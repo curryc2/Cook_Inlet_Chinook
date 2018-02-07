@@ -32,3 +32,8 @@ vignettes/*.pdf
 *.utf8.md
 *.knit.md
 .Rproj.user
+
+#Ignore testing folder
+/testing
+/testing/
+testing/*
