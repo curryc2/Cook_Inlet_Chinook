@@ -1,5 +1,3 @@
 # Cook_Inlet_Chinook/R
 
-***
-
-## R Functions to be sourced
+### R Functions to be sourced
