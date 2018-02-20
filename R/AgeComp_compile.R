@@ -1,9 +1,10 @@
-# CookInletChinook_AgeComp.R
+# AgeComp_compile.R
 # Erik Schoen
 # eschoen@alaska.edu
 # 2-2018
 
-# Compile, QA, and summarize age composition data for Cook Inlet Chinook salmon
+# Cook Inlet Chinook project
+# Compile, QA, and summarize raw age composition data from ADFG
 
 # Load packages and read in data-------------
 library(dplyr)
@@ -12,15 +13,11 @@ library(lubridate)
 library(readr)
 library(ggplot2)
 library(stringr)
-library(googlesheets)
 
-setwd("/Users/ErikSchoen1/Google Drive/Cook Inlet Chinook project_salmon data/Salmon/Salmon figures")
-
-# Point R to the google sheet
-dat <- gs_title("CIChinookSalmonData")
+setwd("~/Desktop/Cook Inlet Chinook/Analysis/data")
 
 # Read in data from AgeComp tab
-age.raw <- gs_read(dat, ws = "AgeComp_Raw")
+age.raw <- read_csv("AgeComp_Raw.csv")
 
 theme_set(theme_bw() + theme(panel.grid.minor = element_blank()))
 
@@ -55,7 +52,7 @@ age.raw <- age.raw %>%
          # Verify that the corrected values add to 1
          SumProportions2 = Age0.1 + Age0.2 + Age1.1 + Age0.3 + Age1.2 + Age2.1 + Age0.4 +
            Age1.3 + Age2.2 + Age0.5 + Age1.4 + Age2.3 + Age1.5 + Age2.4 + Age2.5 + Age1.6)
-  
+
 # Summarize the age composition data for commercial fisheries where more than one area was
 # sampled per year.  Resulting table has 1 row per population (or fishery) per gear (and mesh size)
 # per year
@@ -80,9 +77,7 @@ age.n <- age.raw %>%
 age <- left_join(age, age.n)
 
 # Save the age comp dataframe to csv
-write_csv(age, "/Users/ErikSchoen1/Google Drive/Cook Inlet Chinook project_salmon data/Salmon/CIChinook_AgeComp.csv")
-
-# Save it to a tab in the google sheet
+write_csv(age, "/Users/ErikSchoen1/Desktop/Cook Inlet Chinook/Analysis/data/AgeComp.csv")
 
 # Plot the data------------
 
@@ -99,30 +94,30 @@ age.long.common <- age.long %>%
                             str_c(Group, Mesh, Gear, sep = " ")))
 
 age.by.gear.plot <- ggplot(data = age.long.common, aes(x = Year, y = Proportion, group = GroupGear, 
-                                              color = Gear)) +
+                                                       color = Gear)) +
   facet_grid(Age ~ .) +
   geom_line() +
   labs(x = "Return year", y = "Age proportion") +
   scale_x_continuous(breaks = seq(1980, 2015, 5))
 age.by.gear.plot
-ggsave("Age comp by gear type.png")
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/output/Age comp by gear type.png")
 
 age.by.group.plot <- ggplot(data = age.long.common, aes(x = Year, y = Proportion, group = GroupGear, 
-                                                       color = Group)) +
+                                                        color = Group)) +
   facet_grid(Age ~ .) +
   geom_line() +
   labs(x = "Return year", y = "Age proportion") +
   scale_color_discrete(name = "River or fishery") +
   scale_x_continuous(breaks = seq(1980, 2015, 5))
 age.by.group.plot
-ggsave("Age comp by river or fishery.png")
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/output/Age comp by river or fishery.png")
 
 # Plot the age comp for Kenai and ESSN only to compare gear types
 age.long.kenai <- age.long.common %>%
   filter(Group == "ESSN" | Group == "Kenai.Late") 
 
 age.by.gear.kenai.plot <- ggplot(data = age.long.kenai, 
-                            aes(x = Year, y = Proportion, color = GroupGear)) +
+                                 aes(x = Year, y = Proportion, color = GroupGear)) +
   facet_grid(Age ~ .) +
   geom_line() +
   # geom_point(shape = 1, fill = NA) +
@@ -130,14 +125,14 @@ age.by.gear.kenai.plot <- ggplot(data = age.long.kenai,
   scale_color_discrete(name = "Gear type") +
   scale_x_continuous(breaks = seq(1980, 2015, 5))
 age.by.gear.kenai.plot
-ggsave("Kenai late run age comp by gear type.png")
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/output/Kenai late run age comp by gear type.png")
 
 # Plot the age comp for Deshka and NSN only to compare gear types
 age.long.deshka <- age.long.common %>%
   filter(Group == "NSN" | Group == "Deshka") 
 
 age.by.gear.deshka.plot <- ggplot(data = age.long.deshka, 
-                                 aes(x = Year, y = Proportion, color = GroupGear)) +
+                                  aes(x = Year, y = Proportion, color = GroupGear)) +
   facet_grid(Age ~ .) +
   geom_line() +
   geom_point(shape = 1, fill = NA) +
@@ -145,5 +140,5 @@ age.by.gear.deshka.plot <- ggplot(data = age.long.deshka,
   scale_color_discrete(name = "Gear type") +
   scale_x_continuous(breaks = seq(1980, 2015, 5))
 age.by.gear.deshka.plot
-ggsave("Deshka age comp by gear type.png")
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/output/Deshka age comp by gear type.png")
 
