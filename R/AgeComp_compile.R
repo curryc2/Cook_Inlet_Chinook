@@ -1,7 +1,7 @@
 # AgeComp_compile.R
 # Erik Schoen
 # eschoen@alaska.edu
-# 2-2018
+# 2-2018, revised 9-2018
 
 # Cook Inlet Chinook project
 # Compile, QA, and summarize raw age composition data from ADFG
@@ -93,7 +93,7 @@ ageRawSimple <- ageRawSimple %>%
 age <- ageRawSimple %>%
   # Add a Group column that includes Population (for esc. sampling) and Fishery (for comm fish sampling)
   mutate(Group = if_else(is.na(Population), Fishery, Population)) %>%
-  group_by(Group, Year, Source, Gear, Mesh) %>%
+  group_by(Group, ReturnYear, Component, Gear, Mesh) %>%
   summarize_at(vars(Age1.1:Age1.5), mean) %>%
   mutate(SumProportions = Age1.1 + Age1.2 + Age1.3 + Age1.4 + Age1.5)
 
@@ -102,7 +102,7 @@ age <- ageRawSimple %>%
 # their abundance (so that n_total = sum of all n_areas)
 age.n <- ageRaw %>%
   mutate(Group = if_else(is.na(Population), Fishery, Population)) %>%
-  group_by(Group, Year, Source, Gear, Mesh) %>%
+  group_by(Group, ReturnYear, Component, Gear, Mesh) %>%
   summarize(n = sum(n)) 
 
 # Join sample sizes to the age comp dataframe and reshape into long format
@@ -115,71 +115,4 @@ age <- age %>%
 # well as multiple estimates for some groups/years for different gear types).
 # This will be used for fitting a model to age comp data
 write_csv(age, "AgeFull.csv")
-
-# Generate a simplified version of the age comp data with one row for each population X year
-# (population-specific age data only, no data from mixed-stock fisheries)
-ageSimple <- age %>%
-  # filter(Source != "Commercial Harvest") %>%
-  group_by(Group, Year, Age) %>%
-  summarize(Prop = mean(Prop)) %>%
-  rename(Population = Group, ReturnYear = Year)
-
-write_csv(ageSimple, "AgeSimple.csv")
-# Plot the data------------
-
-# Filter out the hatchery fish, and make a new variable GroupGear 
-# so we can plot each group separately by gear type
-agePlot <- age %>%
-  filter(Group != "Ninilchik.Hatchery" & Group != "Crooked.Hatchery") %>%
-  mutate(GroupGear = ifelse(is.na(Mesh), str_c(Group, Gear, sep = " "), 
-                            str_c(Group, Mesh, Gear, sep = " ")))
-
-ageByGear.plot <- ggplot(data = agePlot, aes(x = Year, y = Prop, group = GroupGear, 
-                                                       color = Gear)) +
-  facet_grid(Age ~ .) +
-  geom_line() +
-  labs(x = "Return year", y = "Age Prop") +
-  scale_x_continuous(breaks = seq(1980, 2015, 5))
-ageByGear.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by gear type.png")
-
-ageByGroup.plot <- ggplot(data = agePlot, aes(x = Year, y = Prop, group = GroupGear, 
-                                                        color = Group)) +
-  facet_grid(Age ~ .) +
-  geom_line() +
-  labs(x = "Return year", y = "Age Prop") +
-  scale_color_discrete(name = "River or fishery") +
-  scale_x_continuous(breaks = seq(1980, 2015, 5))
-ageByGroup.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by river or fishery.png")
-
-# Plot the age comp for Kenai and ESSN only to compare gear types
-agePlotKenai <- agePlot %>%
-  filter(Group == "ESSN" | Group == "Kenai.Late") 
-
-ageByGearKenai.plot <- ggplot(data = agePlotKenai, 
-                                 aes(x = Year, y = Prop, color = GroupGear)) +
-  facet_grid(Age ~ .) +
-  geom_line() +
-  # geom_point(shape = 1, fill = NA) +
-  labs(x = "Return year", y = "Age Prop") +
-  scale_color_discrete(name = "Gear type") +
-  scale_x_continuous(breaks = seq(1980, 2015, 5))
-ageByGearKenai.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Kenai late run age comp by gear type.png")
-
-# Plot the age comp for Deshka and NSN only to compare gear types
-agePlotDeshka <- agePlot %>%
-  filter(Group == "NSN" | Group == "Deshka") 
-
-ageByGearDeshka.plot <- ggplot(data = agePlotDeshka, 
-                                  aes(x = Year, y = Prop, color = GroupGear)) +
-  facet_grid(Age ~ .) +
-  geom_line() +
-  geom_point(shape = 1, fill = NA) +
-  labs(x = "Return year", y = "Age Prop") +
-  scale_color_discrete(name = "Gear type") +
-  scale_x_continuous(breaks = seq(1980, 2015, 5))
-ageByGearDeshka.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Deshka age comp by gear type.png")
 

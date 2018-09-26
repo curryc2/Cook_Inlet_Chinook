@@ -1,19 +1,19 @@
-Group,Year,Source,Gear,Mesh,n,Age,Prop
+Group,ReturnYear,Component,Gear,Mesh,n,Age,Prop
 Alexander,2015,Escapement,Weir,NA,52,Age1.1,0.0577
-Anchor,2003,Escapement,Weir,NA,NA,Age1.1,0.05
-Anchor,2004,Escapement,Weir,NA,NA,Age1.1,0.08800000000000001
-Anchor,2005,Escapement,Weir,NA,NA,Age1.1,0.05
-Anchor,2006,Escapement,Weir,NA,NA,Age1.1,0.064
-Anchor,2007,Escapement,Weir,NA,NA,Age1.1,0.005
-Anchor,2008,Escapement,Weir,NA,NA,Age1.1,0.04404404404404404
-Anchor,2009,Escapement,Weir,NA,NA,Age1.1,0.078
-Anchor,2010,Escapement,Weir,NA,NA,Age1.1,0.07
-Anchor,2011,Escapement,Weir,NA,NA,Age1.1,0.032
-Anchor,2012,Escapement,Weir,NA,NA,Age1.1,0.108
-Anchor,2013,Escapement,Weir,NA,NA,Age1.1,0.20140280561122242
-Anchor,2014,Escapement,Weir,NA,NA,Age1.1,0.1358641358641359
-Anchor,2015,Escapement,Weir,NA,NA,Age1.1,0.135
-Anchor,2016,Escapement,Weir,NA,NA,Age1.1,0.062
+Anchor,2003,Escapement,Weir,NA,601,Age1.1,0.05
+Anchor,2004,Escapement,Weir,NA,285,Age1.1,0.08800000000000001
+Anchor,2005,Escapement,Weir,NA,415,Age1.1,0.05
+Anchor,2006,Escapement,Weir,NA,207,Age1.1,0.064
+Anchor,2007,Escapement,Weir,NA,185,Age1.1,0.005
+Anchor,2008,Escapement,Weir,NA,116,Age1.1,0.04404404404404404
+Anchor,2009,Escapement,Weir,NA,90,Age1.1,0.078
+Anchor,2010,Escapement,Weir,NA,273,Age1.1,0.07
+Anchor,2011,Escapement,Weir,NA,282,Age1.1,0.032
+Anchor,2012,Escapement,Weir,NA,199,Age1.1,0.108
+Anchor,2013,Escapement,Weir,NA,254,Age1.1,0.20140280561122242
+Anchor,2014,Escapement,Weir,NA,267,Age1.1,0.1358641358641359
+Anchor,2015,Escapement,Weir,NA,379,Age1.1,0.135
+Anchor,2016,Escapement,Weir,NA,260,Age1.1,0.062
 Crooked,2004,Escapement,Weir,NA,561,Age1.1,0
 Crooked,2005,Escapement,Weir,NA,194,Age1.1,0
 Crooked,2006,Escapement,Weir,NA,91,Age1.1,0
@@ -109,78 +109,146 @@ ESSN,2013,Commercial Harvest,Gill Net,< 6 in,664,Age1.1,0.2272272272272272
 ESSN,2014,Commercial Harvest,Gill Net,< 6 in,459,Age1.1,0.17617617617617617
 ESSN,2015,Commercial Harvest,Gill Net,< 6 in,631,Age1.1,0.142
 ESSN,2016,Commercial Harvest,Gill Net,< 6 in,809,Age1.1,0.067
-Kenai.Late,1986,Escapement,Gill Net,7 in,1650,Age1.1,0
+Kenai.Late,1986,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.010204081632653062
+Kenai.Late,1986,Escapement,Gill Net,7.5 in,1650,Age1.1,0
+Kenai.Late,1986,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,1986,Sport Harvest,Angling,NA,524,Age1.1,0.0041
-Kenai.Late,1987,Escapement,Gill Net,7 in,962,Age1.1,0.0042
+Kenai.Late,1987,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.02
+Kenai.Late,1987,Escapement,Gill Net,7.5 in,962,Age1.1,0.0042
+Kenai.Late,1987,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,1987,Sport Harvest,Angling,NA,438,Age1.1,0.0041
-Kenai.Late,1988,Escapement,Gill Net,7 in,942,Age1.1,0
+Kenai.Late,1988,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.0297029702970297
+Kenai.Late,1988,Escapement,Gill Net,7.5 in,942,Age1.1,0
+Kenai.Late,1988,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,1988,Sport Harvest,Angling,NA,426,Age1.1,0.0071992800719928
-Kenai.Late,1989,Escapement,Gill Net,7 in,664,Age1.1,0.0049004900490049
+Kenai.Late,1989,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.010101010101010102
+Kenai.Late,1989,Escapement,Gill Net,7.5 in,664,Age1.1,0.0049004900490049
+Kenai.Late,1989,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,1989,Sport Harvest,Angling,NA,104,Age1.1,0.0099
-Kenai.Late,1990,Escapement,Gill Net,7 in,528,Age1.1,0
+Kenai.Late,1990,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.01
+Kenai.Late,1990,Escapement,Gill Net,7.5 in,528,Age1.1,0
+Kenai.Late,1990,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,1990,Sport Harvest,Angling,NA,341,Age1.1,0.0058994100589941
-Kenai.Late,1991,Escapement,Gill Net,7 in,363,Age1.1,0.0062
+Kenai.Late,1991,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.01
+Kenai.Late,1991,Escapement,Gill Net,7.5 in,363,Age1.1,0.0062
+Kenai.Late,1991,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,1991,Sport Harvest,Angling,NA,472,Age1.1,0.009
-Kenai.Late,1992,Escapement,Gill Net,7 in,341,Age1.1,0
+Kenai.Late,1992,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.020202020202020204
+Kenai.Late,1992,Escapement,Gill Net,7.5 in,341,Age1.1,0
+Kenai.Late,1992,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,1992,Sport Harvest,Angling,NA,402,Age1.1,0.005
-Kenai.Late,1993,Escapement,Gill Net,7 in,350,Age1.1,0.005700570057005701
+Kenai.Late,1993,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.03
+Kenai.Late,1993,Escapement,Gill Net,7.5 in,350,Age1.1,0.005700570057005701
+Kenai.Late,1993,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,1993,Sport Harvest,Angling,NA,689,Age1.1,0.010198980101989802
-Kenai.Late,1994,Escapement,Gill Net,7 in,414,Age1.1,0.0072
+Kenai.Late,1994,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.04040404040404041
+Kenai.Late,1994,Escapement,Gill Net,7.5 in,414,Age1.1,0.0072
+Kenai.Late,1994,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,1994,Sport Harvest,Angling,NA,434,Age1.1,0.0046004600460046
-Kenai.Late,1995,Escapement,Gill Net,7 in,207,Age1.1,0.004899510048995101
+Kenai.Late,1995,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.030303030303030304
+Kenai.Late,1995,Escapement,Gill Net,7.5 in,207,Age1.1,0.004899510048995101
+Kenai.Late,1995,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,1995,Sport Harvest,Angling,NA,435,Age1.1,0.0069
-Kenai.Late,1996,Escapement,Gill Net,7 in,470,Age1.1,0.0021
+Kenai.Late,1996,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.0404040404040404
+Kenai.Late,1996,Escapement,Gill Net,7.5 in,470,Age1.1,0.0021
+Kenai.Late,1996,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,1996,Sport Harvest,Angling,NA,235,Age1.1,0
-Kenai.Late,1997,Escapement,Gill Net,7 in,289,Age1.1,0.0035
+Kenai.Late,1997,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.08
+Kenai.Late,1997,Escapement,Gill Net,7.5 in,289,Age1.1,0.0035
+Kenai.Late,1997,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,1997,Sport Harvest,Angling,NA,317,Age1.1,0.009500950095009501
-Kenai.Late,1998,Escapement,Gill Net,7 in,374,Age1.1,0
+Kenai.Late,1998,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.12
+Kenai.Late,1998,Escapement,Gill Net,7.5 in,374,Age1.1,0
+Kenai.Late,1998,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,1998,Sport Harvest,Angling,NA,331,Age1.1,0.0151
-Kenai.Late,1999,Escapement,Gill Net,7 in,386,Age1.1,0.0078
+Kenai.Late,1999,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.02
+Kenai.Late,1999,Escapement,Gill Net,7.5 in,386,Age1.1,0.0078
+Kenai.Late,1999,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,1999,Sport Harvest,Angling,NA,320,Age1.1,0.003
-Kenai.Late,2000,Escapement,Gill Net,7 in,383,Age1.1,0
+Kenai.Late,2000,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.09
+Kenai.Late,2000,Escapement,Gill Net,7.5 in,383,Age1.1,0
+Kenai.Late,2000,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,2000,Sport Harvest,Angling,NA,483,Age1.1,0.0199
-Kenai.Late,2001,Escapement,Gill Net,7 in,256,Age1.1,0
+Kenai.Late,2001,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.12
+Kenai.Late,2001,Escapement,Gill Net,7.5 in,256,Age1.1,0
+Kenai.Late,2001,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,2001,Sport Harvest,Angling,NA,388,Age1.1,0.0192
+Kenai.Late,2002,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.13
+Kenai.Late,2002,Escapement,Gill Net,5 and 7.5 in,945,Age1.1,0.020325621
 Kenai.Late,2002,Escapement,Gill Net,5 in,381,Age1.1,0.020302030203020304
-Kenai.Late,2002,Escapement,Gill Net,7 in,564,Age1.1,0.020302030203020304
+Kenai.Late,2002,Escapement,Gill Net,7.5 in,564,Age1.1,0.020302030203020304
+Kenai.Late,2002,Escapement,Model Estimate,NA,NA,Age1.1,0.02
 Kenai.Late,2002,Sport Harvest,Angling,NA,275,Age1.1,0.0249
+Kenai.Late,2003,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.039603960396039604
+Kenai.Late,2003,Escapement,Gill Net,5 and 7.5 in,1114,Age1.1,0.012
 Kenai.Late,2003,Escapement,Gill Net,5 in,455,Age1.1,0.025097490250974904
-Kenai.Late,2003,Escapement,Gill Net,7 in,659,Age1.1,0.003
+Kenai.Late,2003,Escapement,Gill Net,7.5 in,659,Age1.1,0.003
+Kenai.Late,2003,Escapement,Model Estimate,NA,NA,Age1.1,0.01
 Kenai.Late,2003,Sport Harvest,Angling,NA,311,Age1.1,0.015200000000000002
+Kenai.Late,2004,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.06
+Kenai.Late,2004,Escapement,Gill Net,5 and 7.5 in,933,Age1.1,0.012
 Kenai.Late,2004,Escapement,Gill Net,5 in,333,Age1.1,0.030403040304030404
-Kenai.Late,2004,Escapement,Gill Net,7 in,600,Age1.1,0.0018001800180018
+Kenai.Late,2004,Escapement,Gill Net,7.5 in,600,Age1.1,0.0018001800180018
+Kenai.Late,2004,Escapement,Model Estimate,NA,NA,Age1.1,0.01
 Kenai.Late,2004,Sport Harvest,Angling,NA,305,Age1.1,0.012
+Kenai.Late,2005,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.0297029702970297
+Kenai.Late,2005,Escapement,Gill Net,5 and 7.5 in,519,Age1.1,0
 Kenai.Late,2005,Escapement,Gill Net,5 in,218,Age1.1,0
-Kenai.Late,2005,Escapement,Gill Net,7 in,302,Age1.1,0
+Kenai.Late,2005,Escapement,Gill Net,7.5 in,302,Age1.1,0
+Kenai.Late,2005,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,2005,Sport Harvest,Angling,NA,429,Age1.1,0.004
+Kenai.Late,2006,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.13
+Kenai.Late,2006,Escapement,Gill Net,5 and 7.5 in,703,Age1.1,0.01292841
 Kenai.Late,2006,Escapement,Gill Net,5 in,294,Age1.1,0.0266
-Kenai.Late,2006,Escapement,Gill Net,7 in,409,Age1.1,0.0031
+Kenai.Late,2006,Escapement,Gill Net,7.5 in,409,Age1.1,0.0031
+Kenai.Late,2006,Escapement,Model Estimate,NA,NA,Age1.1,0.01
 Kenai.Late,2006,Sport Harvest,Angling,NA,313,Age1.1,0.0031
+Kenai.Late,2007,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.04950495049504951
+Kenai.Late,2007,Escapement,Gill Net,5 and 7.5 in,437,Age1.1,0.004378799
 Kenai.Late,2007,Escapement,Gill Net,5 in,150,Age1.1,0.012701270127012701
-Kenai.Late,2007,Escapement,Gill Net,7 in,288,Age1.1,0
+Kenai.Late,2007,Escapement,Gill Net,7.5 in,288,Age1.1,0
+Kenai.Late,2007,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,2007,Sport Harvest,Angling,NA,237,Age1.1,0
+Kenai.Late,2008,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.09900990099009901
+Kenai.Late,2008,Escapement,Gill Net,5 and 7.5 in,496,Age1.1,0.02021706697978293
 Kenai.Late,2008,Escapement,Gill Net,5 in,217,Age1.1,0.0416
-Kenai.Late,2008,Escapement,Gill Net,7 in,279,Age1.1,0.0036
+Kenai.Late,2008,Escapement,Gill Net,7.5 in,279,Age1.1,0.0036
+Kenai.Late,2008,Escapement,Model Estimate,NA,NA,Age1.1,0.02
 Kenai.Late,2008,Sport Harvest,Angling,NA,218,Age1.1,0
+Kenai.Late,2009,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.14
+Kenai.Late,2009,Escapement,Gill Net,5 and 7.5 in,338,Age1.1,0.0033754569966245426
 Kenai.Late,2009,Escapement,Gill Net,5 in,145,Age1.1,0.007899210078992101
-Kenai.Late,2009,Escapement,Gill Net,7 in,193,Age1.1,0
+Kenai.Late,2009,Escapement,Gill Net,7.5 in,193,Age1.1,0
+Kenai.Late,2009,Escapement,Model Estimate,NA,NA,Age1.1,0
 Kenai.Late,2009,Sport Harvest,Angling,NA,195,Age1.1,0
+Kenai.Late,2010,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.2
+Kenai.Late,2010,Escapement,Gill Net,5 and 7.5 in,221,Age1.1,0.039531618000000004
 Kenai.Late,2010,Escapement,Gill Net,5 in,84,Age1.1,0.09209079092090791
-Kenai.Late,2010,Escapement,Gill Net,7 in,137,Age1.1,0.0072992700729927005
+Kenai.Late,2010,Escapement,Gill Net,7.5 in,137,Age1.1,0.0072992700729927005
+Kenai.Late,2010,Escapement,Model Estimate,NA,NA,Age1.1,0.04
 Kenai.Late,2010,Sport Harvest,Angling,NA,184,Age1.1,0.040195980401959805
+Kenai.Late,2011,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.05
+Kenai.Late,2011,Escapement,Gill Net,5 and 7.5 in,327,Age1.1,0.024054982975945015
 Kenai.Late,2011,Escapement,Gill Net,5 in,153,Age1.1,0.0514
-Kenai.Late,2011,Escapement,Gill Net,7 in,174,Age1.1,0
+Kenai.Late,2011,Escapement,Gill Net,7.5 in,174,Age1.1,0
+Kenai.Late,2011,Escapement,Model Estimate,NA,NA,Age1.1,0.020202020202020204
 Kenai.Late,2011,Sport Harvest,Angling,NA,233,Age1.1,0.0129
+Kenai.Late,2012,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.1,0.09900990099009901
+Kenai.Late,2012,Escapement,Gill Net,5 and 7.5 in,232,Age1.1,0.01724137901724138
 Kenai.Late,2012,Escapement,Gill Net,5 in,92,Age1.1,0.0326
-Kenai.Late,2012,Escapement,Gill Net,7 in,140,Age1.1,0.007100710071007102
+Kenai.Late,2012,Escapement,Gill Net,7.5 in,140,Age1.1,0.007100710071007102
+Kenai.Late,2012,Escapement,Model Estimate,NA,NA,Age1.1,0.02
+Kenai.Late,2013,Escapement,Gill Net,5 and 7.5 in,149,Age1.1,0.07317073200000002
 Kenai.Late,2013,Escapement,Gill Net,5 in,49,Age1.1,0.2208
-Kenai.Late,2013,Escapement,Gill Net,7 in,101,Age1.1,0
+Kenai.Late,2013,Escapement,Gill Net,7.5 in,101,Age1.1,0
 Kenai.Late,2013,Sport Harvest,Angling,NA,50,Age1.1,0.020100000000000003
+Kenai.Late,2014,Escapement,Gill Net,5 and 7.5 in,283,Age1.1,0.025
 Kenai.Late,2014,Escapement,Gill Net,5 in,145,Age1.1,0.04880000000000001
-Kenai.Late,2014,Escapement,Gill Net,7 in,138,Age1.1,0
+Kenai.Late,2014,Escapement,Gill Net,7.5 in,138,Age1.1,0
 Kenai.Late,2014,Sport Harvest,Angling,NA,30,Age1.1,0.1
+Kenai.Late,2015,Escapement,Gill Net,5 and 7.5 in,238,Age1.1,0.03300000000000001
 Kenai.Late,2015,Escapement,Gill Net,5 in,124,Age1.1,0.0633
-Kenai.Late,2015,Escapement,Gill Net,7 in,114,Age1.1,0
+Kenai.Late,2015,Escapement,Gill Net,7.5 in,114,Age1.1,0
 Kenai.Late,2015,Sport Harvest,Angling,NA,117,Age1.1,0.02620967741935484
 Kenai.Late,2016,Sport Harvest,Angling,NA,189,Age1.1,0.022
 Lewis,2012,Escapement,Weir,NA,71,Age1.1,0.016
@@ -192,46 +260,46 @@ LittleSusitna,2013,Escapement,Weir,NA,242,Age1.1,0.008072653884964684
 LittleSusitna,2014,Escapement,Weir,NA,108,Age1.1,0.065
 LittleSusitna,2015,Escapement,Weir,NA,272,Age1.1,0.202
 LittleSusitna,2016,Escapement,Weir,NA,375,Age1.1,0.1651651651651652
-Ninilchik,1997,Escapement,Weir,NA,NA,Age1.1,0.009
-Ninilchik,1998,Escapement,Weir,NA,NA,Age1.1,0.015
-Ninilchik,1999,Escapement,Weir,NA,NA,Age1.1,0
-Ninilchik,2000,Escapement,Weir,NA,NA,Age1.1,0.023
-Ninilchik,2001,Escapement,Weir,NA,NA,Age1.1,0.009
-Ninilchik,2002,Escapement,Weir,NA,NA,Age1.1,0.03
-Ninilchik,2003,Escapement,Weir,NA,NA,Age1.1,0.011
-Ninilchik,2004,Escapement,Weir,NA,NA,Age1.1,0
-Ninilchik,2005,Escapement,Weir,NA,NA,Age1.1,0.062
-Ninilchik,2006,Escapement,Weir,NA,NA,Age1.1,0.093
-Ninilchik,2007,Escapement,Weir,NA,NA,Age1.1,0.061
-Ninilchik,2008,Escapement,Weir,NA,NA,Age1.1,0.034
-Ninilchik,2009,Escapement,Weir,NA,NA,Age1.1,0.207
-Ninilchik,2010,Escapement,Weir,NA,NA,Age1.1,0.042
-Ninilchik,2011,Escapement,Weir,NA,NA,Age1.1,0
-Ninilchik,2012,Escapement,Weir,NA,NA,Age1.1,0.2442442442442442
-Ninilchik,2013,Escapement,Weir,NA,NA,Age1.1,0.08891108891108891
-Ninilchik,2014,Escapement,Weir,NA,NA,Age1.1,0.11788211788211786
-Ninilchik,2015,Escapement,Weir,NA,NA,Age1.1,0.31931931931931934
-Ninilchik,2016,Escapement,Weir,NA,NA,Age1.1,0.025
-Ninilchik.Hatchery,1997,Escapement,Weir,NA,NA,Age1.1,0.122
-Ninilchik.Hatchery,1998,Escapement,Weir,NA,NA,Age1.1,0.078
-Ninilchik.Hatchery,1999,Escapement,Weir,NA,NA,Age1.1,0.024999999999999994
-Ninilchik.Hatchery,2000,Escapement,Weir,NA,NA,Age1.1,0.046
-Ninilchik.Hatchery,2001,Escapement,Weir,NA,NA,Age1.1,0.081
-Ninilchik.Hatchery,2002,Escapement,Weir,NA,NA,Age1.1,0.194
-Ninilchik.Hatchery,2003,Escapement,Weir,NA,NA,Age1.1,0.097
-Ninilchik.Hatchery,2004,Escapement,Weir,NA,NA,Age1.1,0.018
-Ninilchik.Hatchery,2005,Escapement,Weir,NA,NA,Age1.1,0.13
-Ninilchik.Hatchery,2006,Escapement,Weir,NA,NA,Age1.1,0.328
-Ninilchik.Hatchery,2007,Escapement,Weir,NA,NA,Age1.1,0.263
-Ninilchik.Hatchery,2008,Escapement,Weir,NA,NA,Age1.1,0.166
-Ninilchik.Hatchery,2009,Escapement,Weir,NA,NA,Age1.1,0.584
-Ninilchik.Hatchery,2010,Escapement,Weir,NA,NA,Age1.1,0.20100000000000004
-Ninilchik.Hatchery,2011,Escapement,Weir,NA,NA,Age1.1,0.022
-Ninilchik.Hatchery,2012,Escapement,Weir,NA,NA,Age1.1,0.71
-Ninilchik.Hatchery,2013,Escapement,Weir,NA,NA,Age1.1,0.7272727272727273
-Ninilchik.Hatchery,2014,Escapement,Weir,NA,NA,Age1.1,0.815
-Ninilchik.Hatchery,2015,Escapement,Weir,NA,NA,Age1.1,0.638
-Ninilchik.Hatchery,2016,Escapement,Weir,NA,NA,Age1.1,0.31
+Ninilchik,1997,Escapement,Weir,NA,110,Age1.1,0.009
+Ninilchik,1998,Escapement,Weir,NA,460,Age1.1,0.015
+Ninilchik,1999,Escapement,Weir,NA,225,Age1.1,0
+Ninilchik,2000,Escapement,Weir,NA,278,Age1.1,0.023
+Ninilchik,2001,Escapement,Weir,NA,217,Age1.1,0.009
+Ninilchik,2002,Escapement,Weir,NA,257,Age1.1,0.03
+Ninilchik,2003,Escapement,Weir,NA,175,Age1.1,0.011
+Ninilchik,2004,Escapement,Weir,NA,167,Age1.1,0
+Ninilchik,2005,Escapement,Weir,NA,339,Age1.1,0.062
+Ninilchik,2006,Escapement,Weir,NA,140,Age1.1,0.093
+Ninilchik,2007,Escapement,Weir,NA,66,Age1.1,0.061
+Ninilchik,2008,Escapement,Weir,NA,135,Age1.1,0.034
+Ninilchik,2009,Escapement,Weir,NA,58,Age1.1,0.207
+Ninilchik,2010,Escapement,Weir,NA,99,Age1.1,0.042
+Ninilchik,2011,Escapement,Weir,NA,145,Age1.1,0
+Ninilchik,2012,Escapement,Weir,NA,95,Age1.1,0.2442442442442442
+Ninilchik,2013,Escapement,Weir,NA,99,Age1.1,0.08891108891108891
+Ninilchik,2014,Escapement,Weir,NA,989,Age1.1,0.11788211788211786
+Ninilchik,2015,Escapement,Weir,NA,1002,Age1.1,0.31931931931931934
+Ninilchik,2016,Escapement,Weir,NA,705,Age1.1,0.025
+Ninilchik.Hatchery,1997,Escapement,Weir,NA,180,Age1.1,0.122
+Ninilchik.Hatchery,1998,Escapement,Weir,NA,282,Age1.1,0.078
+Ninilchik.Hatchery,1999,Escapement,Weir,NA,113,Age1.1,0.024999999999999994
+Ninilchik.Hatchery,2000,Escapement,Weir,NA,151,Age1.1,0.046
+Ninilchik.Hatchery,2001,Escapement,Weir,NA,87,Age1.1,0.081
+Ninilchik.Hatchery,2002,Escapement,Weir,NA,103,Age1.1,0.194
+Ninilchik.Hatchery,2003,Escapement,Weir,NA,72,Age1.1,0.097
+Ninilchik.Hatchery,2004,Escapement,Weir,NA,113,Age1.1,0.018
+Ninilchik.Hatchery,2005,Escapement,Weir,NA,123,Age1.1,0.13
+Ninilchik.Hatchery,2006,Escapement,Weir,NA,67,Age1.1,0.328
+Ninilchik.Hatchery,2007,Escapement,Weir,NA,19,Age1.1,0.263
+Ninilchik.Hatchery,2008,Escapement,Weir,NA,55,Age1.1,0.166
+Ninilchik.Hatchery,2009,Escapement,Weir,NA,97,Age1.1,0.584
+Ninilchik.Hatchery,2010,Escapement,Weir,NA,30,Age1.1,0.20100000000000004
+Ninilchik.Hatchery,2011,Escapement,Weir,NA,45,Age1.1,0.022
+Ninilchik.Hatchery,2012,Escapement,Weir,NA,62,Age1.1,0.71
+Ninilchik.Hatchery,2013,Escapement,Weir,NA,115,Age1.1,0.7272727272727273
+Ninilchik.Hatchery,2014,Escapement,Weir,NA,1117,Age1.1,0.815
+Ninilchik.Hatchery,2015,Escapement,Weir,NA,691,Age1.1,0.638
+Ninilchik.Hatchery,2016,Escapement,Weir,NA,436,Age1.1,0.31
 NSN,1983,Commercial Harvest,Gill Net,< 6 in,41,Age1.1,0
 NSN,1985,Commercial Harvest,Gill Net,< 6 in,40,Age1.1,0.025641025641025644
 NSN,1986,Commercial Harvest,Gill Net,< 6 in,900,Age1.1,0.0036458333333333334
@@ -251,54 +319,54 @@ NSN,2016,Commercial Harvest,Gill Net,< 6 in,1027,Age1.1,0.014000000000000002
 Theodore,2012,Escapement,Weir,NA,247,Age1.1,0
 Theodore,2013,Escapement,Weir,NA,192,Age1.1,0
 Theodore,2014,Escapement,Weir,NA,29,Age1.1,0.20700000000000002
-Tyonek,2014,Subsistence Harvest,Gill Net,NA,136,Age1.1,0.058941058941058944
-Tyonek,2015,Subsistence Harvest,Gill Net,NA,300,Age1.1,0.073
-Tyonek,2016,Subsistence Harvest,Gill Net,NA,210,Age1.1,0.052
+Tyonek,2014,Subsistence Harvest,Gill Net,< 6 in,136,Age1.1,0.058941058941058944
+Tyonek,2015,Subsistence Harvest,Gill Net,< 6 in,300,Age1.1,0.073
+Tyonek,2016,Subsistence Harvest,Gill Net,< 6 in,210,Age1.1,0.052
 WSSN,1980,Commercial Harvest,Gill Net,< 6 in,NA,Age1.1,0
 WSSN,1983,Commercial Harvest,Gill Net,< 6 in,330,Age1.1,0
 WSSN,1984,Commercial Harvest,Gill Net,< 6 in,225,Age1.1,0.004036326942482341
 WSSN,1985,Commercial Harvest,Gill Net,< 6 in,308,Age1.1,0.0034246575342465756
 Alexander,2015,Escapement,Weir,NA,52,Age1.2,0.4423
-Anchor,2003,Escapement,Weir,NA,NA,Age1.2,0.23
-Anchor,2004,Escapement,Weir,NA,NA,Age1.2,0.20700000000000002
-Anchor,2005,Escapement,Weir,NA,NA,Age1.2,0.239
-Anchor,2006,Escapement,Weir,NA,NA,Age1.2,0.165
-Anchor,2007,Escapement,Weir,NA,NA,Age1.2,0.22
-Anchor,2008,Escapement,Weir,NA,NA,Age1.2,0.21821821821821819
-Anchor,2009,Escapement,Weir,NA,NA,Age1.2,0.511
-Anchor,2010,Escapement,Weir,NA,NA,Age1.2,0.361
-Anchor,2011,Escapement,Weir,NA,NA,Age1.2,0.5
-Anchor,2012,Escapement,Weir,NA,NA,Age1.2,0.343
-Anchor,2013,Escapement,Weir,NA,NA,Age1.2,0.31462925851703405
-Anchor,2014,Escapement,Weir,NA,NA,Age1.2,0.3656343656343657
-Anchor,2015,Escapement,Weir,NA,NA,Age1.2,0.393
-Anchor,2016,Escapement,Weir,NA,NA,Age1.2,0.412
-Crooked,2004,Escapement,Weir,NA,561,Age1.2,0.4581105169
-Crooked,2005,Escapement,Weir,NA,194,Age1.2,0.3092783505
-Crooked,2006,Escapement,Weir,NA,91,Age1.2,0.2857142857
-Crooked,2007,Escapement,Weir,NA,76,Age1.2,0.1842105263
-Crooked,2008,Escapement,Weir,NA,73,Age1.2,0.2465753425
-Crooked,2009,Escapement,Weir,NA,209,Age1.2,0.4114832535588517
-Crooked,2010,Escapement,Weir,NA,134,Age1.2,0.3582089552358209
-Crooked,2011,Escapement,Weir,NA,218,Age1.2,0.3486238532
-Crooked,2012,Escapement,Weir,NA,259,Age1.2,0.3667953667633205
-Crooked,2013,Escapement,Weir,NA,407,Age1.2,0.4201474201126044
-Crooked,2014,Escapement,Weir,NA,447,Age1.2,0.2729306487945414
-Crooked,2015,Escapement,Weir,NA,459,Age1.2,0.431372549
-Crooked,2016,Escapement,Weir,NA,293,Age1.2,0.6143344710122867
-Crooked.Hatchery,2004,Escapement,Weir,NA,1056,Age1.2,0.667613636353267
-Crooked.Hatchery,2005,Escapement,Weir,NA,157,Age1.2,0.40764331211222926
-Crooked.Hatchery,2006,Escapement,Weir,NA,96,Age1.2,0.5729166666598958
-Crooked.Hatchery,2007,Escapement,Weir,NA,41,Age1.2,0.4634146341463415
-Crooked.Hatchery,2008,Escapement,Weir,NA,31,Age1.2,0.41935483868741935
-Crooked.Hatchery,2009,Escapement,Weir,NA,65,Age1.2,0.4615384615230769
+Anchor,2003,Escapement,Weir,NA,601,Age1.2,0.23
+Anchor,2004,Escapement,Weir,NA,285,Age1.2,0.20700000000000002
+Anchor,2005,Escapement,Weir,NA,415,Age1.2,0.239
+Anchor,2006,Escapement,Weir,NA,207,Age1.2,0.165
+Anchor,2007,Escapement,Weir,NA,185,Age1.2,0.22
+Anchor,2008,Escapement,Weir,NA,116,Age1.2,0.21821821821821819
+Anchor,2009,Escapement,Weir,NA,90,Age1.2,0.511
+Anchor,2010,Escapement,Weir,NA,273,Age1.2,0.361
+Anchor,2011,Escapement,Weir,NA,282,Age1.2,0.5
+Anchor,2012,Escapement,Weir,NA,199,Age1.2,0.343
+Anchor,2013,Escapement,Weir,NA,254,Age1.2,0.31462925851703405
+Anchor,2014,Escapement,Weir,NA,267,Age1.2,0.3656343656343657
+Anchor,2015,Escapement,Weir,NA,379,Age1.2,0.393
+Anchor,2016,Escapement,Weir,NA,260,Age1.2,0.412
+Crooked,2004,Escapement,Weir,NA,561,Age1.2,0.458110517
+Crooked,2005,Escapement,Weir,NA,194,Age1.2,0.3092783506907216
+Crooked,2006,Escapement,Weir,NA,91,Age1.2,0.28571428571428575
+Crooked,2007,Escapement,Weir,NA,76,Age1.2,0.184210526
+Crooked,2008,Escapement,Weir,NA,73,Age1.2,0.24657534275342463
+Crooked,2009,Escapement,Weir,NA,209,Age1.2,0.41148325358851673
+Crooked,2010,Escapement,Weir,NA,134,Age1.2,0.358208955
+Crooked,2011,Escapement,Weir,NA,218,Age1.2,0.348623853
+Crooked,2012,Escapement,Weir,NA,259,Age1.2,0.36679536663320467
+Crooked,2013,Escapement,Weir,NA,407,Age1.2,0.42014742
+Crooked,2014,Escapement,Weir,NA,447,Age1.2,0.272930649
+Crooked,2015,Escapement,Weir,NA,459,Age1.2,0.43137254900000005
+Crooked,2016,Escapement,Weir,NA,293,Age1.2,0.614334471
+Crooked.Hatchery,2004,Escapement,Weir,NA,1056,Age1.2,0.667613636
+Crooked.Hatchery,2005,Escapement,Weir,NA,157,Age1.2,0.40764331200000004
+Crooked.Hatchery,2006,Escapement,Weir,NA,96,Age1.2,0.5729166664270833
+Crooked.Hatchery,2007,Escapement,Weir,NA,41,Age1.2,0.463414634
+Crooked.Hatchery,2008,Escapement,Weir,NA,31,Age1.2,0.419354839
+Crooked.Hatchery,2009,Escapement,Weir,NA,65,Age1.2,0.461538462
 Crooked.Hatchery,2010,Escapement,Weir,NA,25,Age1.2,0.48
-Crooked.Hatchery,2011,Escapement,Weir,NA,74,Age1.2,0.6891891891724324
-Crooked.Hatchery,2012,Escapement,Weir,NA,62,Age1.2,0.30645161289080647
+Crooked.Hatchery,2011,Escapement,Weir,NA,74,Age1.2,0.689189189
+Crooked.Hatchery,2012,Escapement,Weir,NA,62,Age1.2,0.306451613
 Crooked.Hatchery,2013,Escapement,Weir,NA,50,Age1.2,0.54
-Crooked.Hatchery,2014,Escapement,Weir,NA,228,Age1.2,0.7894736841802631
+Crooked.Hatchery,2014,Escapement,Weir,NA,228,Age1.2,0.789473684
 Crooked.Hatchery,2015,Escapement,Weir,NA,169,Age1.2,0
-Crooked.Hatchery,2016,Escapement,Weir,NA,423,Age1.2,0.9905437352247637
+Crooked.Hatchery,2016,Escapement,Weir,NA,423,Age1.2,0.990543735
 Deshka,1979,Sport Harvest,Angling,NA,297,Age1.2,0.07
 Deshka,1980,Sport Harvest,Angling,NA,181,Age1.2,0.1
 Deshka,1981,Sport Harvest,Angling,NA,159,Age1.2,0.1
@@ -368,78 +436,146 @@ ESSN,2013,Commercial Harvest,Gill Net,< 6 in,664,Age1.2,0.43443443443443436
 ESSN,2014,Commercial Harvest,Gill Net,< 6 in,459,Age1.2,0.3223223223223224
 ESSN,2015,Commercial Harvest,Gill Net,< 6 in,631,Age1.2,0.374
 ESSN,2016,Commercial Harvest,Gill Net,< 6 in,809,Age1.2,0.285
-Kenai.Late,1986,Escapement,Gill Net,7 in,1650,Age1.2,0.1214
+Kenai.Late,1986,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.23469387755102042
+Kenai.Late,1986,Escapement,Gill Net,7.5 in,1650,Age1.2,0.1214
+Kenai.Late,1986,Escapement,Model Estimate,NA,NA,Age1.2,0.12
 Kenai.Late,1986,Sport Harvest,Angling,NA,524,Age1.2,0.1014
-Kenai.Late,1987,Escapement,Gill Net,7 in,962,Age1.2,0.0187
+Kenai.Late,1987,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.13
+Kenai.Late,1987,Escapement,Gill Net,7.5 in,962,Age1.2,0.0187
+Kenai.Late,1987,Escapement,Model Estimate,NA,NA,Age1.2,0.02
 Kenai.Late,1987,Sport Harvest,Angling,NA,438,Age1.2,0.0104
-Kenai.Late,1988,Escapement,Gill Net,7 in,942,Age1.2,0.012801280128012802
+Kenai.Late,1988,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.10891089108910891
+Kenai.Late,1988,Escapement,Gill Net,7.5 in,942,Age1.2,0.012801280128012802
+Kenai.Late,1988,Escapement,Model Estimate,NA,NA,Age1.2,0.01
 Kenai.Late,1988,Sport Harvest,Angling,NA,426,Age1.2,0.0023997600239976003
-Kenai.Late,1989,Escapement,Gill Net,7 in,664,Age1.2,0.10291029102910292
+Kenai.Late,1989,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.15151515151515152
+Kenai.Late,1989,Escapement,Gill Net,7.5 in,664,Age1.2,0.10291029102910292
+Kenai.Late,1989,Escapement,Model Estimate,NA,NA,Age1.2,0.10101010101010102
 Kenai.Late,1989,Sport Harvest,Angling,NA,104,Age1.2,0.0099
-Kenai.Late,1990,Escapement,Gill Net,7 in,528,Age1.2,0.12288771122887708
+Kenai.Late,1990,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.3
+Kenai.Late,1990,Escapement,Gill Net,7.5 in,528,Age1.2,0.12288771122887708
+Kenai.Late,1990,Escapement,Model Estimate,NA,NA,Age1.2,0.1188118811881188
 Kenai.Late,1990,Sport Harvest,Angling,NA,341,Age1.2,0.0967903209679032
-Kenai.Late,1991,Escapement,Gill Net,7 in,363,Age1.2,0.0745
+Kenai.Late,1991,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.25
+Kenai.Late,1991,Escapement,Gill Net,7.5 in,363,Age1.2,0.0745
+Kenai.Late,1991,Escapement,Model Estimate,NA,NA,Age1.2,0.07
 Kenai.Late,1991,Sport Harvest,Angling,NA,472,Age1.2,0.0493
-Kenai.Late,1992,Escapement,Gill Net,7 in,341,Age1.2,0.0674
+Kenai.Late,1992,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.15151515151515152
+Kenai.Late,1992,Escapement,Gill Net,7.5 in,341,Age1.2,0.0674
+Kenai.Late,1992,Escapement,Model Estimate,NA,NA,Age1.2,0.07
 Kenai.Late,1992,Sport Harvest,Angling,NA,402,Age1.2,0.0199
-Kenai.Late,1993,Escapement,Gill Net,7 in,350,Age1.2,0.08000800080008001
+Kenai.Late,1993,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.13
+Kenai.Late,1993,Escapement,Gill Net,7.5 in,350,Age1.2,0.08000800080008001
+Kenai.Late,1993,Escapement,Model Estimate,NA,NA,Age1.2,0.08
 Kenai.Late,1993,Sport Harvest,Angling,NA,689,Age1.2,0.0188981101889811
-Kenai.Late,1994,Escapement,Gill Net,7 in,414,Age1.2,0.0556
+Kenai.Late,1994,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.13131313131313133
+Kenai.Late,1994,Escapement,Gill Net,7.5 in,414,Age1.2,0.0556
+Kenai.Late,1994,Escapement,Model Estimate,NA,NA,Age1.2,0.06
 Kenai.Late,1994,Sport Harvest,Angling,NA,434,Age1.2,0.0184018401840184
-Kenai.Late,1995,Escapement,Gill Net,7 in,207,Age1.2,0.22327767223277672
+Kenai.Late,1995,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.24242424242424243
+Kenai.Late,1995,Escapement,Gill Net,7.5 in,207,Age1.2,0.22327767223277672
+Kenai.Late,1995,Escapement,Model Estimate,NA,NA,Age1.2,0.22222222222222224
 Kenai.Late,1995,Sport Harvest,Angling,NA,435,Age1.2,0.0759
-Kenai.Late,1996,Escapement,Gill Net,7 in,470,Age1.2,0.0768
+Kenai.Late,1996,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.1919191919191919
+Kenai.Late,1996,Escapement,Gill Net,7.5 in,470,Age1.2,0.0768
+Kenai.Late,1996,Escapement,Model Estimate,NA,NA,Age1.2,0.08
 Kenai.Late,1996,Sport Harvest,Angling,NA,235,Age1.2,0.0598
-Kenai.Late,1997,Escapement,Gill Net,7 in,289,Age1.2,0.0415
+Kenai.Late,1997,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.15
+Kenai.Late,1997,Escapement,Gill Net,7.5 in,289,Age1.2,0.0415
+Kenai.Late,1997,Escapement,Model Estimate,NA,NA,Age1.2,0.04
 Kenai.Late,1997,Sport Harvest,Angling,NA,317,Age1.2,0.025202520252025202
-Kenai.Late,1998,Escapement,Gill Net,7 in,374,Age1.2,0.14908509149085092
+Kenai.Late,1998,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.24
+Kenai.Late,1998,Escapement,Gill Net,7.5 in,374,Age1.2,0.14908509149085092
+Kenai.Late,1998,Escapement,Model Estimate,NA,NA,Age1.2,0.15
 Kenai.Late,1998,Sport Harvest,Angling,NA,331,Age1.2,0.1208
-Kenai.Late,1999,Escapement,Gill Net,7 in,386,Age1.2,0.1244
+Kenai.Late,1999,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.26
+Kenai.Late,1999,Escapement,Gill Net,7.5 in,386,Age1.2,0.1244
+Kenai.Late,1999,Escapement,Model Estimate,NA,NA,Age1.2,0.12121212121212122
 Kenai.Late,1999,Sport Harvest,Angling,NA,320,Age1.2,0.109
-Kenai.Late,2000,Escapement,Gill Net,7 in,383,Age1.2,0.0392
+Kenai.Late,2000,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.13
+Kenai.Late,2000,Escapement,Gill Net,7.5 in,383,Age1.2,0.0392
+Kenai.Late,2000,Escapement,Model Estimate,NA,NA,Age1.2,0.04
 Kenai.Late,2000,Sport Harvest,Angling,NA,483,Age1.2,0.0275
-Kenai.Late,2001,Escapement,Gill Net,7 in,256,Age1.2,0.1202
+Kenai.Late,2001,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.4
+Kenai.Late,2001,Escapement,Gill Net,7.5 in,256,Age1.2,0.1202
+Kenai.Late,2001,Escapement,Model Estimate,NA,NA,Age1.2,0.12
 Kenai.Late,2001,Sport Harvest,Angling,NA,388,Age1.2,0.1104
+Kenai.Late,2002,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.3
+Kenai.Late,2002,Escapement,Gill Net,5 and 7.5 in,945,Age1.2,0.170949619
 Kenai.Late,2002,Escapement,Gill Net,5 in,381,Age1.2,0.17091709170917094
-Kenai.Late,2002,Escapement,Gill Net,7 in,564,Age1.2,0.17091709170917094
+Kenai.Late,2002,Escapement,Gill Net,7.5 in,564,Age1.2,0.17091709170917094
+Kenai.Late,2002,Escapement,Model Estimate,NA,NA,Age1.2,0.18
 Kenai.Late,2002,Sport Harvest,Angling,NA,275,Age1.2,0.0502
+Kenai.Late,2003,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.5148514851485149
+Kenai.Late,2003,Escapement,Gill Net,5 and 7.5 in,1114,Age1.2,0.295
 Kenai.Late,2003,Escapement,Gill Net,5 in,455,Age1.2,0.37306269373062695
-Kenai.Late,2003,Escapement,Gill Net,7 in,659,Age1.2,0.2411
+Kenai.Late,2003,Escapement,Gill Net,7.5 in,659,Age1.2,0.2411
+Kenai.Late,2003,Escapement,Model Estimate,NA,NA,Age1.2,0.3
 Kenai.Late,2003,Sport Harvest,Angling,NA,311,Age1.2,0.15030000000000002
+Kenai.Late,2004,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.24
+Kenai.Late,2004,Escapement,Gill Net,5 and 7.5 in,933,Age1.2,0.14
 Kenai.Late,2004,Escapement,Gill Net,5 in,333,Age1.2,0.1336133613361336
-Kenai.Late,2004,Escapement,Gill Net,7 in,600,Age1.2,0.1435143514351435
+Kenai.Late,2004,Escapement,Gill Net,7.5 in,600,Age1.2,0.1435143514351435
+Kenai.Late,2004,Escapement,Model Estimate,NA,NA,Age1.2,0.14
 Kenai.Late,2004,Sport Harvest,Angling,NA,305,Age1.2,0.089
+Kenai.Late,2005,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.26732673267326734
+Kenai.Late,2005,Escapement,Gill Net,5 and 7.5 in,519,Age1.2,0.06893106893106894
 Kenai.Late,2005,Escapement,Gill Net,5 in,218,Age1.2,0.10368963103689631
-Kenai.Late,2005,Escapement,Gill Net,7 in,302,Age1.2,0.0439
+Kenai.Late,2005,Escapement,Gill Net,7.5 in,302,Age1.2,0.0439
+Kenai.Late,2005,Escapement,Model Estimate,NA,NA,Age1.2,0.07070707070707072
 Kenai.Late,2005,Sport Harvest,Angling,NA,429,Age1.2,0.025
+Kenai.Late,2006,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.35
+Kenai.Late,2006,Escapement,Gill Net,5 and 7.5 in,703,Age1.2,0.275405388
 Kenai.Late,2006,Escapement,Gill Net,5 in,294,Age1.2,0.3296
-Kenai.Late,2006,Escapement,Gill Net,7 in,409,Age1.2,0.2364
+Kenai.Late,2006,Escapement,Gill Net,7.5 in,409,Age1.2,0.2364
+Kenai.Late,2006,Escapement,Model Estimate,NA,NA,Age1.2,0.27
 Kenai.Late,2006,Sport Harvest,Angling,NA,313,Age1.2,0.1149
+Kenai.Late,2007,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.42574257425742573
+Kenai.Late,2007,Escapement,Gill Net,5 and 7.5 in,437,Age1.2,0.204071658
 Kenai.Late,2007,Escapement,Gill Net,5 in,150,Age1.2,0.26482648264826486
-Kenai.Late,2007,Escapement,Gill Net,7 in,288,Age1.2,0.1722233380196827
+Kenai.Late,2007,Escapement,Gill Net,7.5 in,288,Age1.2,0.1722233380196827
+Kenai.Late,2007,Escapement,Model Estimate,NA,NA,Age1.2,0.20000000000000004
 Kenai.Late,2007,Sport Harvest,Angling,NA,237,Age1.2,0.11478852114788521
+Kenai.Late,2008,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.19801980198019803
+Kenai.Late,2008,Escapement,Gill Net,5 and 7.5 in,496,Age1.2,0.07544232092455767
 Kenai.Late,2008,Escapement,Gill Net,5 in,217,Age1.2,0.0803
-Kenai.Late,2008,Escapement,Gill Net,7 in,279,Age1.2,0.0717
+Kenai.Late,2008,Escapement,Gill Net,7.5 in,279,Age1.2,0.0717
+Kenai.Late,2008,Escapement,Model Estimate,NA,NA,Age1.2,0.07
 Kenai.Late,2008,Sport Harvest,Angling,NA,218,Age1.2,0.0504
+Kenai.Late,2009,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.51
+Kenai.Late,2009,Escapement,Gill Net,5 and 7.5 in,338,Age1.2,0.2945301697054698
 Kenai.Late,2009,Escapement,Gill Net,5 in,145,Age1.2,0.36236376362363765
-Kenai.Late,2009,Escapement,Gill Net,7 in,193,Age1.2,0.2435
+Kenai.Late,2009,Escapement,Gill Net,7.5 in,193,Age1.2,0.2435
+Kenai.Late,2009,Escapement,Model Estimate,NA,NA,Age1.2,0.29292929292929293
 Kenai.Late,2009,Sport Harvest,Angling,NA,195,Age1.2,0.1645
+Kenai.Late,2010,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.26
+Kenai.Late,2010,Escapement,Gill Net,5 and 7.5 in,221,Age1.2,0.20062593700000003
 Kenai.Late,2010,Escapement,Gill Net,5 in,84,Age1.2,0.18258174182581743
-Kenai.Late,2010,Escapement,Gill Net,7 in,137,Age1.2,0.2116788321167883
+Kenai.Late,2010,Escapement,Gill Net,7.5 in,137,Age1.2,0.2116788321167883
+Kenai.Late,2010,Escapement,Model Estimate,NA,NA,Age1.2,0.2
 Kenai.Late,2010,Sport Harvest,Angling,NA,184,Age1.2,0.13938606139386062
+Kenai.Late,2011,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.34
+Kenai.Late,2011,Escapement,Gill Net,5 and 7.5 in,327,Age1.2,0.29896907170103093
 Kenai.Late,2011,Escapement,Gill Net,5 in,153,Age1.2,0.3318
-Kenai.Late,2011,Escapement,Gill Net,7 in,174,Age1.2,0.2701
+Kenai.Late,2011,Escapement,Gill Net,7.5 in,174,Age1.2,0.2701
+Kenai.Late,2011,Escapement,Model Estimate,NA,NA,Age1.2,0.30303030303030304
 Kenai.Late,2011,Sport Harvest,Angling,NA,233,Age1.2,0.1588
+Kenai.Late,2012,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.2,0.1782178217821782
+Kenai.Late,2012,Escapement,Gill Net,5 and 7.5 in,232,Age1.2,0.09913793109913793
 Kenai.Late,2012,Escapement,Gill Net,5 in,92,Age1.2,0.1196
-Kenai.Late,2012,Escapement,Gill Net,7 in,140,Age1.2,0.08570857085708572
+Kenai.Late,2012,Escapement,Gill Net,7.5 in,140,Age1.2,0.08570857085708572
+Kenai.Late,2012,Escapement,Model Estimate,NA,NA,Age1.2,0.1
+Kenai.Late,2013,Escapement,Gill Net,5 and 7.5 in,149,Age1.2,0.19512195100000002
 Kenai.Late,2013,Escapement,Gill Net,5 in,49,Age1.2,0.0623
-Kenai.Late,2013,Escapement,Gill Net,7 in,101,Age1.2,0.25742574257425743
+Kenai.Late,2013,Escapement,Gill Net,7.5 in,101,Age1.2,0.25742574257425743
 Kenai.Late,2013,Sport Harvest,Angling,NA,50,Age1.2,0.28190000000000004
+Kenai.Late,2014,Escapement,Gill Net,5 and 7.5 in,283,Age1.2,0.205
 Kenai.Late,2014,Escapement,Gill Net,5 in,145,Age1.2,0.21390000000000003
-Kenai.Late,2014,Escapement,Gill Net,7 in,138,Age1.2,0.1957
+Kenai.Late,2014,Escapement,Gill Net,7.5 in,138,Age1.2,0.1957
 Kenai.Late,2014,Sport Harvest,Angling,NA,30,Age1.2,0.267
+Kenai.Late,2015,Escapement,Gill Net,5 and 7.5 in,238,Age1.2,0.28200000000000003
 Kenai.Late,2015,Escapement,Gill Net,5 in,124,Age1.2,0.2913
-Kenai.Late,2015,Escapement,Gill Net,7 in,114,Age1.2,0.2719
+Kenai.Late,2015,Escapement,Gill Net,7.5 in,114,Age1.2,0.2719
 Kenai.Late,2015,Sport Harvest,Angling,NA,117,Age1.2,0.1895161290322581
 Kenai.Late,2016,Sport Harvest,Angling,NA,189,Age1.2,0.19
 Lewis,2012,Escapement,Weir,NA,71,Age1.2,0.654
@@ -451,46 +587,46 @@ LittleSusitna,2013,Escapement,Weir,NA,242,Age1.2,0.48738647830474274
 LittleSusitna,2014,Escapement,Weir,NA,108,Age1.2,0.315
 LittleSusitna,2015,Escapement,Weir,NA,272,Age1.2,0.537
 LittleSusitna,2016,Escapement,Weir,NA,375,Age1.2,0.1891891891891892
-Ninilchik,1997,Escapement,Weir,NA,NA,Age1.2,0.091
-Ninilchik,1998,Escapement,Weir,NA,NA,Age1.2,0.335
-Ninilchik,1999,Escapement,Weir,NA,NA,Age1.2,0.364
-Ninilchik,2000,Escapement,Weir,NA,NA,Age1.2,0.105
-Ninilchik,2001,Escapement,Weir,NA,NA,Age1.2,0.406
-Ninilchik,2002,Escapement,Weir,NA,NA,Age1.2,0.391
-Ninilchik,2003,Escapement,Weir,NA,NA,Age1.2,0.269
-Ninilchik,2004,Escapement,Weir,NA,NA,Age1.2,0.21
-Ninilchik,2005,Escapement,Weir,NA,NA,Age1.2,0.182
-Ninilchik,2006,Escapement,Weir,NA,NA,Age1.2,0.3
-Ninilchik,2007,Escapement,Weir,NA,NA,Age1.2,0.242
-Ninilchik,2008,Escapement,Weir,NA,NA,Age1.2,0.226
-Ninilchik,2009,Escapement,Weir,NA,NA,Age1.2,0.443
-Ninilchik,2010,Escapement,Weir,NA,NA,Age1.2,0.522
-Ninilchik,2011,Escapement,Weir,NA,NA,Age1.2,0.19
-Ninilchik,2012,Escapement,Weir,NA,NA,Age1.2,0.27927927927927926
-Ninilchik,2013,Escapement,Weir,NA,NA,Age1.2,0.5244755244755246
-Ninilchik,2014,Escapement,Weir,NA,NA,Age1.2,0.44955044955044954
-Ninilchik,2015,Escapement,Weir,NA,NA,Age1.2,0.3033033033033033
-Ninilchik,2016,Escapement,Weir,NA,NA,Age1.2,0.407
-Ninilchik.Hatchery,1997,Escapement,Weir,NA,NA,Age1.2,0.345
-Ninilchik.Hatchery,1998,Escapement,Weir,NA,NA,Age1.2,0.298
-Ninilchik.Hatchery,1999,Escapement,Weir,NA,NA,Age1.2,0.5349999999999999
-Ninilchik.Hatchery,2000,Escapement,Weir,NA,NA,Age1.2,0.267
-Ninilchik.Hatchery,2001,Escapement,Weir,NA,NA,Age1.2,0.414
-Ninilchik.Hatchery,2002,Escapement,Weir,NA,NA,Age1.2,0.33
-Ninilchik.Hatchery,2003,Escapement,Weir,NA,NA,Age1.2,0.417
-Ninilchik.Hatchery,2004,Escapement,Weir,NA,NA,Age1.2,0.319
-Ninilchik.Hatchery,2005,Escapement,Weir,NA,NA,Age1.2,0.122
-Ninilchik.Hatchery,2006,Escapement,Weir,NA,NA,Age1.2,0.328
-Ninilchik.Hatchery,2007,Escapement,Weir,NA,NA,Age1.2,0.316
-Ninilchik.Hatchery,2008,Escapement,Weir,NA,NA,Age1.2,0.345
-Ninilchik.Hatchery,2009,Escapement,Weir,NA,NA,Age1.2,0.196
-Ninilchik.Hatchery,2010,Escapement,Weir,NA,NA,Age1.2,0.46900000000000003
-Ninilchik.Hatchery,2011,Escapement,Weir,NA,NA,Age1.2,0.291
-Ninilchik.Hatchery,2012,Escapement,Weir,NA,NA,Age1.2,0.126
-Ninilchik.Hatchery,2013,Escapement,Weir,NA,NA,Age1.2,0.2167832167832168
-Ninilchik.Hatchery,2014,Escapement,Weir,NA,NA,Age1.2,0.152
-Ninilchik.Hatchery,2015,Escapement,Weir,NA,NA,Age1.2,0.17
-Ninilchik.Hatchery,2016,Escapement,Weir,NA,NA,Age1.2,0.48
+Ninilchik,1997,Escapement,Weir,NA,110,Age1.2,0.091
+Ninilchik,1998,Escapement,Weir,NA,460,Age1.2,0.335
+Ninilchik,1999,Escapement,Weir,NA,225,Age1.2,0.364
+Ninilchik,2000,Escapement,Weir,NA,278,Age1.2,0.105
+Ninilchik,2001,Escapement,Weir,NA,217,Age1.2,0.406
+Ninilchik,2002,Escapement,Weir,NA,257,Age1.2,0.391
+Ninilchik,2003,Escapement,Weir,NA,175,Age1.2,0.269
+Ninilchik,2004,Escapement,Weir,NA,167,Age1.2,0.21
+Ninilchik,2005,Escapement,Weir,NA,339,Age1.2,0.182
+Ninilchik,2006,Escapement,Weir,NA,140,Age1.2,0.3
+Ninilchik,2007,Escapement,Weir,NA,66,Age1.2,0.242
+Ninilchik,2008,Escapement,Weir,NA,135,Age1.2,0.226
+Ninilchik,2009,Escapement,Weir,NA,58,Age1.2,0.443
+Ninilchik,2010,Escapement,Weir,NA,99,Age1.2,0.522
+Ninilchik,2011,Escapement,Weir,NA,145,Age1.2,0.19
+Ninilchik,2012,Escapement,Weir,NA,95,Age1.2,0.27927927927927926
+Ninilchik,2013,Escapement,Weir,NA,99,Age1.2,0.5244755244755246
+Ninilchik,2014,Escapement,Weir,NA,989,Age1.2,0.44955044955044954
+Ninilchik,2015,Escapement,Weir,NA,1002,Age1.2,0.3033033033033033
+Ninilchik,2016,Escapement,Weir,NA,705,Age1.2,0.407
+Ninilchik.Hatchery,1997,Escapement,Weir,NA,180,Age1.2,0.345
+Ninilchik.Hatchery,1998,Escapement,Weir,NA,282,Age1.2,0.298
+Ninilchik.Hatchery,1999,Escapement,Weir,NA,113,Age1.2,0.5349999999999999
+Ninilchik.Hatchery,2000,Escapement,Weir,NA,151,Age1.2,0.267
+Ninilchik.Hatchery,2001,Escapement,Weir,NA,87,Age1.2,0.414
+Ninilchik.Hatchery,2002,Escapement,Weir,NA,103,Age1.2,0.33
+Ninilchik.Hatchery,2003,Escapement,Weir,NA,72,Age1.2,0.417
+Ninilchik.Hatchery,2004,Escapement,Weir,NA,113,Age1.2,0.319
+Ninilchik.Hatchery,2005,Escapement,Weir,NA,123,Age1.2,0.122
+Ninilchik.Hatchery,2006,Escapement,Weir,NA,67,Age1.2,0.328
+Ninilchik.Hatchery,2007,Escapement,Weir,NA,19,Age1.2,0.316
+Ninilchik.Hatchery,2008,Escapement,Weir,NA,55,Age1.2,0.345
+Ninilchik.Hatchery,2009,Escapement,Weir,NA,97,Age1.2,0.196
+Ninilchik.Hatchery,2010,Escapement,Weir,NA,30,Age1.2,0.46900000000000003
+Ninilchik.Hatchery,2011,Escapement,Weir,NA,45,Age1.2,0.291
+Ninilchik.Hatchery,2012,Escapement,Weir,NA,62,Age1.2,0.126
+Ninilchik.Hatchery,2013,Escapement,Weir,NA,115,Age1.2,0.2167832167832168
+Ninilchik.Hatchery,2014,Escapement,Weir,NA,1117,Age1.2,0.152
+Ninilchik.Hatchery,2015,Escapement,Weir,NA,691,Age1.2,0.17
+Ninilchik.Hatchery,2016,Escapement,Weir,NA,436,Age1.2,0.48
 NSN,1983,Commercial Harvest,Gill Net,< 6 in,41,Age1.2,0.22
 NSN,1985,Commercial Harvest,Gill Net,< 6 in,40,Age1.2,0.2820512820512821
 NSN,1986,Commercial Harvest,Gill Net,< 6 in,900,Age1.2,0.2683043384879725
@@ -510,53 +646,53 @@ NSN,2016,Commercial Harvest,Gill Net,< 6 in,1027,Age1.2,0.34700000000000003
 Theodore,2012,Escapement,Weir,NA,247,Age1.2,0.656
 Theodore,2013,Escapement,Weir,NA,192,Age1.2,0.32600000000000007
 Theodore,2014,Escapement,Weir,NA,29,Age1.2,0.13800000000000004
-Tyonek,2014,Subsistence Harvest,Gill Net,NA,136,Age1.2,0.18381618381618384
-Tyonek,2015,Subsistence Harvest,Gill Net,NA,300,Age1.2,0.283
-Tyonek,2016,Subsistence Harvest,Gill Net,NA,210,Age1.2,0.181
+Tyonek,2014,Subsistence Harvest,Gill Net,< 6 in,136,Age1.2,0.18381618381618384
+Tyonek,2015,Subsistence Harvest,Gill Net,< 6 in,300,Age1.2,0.283
+Tyonek,2016,Subsistence Harvest,Gill Net,< 6 in,210,Age1.2,0.181
 WSSN,1980,Commercial Harvest,Gill Net,< 6 in,NA,Age1.2,0.197
 WSSN,1983,Commercial Harvest,Gill Net,< 6 in,330,Age1.2,0.1987891019172553
 WSSN,1984,Commercial Harvest,Gill Net,< 6 in,225,Age1.2,0.17053481331987894
 WSSN,1985,Commercial Harvest,Gill Net,< 6 in,308,Age1.2,0.1894977168949772
 Alexander,2015,Escapement,Weir,NA,52,Age1.3,0.4615
-Anchor,2003,Escapement,Weir,NA,NA,Age1.3,0.58
-Anchor,2004,Escapement,Weir,NA,NA,Age1.3,0.48600000000000004
-Anchor,2005,Escapement,Weir,NA,NA,Age1.3,0.522
-Anchor,2006,Escapement,Weir,NA,NA,Age1.3,0.521
-Anchor,2007,Escapement,Weir,NA,NA,Age1.3,0.534
-Anchor,2008,Escapement,Weir,NA,NA,Age1.3,0.6856856856856857
-Anchor,2009,Escapement,Weir,NA,NA,Age1.3,0.367
-Anchor,2010,Escapement,Weir,NA,NA,Age1.3,0.513
-Anchor,2011,Escapement,Weir,NA,NA,Age1.3,0.411
-Anchor,2012,Escapement,Weir,NA,NA,Age1.3,0.504
-Anchor,2013,Escapement,Weir,NA,NA,Age1.3,0.4368737474949899
-Anchor,2014,Escapement,Weir,NA,NA,Age1.3,0.4075924075924076
-Anchor,2015,Escapement,Weir,NA,NA,Age1.3,0.446
-Anchor,2016,Escapement,Weir,NA,NA,Age1.3,0.479
-Crooked,2004,Escapement,Weir,NA,561,Age1.3,0.4331550802
-Crooked,2005,Escapement,Weir,NA,194,Age1.3,0.5206185567
-Crooked,2006,Escapement,Weir,NA,91,Age1.3,0.5494505495
-Crooked,2007,Escapement,Weir,NA,76,Age1.3,0.5263157895
-Crooked,2008,Escapement,Weir,NA,73,Age1.3,0.5890410959
-Crooked,2009,Escapement,Weir,NA,209,Age1.3,0.44497607655550236
-Crooked,2010,Escapement,Weir,NA,134,Age1.3,0.47014925374701494
-Crooked,2011,Escapement,Weir,NA,218,Age1.3,0.4724770642
-Crooked,2012,Escapement,Weir,NA,259,Age1.3,0.5096525096490347
-Crooked,2013,Escapement,Weir,NA,407,Age1.3,0.5036855037151106
-Crooked,2014,Escapement,Weir,NA,447,Age1.3,0.6510067113869799
-Crooked,2015,Escapement,Weir,NA,459,Age1.3,0.4531590414
-Crooked,2016,Escapement,Weir,NA,293,Age1.3,0.34129692830682595
-Crooked.Hatchery,2004,Escapement,Weir,NA,1056,Age1.3,0.32291666667739577
-Crooked.Hatchery,2005,Escapement,Weir,NA,157,Age1.3,0.5222929936156687
-Crooked.Hatchery,2006,Escapement,Weir,NA,96,Age1.3,0.3854166666730208
-Crooked.Hatchery,2007,Escapement,Weir,NA,41,Age1.3,0.4878048780487805
-Crooked.Hatchery,2008,Escapement,Weir,NA,31,Age1.3,0.5161290322845161
-Crooked.Hatchery,2009,Escapement,Weir,NA,65,Age1.3,0.49230769232461535
+Anchor,2003,Escapement,Weir,NA,601,Age1.3,0.58
+Anchor,2004,Escapement,Weir,NA,285,Age1.3,0.48600000000000004
+Anchor,2005,Escapement,Weir,NA,415,Age1.3,0.522
+Anchor,2006,Escapement,Weir,NA,207,Age1.3,0.521
+Anchor,2007,Escapement,Weir,NA,185,Age1.3,0.534
+Anchor,2008,Escapement,Weir,NA,116,Age1.3,0.6856856856856857
+Anchor,2009,Escapement,Weir,NA,90,Age1.3,0.367
+Anchor,2010,Escapement,Weir,NA,273,Age1.3,0.513
+Anchor,2011,Escapement,Weir,NA,282,Age1.3,0.411
+Anchor,2012,Escapement,Weir,NA,199,Age1.3,0.504
+Anchor,2013,Escapement,Weir,NA,254,Age1.3,0.4368737474949899
+Anchor,2014,Escapement,Weir,NA,267,Age1.3,0.4075924075924076
+Anchor,2015,Escapement,Weir,NA,379,Age1.3,0.446
+Anchor,2016,Escapement,Weir,NA,260,Age1.3,0.479
+Crooked,2004,Escapement,Weir,NA,561,Age1.3,0.43315508
+Crooked,2005,Escapement,Weir,NA,194,Age1.3,0.5206185564793815
+Crooked,2006,Escapement,Weir,NA,91,Age1.3,0.5494505494505495
+Crooked,2007,Escapement,Weir,NA,76,Age1.3,0.52631579
+Crooked,2008,Escapement,Weir,NA,73,Age1.3,0.5890410954109588
+Crooked,2009,Escapement,Weir,NA,209,Age1.3,0.4449760765550239
+Crooked,2010,Escapement,Weir,NA,134,Age1.3,0.470149254
+Crooked,2011,Escapement,Weir,NA,218,Age1.3,0.472477064
+Crooked,2012,Escapement,Weir,NA,259,Age1.3,0.5096525094903476
+Crooked,2013,Escapement,Weir,NA,407,Age1.3,0.503685504
+Crooked,2014,Escapement,Weir,NA,447,Age1.3,0.651006711
+Crooked,2015,Escapement,Weir,NA,459,Age1.3,0.45315904100000004
+Crooked,2016,Escapement,Weir,NA,293,Age1.3,0.341296928
+Crooked.Hatchery,2004,Escapement,Weir,NA,1056,Age1.3,0.322916667
+Crooked.Hatchery,2005,Escapement,Weir,NA,157,Age1.3,0.5222929940000001
+Crooked.Hatchery,2006,Escapement,Weir,NA,96,Age1.3,0.3854166666145833
+Crooked.Hatchery,2007,Escapement,Weir,NA,41,Age1.3,0.487804878
+Crooked.Hatchery,2008,Escapement,Weir,NA,31,Age1.3,0.516129032
+Crooked.Hatchery,2009,Escapement,Weir,NA,65,Age1.3,0.492307692
 Crooked.Hatchery,2010,Escapement,Weir,NA,25,Age1.3,0.48
-Crooked.Hatchery,2011,Escapement,Weir,NA,74,Age1.3,0.2702702702891892
-Crooked.Hatchery,2012,Escapement,Weir,NA,62,Age1.3,0.629032258081129
+Crooked.Hatchery,2011,Escapement,Weir,NA,74,Age1.3,0.27027027
+Crooked.Hatchery,2012,Escapement,Weir,NA,62,Age1.3,0.629032258
 Crooked.Hatchery,2013,Escapement,Weir,NA,50,Age1.3,0.42
-Crooked.Hatchery,2014,Escapement,Weir,NA,228,Age1.3,0.20175438599495615
-Crooked.Hatchery,2015,Escapement,Weir,NA,169,Age1.3,0.9763313609488166
+Crooked.Hatchery,2014,Escapement,Weir,NA,228,Age1.3,0.201754386
+Crooked.Hatchery,2015,Escapement,Weir,NA,169,Age1.3,0.976331361
 Crooked.Hatchery,2016,Escapement,Weir,NA,423,Age1.3,0
 Deshka,1979,Sport Harvest,Angling,NA,297,Age1.3,0.6
 Deshka,1980,Sport Harvest,Angling,NA,181,Age1.3,0.51
@@ -627,78 +763,146 @@ ESSN,2013,Commercial Harvest,Gill Net,< 6 in,664,Age1.3,0.15215215215215214
 ESSN,2014,Commercial Harvest,Gill Net,< 6 in,459,Age1.3,0.29129129129129133
 ESSN,2015,Commercial Harvest,Gill Net,< 6 in,631,Age1.3,0.243
 ESSN,2016,Commercial Harvest,Gill Net,< 6 in,809,Age1.3,0.362
-Kenai.Late,1986,Escapement,Gill Net,7 in,1650,Age1.3,0.4378
+Kenai.Late,1986,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.37755102040816324
+Kenai.Late,1986,Escapement,Gill Net,7.5 in,1650,Age1.3,0.4378
+Kenai.Late,1986,Escapement,Model Estimate,NA,NA,Age1.3,0.44
 Kenai.Late,1986,Sport Harvest,Angling,NA,524,Age1.3,0.3895
-Kenai.Late,1987,Escapement,Gill Net,7 in,962,Age1.3,0.2786
+Kenai.Late,1987,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.33
+Kenai.Late,1987,Escapement,Gill Net,7.5 in,962,Age1.3,0.2786
+Kenai.Late,1987,Escapement,Model Estimate,NA,NA,Age1.3,0.28
 Kenai.Late,1987,Sport Harvest,Angling,NA,438,Age1.3,0.2277
-Kenai.Late,1988,Escapement,Gill Net,7 in,942,Age1.3,0.0384038403840384
+Kenai.Late,1988,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.1485148514851485
+Kenai.Late,1988,Escapement,Gill Net,7.5 in,942,Age1.3,0.0384038403840384
+Kenai.Late,1988,Escapement,Model Estimate,NA,NA,Age1.3,0.04
 Kenai.Late,1988,Sport Harvest,Angling,NA,426,Age1.3,0.03369663033696631
-Kenai.Late,1989,Escapement,Gill Net,7 in,664,Age1.3,0.1225122512251225
+Kenai.Late,1989,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.21212121212121213
+Kenai.Late,1989,Escapement,Gill Net,7.5 in,664,Age1.3,0.1225122512251225
+Kenai.Late,1989,Escapement,Model Estimate,NA,NA,Age1.3,0.12121212121212122
 Kenai.Late,1989,Sport Harvest,Angling,NA,104,Age1.3,0.1089
-Kenai.Late,1990,Escapement,Gill Net,7 in,528,Age1.3,0.1455854414558544
+Kenai.Late,1990,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.3
+Kenai.Late,1990,Escapement,Gill Net,7.5 in,528,Age1.3,0.1455854414558544
+Kenai.Late,1990,Escapement,Model Estimate,NA,NA,Age1.3,0.1485148514851485
 Kenai.Late,1990,Sport Harvest,Angling,NA,341,Age1.3,0.15838416158384164
-Kenai.Late,1991,Escapement,Gill Net,7 in,363,Age1.3,0.1584
+Kenai.Late,1991,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.33
+Kenai.Late,1991,Escapement,Gill Net,7.5 in,363,Age1.3,0.1584
+Kenai.Late,1991,Escapement,Model Estimate,NA,NA,Age1.3,0.16
 Kenai.Late,1991,Sport Harvest,Angling,NA,472,Age1.3,0.1166
-Kenai.Late,1992,Escapement,Gill Net,7 in,341,Age1.3,0.1584
+Kenai.Late,1992,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.2828282828282829
+Kenai.Late,1992,Escapement,Gill Net,7.5 in,341,Age1.3,0.1584
+Kenai.Late,1992,Escapement,Model Estimate,NA,NA,Age1.3,0.16
 Kenai.Late,1992,Sport Harvest,Angling,NA,402,Age1.3,0.1542
-Kenai.Late,1993,Escapement,Gill Net,7 in,350,Age1.3,0.14001400140014003
+Kenai.Late,1993,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.21
+Kenai.Late,1993,Escapement,Gill Net,7.5 in,350,Age1.3,0.14001400140014003
+Kenai.Late,1993,Escapement,Model Estimate,NA,NA,Age1.3,0.14
 Kenai.Late,1993,Sport Harvest,Angling,NA,689,Age1.3,0.0565943405659434
-Kenai.Late,1994,Escapement,Gill Net,7 in,414,Age1.3,0.1135
+Kenai.Late,1994,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.15151515151515152
+Kenai.Late,1994,Escapement,Gill Net,7.5 in,414,Age1.3,0.1135
+Kenai.Late,1994,Escapement,Model Estimate,NA,NA,Age1.3,0.11
 Kenai.Late,1994,Sport Harvest,Angling,NA,434,Age1.3,0.0438043804380438
-Kenai.Late,1995,Escapement,Gill Net,7 in,207,Age1.3,0.21357864213578642
+Kenai.Late,1995,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.31313131313131315
+Kenai.Late,1995,Escapement,Gill Net,7.5 in,207,Age1.3,0.21357864213578642
+Kenai.Late,1995,Escapement,Model Estimate,NA,NA,Age1.3,0.21212121212121213
 Kenai.Late,1995,Sport Harvest,Angling,NA,435,Age1.3,0.0989
-Kenai.Late,1996,Escapement,Gill Net,7 in,470,Age1.3,0.339
+Kenai.Late,1996,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.3434343434343434
+Kenai.Late,1996,Escapement,Gill Net,7.5 in,470,Age1.3,0.339
+Kenai.Late,1996,Escapement,Model Estimate,NA,NA,Age1.3,0.34
 Kenai.Late,1996,Sport Harvest,Angling,NA,235,Age1.3,0.3675
-Kenai.Late,1997,Escapement,Gill Net,7 in,289,Age1.3,0.218
+Kenai.Late,1997,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.3
+Kenai.Late,1997,Escapement,Gill Net,7.5 in,289,Age1.3,0.218
+Kenai.Late,1997,Escapement,Model Estimate,NA,NA,Age1.3,0.22
 Kenai.Late,1997,Sport Harvest,Angling,NA,317,Age1.3,0.23342334233423342
-Kenai.Late,1998,Escapement,Gill Net,7 in,374,Age1.3,0.14038596140385962
+Kenai.Late,1998,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.23
+Kenai.Late,1998,Escapement,Gill Net,7.5 in,374,Age1.3,0.14038596140385962
+Kenai.Late,1998,Escapement,Model Estimate,NA,NA,Age1.3,0.14
 Kenai.Late,1998,Sport Harvest,Angling,NA,331,Age1.3,0.1239
-Kenai.Late,1999,Escapement,Gill Net,7 in,386,Age1.3,0.2124
+Kenai.Late,1999,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.25
+Kenai.Late,1999,Escapement,Gill Net,7.5 in,386,Age1.3,0.2124
+Kenai.Late,1999,Escapement,Model Estimate,NA,NA,Age1.3,0.21212121212121213
 Kenai.Late,1999,Sport Harvest,Angling,NA,320,Age1.3,0.275
-Kenai.Late,2000,Escapement,Gill Net,7 in,383,Age1.3,0.3133
+Kenai.Late,2000,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.39
+Kenai.Late,2000,Escapement,Gill Net,7.5 in,383,Age1.3,0.3133
+Kenai.Late,2000,Escapement,Model Estimate,NA,NA,Age1.3,0.31
 Kenai.Late,2000,Sport Harvest,Angling,NA,483,Age1.3,0.3018
-Kenai.Late,2001,Escapement,Gill Net,7 in,256,Age1.3,0.1906
+Kenai.Late,2001,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.15
+Kenai.Late,2001,Escapement,Gill Net,7.5 in,256,Age1.3,0.1906
+Kenai.Late,2001,Escapement,Model Estimate,NA,NA,Age1.3,0.19
 Kenai.Late,2001,Sport Harvest,Angling,NA,388,Age1.3,0.1545
+Kenai.Late,2002,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.36
+Kenai.Late,2002,Escapement,Gill Net,5 and 7.5 in,945,Age1.3,0.187203602
 Kenai.Late,2002,Escapement,Gill Net,5 in,381,Age1.3,0.18721872187218724
-Kenai.Late,2002,Escapement,Gill Net,7 in,564,Age1.3,0.18721872187218724
+Kenai.Late,2002,Escapement,Gill Net,7.5 in,564,Age1.3,0.18721872187218724
+Kenai.Late,2002,Escapement,Model Estimate,NA,NA,Age1.3,0.19
 Kenai.Late,2002,Sport Harvest,Angling,NA,275,Age1.3,0.2308
+Kenai.Late,2003,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.2376237623762376
+Kenai.Late,2003,Escapement,Gill Net,5 and 7.5 in,1114,Age1.3,0.199
 Kenai.Late,2003,Escapement,Gill Net,5 in,455,Age1.3,0.15258474152584742
-Kenai.Late,2003,Escapement,Gill Net,7 in,659,Age1.3,0.231
+Kenai.Late,2003,Escapement,Gill Net,7.5 in,659,Age1.3,0.231
+Kenai.Late,2003,Escapement,Model Estimate,NA,NA,Age1.3,0.2
 Kenai.Late,2003,Sport Harvest,Angling,NA,311,Age1.3,0.18500000000000003
+Kenai.Late,2004,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.43
+Kenai.Late,2004,Escapement,Gill Net,5 and 7.5 in,933,Age1.3,0.246
 Kenai.Late,2004,Escapement,Gill Net,5 in,333,Age1.3,0.2138213821382138
-Kenai.Late,2004,Escapement,Gill Net,7 in,600,Age1.3,0.2638263826382638
+Kenai.Late,2004,Escapement,Gill Net,7.5 in,600,Age1.3,0.2638263826382638
+Kenai.Late,2004,Escapement,Model Estimate,NA,NA,Age1.3,0.25
 Kenai.Late,2004,Sport Harvest,Angling,NA,305,Age1.3,0.275
+Kenai.Late,2005,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.2079207920792079
+Kenai.Late,2005,Escapement,Gill Net,5 and 7.5 in,519,Age1.3,0.18481518481518483
 Kenai.Late,2005,Escapement,Gill Net,5 in,218,Age1.3,0.1318868113188681
-Kenai.Late,2005,Escapement,Gill Net,7 in,302,Age1.3,0.2229
+Kenai.Late,2005,Escapement,Gill Net,7.5 in,302,Age1.3,0.2229
+Kenai.Late,2005,Escapement,Model Estimate,NA,NA,Age1.3,0.18181818181818182
 Kenai.Late,2005,Sport Harvest,Angling,NA,429,Age1.3,0.183
+Kenai.Late,2006,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.22
+Kenai.Late,2006,Escapement,Gill Net,5 and 7.5 in,703,Age1.3,0.145698271
 Kenai.Late,2006,Escapement,Gill Net,5 in,294,Age1.3,0.131
-Kenai.Late,2006,Escapement,Gill Net,7 in,409,Age1.3,0.1563
+Kenai.Late,2006,Escapement,Gill Net,7.5 in,409,Age1.3,0.1563
+Kenai.Late,2006,Escapement,Model Estimate,NA,NA,Age1.3,0.13
 Kenai.Late,2006,Sport Harvest,Angling,NA,313,Age1.3,0.2143
+Kenai.Late,2007,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.22772277227722773
+Kenai.Late,2007,Escapement,Gill Net,5 and 7.5 in,437,Age1.3,0.273543864
 Kenai.Late,2007,Escapement,Gill Net,5 in,150,Age1.3,0.2682268226822683
-Kenai.Late,2007,Escapement,Gill Net,7 in,288,Age1.3,0.2763607150030127
+Kenai.Late,2007,Escapement,Gill Net,7.5 in,288,Age1.3,0.2763607150030127
+Kenai.Late,2007,Escapement,Model Estimate,NA,NA,Age1.3,0.29000000000000004
 Kenai.Late,2007,Sport Harvest,Angling,NA,237,Age1.3,0.29917008299170084
+Kenai.Late,2008,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.27722772277227725
+Kenai.Late,2008,Escapement,Gill Net,5 and 7.5 in,496,Age1.3,0.2059752727940247
 Kenai.Late,2008,Escapement,Gill Net,5 in,217,Age1.3,0.1989
-Kenai.Late,2008,Escapement,Gill Net,7 in,279,Age1.3,0.2115
+Kenai.Late,2008,Escapement,Gill Net,7.5 in,279,Age1.3,0.2115
+Kenai.Late,2008,Escapement,Model Estimate,NA,NA,Age1.3,0.2
 Kenai.Late,2008,Sport Harvest,Angling,NA,218,Age1.3,0.2768
+Kenai.Late,2009,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.12
+Kenai.Late,2009,Escapement,Gill Net,5 and 7.5 in,338,Age1.3,0.11242857788757142
 Kenai.Late,2009,Escapement,Gill Net,5 in,145,Age1.3,0.09659034096590341
-Kenai.Late,2009,Escapement,Gill Net,7 in,193,Age1.3,0.1244
+Kenai.Late,2009,Escapement,Gill Net,7.5 in,193,Age1.3,0.1244
+Kenai.Late,2009,Escapement,Model Estimate,NA,NA,Age1.3,0.11111111111111112
 Kenai.Late,2009,Sport Harvest,Angling,NA,195,Age1.3,0.2008
+Kenai.Late,2010,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.34
+Kenai.Late,2010,Escapement,Gill Net,5 and 7.5 in,221,Age1.3,0.34040578800000004
 Kenai.Late,2010,Escapement,Gill Net,5 in,84,Age1.3,0.3003699630036996
-Kenai.Late,2010,Escapement,Gill Net,7 in,137,Age1.3,0.36496350364963503
+Kenai.Late,2010,Escapement,Gill Net,7.5 in,137,Age1.3,0.36496350364963503
+Kenai.Late,2010,Escapement,Model Estimate,NA,NA,Age1.3,0.34
 Kenai.Late,2010,Sport Harvest,Angling,NA,184,Age1.3,0.39936006399360063
+Kenai.Late,2011,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.25
+Kenai.Late,2011,Escapement,Gill Net,5 and 7.5 in,327,Age1.3,0.19243986280756012
 Kenai.Late,2011,Escapement,Gill Net,5 in,153,Age1.3,0.1368
-Kenai.Late,2011,Escapement,Gill Net,7 in,174,Age1.3,0.2414
+Kenai.Late,2011,Escapement,Gill Net,7.5 in,174,Age1.3,0.2414
+Kenai.Late,2011,Escapement,Model Estimate,NA,NA,Age1.3,0.19191919191919193
 Kenai.Late,2011,Sport Harvest,Angling,NA,233,Age1.3,0.2146
+Kenai.Late,2012,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.3,0.36633663366336633
+Kenai.Late,2012,Escapement,Gill Net,5 and 7.5 in,232,Age1.3,0.40086206940086205
 Kenai.Late,2012,Escapement,Gill Net,5 in,92,Age1.3,0.3478
-Kenai.Late,2012,Escapement,Gill Net,7 in,140,Age1.3,0.43574357435743577
+Kenai.Late,2012,Escapement,Gill Net,7.5 in,140,Age1.3,0.43574357435743577
+Kenai.Late,2012,Escapement,Model Estimate,NA,NA,Age1.3,0.4
+Kenai.Late,2013,Escapement,Gill Net,5 and 7.5 in,149,Age1.3,0.26829268300000003
 Kenai.Late,2013,Escapement,Gill Net,5 in,49,Age1.3,0.3236
-Kenai.Late,2013,Escapement,Gill Net,7 in,101,Age1.3,0.23762376237623764
+Kenai.Late,2013,Escapement,Gill Net,7.5 in,101,Age1.3,0.23762376237623764
 Kenai.Late,2013,Sport Harvest,Angling,NA,50,Age1.3,0.23490000000000003
+Kenai.Late,2014,Escapement,Gill Net,5 and 7.5 in,283,Age1.3,0.356
 Kenai.Late,2014,Escapement,Gill Net,5 in,145,Age1.3,0.27410000000000007
-Kenai.Late,2014,Escapement,Gill Net,7 in,138,Age1.3,0.442
+Kenai.Late,2014,Escapement,Gill Net,7.5 in,138,Age1.3,0.442
 Kenai.Late,2014,Sport Harvest,Angling,NA,30,Age1.3,0.3
+Kenai.Late,2015,Escapement,Gill Net,5 and 7.5 in,238,Age1.3,0.38100000000000006
 Kenai.Late,2015,Escapement,Gill Net,5 in,124,Age1.3,0.3845
-Kenai.Late,2015,Escapement,Gill Net,7 in,114,Age1.3,0.3772
+Kenai.Late,2015,Escapement,Gill Net,7.5 in,114,Age1.3,0.3772
 Kenai.Late,2015,Sport Harvest,Angling,NA,117,Age1.3,0.4737903225806452
 Kenai.Late,2016,Sport Harvest,Angling,NA,189,Age1.3,0.508
 Lewis,2012,Escapement,Weir,NA,71,Age1.3,0.241
@@ -710,46 +914,46 @@ LittleSusitna,2013,Escapement,Weir,NA,242,Age1.3,0.3047426841574168
 LittleSusitna,2014,Escapement,Weir,NA,108,Age1.3,0.481
 LittleSusitna,2015,Escapement,Weir,NA,272,Age1.3,0.136
 LittleSusitna,2016,Escapement,Weir,NA,375,Age1.3,0.5655655655655656
-Ninilchik,1997,Escapement,Weir,NA,NA,Age1.3,0.855
-Ninilchik,1998,Escapement,Weir,NA,NA,Age1.3,0.361
-Ninilchik,1999,Escapement,Weir,NA,NA,Age1.3,0.467
-Ninilchik,2000,Escapement,Weir,NA,NA,Age1.3,0.593
-Ninilchik,2001,Escapement,Weir,NA,NA,Age1.3,0.415
-Ninilchik,2002,Escapement,Weir,NA,NA,Age1.3,0.523
-Ninilchik,2003,Escapement,Weir,NA,NA,Age1.3,0.6
-Ninilchik,2004,Escapement,Weir,NA,NA,Age1.3,0.503
-Ninilchik,2005,Escapement,Weir,NA,NA,Age1.3,0.682
-Ninilchik,2006,Escapement,Weir,NA,NA,Age1.3,0.4
-Ninilchik,2007,Escapement,Weir,NA,NA,Age1.3,0.545
-Ninilchik,2008,Escapement,Weir,NA,NA,Age1.3,0.629
-Ninilchik,2009,Escapement,Weir,NA,NA,Age1.3,0.309
-Ninilchik,2010,Escapement,Weir,NA,NA,Age1.3,0.39
-Ninilchik,2011,Escapement,Weir,NA,NA,Age1.3,0.711
-Ninilchik,2012,Escapement,Weir,NA,NA,Age1.3,0.41441441441441434
-Ninilchik,2013,Escapement,Weir,NA,NA,Age1.3,0.3656343656343657
-Ninilchik,2014,Escapement,Weir,NA,NA,Age1.3,0.4265734265734265
-Ninilchik,2015,Escapement,Weir,NA,NA,Age1.3,0.3443443443443443
-Ninilchik,2016,Escapement,Weir,NA,NA,Age1.3,0.556
-Ninilchik.Hatchery,1997,Escapement,Weir,NA,NA,Age1.3,0.45
-Ninilchik.Hatchery,1998,Escapement,Weir,NA,NA,Age1.3,0.539
-Ninilchik.Hatchery,1999,Escapement,Weir,NA,NA,Age1.3,0.33799999999999997
-Ninilchik.Hatchery,2000,Escapement,Weir,NA,NA,Age1.3,0.608
-Ninilchik.Hatchery,2001,Escapement,Weir,NA,NA,Age1.3,0.379
-Ninilchik.Hatchery,2002,Escapement,Weir,NA,NA,Age1.3,0.466
-Ninilchik.Hatchery,2003,Escapement,Weir,NA,NA,Age1.3,0.472
-Ninilchik.Hatchery,2004,Escapement,Weir,NA,NA,Age1.3,0.628
-Ninilchik.Hatchery,2005,Escapement,Weir,NA,NA,Age1.3,0.675
-Ninilchik.Hatchery,2006,Escapement,Weir,NA,NA,Age1.3,0.223
-Ninilchik.Hatchery,2007,Escapement,Weir,NA,NA,Age1.3,0.421
-Ninilchik.Hatchery,2008,Escapement,Weir,NA,NA,Age1.3,0.458
-Ninilchik.Hatchery,2009,Escapement,Weir,NA,NA,Age1.3,0.211
-Ninilchik.Hatchery,2010,Escapement,Weir,NA,NA,Age1.3,0.29700000000000004
-Ninilchik.Hatchery,2011,Escapement,Weir,NA,NA,Age1.3,0.687
-Ninilchik.Hatchery,2012,Escapement,Weir,NA,NA,Age1.3,0.164
-Ninilchik.Hatchery,2013,Escapement,Weir,NA,NA,Age1.3,0.05594405594405595
-Ninilchik.Hatchery,2014,Escapement,Weir,NA,NA,Age1.3,0.033
-Ninilchik.Hatchery,2015,Escapement,Weir,NA,NA,Age1.3,0.192
-Ninilchik.Hatchery,2016,Escapement,Weir,NA,NA,Age1.3,0.21
+Ninilchik,1997,Escapement,Weir,NA,110,Age1.3,0.855
+Ninilchik,1998,Escapement,Weir,NA,460,Age1.3,0.361
+Ninilchik,1999,Escapement,Weir,NA,225,Age1.3,0.467
+Ninilchik,2000,Escapement,Weir,NA,278,Age1.3,0.593
+Ninilchik,2001,Escapement,Weir,NA,217,Age1.3,0.415
+Ninilchik,2002,Escapement,Weir,NA,257,Age1.3,0.523
+Ninilchik,2003,Escapement,Weir,NA,175,Age1.3,0.6
+Ninilchik,2004,Escapement,Weir,NA,167,Age1.3,0.503
+Ninilchik,2005,Escapement,Weir,NA,339,Age1.3,0.682
+Ninilchik,2006,Escapement,Weir,NA,140,Age1.3,0.4
+Ninilchik,2007,Escapement,Weir,NA,66,Age1.3,0.545
+Ninilchik,2008,Escapement,Weir,NA,135,Age1.3,0.629
+Ninilchik,2009,Escapement,Weir,NA,58,Age1.3,0.309
+Ninilchik,2010,Escapement,Weir,NA,99,Age1.3,0.39
+Ninilchik,2011,Escapement,Weir,NA,145,Age1.3,0.711
+Ninilchik,2012,Escapement,Weir,NA,95,Age1.3,0.41441441441441434
+Ninilchik,2013,Escapement,Weir,NA,99,Age1.3,0.3656343656343657
+Ninilchik,2014,Escapement,Weir,NA,989,Age1.3,0.4265734265734265
+Ninilchik,2015,Escapement,Weir,NA,1002,Age1.3,0.3443443443443443
+Ninilchik,2016,Escapement,Weir,NA,705,Age1.3,0.556
+Ninilchik.Hatchery,1997,Escapement,Weir,NA,180,Age1.3,0.45
+Ninilchik.Hatchery,1998,Escapement,Weir,NA,282,Age1.3,0.539
+Ninilchik.Hatchery,1999,Escapement,Weir,NA,113,Age1.3,0.33799999999999997
+Ninilchik.Hatchery,2000,Escapement,Weir,NA,151,Age1.3,0.608
+Ninilchik.Hatchery,2001,Escapement,Weir,NA,87,Age1.3,0.379
+Ninilchik.Hatchery,2002,Escapement,Weir,NA,103,Age1.3,0.466
+Ninilchik.Hatchery,2003,Escapement,Weir,NA,72,Age1.3,0.472
+Ninilchik.Hatchery,2004,Escapement,Weir,NA,113,Age1.3,0.628
+Ninilchik.Hatchery,2005,Escapement,Weir,NA,123,Age1.3,0.675
+Ninilchik.Hatchery,2006,Escapement,Weir,NA,67,Age1.3,0.223
+Ninilchik.Hatchery,2007,Escapement,Weir,NA,19,Age1.3,0.421
+Ninilchik.Hatchery,2008,Escapement,Weir,NA,55,Age1.3,0.458
+Ninilchik.Hatchery,2009,Escapement,Weir,NA,97,Age1.3,0.211
+Ninilchik.Hatchery,2010,Escapement,Weir,NA,30,Age1.3,0.29700000000000004
+Ninilchik.Hatchery,2011,Escapement,Weir,NA,45,Age1.3,0.687
+Ninilchik.Hatchery,2012,Escapement,Weir,NA,62,Age1.3,0.164
+Ninilchik.Hatchery,2013,Escapement,Weir,NA,115,Age1.3,0.05594405594405595
+Ninilchik.Hatchery,2014,Escapement,Weir,NA,1117,Age1.3,0.033
+Ninilchik.Hatchery,2015,Escapement,Weir,NA,691,Age1.3,0.192
+Ninilchik.Hatchery,2016,Escapement,Weir,NA,436,Age1.3,0.21
 NSN,1983,Commercial Harvest,Gill Net,< 6 in,41,Age1.3,0.415
 NSN,1985,Commercial Harvest,Gill Net,< 6 in,40,Age1.3,0.358974358974359
 NSN,1986,Commercial Harvest,Gill Net,< 6 in,900,Age1.3,0.4585481099656358
@@ -769,54 +973,54 @@ NSN,2016,Commercial Harvest,Gill Net,< 6 in,1027,Age1.3,0.5630000000000001
 Theodore,2012,Escapement,Weir,NA,247,Age1.3,0.271
 Theodore,2013,Escapement,Weir,NA,192,Age1.3,0.5760000000000001
 Theodore,2014,Escapement,Weir,NA,29,Age1.3,0.41400000000000003
-Tyonek,2014,Subsistence Harvest,Gill Net,NA,136,Age1.3,0.37462537462537465
-Tyonek,2015,Subsistence Harvest,Gill Net,NA,300,Age1.3,0.527
-Tyonek,2016,Subsistence Harvest,Gill Net,NA,210,Age1.3,0.629
+Tyonek,2014,Subsistence Harvest,Gill Net,< 6 in,136,Age1.3,0.37462537462537465
+Tyonek,2015,Subsistence Harvest,Gill Net,< 6 in,300,Age1.3,0.527
+Tyonek,2016,Subsistence Harvest,Gill Net,< 6 in,210,Age1.3,0.629
 WSSN,1980,Commercial Harvest,Gill Net,< 6 in,NA,Age1.3,0.122
 WSSN,1983,Commercial Harvest,Gill Net,< 6 in,330,Age1.3,0.38446014127144296
 WSSN,1984,Commercial Harvest,Gill Net,< 6 in,225,Age1.3,0.3541876892028254
 WSSN,1985,Commercial Harvest,Gill Net,< 6 in,308,Age1.3,0.3835616438356165
 Alexander,2015,Escapement,Weir,NA,52,Age1.4,0.0385
-Anchor,2003,Escapement,Weir,NA,NA,Age1.4,0.14
-Anchor,2004,Escapement,Weir,NA,NA,Age1.4,0.21900000000000003
-Anchor,2005,Escapement,Weir,NA,NA,Age1.4,0.189
-Anchor,2006,Escapement,Weir,NA,NA,Age1.4,0.25
-Anchor,2007,Escapement,Weir,NA,NA,Age1.4,0.241
-Anchor,2008,Escapement,Weir,NA,NA,Age1.4,0.052052052052052045
-Anchor,2009,Escapement,Weir,NA,NA,Age1.4,0.044
-Anchor,2010,Escapement,Weir,NA,NA,Age1.4,0.056
-Anchor,2011,Escapement,Weir,NA,NA,Age1.4,0.057
-Anchor,2012,Escapement,Weir,NA,NA,Age1.4,0.045
-Anchor,2013,Escapement,Weir,NA,NA,Age1.4,0.0470941883767535
-Anchor,2014,Escapement,Weir,NA,NA,Age1.4,0.09090909090909091
-Anchor,2015,Escapement,Weir,NA,NA,Age1.4,0.026
-Anchor,2016,Escapement,Weir,NA,NA,Age1.4,0.047
-Crooked,2004,Escapement,Weir,NA,561,Age1.4,0.1087344029
-Crooked,2005,Escapement,Weir,NA,194,Age1.4,0.1701030928
-Crooked,2006,Escapement,Weir,NA,91,Age1.4,0.1648351648
-Crooked,2007,Escapement,Weir,NA,76,Age1.4,0.2894736842
-Crooked,2008,Escapement,Weir,NA,73,Age1.4,0.1643835616
-Crooked,2009,Escapement,Weir,NA,209,Age1.4,0.14354066988564593
-Crooked,2010,Escapement,Weir,NA,134,Age1.4,0.17164179101716417
-Crooked,2011,Escapement,Weir,NA,218,Age1.4,0.1788990826
-Crooked,2012,Escapement,Weir,NA,259,Age1.4,0.12355212358764478
-Crooked,2013,Escapement,Weir,NA,407,Age1.4,0.07616707617228502
-Crooked,2014,Escapement,Weir,NA,447,Age1.4,0.07606263981847874
-Crooked,2015,Escapement,Weir,NA,459,Age1.4,0.1154684096
-Crooked,2016,Escapement,Weir,NA,293,Age1.4,0.04436860068088737
-Crooked.Hatchery,2004,Escapement,Weir,NA,1056,Age1.4,0.009469696969337119
-Crooked.Hatchery,2005,Escapement,Weir,NA,157,Age1.4,0.0700636942721019
-Crooked.Hatchery,2006,Escapement,Weir,NA,96,Age1.4,0.04166666666708333
-Crooked.Hatchery,2007,Escapement,Weir,NA,41,Age1.4,0.04878048780487805
-Crooked.Hatchery,2008,Escapement,Weir,NA,31,Age1.4,0.06451612902806451
-Crooked.Hatchery,2009,Escapement,Weir,NA,65,Age1.4,0.04615384615230769
+Anchor,2003,Escapement,Weir,NA,601,Age1.4,0.14
+Anchor,2004,Escapement,Weir,NA,285,Age1.4,0.21900000000000003
+Anchor,2005,Escapement,Weir,NA,415,Age1.4,0.189
+Anchor,2006,Escapement,Weir,NA,207,Age1.4,0.25
+Anchor,2007,Escapement,Weir,NA,185,Age1.4,0.241
+Anchor,2008,Escapement,Weir,NA,116,Age1.4,0.052052052052052045
+Anchor,2009,Escapement,Weir,NA,90,Age1.4,0.044
+Anchor,2010,Escapement,Weir,NA,273,Age1.4,0.056
+Anchor,2011,Escapement,Weir,NA,282,Age1.4,0.057
+Anchor,2012,Escapement,Weir,NA,199,Age1.4,0.045
+Anchor,2013,Escapement,Weir,NA,254,Age1.4,0.0470941883767535
+Anchor,2014,Escapement,Weir,NA,267,Age1.4,0.09090909090909091
+Anchor,2015,Escapement,Weir,NA,379,Age1.4,0.026
+Anchor,2016,Escapement,Weir,NA,260,Age1.4,0.047
+Crooked,2004,Escapement,Weir,NA,561,Age1.4,0.108734403
+Crooked,2005,Escapement,Weir,NA,194,Age1.4,0.1701030928298969
+Crooked,2006,Escapement,Weir,NA,91,Age1.4,0.16483516483516486
+Crooked,2007,Escapement,Weir,NA,76,Age1.4,0.289473684
+Crooked,2008,Escapement,Weir,NA,73,Age1.4,0.16438356183561645
+Crooked,2009,Escapement,Weir,NA,209,Age1.4,0.14354066985645933
+Crooked,2010,Escapement,Weir,NA,134,Age1.4,0.171641791
+Crooked,2011,Escapement,Weir,NA,218,Age1.4,0.178899083
+Crooked,2012,Escapement,Weir,NA,259,Age1.4,0.12355212387644789
+Crooked,2013,Escapement,Weir,NA,407,Age1.4,0.076167076
+Crooked,2014,Escapement,Weir,NA,447,Age1.4,0.07606264
+Crooked,2015,Escapement,Weir,NA,459,Age1.4,0.11546841000000001
+Crooked,2016,Escapement,Weir,NA,293,Age1.4,0.044368601
+Crooked.Hatchery,2004,Escapement,Weir,NA,1056,Age1.4,0.009469697
+Crooked.Hatchery,2005,Escapement,Weir,NA,157,Age1.4,0.07006369400000001
+Crooked.Hatchery,2006,Escapement,Weir,NA,96,Age1.4,0.04166666695833333
+Crooked.Hatchery,2007,Escapement,Weir,NA,41,Age1.4,0.048780488
+Crooked.Hatchery,2008,Escapement,Weir,NA,31,Age1.4,0.064516129
+Crooked.Hatchery,2009,Escapement,Weir,NA,65,Age1.4,0.046153846
 Crooked.Hatchery,2010,Escapement,Weir,NA,25,Age1.4,0.04
-Crooked.Hatchery,2011,Escapement,Weir,NA,74,Age1.4,0.04054054053837838
-Crooked.Hatchery,2012,Escapement,Weir,NA,62,Age1.4,0.06451612902806451
+Crooked.Hatchery,2011,Escapement,Weir,NA,74,Age1.4,0.040540541
+Crooked.Hatchery,2012,Escapement,Weir,NA,62,Age1.4,0.064516129
 Crooked.Hatchery,2013,Escapement,Weir,NA,50,Age1.4,0.04
-Crooked.Hatchery,2014,Escapement,Weir,NA,228,Age1.4,0.008771929824780702
-Crooked.Hatchery,2015,Escapement,Weir,NA,169,Age1.4,0.02366863905118343
-Crooked.Hatchery,2016,Escapement,Weir,NA,423,Age1.4,0.009456264775236407
+Crooked.Hatchery,2014,Escapement,Weir,NA,228,Age1.4,0.00877193
+Crooked.Hatchery,2015,Escapement,Weir,NA,169,Age1.4,0.023668639000000002
+Crooked.Hatchery,2016,Escapement,Weir,NA,423,Age1.4,0.009456265
 Deshka,1979,Sport Harvest,Angling,NA,297,Age1.4,0.33
 Deshka,1980,Sport Harvest,Angling,NA,181,Age1.4,0.39
 Deshka,1981,Sport Harvest,Angling,NA,159,Age1.4,0.33
@@ -886,78 +1090,146 @@ ESSN,2013,Commercial Harvest,Gill Net,< 6 in,664,Age1.4,0.18618618618618615
 ESSN,2014,Commercial Harvest,Gill Net,< 6 in,459,Age1.4,0.2092092092092092
 ESSN,2015,Commercial Harvest,Gill Net,< 6 in,631,Age1.4,0.238
 ESSN,2016,Commercial Harvest,Gill Net,< 6 in,809,Age1.4,0.267
-Kenai.Late,1986,Escapement,Gill Net,7 in,1650,Age1.4,0.3965
+Kenai.Late,1986,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.34693877551020413
+Kenai.Late,1986,Escapement,Gill Net,7.5 in,1650,Age1.4,0.3965
+Kenai.Late,1986,Escapement,Model Estimate,NA,NA,Age1.4,0.4
 Kenai.Late,1986,Sport Harvest,Angling,NA,524,Age1.4,0.4523
-Kenai.Late,1987,Escapement,Gill Net,7 in,962,Age1.4,0.6881
+Kenai.Late,1987,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.51
+Kenai.Late,1987,Escapement,Gill Net,7.5 in,962,Age1.4,0.6881
+Kenai.Late,1987,Escapement,Model Estimate,NA,NA,Age1.4,0.69
 Kenai.Late,1987,Sport Harvest,Angling,NA,438,Age1.4,0.7267
-Kenai.Late,1988,Escapement,Gill Net,7 in,942,Age1.4,0.776977697769777
+Kenai.Late,1988,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.6831683168316831
+Kenai.Late,1988,Escapement,Gill Net,7.5 in,942,Age1.4,0.776977697769777
+Kenai.Late,1988,Escapement,Model Estimate,NA,NA,Age1.4,0.78
 Kenai.Late,1988,Sport Harvest,Angling,NA,426,Age1.4,0.786021397860214
-Kenai.Late,1989,Escapement,Gill Net,7 in,664,Age1.4,0.6487648764876488
+Kenai.Late,1989,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.5353535353535354
+Kenai.Late,1989,Escapement,Gill Net,7.5 in,664,Age1.4,0.6487648764876488
+Kenai.Late,1989,Escapement,Model Estimate,NA,NA,Age1.4,0.6565656565656566
 Kenai.Late,1989,Sport Harvest,Angling,NA,104,Age1.4,0.7129
-Kenai.Late,1990,Escapement,Gill Net,7 in,528,Age1.4,0.6861313868613138
+Kenai.Late,1990,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.34
+Kenai.Late,1990,Escapement,Gill Net,7.5 in,528,Age1.4,0.6861313868613138
+Kenai.Late,1990,Escapement,Model Estimate,NA,NA,Age1.4,0.6831683168316831
 Kenai.Late,1990,Sport Harvest,Angling,NA,341,Age1.4,0.6216378362163784
-Kenai.Late,1991,Escapement,Gill Net,7 in,363,Age1.4,0.6957
+Kenai.Late,1991,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.39
+Kenai.Late,1991,Escapement,Gill Net,7.5 in,363,Age1.4,0.6957
+Kenai.Late,1991,Escapement,Model Estimate,NA,NA,Age1.4,0.7
 Kenai.Late,1991,Sport Harvest,Angling,NA,472,Age1.4,0.7623
-Kenai.Late,1992,Escapement,Gill Net,7 in,341,Age1.4,0.7507
+Kenai.Late,1992,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.5050505050505051
+Kenai.Late,1992,Escapement,Gill Net,7.5 in,341,Age1.4,0.7507
+Kenai.Late,1992,Escapement,Model Estimate,NA,NA,Age1.4,0.75
 Kenai.Late,1992,Sport Harvest,Angling,NA,402,Age1.4,0.7612
-Kenai.Late,1993,Escapement,Gill Net,7 in,350,Age1.4,0.7171717171717171
+Kenai.Late,1993,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.59
+Kenai.Late,1993,Escapement,Gill Net,7.5 in,350,Age1.4,0.7171717171717171
+Kenai.Late,1993,Escapement,Model Estimate,NA,NA,Age1.4,0.72
 Kenai.Late,1993,Sport Harvest,Angling,NA,689,Age1.4,0.8562143785621438
-Kenai.Late,1994,Escapement,Gill Net,7 in,414,Age1.4,0.7826
+Kenai.Late,1994,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.6060606060606061
+Kenai.Late,1994,Escapement,Gill Net,7.5 in,414,Age1.4,0.7826
+Kenai.Late,1994,Escapement,Model Estimate,NA,NA,Age1.4,0.78
 Kenai.Late,1994,Sport Harvest,Angling,NA,434,Age1.4,0.907890789078908
-Kenai.Late,1995,Escapement,Gill Net,7 in,207,Age1.4,0.5048495150484952
+Kenai.Late,1995,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.35353535353535354
+Kenai.Late,1995,Escapement,Gill Net,7.5 in,207,Age1.4,0.5048495150484952
+Kenai.Late,1995,Escapement,Model Estimate,NA,NA,Age1.4,0.5050505050505051
 Kenai.Late,1995,Sport Harvest,Angling,NA,435,Age1.4,0.7126
-Kenai.Late,1996,Escapement,Gill Net,7 in,470,Age1.4,0.5736
+Kenai.Late,1996,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.40404040404040403
+Kenai.Late,1996,Escapement,Gill Net,7.5 in,470,Age1.4,0.5736
+Kenai.Late,1996,Escapement,Model Estimate,NA,NA,Age1.4,0.57
 Kenai.Late,1996,Sport Harvest,Angling,NA,235,Age1.4,0.5513
-Kenai.Late,1997,Escapement,Gill Net,7 in,289,Age1.4,0.7197
+Kenai.Late,1997,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.45
+Kenai.Late,1997,Escapement,Gill Net,7.5 in,289,Age1.4,0.7197
+Kenai.Late,1997,Escapement,Model Estimate,NA,NA,Age1.4,0.72
 Kenai.Late,1997,Sport Harvest,Angling,NA,317,Age1.4,0.7192719271927193
-Kenai.Late,1998,Escapement,Gill Net,7 in,374,Age1.4,0.6783321667833216
+Kenai.Late,1998,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.39
+Kenai.Late,1998,Escapement,Gill Net,7.5 in,374,Age1.4,0.6783321667833216
+Kenai.Late,1998,Escapement,Model Estimate,NA,NA,Age1.4,0.68
 Kenai.Late,1998,Sport Harvest,Angling,NA,331,Age1.4,0.71
-Kenai.Late,1999,Escapement,Gill Net,7 in,386,Age1.4,0.6088
+Kenai.Late,1999,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.44
+Kenai.Late,1999,Escapement,Gill Net,7.5 in,386,Age1.4,0.6088
+Kenai.Late,1999,Escapement,Model Estimate,NA,NA,Age1.4,0.6161616161616161
 Kenai.Late,1999,Sport Harvest,Angling,NA,320,Age1.4,0.572
-Kenai.Late,2000,Escapement,Gill Net,7 in,383,Age1.4,0.6214
+Kenai.Late,2000,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.38
+Kenai.Late,2000,Escapement,Gill Net,7.5 in,383,Age1.4,0.6214
+Kenai.Late,2000,Escapement,Model Estimate,NA,NA,Age1.4,0.62
 Kenai.Late,2000,Sport Harvest,Angling,NA,483,Age1.4,0.6385
-Kenai.Late,2001,Escapement,Gill Net,7 in,256,Age1.4,0.662
+Kenai.Late,2001,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.32
+Kenai.Late,2001,Escapement,Gill Net,7.5 in,256,Age1.4,0.662
+Kenai.Late,2001,Escapement,Model Estimate,NA,NA,Age1.4,0.66
 Kenai.Late,2001,Sport Harvest,Angling,NA,388,Age1.4,0.6964
+Kenai.Late,2002,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.2
+Kenai.Late,2002,Escapement,Gill Net,5 and 7.5 in,945,Age1.4,0.589044816
 Kenai.Late,2002,Escapement,Gill Net,5 in,381,Age1.4,0.5890589058905891
-Kenai.Late,2002,Escapement,Gill Net,7 in,564,Age1.4,0.5890589058905891
+Kenai.Late,2002,Escapement,Gill Net,7.5 in,564,Age1.4,0.5890589058905891
+Kenai.Late,2002,Escapement,Model Estimate,NA,NA,Age1.4,0.58
 Kenai.Late,2002,Sport Harvest,Angling,NA,275,Age1.4,0.6762
+Kenai.Late,2003,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.18811881188118812
+Kenai.Late,2003,Escapement,Gill Net,5 and 7.5 in,1114,Age1.4,0.489
 Kenai.Late,2003,Escapement,Gill Net,5 in,455,Age1.4,0.4480551944805519
-Kenai.Late,2003,Escapement,Gill Net,7 in,659,Age1.4,0.5173
+Kenai.Late,2003,Escapement,Gill Net,7.5 in,659,Age1.4,0.5173
+Kenai.Late,2003,Escapement,Model Estimate,NA,NA,Age1.4,0.49
 Kenai.Late,2003,Sport Harvest,Angling,NA,311,Age1.4,0.6402000000000001
+Kenai.Late,2004,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.26
+Kenai.Late,2004,Escapement,Gill Net,5 and 7.5 in,933,Age1.4,0.589
 Kenai.Late,2004,Escapement,Gill Net,5 in,333,Age1.4,0.6071607160716072
-Kenai.Late,2004,Escapement,Gill Net,7 in,600,Age1.4,0.5789578957895789
+Kenai.Late,2004,Escapement,Gill Net,7.5 in,600,Age1.4,0.5789578957895789
+Kenai.Late,2004,Escapement,Model Estimate,NA,NA,Age1.4,0.59
 Kenai.Late,2004,Sport Harvest,Angling,NA,305,Age1.4,0.593
+Kenai.Late,2005,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.4752475247524752
+Kenai.Late,2005,Escapement,Gill Net,5 and 7.5 in,519,Age1.4,0.7042957042957043
 Kenai.Late,2005,Escapement,Gill Net,5 in,218,Age1.4,0.7005299470052995
-Kenai.Late,2005,Escapement,Gill Net,7 in,302,Age1.4,0.707
+Kenai.Late,2005,Escapement,Gill Net,7.5 in,302,Age1.4,0.707
+Kenai.Late,2005,Escapement,Model Estimate,NA,NA,Age1.4,0.7070707070707071
 Kenai.Late,2005,Sport Harvest,Angling,NA,429,Age1.4,0.761
+Kenai.Late,2006,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.27
+Kenai.Late,2006,Escapement,Gill Net,5 and 7.5 in,703,Age1.4,0.495913202
 Kenai.Late,2006,Escapement,Gill Net,5 in,294,Age1.4,0.455
-Kenai.Late,2006,Escapement,Gill Net,7 in,409,Age1.4,0.5253
+Kenai.Late,2006,Escapement,Gill Net,7.5 in,409,Age1.4,0.5253
+Kenai.Late,2006,Escapement,Model Estimate,NA,NA,Age1.4,0.49
 Kenai.Late,2006,Sport Harvest,Angling,NA,313,Age1.4,0.6025
+Kenai.Late,2007,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.2871287128712871
+Kenai.Late,2007,Escapement,Gill Net,5 and 7.5 in,437,Age1.4,0.4303316
 Kenai.Late,2007,Escapement,Gill Net,5 in,150,Age1.4,0.4026402640264027
-Kenai.Late,2007,Escapement,Gill Net,7 in,288,Age1.4,0.44486844747941356
+Kenai.Late,2007,Escapement,Gill Net,7.5 in,288,Age1.4,0.44486844747941356
+Kenai.Late,2007,Escapement,Model Estimate,NA,NA,Age1.4,0.42000000000000004
 Kenai.Late,2007,Sport Harvest,Angling,NA,237,Age1.4,0.5204479552044795
+Kenai.Late,2008,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.4059405940594059
+Kenai.Late,2008,Escapement,Gill Net,5 and 7.5 in,496,Age1.4,0.6206973253793027
 Kenai.Late,2008,Escapement,Gill Net,5 in,217,Age1.4,0.5846
-Kenai.Late,2008,Escapement,Gill Net,7 in,279,Age1.4,0.6487
+Kenai.Late,2008,Escapement,Gill Net,7.5 in,279,Age1.4,0.6487
+Kenai.Late,2008,Escapement,Model Estimate,NA,NA,Age1.4,0.63
 Kenai.Late,2008,Sport Harvest,Angling,NA,218,Age1.4,0.5874
+Kenai.Late,2009,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.22
+Kenai.Late,2009,Escapement,Gill Net,5 and 7.5 in,338,Age1.4,0.5475736044524263
 Kenai.Late,2009,Escapement,Gill Net,5 in,145,Age1.4,0.5108489151084892
-Kenai.Late,2009,Escapement,Gill Net,7 in,193,Age1.4,0.5751
+Kenai.Late,2009,Escapement,Gill Net,7.5 in,193,Age1.4,0.5751
+Kenai.Late,2009,Escapement,Model Estimate,NA,NA,Age1.4,0.5555555555555556
 Kenai.Late,2009,Sport Harvest,Angling,NA,195,Age1.4,0.6105
+Kenai.Late,2010,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.19
+Kenai.Late,2010,Escapement,Gill Net,5 and 7.5 in,221,Age1.4,0.35746816800000003
 Kenai.Late,2010,Escapement,Gill Net,5 in,84,Age1.4,0.36906309369063095
-Kenai.Late,2010,Escapement,Gill Net,7 in,137,Age1.4,0.35036496350364965
+Kenai.Late,2010,Escapement,Gill Net,7.5 in,137,Age1.4,0.35036496350364965
+Kenai.Late,2010,Escapement,Model Estimate,NA,NA,Age1.4,0.36
 Kenai.Late,2010,Sport Harvest,Angling,NA,184,Age1.4,0.37996200379962003
+Kenai.Late,2011,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.35
+Kenai.Late,2011,Escapement,Gill Net,5 and 7.5 in,327,Age1.4,0.46391752553608245
 Kenai.Late,2011,Escapement,Gill Net,5 in,153,Age1.4,0.4621
-Kenai.Late,2011,Escapement,Gill Net,7 in,174,Age1.4,0.4655
+Kenai.Late,2011,Escapement,Gill Net,7.5 in,174,Age1.4,0.4655
+Kenai.Late,2011,Escapement,Model Estimate,NA,NA,Age1.4,0.4646464646464647
 Kenai.Late,2011,Sport Harvest,Angling,NA,233,Age1.4,0.5794
+Kenai.Late,2012,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.4,0.3564356435643564
+Kenai.Late,2012,Escapement,Gill Net,5 and 7.5 in,232,Age1.4,0.4439655174439655
 Kenai.Late,2012,Escapement,Gill Net,5 in,92,Age1.4,0.4348
-Kenai.Late,2012,Escapement,Gill Net,7 in,140,Age1.4,0.4500450045004501
+Kenai.Late,2012,Escapement,Gill Net,7.5 in,140,Age1.4,0.4500450045004501
+Kenai.Late,2012,Escapement,Model Estimate,NA,NA,Age1.4,0.44
+Kenai.Late,2013,Escapement,Gill Net,5 and 7.5 in,149,Age1.4,0.43902439000000004
 Kenai.Late,2013,Escapement,Gill Net,5 in,49,Age1.4,0.3933
-Kenai.Late,2013,Escapement,Gill Net,7 in,101,Age1.4,0.45544554455445546
+Kenai.Late,2013,Escapement,Gill Net,7.5 in,101,Age1.4,0.45544554455445546
 Kenai.Late,2013,Sport Harvest,Angling,NA,50,Age1.4,0.42950000000000005
+Kenai.Late,2014,Escapement,Gill Net,5 and 7.5 in,283,Age1.4,0.393
 Kenai.Late,2014,Escapement,Gill Net,5 in,145,Age1.4,0.43600000000000005
-Kenai.Late,2014,Escapement,Gill Net,7 in,138,Age1.4,0.3478
+Kenai.Late,2014,Escapement,Gill Net,7.5 in,138,Age1.4,0.3478
 Kenai.Late,2014,Sport Harvest,Angling,NA,30,Age1.4,0.333
+Kenai.Late,2015,Escapement,Gill Net,5 and 7.5 in,238,Age1.4,0.28700000000000003
 Kenai.Late,2015,Escapement,Gill Net,5 in,124,Age1.4,0.2525
-Kenai.Late,2015,Escapement,Gill Net,7 in,114,Age1.4,0.3246
+Kenai.Late,2015,Escapement,Gill Net,7.5 in,114,Age1.4,0.3246
 Kenai.Late,2015,Sport Harvest,Angling,NA,117,Age1.4,0.3014112903225807
 Kenai.Late,2016,Sport Harvest,Angling,NA,189,Age1.4,0.259
 Lewis,2012,Escapement,Weir,NA,71,Age1.4,0.089
@@ -969,46 +1241,46 @@ LittleSusitna,2013,Escapement,Weir,NA,242,Age1.4,0.1997981836528759
 LittleSusitna,2014,Escapement,Weir,NA,108,Age1.4,0.139
 LittleSusitna,2015,Escapement,Weir,NA,272,Age1.4,0.125
 LittleSusitna,2016,Escapement,Weir,NA,375,Age1.4,0.0800800800800801
-Ninilchik,1997,Escapement,Weir,NA,NA,Age1.4,0.045
-Ninilchik,1998,Escapement,Weir,NA,NA,Age1.4,0.289
-Ninilchik,1999,Escapement,Weir,NA,NA,Age1.4,0.169
-Ninilchik,2000,Escapement,Weir,NA,NA,Age1.4,0.279
-Ninilchik,2001,Escapement,Weir,NA,NA,Age1.4,0.17
-Ninilchik,2002,Escapement,Weir,NA,NA,Age1.4,0.056
-Ninilchik,2003,Escapement,Weir,NA,NA,Age1.4,0.12
-Ninilchik,2004,Escapement,Weir,NA,NA,Age1.4,0.287
-Ninilchik,2005,Escapement,Weir,NA,NA,Age1.4,0.074
-Ninilchik,2006,Escapement,Weir,NA,NA,Age1.4,0.207
-Ninilchik,2007,Escapement,Weir,NA,NA,Age1.4,0.152
-Ninilchik,2008,Escapement,Weir,NA,NA,Age1.4,0.111
-Ninilchik,2009,Escapement,Weir,NA,NA,Age1.4,0.041
-Ninilchik,2010,Escapement,Weir,NA,NA,Age1.4,0.046
-Ninilchik,2011,Escapement,Weir,NA,NA,Age1.4,0.099
-Ninilchik,2012,Escapement,Weir,NA,NA,Age1.4,0.06206206206206206
-Ninilchik,2013,Escapement,Weir,NA,NA,Age1.4,0.020979020979020983
-Ninilchik,2014,Escapement,Weir,NA,NA,Age1.4,0.005994005994005993
-Ninilchik,2015,Escapement,Weir,NA,NA,Age1.4,0.03303303303303304
-Ninilchik,2016,Escapement,Weir,NA,NA,Age1.4,0.012
-Ninilchik.Hatchery,1997,Escapement,Weir,NA,NA,Age1.4,0.083
-Ninilchik.Hatchery,1998,Escapement,Weir,NA,NA,Age1.4,0.085
-Ninilchik.Hatchery,1999,Escapement,Weir,NA,NA,Age1.4,0.10199999999999997
-Ninilchik.Hatchery,2000,Escapement,Weir,NA,NA,Age1.4,0.079
-Ninilchik.Hatchery,2001,Escapement,Weir,NA,NA,Age1.4,0.126
-Ninilchik.Hatchery,2002,Escapement,Weir,NA,NA,Age1.4,0.01
-Ninilchik.Hatchery,2003,Escapement,Weir,NA,NA,Age1.4,0.014
-Ninilchik.Hatchery,2004,Escapement,Weir,NA,NA,Age1.4,0.035
-Ninilchik.Hatchery,2005,Escapement,Weir,NA,NA,Age1.4,0.073
-Ninilchik.Hatchery,2006,Escapement,Weir,NA,NA,Age1.4,0.121
-Ninilchik.Hatchery,2007,Escapement,Weir,NA,NA,Age1.4,0
-Ninilchik.Hatchery,2008,Escapement,Weir,NA,NA,Age1.4,0.031
-Ninilchik.Hatchery,2009,Escapement,Weir,NA,NA,Age1.4,0.009
-Ninilchik.Hatchery,2010,Escapement,Weir,NA,NA,Age1.4,0.03300000000000001
-Ninilchik.Hatchery,2011,Escapement,Weir,NA,NA,Age1.4,0
-Ninilchik.Hatchery,2012,Escapement,Weir,NA,NA,Age1.4,0
-Ninilchik.Hatchery,2013,Escapement,Weir,NA,NA,Age1.4,0
-Ninilchik.Hatchery,2014,Escapement,Weir,NA,NA,Age1.4,0
-Ninilchik.Hatchery,2015,Escapement,Weir,NA,NA,Age1.4,0
-Ninilchik.Hatchery,2016,Escapement,Weir,NA,NA,Age1.4,0
+Ninilchik,1997,Escapement,Weir,NA,110,Age1.4,0.045
+Ninilchik,1998,Escapement,Weir,NA,460,Age1.4,0.289
+Ninilchik,1999,Escapement,Weir,NA,225,Age1.4,0.169
+Ninilchik,2000,Escapement,Weir,NA,278,Age1.4,0.279
+Ninilchik,2001,Escapement,Weir,NA,217,Age1.4,0.17
+Ninilchik,2002,Escapement,Weir,NA,257,Age1.4,0.056
+Ninilchik,2003,Escapement,Weir,NA,175,Age1.4,0.12
+Ninilchik,2004,Escapement,Weir,NA,167,Age1.4,0.287
+Ninilchik,2005,Escapement,Weir,NA,339,Age1.4,0.074
+Ninilchik,2006,Escapement,Weir,NA,140,Age1.4,0.207
+Ninilchik,2007,Escapement,Weir,NA,66,Age1.4,0.152
+Ninilchik,2008,Escapement,Weir,NA,135,Age1.4,0.111
+Ninilchik,2009,Escapement,Weir,NA,58,Age1.4,0.041
+Ninilchik,2010,Escapement,Weir,NA,99,Age1.4,0.046
+Ninilchik,2011,Escapement,Weir,NA,145,Age1.4,0.099
+Ninilchik,2012,Escapement,Weir,NA,95,Age1.4,0.06206206206206206
+Ninilchik,2013,Escapement,Weir,NA,99,Age1.4,0.020979020979020983
+Ninilchik,2014,Escapement,Weir,NA,989,Age1.4,0.005994005994005993
+Ninilchik,2015,Escapement,Weir,NA,1002,Age1.4,0.03303303303303304
+Ninilchik,2016,Escapement,Weir,NA,705,Age1.4,0.012
+Ninilchik.Hatchery,1997,Escapement,Weir,NA,180,Age1.4,0.083
+Ninilchik.Hatchery,1998,Escapement,Weir,NA,282,Age1.4,0.085
+Ninilchik.Hatchery,1999,Escapement,Weir,NA,113,Age1.4,0.10199999999999997
+Ninilchik.Hatchery,2000,Escapement,Weir,NA,151,Age1.4,0.079
+Ninilchik.Hatchery,2001,Escapement,Weir,NA,87,Age1.4,0.126
+Ninilchik.Hatchery,2002,Escapement,Weir,NA,103,Age1.4,0.01
+Ninilchik.Hatchery,2003,Escapement,Weir,NA,72,Age1.4,0.014
+Ninilchik.Hatchery,2004,Escapement,Weir,NA,113,Age1.4,0.035
+Ninilchik.Hatchery,2005,Escapement,Weir,NA,123,Age1.4,0.073
+Ninilchik.Hatchery,2006,Escapement,Weir,NA,67,Age1.4,0.121
+Ninilchik.Hatchery,2007,Escapement,Weir,NA,19,Age1.4,0
+Ninilchik.Hatchery,2008,Escapement,Weir,NA,55,Age1.4,0.031
+Ninilchik.Hatchery,2009,Escapement,Weir,NA,97,Age1.4,0.009
+Ninilchik.Hatchery,2010,Escapement,Weir,NA,30,Age1.4,0.03300000000000001
+Ninilchik.Hatchery,2011,Escapement,Weir,NA,45,Age1.4,0
+Ninilchik.Hatchery,2012,Escapement,Weir,NA,62,Age1.4,0
+Ninilchik.Hatchery,2013,Escapement,Weir,NA,115,Age1.4,0
+Ninilchik.Hatchery,2014,Escapement,Weir,NA,1117,Age1.4,0
+Ninilchik.Hatchery,2015,Escapement,Weir,NA,691,Age1.4,0
+Ninilchik.Hatchery,2016,Escapement,Weir,NA,436,Age1.4,0
 NSN,1983,Commercial Harvest,Gill Net,< 6 in,41,Age1.4,0.365
 NSN,1985,Commercial Harvest,Gill Net,< 6 in,40,Age1.4,0.3076923076923077
 NSN,1986,Commercial Harvest,Gill Net,< 6 in,900,Age1.4,0.25864475945017185
@@ -1028,28 +1300,28 @@ NSN,2016,Commercial Harvest,Gill Net,< 6 in,1027,Age1.4,0.07600000000000001
 Theodore,2012,Escapement,Weir,NA,247,Age1.4,0.073
 Theodore,2013,Escapement,Weir,NA,192,Age1.4,0.09800000000000002
 Theodore,2014,Escapement,Weir,NA,29,Age1.4,0.24100000000000002
-Tyonek,2014,Subsistence Harvest,Gill Net,NA,136,Age1.4,0.3236763236763237
-Tyonek,2015,Subsistence Harvest,Gill Net,NA,300,Age1.4,0.117
-Tyonek,2016,Subsistence Harvest,Gill Net,NA,210,Age1.4,0.133
+Tyonek,2014,Subsistence Harvest,Gill Net,< 6 in,136,Age1.4,0.3236763236763237
+Tyonek,2015,Subsistence Harvest,Gill Net,< 6 in,300,Age1.4,0.117
+Tyonek,2016,Subsistence Harvest,Gill Net,< 6 in,210,Age1.4,0.133
 WSSN,1980,Commercial Harvest,Gill Net,< 6 in,NA,Age1.4,0.681
 WSSN,1983,Commercial Harvest,Gill Net,< 6 in,330,Age1.4,0.4106962663975781
 WSSN,1984,Commercial Harvest,Gill Net,< 6 in,225,Age1.4,0.4399596367305752
 WSSN,1985,Commercial Harvest,Gill Net,< 6 in,308,Age1.4,0.4235159817351598
 Alexander,2015,Escapement,Weir,NA,52,Age1.5,0
-Anchor,2003,Escapement,Weir,NA,NA,Age1.5,0
-Anchor,2004,Escapement,Weir,NA,NA,Age1.5,0
-Anchor,2005,Escapement,Weir,NA,NA,Age1.5,0
-Anchor,2006,Escapement,Weir,NA,NA,Age1.5,0
-Anchor,2007,Escapement,Weir,NA,NA,Age1.5,0
-Anchor,2008,Escapement,Weir,NA,NA,Age1.5,0
-Anchor,2009,Escapement,Weir,NA,NA,Age1.5,0
-Anchor,2010,Escapement,Weir,NA,NA,Age1.5,0
-Anchor,2011,Escapement,Weir,NA,NA,Age1.5,0
-Anchor,2012,Escapement,Weir,NA,NA,Age1.5,0
-Anchor,2013,Escapement,Weir,NA,NA,Age1.5,0
-Anchor,2014,Escapement,Weir,NA,NA,Age1.5,0
-Anchor,2015,Escapement,Weir,NA,NA,Age1.5,0
-Anchor,2016,Escapement,Weir,NA,NA,Age1.5,0
+Anchor,2003,Escapement,Weir,NA,601,Age1.5,0
+Anchor,2004,Escapement,Weir,NA,285,Age1.5,0
+Anchor,2005,Escapement,Weir,NA,415,Age1.5,0
+Anchor,2006,Escapement,Weir,NA,207,Age1.5,0
+Anchor,2007,Escapement,Weir,NA,185,Age1.5,0
+Anchor,2008,Escapement,Weir,NA,116,Age1.5,0
+Anchor,2009,Escapement,Weir,NA,90,Age1.5,0
+Anchor,2010,Escapement,Weir,NA,273,Age1.5,0
+Anchor,2011,Escapement,Weir,NA,282,Age1.5,0
+Anchor,2012,Escapement,Weir,NA,199,Age1.5,0
+Anchor,2013,Escapement,Weir,NA,254,Age1.5,0
+Anchor,2014,Escapement,Weir,NA,267,Age1.5,0
+Anchor,2015,Escapement,Weir,NA,379,Age1.5,0
+Anchor,2016,Escapement,Weir,NA,260,Age1.5,0
 Crooked,2004,Escapement,Weir,NA,561,Age1.5,0
 Crooked,2005,Escapement,Weir,NA,194,Age1.5,0
 Crooked,2006,Escapement,Weir,NA,91,Age1.5,0
@@ -1145,78 +1417,146 @@ ESSN,2013,Commercial Harvest,Gill Net,< 6 in,664,Age1.5,0
 ESSN,2014,Commercial Harvest,Gill Net,< 6 in,459,Age1.5,0.0010010010010010012
 ESSN,2015,Commercial Harvest,Gill Net,< 6 in,631,Age1.5,0.003
 ESSN,2016,Commercial Harvest,Gill Net,< 6 in,809,Age1.5,0.019
-Kenai.Late,1986,Escapement,Gill Net,7 in,1650,Age1.5,0.0443
+Kenai.Late,1986,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.030612244897959183
+Kenai.Late,1986,Escapement,Gill Net,7.5 in,1650,Age1.5,0.0443
+Kenai.Late,1986,Escapement,Model Estimate,NA,NA,Age1.5,0.04
 Kenai.Late,1986,Sport Harvest,Angling,NA,524,Age1.5,0.0527
-Kenai.Late,1987,Escapement,Gill Net,7 in,962,Age1.5,0.0104
+Kenai.Late,1987,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.01
+Kenai.Late,1987,Escapement,Gill Net,7.5 in,962,Age1.5,0.0104
+Kenai.Late,1987,Escapement,Model Estimate,NA,NA,Age1.5,0.01
 Kenai.Late,1987,Sport Harvest,Angling,NA,438,Age1.5,0.0311
-Kenai.Late,1988,Escapement,Gill Net,7 in,942,Age1.5,0.1718171817181718
+Kenai.Late,1988,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.0297029702970297
+Kenai.Late,1988,Escapement,Gill Net,7.5 in,942,Age1.5,0.1718171817181718
+Kenai.Late,1988,Escapement,Model Estimate,NA,NA,Age1.5,0.17
 Kenai.Late,1988,Sport Harvest,Angling,NA,426,Age1.5,0.1706829317068293
-Kenai.Late,1989,Escapement,Gill Net,7 in,664,Age1.5,0.1209120912091209
+Kenai.Late,1989,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.09090909090909091
+Kenai.Late,1989,Escapement,Gill Net,7.5 in,664,Age1.5,0.1209120912091209
+Kenai.Late,1989,Escapement,Model Estimate,NA,NA,Age1.5,0.12121212121212122
 Kenai.Late,1989,Sport Harvest,Angling,NA,104,Age1.5,0.1584
-Kenai.Late,1990,Escapement,Gill Net,7 in,528,Age1.5,0.045395460453954595
+Kenai.Late,1990,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.05
+Kenai.Late,1990,Escapement,Gill Net,7.5 in,528,Age1.5,0.045395460453954595
+Kenai.Late,1990,Escapement,Model Estimate,NA,NA,Age1.5,0.04950495049504951
 Kenai.Late,1990,Sport Harvest,Angling,NA,341,Age1.5,0.11728827117288271
-Kenai.Late,1991,Escapement,Gill Net,7 in,363,Age1.5,0.0652
+Kenai.Late,1991,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.02
+Kenai.Late,1991,Escapement,Gill Net,7.5 in,363,Age1.5,0.0652
+Kenai.Late,1991,Escapement,Model Estimate,NA,NA,Age1.5,0.07
 Kenai.Late,1991,Sport Harvest,Angling,NA,472,Age1.5,0.0628
-Kenai.Late,1992,Escapement,Gill Net,7 in,341,Age1.5,0.0235
+Kenai.Late,1992,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.04040404040404041
+Kenai.Late,1992,Escapement,Gill Net,7.5 in,341,Age1.5,0.0235
+Kenai.Late,1992,Escapement,Model Estimate,NA,NA,Age1.5,0.02
 Kenai.Late,1992,Sport Harvest,Angling,NA,402,Age1.5,0.0597
-Kenai.Late,1993,Escapement,Gill Net,7 in,350,Age1.5,0.0571057105710571
+Kenai.Late,1993,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.04
+Kenai.Late,1993,Escapement,Gill Net,7.5 in,350,Age1.5,0.0571057105710571
+Kenai.Late,1993,Escapement,Model Estimate,NA,NA,Age1.5,0.06
 Kenai.Late,1993,Sport Harvest,Angling,NA,689,Age1.5,0.0580941905809419
-Kenai.Late,1994,Escapement,Gill Net,7 in,414,Age1.5,0.0411
+Kenai.Late,1994,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.07070707070707072
+Kenai.Late,1994,Escapement,Gill Net,7.5 in,414,Age1.5,0.0411
+Kenai.Late,1994,Escapement,Model Estimate,NA,NA,Age1.5,0.05
 Kenai.Late,1994,Sport Harvest,Angling,NA,434,Age1.5,0.025302530253025302
-Kenai.Late,1995,Escapement,Gill Net,7 in,207,Age1.5,0.053394660533946606
+Kenai.Late,1995,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.06060606060606061
+Kenai.Late,1995,Escapement,Gill Net,7.5 in,207,Age1.5,0.053394660533946606
+Kenai.Late,1995,Escapement,Model Estimate,NA,NA,Age1.5,0.06060606060606061
 Kenai.Late,1995,Sport Harvest,Angling,NA,435,Age1.5,0.1057
-Kenai.Late,1996,Escapement,Gill Net,7 in,470,Age1.5,0.0085
+Kenai.Late,1996,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.0202020202020202
+Kenai.Late,1996,Escapement,Gill Net,7.5 in,470,Age1.5,0.0085
+Kenai.Late,1996,Escapement,Model Estimate,NA,NA,Age1.5,0.01
 Kenai.Late,1996,Sport Harvest,Angling,NA,235,Age1.5,0.0214
-Kenai.Late,1997,Escapement,Gill Net,7 in,289,Age1.5,0.0173
+Kenai.Late,1997,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.02
+Kenai.Late,1997,Escapement,Gill Net,7.5 in,289,Age1.5,0.0173
+Kenai.Late,1997,Escapement,Model Estimate,NA,NA,Age1.5,0.02
 Kenai.Late,1997,Sport Harvest,Angling,NA,317,Age1.5,0.012601260126012601
-Kenai.Late,1998,Escapement,Gill Net,7 in,374,Age1.5,0.0321967803219678
+Kenai.Late,1998,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.02
+Kenai.Late,1998,Escapement,Gill Net,7.5 in,374,Age1.5,0.0321967803219678
+Kenai.Late,1998,Escapement,Model Estimate,NA,NA,Age1.5,0.03
 Kenai.Late,1998,Sport Harvest,Angling,NA,331,Age1.5,0.0302
-Kenai.Late,1999,Escapement,Gill Net,7 in,386,Age1.5,0.0466
+Kenai.Late,1999,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.03
+Kenai.Late,1999,Escapement,Gill Net,7.5 in,386,Age1.5,0.0466
+Kenai.Late,1999,Escapement,Model Estimate,NA,NA,Age1.5,0.05050505050505051
 Kenai.Late,1999,Sport Harvest,Angling,NA,320,Age1.5,0.041
-Kenai.Late,2000,Escapement,Gill Net,7 in,383,Age1.5,0.0261
+Kenai.Late,2000,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.01
+Kenai.Late,2000,Escapement,Gill Net,7.5 in,383,Age1.5,0.0261
+Kenai.Late,2000,Escapement,Model Estimate,NA,NA,Age1.5,0.03
 Kenai.Late,2000,Sport Harvest,Angling,NA,483,Age1.5,0.0123
-Kenai.Late,2001,Escapement,Gill Net,7 in,256,Age1.5,0.0272
+Kenai.Late,2001,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.01
+Kenai.Late,2001,Escapement,Gill Net,7.5 in,256,Age1.5,0.0272
+Kenai.Late,2001,Escapement,Model Estimate,NA,NA,Age1.5,0.03
 Kenai.Late,2001,Sport Harvest,Angling,NA,388,Age1.5,0.0195
+Kenai.Late,2002,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.01
+Kenai.Late,2002,Escapement,Gill Net,5 and 7.5 in,945,Age1.5,0.032476342
 Kenai.Late,2002,Escapement,Gill Net,5 in,381,Age1.5,0.032503250325032505
-Kenai.Late,2002,Escapement,Gill Net,7 in,564,Age1.5,0.032503250325032505
+Kenai.Late,2002,Escapement,Gill Net,7.5 in,564,Age1.5,0.032503250325032505
+Kenai.Late,2002,Escapement,Model Estimate,NA,NA,Age1.5,0.03
 Kenai.Late,2002,Sport Harvest,Angling,NA,275,Age1.5,0.0179
+Kenai.Late,2003,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.019801980198019802
+Kenai.Late,2003,Escapement,Gill Net,5 and 7.5 in,1114,Age1.5,0.005
 Kenai.Late,2003,Escapement,Gill Net,5 in,455,Age1.5,0.0011998800119988001
-Kenai.Late,2003,Escapement,Gill Net,7 in,659,Age1.5,0.0076
+Kenai.Late,2003,Escapement,Gill Net,7.5 in,659,Age1.5,0.0076
+Kenai.Late,2003,Escapement,Model Estimate,NA,NA,Age1.5,0
 Kenai.Late,2003,Sport Harvest,Angling,NA,311,Age1.5,0.009300000000000001
+Kenai.Late,2004,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.01
+Kenai.Late,2004,Escapement,Gill Net,5 and 7.5 in,933,Age1.5,0.013
 Kenai.Late,2004,Escapement,Gill Net,5 in,333,Age1.5,0.015001500150015001
-Kenai.Late,2004,Escapement,Gill Net,7 in,600,Age1.5,0.011901190119011902
+Kenai.Late,2004,Escapement,Gill Net,7.5 in,600,Age1.5,0.011901190119011902
+Kenai.Late,2004,Escapement,Model Estimate,NA,NA,Age1.5,0.01
 Kenai.Late,2004,Sport Harvest,Angling,NA,305,Age1.5,0.031
+Kenai.Late,2005,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.019801980198019802
+Kenai.Late,2005,Escapement,Gill Net,5 and 7.5 in,519,Age1.5,0.04195804195804197
 Kenai.Late,2005,Escapement,Gill Net,5 in,218,Age1.5,0.0638936106389361
-Kenai.Late,2005,Escapement,Gill Net,7 in,302,Age1.5,0.0262
+Kenai.Late,2005,Escapement,Gill Net,7.5 in,302,Age1.5,0.0262
+Kenai.Late,2005,Escapement,Model Estimate,NA,NA,Age1.5,0.04040404040404041
 Kenai.Late,2005,Sport Harvest,Angling,NA,429,Age1.5,0.027
+Kenai.Late,2006,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.03
+Kenai.Late,2006,Escapement,Gill Net,5 and 7.5 in,703,Age1.5,0.070054729
 Kenai.Late,2006,Escapement,Gill Net,5 in,294,Age1.5,0.0578
-Kenai.Late,2006,Escapement,Gill Net,7 in,409,Age1.5,0.0789
+Kenai.Late,2006,Escapement,Gill Net,7.5 in,409,Age1.5,0.0789
+Kenai.Late,2006,Escapement,Model Estimate,NA,NA,Age1.5,0.1
 Kenai.Late,2006,Sport Harvest,Angling,NA,313,Age1.5,0.0652
+Kenai.Late,2007,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.009900990099009901
+Kenai.Late,2007,Escapement,Gill Net,5 and 7.5 in,437,Age1.5,0.087674079
 Kenai.Late,2007,Escapement,Gill Net,5 in,150,Age1.5,0.05160516051605161
-Kenai.Late,2007,Escapement,Gill Net,7 in,288,Age1.5,0.10654749949789115
+Kenai.Late,2007,Escapement,Gill Net,7.5 in,288,Age1.5,0.10654749949789115
+Kenai.Late,2007,Escapement,Model Estimate,NA,NA,Age1.5,0.09000000000000001
 Kenai.Late,2007,Sport Harvest,Angling,NA,237,Age1.5,0.0655934406559344
+Kenai.Late,2008,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.019801980198019802
+Kenai.Late,2008,Escapement,Gill Net,5 and 7.5 in,496,Age1.5,0.07766801392233197
 Kenai.Late,2008,Escapement,Gill Net,5 in,217,Age1.5,0.0946
-Kenai.Late,2008,Escapement,Gill Net,7 in,279,Age1.5,0.0645
+Kenai.Late,2008,Escapement,Gill Net,7.5 in,279,Age1.5,0.0645
+Kenai.Late,2008,Escapement,Model Estimate,NA,NA,Age1.5,0.08
 Kenai.Late,2008,Sport Harvest,Angling,NA,218,Age1.5,0.0854
+Kenai.Late,2009,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.01
+Kenai.Late,2009,Escapement,Gill Net,5 and 7.5 in,338,Age1.5,0.0420921909579078
 Kenai.Late,2009,Escapement,Gill Net,5 in,145,Age1.5,0.022297770222977704
-Kenai.Late,2009,Escapement,Gill Net,7 in,193,Age1.5,0.057
+Kenai.Late,2009,Escapement,Gill Net,7.5 in,193,Age1.5,0.057
+Kenai.Late,2009,Escapement,Model Estimate,NA,NA,Age1.5,0.04040404040404041
 Kenai.Late,2009,Sport Harvest,Angling,NA,195,Age1.5,0.0242
+Kenai.Late,2010,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.01
+Kenai.Late,2010,Escapement,Gill Net,5 and 7.5 in,221,Age1.5,0.06196848900000001
 Kenai.Late,2010,Escapement,Gill Net,5 in,84,Age1.5,0.055894410558944105
-Kenai.Late,2010,Escapement,Gill Net,7 in,137,Age1.5,0.0656934306569343
+Kenai.Late,2010,Escapement,Gill Net,7.5 in,137,Age1.5,0.0656934306569343
+Kenai.Late,2010,Escapement,Model Estimate,NA,NA,Age1.5,0.06
 Kenai.Late,2010,Sport Harvest,Angling,NA,184,Age1.5,0.0410958904109589
+Kenai.Late,2011,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0.01
+Kenai.Late,2011,Escapement,Gill Net,5 and 7.5 in,327,Age1.5,0.02061855697938144
 Kenai.Late,2011,Escapement,Gill Net,5 in,153,Age1.5,0.0179
-Kenai.Late,2011,Escapement,Gill Net,7 in,174,Age1.5,0.023
+Kenai.Late,2011,Escapement,Gill Net,7.5 in,174,Age1.5,0.023
+Kenai.Late,2011,Escapement,Model Estimate,NA,NA,Age1.5,0.020202020202020204
 Kenai.Late,2011,Sport Harvest,Angling,NA,233,Age1.5,0.0343
+Kenai.Late,2012,Commercial + Sport Harvest,Model Estimate,NA,NA,Age1.5,0
+Kenai.Late,2012,Escapement,Gill Net,5 and 7.5 in,232,Age1.5,0.0387931030387931
 Kenai.Late,2012,Escapement,Gill Net,5 in,92,Age1.5,0.0652
-Kenai.Late,2012,Escapement,Gill Net,7 in,140,Age1.5,0.021402140214021405
+Kenai.Late,2012,Escapement,Gill Net,7.5 in,140,Age1.5,0.021402140214021405
+Kenai.Late,2012,Escapement,Model Estimate,NA,NA,Age1.5,0.04
+Kenai.Late,2013,Escapement,Gill Net,5 and 7.5 in,149,Age1.5,0.024390244000000002
 Kenai.Late,2013,Escapement,Gill Net,5 in,49,Age1.5,0
-Kenai.Late,2013,Escapement,Gill Net,7 in,101,Age1.5,0.04950495049504951
+Kenai.Late,2013,Escapement,Gill Net,7.5 in,101,Age1.5,0.04950495049504951
 Kenai.Late,2013,Sport Harvest,Angling,NA,50,Age1.5,0.033600000000000005
+Kenai.Late,2014,Escapement,Gill Net,5 and 7.5 in,283,Age1.5,0.021
 Kenai.Late,2014,Escapement,Gill Net,5 in,145,Age1.5,0.027200000000000002
-Kenai.Late,2014,Escapement,Gill Net,7 in,138,Age1.5,0.0145
+Kenai.Late,2014,Escapement,Gill Net,7.5 in,138,Age1.5,0.0145
 Kenai.Late,2014,Sport Harvest,Angling,NA,30,Age1.5,0
+Kenai.Late,2015,Escapement,Gill Net,5 and 7.5 in,238,Age1.5,0.017000000000000005
 Kenai.Late,2015,Escapement,Gill Net,5 in,124,Age1.5,0.0084
-Kenai.Late,2015,Escapement,Gill Net,7 in,114,Age1.5,0.0263
+Kenai.Late,2015,Escapement,Gill Net,7.5 in,114,Age1.5,0.0263
 Kenai.Late,2015,Sport Harvest,Angling,NA,117,Age1.5,0.009072580645161291
 Kenai.Late,2016,Sport Harvest,Angling,NA,189,Age1.5,0.021
 Lewis,2012,Escapement,Weir,NA,71,Age1.5,0
@@ -1228,46 +1568,46 @@ LittleSusitna,2013,Escapement,Weir,NA,242,Age1.5,0
 LittleSusitna,2014,Escapement,Weir,NA,108,Age1.5,0
 LittleSusitna,2015,Escapement,Weir,NA,272,Age1.5,0
 LittleSusitna,2016,Escapement,Weir,NA,375,Age1.5,0
-Ninilchik,1997,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,1998,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,1999,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2000,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2001,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2002,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2003,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2004,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2005,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2006,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2007,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2008,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2009,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2010,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2011,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2012,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2013,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2014,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2015,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik,2016,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,1997,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,1998,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,1999,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2000,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2001,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2002,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2003,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2004,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2005,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2006,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2007,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2008,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2009,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2010,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2011,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2012,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2013,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2014,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2015,Escapement,Weir,NA,NA,Age1.5,0
-Ninilchik.Hatchery,2016,Escapement,Weir,NA,NA,Age1.5,0
+Ninilchik,1997,Escapement,Weir,NA,110,Age1.5,0
+Ninilchik,1998,Escapement,Weir,NA,460,Age1.5,0
+Ninilchik,1999,Escapement,Weir,NA,225,Age1.5,0
+Ninilchik,2000,Escapement,Weir,NA,278,Age1.5,0
+Ninilchik,2001,Escapement,Weir,NA,217,Age1.5,0
+Ninilchik,2002,Escapement,Weir,NA,257,Age1.5,0
+Ninilchik,2003,Escapement,Weir,NA,175,Age1.5,0
+Ninilchik,2004,Escapement,Weir,NA,167,Age1.5,0
+Ninilchik,2005,Escapement,Weir,NA,339,Age1.5,0
+Ninilchik,2006,Escapement,Weir,NA,140,Age1.5,0
+Ninilchik,2007,Escapement,Weir,NA,66,Age1.5,0
+Ninilchik,2008,Escapement,Weir,NA,135,Age1.5,0
+Ninilchik,2009,Escapement,Weir,NA,58,Age1.5,0
+Ninilchik,2010,Escapement,Weir,NA,99,Age1.5,0
+Ninilchik,2011,Escapement,Weir,NA,145,Age1.5,0
+Ninilchik,2012,Escapement,Weir,NA,95,Age1.5,0
+Ninilchik,2013,Escapement,Weir,NA,99,Age1.5,0
+Ninilchik,2014,Escapement,Weir,NA,989,Age1.5,0
+Ninilchik,2015,Escapement,Weir,NA,1002,Age1.5,0
+Ninilchik,2016,Escapement,Weir,NA,705,Age1.5,0
+Ninilchik.Hatchery,1997,Escapement,Weir,NA,180,Age1.5,0
+Ninilchik.Hatchery,1998,Escapement,Weir,NA,282,Age1.5,0
+Ninilchik.Hatchery,1999,Escapement,Weir,NA,113,Age1.5,0
+Ninilchik.Hatchery,2000,Escapement,Weir,NA,151,Age1.5,0
+Ninilchik.Hatchery,2001,Escapement,Weir,NA,87,Age1.5,0
+Ninilchik.Hatchery,2002,Escapement,Weir,NA,103,Age1.5,0
+Ninilchik.Hatchery,2003,Escapement,Weir,NA,72,Age1.5,0
+Ninilchik.Hatchery,2004,Escapement,Weir,NA,113,Age1.5,0
+Ninilchik.Hatchery,2005,Escapement,Weir,NA,123,Age1.5,0
+Ninilchik.Hatchery,2006,Escapement,Weir,NA,67,Age1.5,0
+Ninilchik.Hatchery,2007,Escapement,Weir,NA,19,Age1.5,0
+Ninilchik.Hatchery,2008,Escapement,Weir,NA,55,Age1.5,0
+Ninilchik.Hatchery,2009,Escapement,Weir,NA,97,Age1.5,0
+Ninilchik.Hatchery,2010,Escapement,Weir,NA,30,Age1.5,0
+Ninilchik.Hatchery,2011,Escapement,Weir,NA,45,Age1.5,0
+Ninilchik.Hatchery,2012,Escapement,Weir,NA,62,Age1.5,0
+Ninilchik.Hatchery,2013,Escapement,Weir,NA,115,Age1.5,0
+Ninilchik.Hatchery,2014,Escapement,Weir,NA,1117,Age1.5,0
+Ninilchik.Hatchery,2015,Escapement,Weir,NA,691,Age1.5,0
+Ninilchik.Hatchery,2016,Escapement,Weir,NA,436,Age1.5,0
 NSN,1983,Commercial Harvest,Gill Net,< 6 in,41,Age1.5,0
 NSN,1985,Commercial Harvest,Gill Net,< 6 in,40,Age1.5,0.025641025641025644
 NSN,1986,Commercial Harvest,Gill Net,< 6 in,900,Age1.5,0.010856958762886598
@@ -1287,9 +1627,9 @@ NSN,2016,Commercial Harvest,Gill Net,< 6 in,1027,Age1.5,0
 Theodore,2012,Escapement,Weir,NA,247,Age1.5,0
 Theodore,2013,Escapement,Weir,NA,192,Age1.5,0
 Theodore,2014,Escapement,Weir,NA,29,Age1.5,0
-Tyonek,2014,Subsistence Harvest,Gill Net,NA,136,Age1.5,0.058941058941058944
-Tyonek,2015,Subsistence Harvest,Gill Net,NA,300,Age1.5,0
-Tyonek,2016,Subsistence Harvest,Gill Net,NA,210,Age1.5,0.005
+Tyonek,2014,Subsistence Harvest,Gill Net,< 6 in,136,Age1.5,0.058941058941058944
+Tyonek,2015,Subsistence Harvest,Gill Net,< 6 in,300,Age1.5,0
+Tyonek,2016,Subsistence Harvest,Gill Net,< 6 in,210,Age1.5,0.005
 WSSN,1980,Commercial Harvest,Gill Net,< 6 in,NA,Age1.5,0
 WSSN,1983,Commercial Harvest,Gill Net,< 6 in,330,Age1.5,0.006054490413723511
 WSSN,1984,Commercial Harvest,Gill Net,< 6 in,225,Age1.5,0.03128153380423814

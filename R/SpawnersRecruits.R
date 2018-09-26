@@ -29,10 +29,13 @@ library(stringr)
 
 theme_set(theme_classic(14))
 
-source("~/Desktop/Cook Inlet Chinook/Analysis/R/AgeComp_estimate.R")
 source("~/Desktop/Cook Inlet Chinook/Analysis/R/Harvest_compile.R")
 setwd("~/Desktop/Cook Inlet Chinook/Analysis")
+
+sites <- read_csv("./data/Sites.csv")
 escapeFull <- read_csv("./data/Escapement.csv")
+ageSimple <- read_csv("./data/AgeSimple.csv")
+agePredicted <- read_csv("./data/AgePredicted.csv")
 
 # Aerial expansion factors: what fraction of spawners are counted in aerial surveys?
 # Source: Oslund et al. 2017 (p. 10) and Adam St. Saviour pers. comm.
@@ -40,6 +43,19 @@ aerialExp.min <- 0.3
 aerialExp.nom <- 0.45
 aerialExp.max <- 0.6
 
+# Reshape age composition data into "wide" format, with one row for each group and return year, and
+# different columns for the escapement and sport harvest run components
+ageSimpleWide <- ageSimple %>%
+  select(Group, Component, ReturnYear, Age, Prop) %>%
+  spread(key = "Component", value = "Prop") %>%
+  select(-`Commercial Harvest`, -`Subsistence Harvest`) %>%
+  rename(PropEsc = Escapement, PropSport = `Sport Harvest`)
+
+agePredictedWide <- agePredicted %>%
+  select(-zReturnYear) %>%
+  spread(key = "Component", value = "Prop") %>%
+  rename(PropEscPredicted = Escapement, PropSportPredicted = `Sport Harvest`)
+  
 # TODO: check my notes on Ninilchik: are there real data breaking down sport harvest by
 # hatchery vs. natural origin?  The spreadsheet from Mike Booz just divides them 50/50
 # for some years and 75/25 for other years.  If they don't have data on the breakdown
@@ -79,16 +95,19 @@ recruitsByRYxBY <- spawnersByRY %>%
   gather(key = "Age", value = "Prop", Age1.1:Age1.5) %>%
   select(-Prop) %>%
   # Join the age data and the global mean age composition
-  full_join(ageSimple, by = c("Population", "ReturnYear", "Age")) %>%
-  full_join(meanAgeComp, by = c("ReturnYear", "Age")) %>%
+  # TODO: these joins aren't working
+  left_join(sites, by = c("Population" = "Group")) %>%
+  left_join(ageSimpleWide, by = c("Population" = "Group", "ReturnYear", "Age")) %>%
+  left_join(agePredictedWide, by = c("Region", "ReturnYear", "Age")) %>%
   # Remove the marine fisheries (have age comps but no escapement data)
   filter(Population != "NSN" & Population != "ESSN" & Population != "WSSN" & 
            Population != "Tyonek") %>%
   # Now make a bunch of calculations...
   mutate(
-          # Use the population-specific age composition data if available, 
-          # or the average age comp for that return year if not
-         PropEst = if_else(is.na(Prop), PropMean, Prop),
+          # Use the population- and component-specific age composition data if available, 
+          # or the predictions from the MLR age-composition model if not
+         PropEscEst = if_else(is.na(PropEsc), PropEscPredicted, PropEsc), # Age comp of escapement
+         PropSportEst = if_else(is.na(PropSport), PropSportPredicted, PropSport), # Age comp of sport harvest
          # Calculate various age metrics in years
          AgeFW = as.numeric(str_sub(Age, start = 4, end = 4)),
          AgeSW = as.numeric(str_sub(Age, start = 6, end = 6)),
@@ -99,19 +118,19 @@ recruitsByRYxBY <- spawnersByRY %>%
          # weir removals, and terminal harvest (below and above the site where 
          # escapement is estimated, if applicable) for each combination of 
          # Population, ReturnYear, and BroodYear
-         Spawners1ByRYxBY = Spawners1 * PropEst,
-         Spawners2.minByRYxBY = Spawners2.min * PropEst,
-         Spawners2.nomByRYxBY = Spawners2.nom * PropEst,
-         Spawners2.maxByRYxBY = Spawners2.max * PropEst,
-         WeirRemovalsByRYxBY = WeirRemovals * PropEst,
+         Spawners1ByRYxBY = Spawners1 * PropEscEst,
+         Spawners2.minByRYxBY = Spawners2.min * PropEscEst,
+         Spawners2.nomByRYxBY = Spawners2.nom * PropEscEst,
+         Spawners2.maxByRYxBY = Spawners2.max * PropEscEst,
+         WeirRemovalsByRYxBY = WeirRemovals * PropEscEst,
          TermHarvestByRYxBY = if_else(
            # For the Kenai late run, add up the 4 terminal fisheries
            Population == "Kenai.Late", rowSums(cbind(EducationalHarvest, 
                                                      SubsistenceHarvest, PUHarvest, 
                                                      SportHarvestBelowSonar,
                                                      SportHarvestAboveSonar, 
-                                                     na.rm = T)) * PropEst,
-           SportHarvest * PropEst)
+                                                     na.rm = T)) * PropSportEst,
+           SportHarvest * PropSportEst)
   )
 
 # Calculate spawners and recruits from the 5 major age classes (1.1, 1.2, 1.3, 1.4, 1.5)
@@ -169,8 +188,8 @@ spawnersRecruits <- spawnersByRY %>%
   left_join(coreRecruitsByBrood, by = c("Population", "BroodYear")) %>%
   # Trim years and populations outside the study and remove intermediate variables
   filter(BroodYear > 1979) %>%
-  filter(Population != "Funny" & Population != "Slikok" & Population != "Quartz" & 
-           Population != "Crooked.Hatchery" & Population != "Ninilchik.Hatchery") %>%
+  filter(Population != "Funny" & Population != "Slikok" & Population != "Quartz" & Population != 
+           "Lewis" & Population != "Crooked.Hatchery" & Population != "Ninilchik.Hatchery") %>%
   
   # Calculate 2 indices of brood year productivity:
   # recruits [escapement + terminal harvest] / spawner (including top 5 age classes)

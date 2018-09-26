@@ -1,0 +1,47 @@
+Population,ReleaseYear,BroodYear,SmoltsReleased,Hatchery,MarkType,PercAFC,LengthAvg,WeightAvg,Source,Page
+Crooked.Hatchery,1994,NA,224784,Elmendorf,AFC,19.4,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,1995,NA,184049,Elmendorf,AFC,22.2,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,1996,NA,193180,Elmendorf,AFC,21.1,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,1997,NA,223201,Elmendorf,AFC,18.4,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,1998,NA,137338,Elmendorf,AFC,31.2,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,1999,NA,192304,Elmendorf,AFC,22.6,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2000,NA,108507,Elmendorf,AFC,100,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2001,NA,109201,Elmendorf,AFC,100,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2002,NA,99547,Elmendorf,AFC,100,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2003,NA,98800,Ft. Richardson,AFC,100,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2004,NA,80601,Ft. Richardson,AFC,100,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2005,NA,113613,Ft. Richardson,AFC,99.5,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2006,NA,111705,Ft. Richardson,AFC,100,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2007,NA,111382,Ft. Richardson,AFC,99.9,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2008,NA,114588,Ft. Richardson,AFC,100,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2009,NA,115035,Ft. Richardson,AFC,99.7,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2010,NA,106145,Ft. Richardson,AFC,100,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2011,NA,64578,Ft. Richardson,AFC,100,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2012,NA,52759,Jack Hernandez,AFC,100,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2013,NA,0,Jack Hernandez,AFC,NA,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2014,NA,143751,Jack Hernandez,AFC,99.6,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2015,NA,145855,Jack Hernandez,AFC,96.9,NA,NA,Begich et al. 2017,110
+Crooked.Hatchery,2016,NA,143280,Jack Hernandez,AFC,97.1,NA,NA,Begich et al. 2017,110
+Ninilchik.Hatchery,1988,1987,248586,Ft. Richardson ,Ad; CWT,NA,NA,12.5,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,1989,1988,200203,Ft. Richardson ,Ad; CWT,NA,NA,11.8,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,1990,1989,215804,Ft. Richardson ,Ad; CWT,NA,NA,12.8,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,1991,1990,87992,Ft. Richardson ,Ad; CWT,NA,100,12,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,1992,1991,132387,Ft. Richardson ,Ad; CWT,NA,107,12.5,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,1993,1992,184585,Ft. Richardson ,Ad; CWT,NA,107,14.7,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,1994,1993,201513,Ft. Richardson ,Ad; CWT,NA,NA,12,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,1995,1994,54662,Ft. Richardson ,Ad; CWT,NA,NA,14.1,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,1996,1995,51688,Ft. Richardson ,Ad; CWT,NA,NA,12.9,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,1997,1996,50292,Ft. Richardson ,Ad; CWT; TM,NA,NA,12,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,1998,1997,48798,Ft. Richardson ,Ad; CWT; TM,NA,NA,11.4,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,1999,1998,49853,Ft. Richardson ,Ad; CWT; TM,NA,104,13.6,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,2000,1999,51298,Ft. Richardson ,Ad; CWT; TM,NA,96,10.2,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,2001,2000,54770,Ft. Richardson ,Ad; CWT; TM,NA,104,13.6,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,2002,2001,54631,Ft. Richardson ,Ad; CWT; TM,NA,101,12.1,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,2003,2002,47997,Ft. Richardson ,Ad; CWT; TM,NA,105,12.6,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,2004,2002,51303,Ft. Richardson ,Ad; CWT; TM,NA,105,12.6,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,2005,2003,55229,Ft. Richardson ,Ad; CWT; TM,NA,101,11.9,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,2006,2004,57537,Ft. Richardson ,Ad; CWT; TM,99.2,102,12.5,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,2007,2005,56368,Ft. Richardson ,Ad; CWT; TM,99.5,92,8.7,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,2008,2006,56943,Ft. Richardson ,Ad; CWT; TM,99.9,96,10.3,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,2009,2007,54797,Ft. Richardson ,Ad; CWT; TM,100,87.6,8.2,Booz and Kerkvliet 2016,19
+Ninilchik.Hatchery,2010,2008,58297,Ft. Richardson ,Ad; CWT; TM,NA,92.7,9.4,Booz and Kerkvliet 2016,19
