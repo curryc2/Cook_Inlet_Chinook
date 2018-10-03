@@ -1,0 +1,17 @@
+"","Population","EscapementMethod","startBY","endBY","n.year"
+"1","Alexander","Single aerial survey",1982,2009,28
+"2","Anchor","Weir count",2003,2009,7
+"3","Campbell","Single foot survey",1986,2005,19
+"4","Chuitna","Single aerial survey",1984,2009,25
+"5","Chulitna","Single aerial survey",1987,2009,17
+"6","Crooked","Weir count minus removals",2004,2009,6
+"7","Deep","Single aerial survey",1981,2009,29
+"8","Deshka","Expansion of aerial surveys based on weir count : aerial survey regression",1982,1998,10
+"9","Deshka","Weir count minus sport harvest above weir",1995,2009,14
+"10","Kenai.Late","Sonar count minus sport harvest above sonar",1986,2009,24
+"11","LittleSusitna","Expansion of aerial surveys based on ratio of paired aerial survey and weir count data",1983,2009,16
+"12","LittleWillow","Single aerial survey",1981,2009,24
+"13","Montana","Single aerial survey",1987,2009,22
+"14","Ninilchik","Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",1999,2010,12
+"15","Theodore","Single aerial survey",1981,2009,29
+"16","Willow","Single aerial survey",1981,2009,28
