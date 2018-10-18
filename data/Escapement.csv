@@ -1,567 +1,876 @@
-Population,ReturnYear,SpawnerSurvey,WeirCount,WeirRemovals,Escapement,EscapementMethod,Comments,Reference,Page
-Alexander,1974,2193,,,2193,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1975,1878,,,1878,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1976,5412,,,5412,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1977,9246,,,9246,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1978,5854,,,5854,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1979,6215,,,6215,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1980,,,,,,No survey,Erickson et al. 2017,44
-Alexander,1981,,,,,,No survey,Erickson et al. 2017,44
-Alexander,1982,2546,,,2546,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1983,3755,,,3755,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1984,4620,,,4620,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1985,6241,,,6241,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1986,5225,,,5225,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1987,2152,,,2152,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1988,6273,,,6273,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1989,3497,,,3497,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1990,2596,,,2596,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1991,2727,,,2727,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1992,3710,,,3710,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1993,2763,,,2763,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1994,1514,,,1514,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1995,2090,,,2090,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1996,2319,,,2319,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1997,5598,,,5598,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1998,2807,,,2807,Single aerial survey,,Erickson et al. 2017,44
-Alexander,1999,3974,,,3974,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2000,2331,,,2331,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2001,2282,,,2282,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2002,1936,,,1936,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2003,2012,,,2012,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2004,2215,,,2215,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2005,2140,,,2140,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2006,885,,,885,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2007,480,,,480,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2008,150,,,150,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2009,275,,,275,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2010,177,,,177,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2011,343,,,343,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2012,181,,,181,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2013,588,,,588,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2014,911,,,911,Single aerial survey,,Erickson et al. 2017,44
-Alexander,2015,1117,,,1117,Single aerial survey,,Erickson et al. 2017,44
-Anchor,2003,,13273,,13273,Weir count,Chinook salmon were monitored in the mainstem Anchor River below the confluence of the North/South forks using DIDSON sonar and/or resistance board weir and/or instream video during 2003–2012. Monitoring occurred throughout the run; except in 2003; when an expansion was applied. Aerial surveys also conducted during previous years; but they were found to be unreliable (Kerkvliet et al. 2016) so we did not include them in our analysis.,Otis et al. 2016,30
-Anchor,2004,,12016,,12016,Weir count,,Otis et al. 2016,30
-Anchor,2005,,11156,,11156,Weir count,,Otis et al. 2016,30
-Anchor,2006,,8945,,8945,Weir count,,Otis et al. 2016,30
-Anchor,2007,,9622,,9622,Weir count,,Otis et al. 2016,30
-Anchor,2008,,5806,,5806,Weir count,,Otis et al. 2016,30
-Anchor,2009,,3455,,3455,Weir count,,Otis et al. 2016,30
-Anchor,2010,,4449,,4449,Weir count,,Otis et al. 2016,30
-Anchor,2011,,3545,,3545,Weir count,,Otis et al. 2016,30
-Anchor,2012,,4509,,4509,Weir count,,Otis et al. 2016,30
-Anchor,2013,,4388,,4388,Weir count,A series of floods rendered the mainstem Anchor River site unsuitable for escapement monitoring. A combination of mainstem DIDSON sonar and weir/video systems operated on both the North and South forks was used to assess escapement throughout the run in 2013. ,Otis et al. 2016,30
-Anchor,2014,,2497,,2497,Weir count,DIDSON sonar and/or resistance board weirs equipped with instream video were used to monitor Chinook salmon escapement throughout the run on both the North and South forks of the Anchor River during 2014–2015. ,Otis et al. 2016,30
-Anchor,2015,,10049,,10049,Weir count,DIDSON sonar and/or resistance board weirs equipped with instream video were used to monitor Chinook salmon escapement throughout the run on both the North and South forks of the Anchor River during 2014–2015. ,Otis et al. 2016,30
-Campbell,1982,68,,,68,Single foot survey,,Erickson et al. 2017,45
-Campbell,1983,,,,,,No survey,Erickson et al. 2017,45
-Campbell,1984,423,,,423,Single foot survey,,Erickson et al. 2017,45
-Campbell,1985,,,,,,No survey,Erickson et al. 2017,45
-Campbell,1986,733,,,733,Single foot survey,,Erickson et al. 2017,45
-Campbell,1987,571,,,571,Single foot survey,,Erickson et al. 2017,45
-Campbell,1988,,,,,,No survey,Erickson et al. 2017,45
-Campbell,1989,218,,,218,Single foot survey,,Erickson et al. 2017,45
-Campbell,1990,458,,,458,Single foot survey,,Erickson et al. 2017,45
-Campbell,1991,590,,,590,Single foot survey,,Erickson et al. 2017,45
-Campbell,1992,931,,,931,Single foot survey,,Erickson et al. 2017,45
-Campbell,1993,937,,,937,Single foot survey,,Erickson et al. 2017,45
-Campbell,1994,1076,,,1076,Single foot survey,,Erickson et al. 2017,45
-Campbell,1995,734,,,734,Single foot survey,,Erickson et al. 2017,45
-Campbell,1996,369,,,369,Single foot survey,,Erickson et al. 2017,45
-Campbell,1997,1119,,,1119,Single foot survey,,Erickson et al. 2017,45
-Campbell,1998,761,,,761,Single foot survey,,Erickson et al. 2017,45
-Campbell,1999,1035,,,1035,Single foot survey,,Erickson et al. 2017,45
-Campbell,2000,591,,,591,Single foot survey,,Erickson et al. 2017,45
-Campbell,2001,717,,,717,Single foot survey,,Erickson et al. 2017,45
-Campbell,2002,744,,,744,Single foot survey,,Erickson et al. 2017,45
-Campbell,2003,745,,,745,Single foot survey,,Erickson et al. 2017,45
-Campbell,2004,964,,,964,Single foot survey,,Erickson et al. 2017,45
-Campbell,2005,1097,,,1097,Single foot survey,,Erickson et al. 2017,45
-Campbell,2006,1052,,,1052,Single foot survey,,Erickson et al. 2017,45
-Campbell,2007,588,,,588,Single foot survey,,Erickson et al. 2017,45
-Campbell,2008,439,,,439,Single foot survey,,Erickson et al. 2017,45
-Campbell,2009,554,,,554,Single foot survey,,Erickson et al. 2017,45
-Campbell,2010,290,,,290,Single foot survey,,Erickson et al. 2017,45
-Campbell,2011,260,,,260,Single foot survey,,Erickson et al. 2017,45
-Campbell,2012,,,,,,No survey,Erickson et al. 2017,45
-Campbell,2013,,,,,,No survey,Erickson et al. 2017,45
-Campbell,2014,274,,,274,Single foot survey,,Erickson et al. 2017,45
-Campbell,2015,654,,,654,Single foot survey,,Erickson et al. 2017,45
-Chuitna,1979,1246,,,1246,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1980,,,,,,No survey,Erickson et al. 2017,46
-Chuitna,1981,1362,,,1362,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1982,3438,,,3438,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1983,4043,,,4043,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1984,2845,,,2845,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1985,1600,,,1600,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1986,3946,,,3946,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1987,,,,,,No survey,Erickson et al. 2017,46
-Chuitna,1988,3024,,,3024,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1989,990,,,990,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1990,480,,,480,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1991,537,,,537,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1992,1337,,,1337,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1993,2085,,,2085,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1994,1012,,,1012,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1995,1162,,,1162,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1996,1343,,,1343,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1997,2232,,,2232,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1998,1869,,,1869,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,1999,3721,,,3721,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2000,1456,,,1456,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2001,1501,,,1501,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2002,1394,,,1394,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2003,2339,,,2339,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2004,2938,,,2938,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2005,1307,,,1307,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2006,1911,,,1911,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2007,1180,,,1180,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2008,586,,,586,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2009,1040,,,1040,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2010,735,,,735,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2011,719,,,719,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2012,502,,,502,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2013,1690,,,1690,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2014,1398,,,1398,Single aerial survey,,Erickson et al. 2017,46
-Chuitna,2015,1965,,,1965,Single aerial survey,,Erickson et al. 2017,46
-Chulitna,1982,863,,,863,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,1983,4058,,,4058,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,1984,4191,,,4191,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,1985,783,,,783,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,1986,,,,,,No survey,Erickson et al. 2017,47
-Chulitna,1987,5252,,,5252,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,1988,,,,,,No survey,Erickson et al. 2017,47
-Chulitna,1989,,,,,,No survey,Erickson et al. 2017,47
-Chulitna,1990,2681,,,2681,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,1991,4410,,,4410,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,1992,2527,,,2527,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,1993,2070,,,2070,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,1994,1806,,,1806,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,1995,3460,,,3460,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,1996,4172,,,4172,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,1997,5618,,,5618,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,1998,2586,,,2586,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,1999,5455,,,5455,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2000,4218,,,4218,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2001,2353,,,2353,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2002,9002,,,9002,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2003,,,,,,No survey,Erickson et al. 2017,47
-Chulitna,2004,2162,,,2162,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2005,2838,,,2838,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2006,2862,,,2862,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2007,5166,,,5166,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2008,2514,,,2514,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2009,2093,,,2093,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2010,1052,,,1052,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2011,1875,,,1875,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2012,667,,,667,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2013,1262,,,1262,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2014,1011,,,1011,Single aerial survey,,Erickson et al. 2017,47
-Chulitna,2015,3137,,,3137,Single aerial survey,,Erickson et al. 2017,47
-Crooked.Hatchery,2004,,2232,72,2160,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked.Hatchery,2005,,1060,33,1027,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked.Hatchery,2006,,1057,4,1053,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked.Hatchery,2007,,489,2,487,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked.Hatchery,2008,,396,94,302,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked.Hatchery,2009,,255,138,117,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked.Hatchery,2010,,262,2,260,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked.Hatchery,2011,,256,128,128,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked.Hatchery,2012,,163,63,100,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked.Hatchery,2013,,198,87,111,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked.Hatchery,2014,,911,174,737,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked.Hatchery,2015,,601,154,447,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked,2004,,2641,445,2196,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked,2005,,2108,199,1909,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked,2006,,1589,73,1516,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked,2007,,1038,73,965,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked,2008,,1018,139,879,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked,2009,,674,57,617,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked,2010,,1090,2,1088,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked,2011,,677,23,654,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked,2012,,633,2,631,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked,2013,,1211,109,1102,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked,2014,,1522,111,1411,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Crooked,2015,,1639,183,1456,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
-Deep,1976,1075,,,1075,Single aerial survey,Escapement was estimated from single aerial survey data unless otherwise specified. Escapement was not surveyed or monitored during years with no escapement value. ,Otis et al. 2016,31
-Deep,1977,848,,,848,Single aerial survey,,Otis et al. 2016,31
-Deep,1978,582,,,582,Single aerial survey,,Otis et al. 2016,31
-Deep,1979,726,,,726,Single aerial survey,,Otis et al. 2016,31
-Deep,1980,,,,,,,Otis et al. 2016,31
-Deep,1981,427,,,427,Single aerial survey,,Otis et al. 2016,31
-Deep,1982,977,,,977,Single aerial survey,,Otis et al. 2016,31
-Deep,1983,550,,,550,Single aerial survey,,Otis et al. 2016,31
-Deep,1984,380,,,380,Single aerial survey,,Otis et al. 2016,31
-Deep,1985,644,,,644,Single aerial survey,,Otis et al. 2016,31
-Deep,1986,976,,,976,Single aerial survey,,Otis et al. 2016,31
-Deep,1987,968,,,968,Single aerial survey,,Otis et al. 2016,31
-Deep,1988,409,,,409,Single aerial survey,,Otis et al. 2016,31
-Deep,1989,561,,,561,Single aerial survey,,Otis et al. 2016,31
-Deep,1990,347,,,347,Single aerial survey,,Otis et al. 2016,31
-Deep,1991,294,,,294,Single aerial survey,,Otis et al. 2016,31
-Deep,1992,63,,,63,Single aerial survey,,Otis et al. 2016,31
-Deep,1993,486,,,486,Single aerial survey,,Otis et al. 2016,31
-Deep,1994,364,,,364,Single aerial survey,,Otis et al. 2016,31
-Deep,1995,229,,,229,Single aerial survey,,Otis et al. 2016,31
-Deep,1996,193,,,193,Single aerial survey,,Otis et al. 2016,31
-Deep,1997,136,,,136,Single aerial survey,,Otis et al. 2016,31
-Deep,1998,676,,,676,Single aerial survey,,Otis et al. 2016,31
-Deep,1999,1190,,,1190,Single aerial survey,,Otis et al. 2016,31
-Deep,2000,556,,,556,Single aerial survey,,Otis et al. 2016,31
-Deep,2001,551,,,551,Single aerial survey,,Otis et al. 2016,31
-Deep,2002,696,,,696,Single aerial survey,,Otis et al. 2016,31
-Deep,2003,1008,,,1008,Single aerial survey,,Otis et al. 2016,31
-Deep,2004,1075,,,1075,Single aerial survey,,Otis et al. 2016,31
-Deep,2005,1076,,,1076,Single aerial survey,,Otis et al. 2016,31
-Deep,2006,507,,,507,Single aerial survey,,Otis et al. 2016,31
-Deep,2007,553,,,553,Single aerial survey,,Otis et al. 2016,31
-Deep,2008,205,,,205,Single aerial survey,,Otis et al. 2016,31
-Deep,2009,483,,,483,Single aerial survey,,Otis et al. 2016,31
-Deep,2010,387,,,387,Single aerial survey,,Otis et al. 2016,31
-Deep,2011,696,,,696,Single aerial survey,,Otis et al. 2016,31
-Deep,2012,447,,,447,Single aerial survey,,Otis et al. 2016,31
-Deep,2013,475,,,475,Single aerial survey,,Otis et al. 2016,31
-Deep,2014,601,,,601,Single aerial survey,,Otis et al. 2016,31
-Deep,2015,535,,,535,Single aerial survey,,Otis et al. 2016,31
-Deshka,1974,5279,,,15201,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1975,4737,,,14088,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1976,21693,,,48916,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1977,39642,,,85784,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1978,24639,,,54967,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1979,27385,,,60607,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1980,,,,,,,Erickson et al. 2017,50
-Deshka,1981,,,,,,,Erickson et al. 2017,50
-Deshka,1982,16000,,,37222,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1983,19237,,,43871,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1984,16892,,,39054,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1985,18151,,,41640,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1986,21080,,,47657,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1987,15028,,,35226,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1988,19200,,,43795,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1989,,,,,,,Erickson et al. 2017,50
-Deshka,1990,18166,,,41671,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1991,8112,,,21020,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1992,7736,,,20248,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1993,5769,,,16207,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1994,2665,,,9832,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1995,5150,10048,,10048,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,1996,6343,14349,,14349,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,1997,19047,35587,,35587,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,1998,15556,,,36310,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
-Deshka,1999,12904,29649,,29088,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2000,,35242,,33965,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2001,,29004,,27966,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2002,8749,29428,,28535,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2003,,40069,,39257,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2004,28778,57934,,56659,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2005,11495,37725,,36433,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2006,6499,31150,,29922,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2007,6712,18714,,17594,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2008,,7533,,7284,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2009,3954,11960,,11641,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2010,,18594,,18223,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2011,7522,19026,,18553,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2012,,14096,,13952,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2013,,18531,,18378,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2014,,16335,,16099,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Deshka,2015,,24316,,23627,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
-Funny,2006,,2779,,2779,Weir count,,McKinley and Fleischman 2013,31
-Funny,2007,,2075,,2075,Weir count,,McKinley and Fleischman 2013,31
-Funny,2008,,1246,,1246,Weir count,,McKinley and Fleischman 2013,31
-Funny,2009,,1114,,1114,Weir count,,McKinley and Fleischman 2013,31
-Funny,2010,,1187,,1187,Weir count,,McKinley and Fleischman 2013,31
-Funny,2011,,990,,990,Weir count,,McKinley and Fleischman 2013,31
-Funny,2012,,879,,879,Weir count,,McKinley and Fleischman 2013,31
-Funny,2013,,988,,988,Weir count,,Begich et al. 2017,111
-Funny,2014,,1308,,1308,Weir count,,Begich et al. 2017,111
-Funny,2015,,1727,,1727,Weir count,,Begich et al. 2017,111
-Kenai.Late,1986,,,,52868,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,1987,,,,50450,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,1988,,,,42065,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,1989,,,,26679,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,1990,,,,27303,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,1991,,,,31037,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,1992,,,,34734,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,1993,,,,32435,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,1994,,,,29603,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,1995,,,,32161,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,1996,,,,34678,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,1997,,,,28365,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,1998,,,,39595,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,1999,,,,31245,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2000,,,,33049,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2001,,,,38466,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2002,,,,46122,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2003,,,,68990,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2004,,,,64702,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2005,,,,61513,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2006,,,,49780,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2007,,,,37680,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2008,,,,32712,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2009,,,,22036,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2010,,,,11639,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2011,,,,16819,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2012,,,,21512,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2013,,,,19419,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2014,,,,17522,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Kenai.Late,2015,,,,22871,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
-Lewis,1979,546,,,546,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1980,,,,,,No survey,Erickson et al. 2017,55
-Lewis,1981,560,,,560,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1982,606,,,606,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1983,,,,,,No survey,Erickson et al. 2017,55
-Lewis,1984,947,,,947,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1985,861,,,861,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1986,722,,,722,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1987,875,,,875,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1988,616,,,616,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1989,452,,,452,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1990,207,,,207,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1991,303,,,303,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1992,445,,,445,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1993,531,,,531,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1994,164,,,164,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1995,146,,,146,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1996,257,,,257,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1997,777,,,777,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1998,626,,,626,Single aerial survey,,Erickson et al. 2017,55
-Lewis,1999,675,,,675,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2000,480,,,480,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2001,502,,,502,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2002,439,,,439,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2003,878,,,878,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2004,1000,,,1000,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2005,441,,,441,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2006,341,,,341,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2007,0,,,0,Single aerial survey,Lack of a channel following a flood event prevented upstream fish passage,Erickson et al. 2017,55
-Lewis,2008,120,,,120,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2009,111,,,111,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2010,56,,,56,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2011,92,,,92,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2012,107,,,107,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2013,61,,,61,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2014,61,,,61,Single aerial survey,,Erickson et al. 2017,55
-Lewis,2015,5,,,5,Single aerial survey,,Erickson et al. 2017,55
-LittleSusitna,1983,929,,,2138,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,1984,558,,,1275,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,1985,1005,,,2315,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,1986,,,,,,No survey,Erickson et al. 2017,56
-LittleSusitna,1987,1386,,,3201,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,1988,3197,7712,,7712,Weir count,,Erickson et al. 2017,56
-LittleSusitna,1989,2184,4367,,4367,Weir count,Escapement not surveyed or monitored during years with no escapement value. No aerial survey conducted in 1989; however; in 1988; 1989; 1994; and 1995 a weir was operated on the Little Susitna River. Based on the relationship of weir counts to aerial surveys in 1988; 1994; and 1995; 50% of the 1989 weir count of 4;367 Chinook salmon was used for an index of escapement.,Erickson et al. 2017,56
-LittleSusitna,1990,922,,,2122,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,1991,892,,,2052,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,1992,1441,,,3329,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,1993,,,,,,No survey,Erickson et al. 2017,56
-LittleSusitna,1994,1221,2981,,2981,Weir count,,Erickson et al. 2017,56
-LittleSusitna,1995,1714,2893,,2893,Weir count,,Erickson et al. 2017,56
-LittleSusitna,1996,1079,,,2487,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,1997,,,,,,No survey,Erickson et al. 2017,56
-LittleSusitna,1998,1091,,,2515,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,1999,,,,,,,Erickson et al. 2017,56
-LittleSusitna,2000,1094,,,2522,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,2001,1238,,,2857,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,2002,1660,,,3839,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,2003,1114,,,2569,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,2004,1694,,,3918,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,2005,2095,,,4850,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,2006,1855,,,4292,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,2007,1731,,,4004,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,2008,1297,,,2994,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,2009,1028,,,2368,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,2010,589,,,1347,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,2011,887,,,2040,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,2012,1154,,,2662,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,2013,1651,,,3818,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
-LittleSusitna,2014,1759,3135,,3135,Weir count,,Erickson et al. 2017,56
-LittleSusitna,2015,1507,5026,,5026,Weir count,,Erickson et al. 2017,56
-LittleWillow,1979,327,,,327,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1980,,,,,,No survey,Erickson et al. 2017,57
-LittleWillow,1981,459,,,459,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1982,316,,,316,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1983,1042,,,1042,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1984,,,,,,No survey,Erickson et al. 2017,57
-LittleWillow,1985,1305,,,1305,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1986,2133,,,2133,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1987,1320,,,1320,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1988,1515,,,1515,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1989,1325,,,1325,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1990,1115,,,1115,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1991,498,,,498,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1992,673,,,673,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1993,705,,,705,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1994,712,,,712,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1995,1210,,,1210,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1996,1077,,,1077,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1997,2390,,,2390,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1998,1782,,,1782,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,1999,1837,,,1837,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2000,1121,,,1121,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2001,2084,,,2084,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2002,1680,,,1680,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2003,879,,,879,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2004,2227,,,2227,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2005,1784,,,1784,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2006,816,,,816,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2007,1103,,,1103,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2008,,,,,,No survey,Erickson et al. 2017,57
-LittleWillow,2009,776,,,776,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2010,468,,,468,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2011,713,,,713,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2012,494,,,494,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2013,858,,,858,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2014,684,,,684,Single aerial survey,,Erickson et al. 2017,57
-LittleWillow,2015,788,,,788,Single aerial survey,,Erickson et al. 2017,57
-Montana,1981,814,,,814,Single aerial survey,,Erickson et al. 2017,58
-Montana,1982,,,,,,No survey,Erickson et al. 2017,58
-Montana,1983,,,,,,No survey,Erickson et al. 2017,58
-Montana,1984,,,,,,No survey,Erickson et al. 2017,58
-Montana,1985,,,,,,No survey,Erickson et al. 2017,58
-Montana,1986,,,,,,No survey,Erickson et al. 2017,58
-Montana,1987,1320,,,1320,Single aerial survey,,Erickson et al. 2017,58
-Montana,1988,2016,,,2016,Single aerial survey,,Erickson et al. 2017,58
-Montana,1989,,,,,,No survey,Erickson et al. 2017,58
-Montana,1990,1269,,,1269,Single aerial survey,,Erickson et al. 2017,58
-Montana,1991,1215,,,1215,Single aerial survey,,Erickson et al. 2017,58
-Montana,1992,1560,,,1560,Single aerial survey,,Erickson et al. 2017,58
-Montana,1993,1281,,,1281,Single aerial survey,,Erickson et al. 2017,58
-Montana,1994,1143,,,1143,Single aerial survey,,Erickson et al. 2017,58
-Montana,1995,2110,,,2110,Single aerial survey,,Erickson et al. 2017,58
-Montana,1996,1841,,,1841,Single aerial survey,,Erickson et al. 2017,58
-Montana,1997,3073,,,3073,Single aerial survey,,Erickson et al. 2017,58
-Montana,1998,2936,,,2936,Single aerial survey,,Erickson et al. 2017,58
-Montana,1999,2088,,,2088,Single aerial survey,,Erickson et al. 2017,58
-Montana,2000,1271,,,1271,Single aerial survey,,Erickson et al. 2017,58
-Montana,2001,1930,,,1930,Single aerial survey,,Erickson et al. 2017,58
-Montana,2002,2357,,,2357,Single aerial survey,,Erickson et al. 2017,58
-Montana,2003,2576,,,2576,Single aerial survey,,Erickson et al. 2017,58
-Montana,2004,2117,,,2117,Single aerial survey,,Erickson et al. 2017,58
-Montana,2005,2600,,,2600,Single aerial survey,,Erickson et al. 2017,58
-Montana,2006,1850,,,1850,Single aerial survey,,Erickson et al. 2017,58
-Montana,2007,1936,,,1936,Single aerial survey,,Erickson et al. 2017,58
-Montana,2008,1357,,,1357,Single aerial survey,,Erickson et al. 2017,58
-Montana,2009,1460,,,1460,Single aerial survey,,Erickson et al. 2017,58
-Montana,2010,755,,,755,Single aerial survey,,Erickson et al. 2017,58
-Montana,2011,494,,,494,Single aerial survey,,Erickson et al. 2017,58
-Montana,2012,416,,,416,Single aerial survey,,Erickson et al. 2017,58
-Montana,2013,1304,,,1304,Single aerial survey,,Erickson et al. 2017,58
-Montana,2014,953,,,953,Single aerial survey,,Erickson et al. 2017,58
-Montana,2015,1416,,,1416,Single aerial survey,,Erickson et al. 2017,58
-Ninilchik.Hatchery,1999,,641,68,573,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2000,,853,168,685,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2001,,673,130,543,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2002,,559,164,395,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2003,,425,89,336,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2004,,536,67,469,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2005,,462,53,409,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2006,,321,69,252,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2007,,98,20,78,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2008,,119,31,88,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2009,,126,39,87,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2010,,41,0,41,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2011,,68,35,33,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2012,,101,21,80,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2013,,369,215,154,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2014,,1315,1026,289,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik.Hatchery,2015,,813,585,228,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
-Ninilchik,1999,,1644,68,1576,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2000,,1634,81,1553,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2001,,1414,175,1239,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2002,,1516,176,1340,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2003,,1258,131,1127,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2004,,1525,132,1393,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2005,,2241,165,2076,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2006,,1530,101,1429,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2007,,954,129,825,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2008,,1019,140,879,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2009,,781,41,740,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2010,,852,0,852,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2011,,1111,99,1012,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2012,,789,26,763,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2013,,888,34,854,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2014,,1369,92,1277,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2015,,1356,88,1268,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Ninilchik,2016,,1676,145,1531,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
-Quartz,1982,,337,,337,Weir count,,McKinley and Fleischman 2013,31
-Quartz,1983,,351,,351,Weir count,,McKinley and Fleischman 2013,31
-Quartz,1984,,497,,497,Weir count,,McKinley and Fleischman 2013,31
-Quartz,2013,,280,,280,Weir count,,Begich et al. 2017,111
-Quartz,2014,,325,,325,Weir count,,Begich et al. 2017,111
-Quartz,2015,,448,,448,Weir count,,Begich et al. 2017,111
-Slikok,2008,,59,,59,Weir count,,McKinley and Fleischman 2013,31
-Slikok,2009,,70,,70,Weir count,,McKinley and Fleischman 2013,31
-Slikok,2010,,28,,28,Weir count,,McKinley and Fleischman 2013,31
-Slikok,2011,,44,,44,Weir count,,McKinley and Fleischman 2013,31
-Slikok,2012,,27,,27,Weir count,Slikok weir ceased operating in 2012,McKinley and Fleischman 2013,31
-Theodore,1979,512,,,512,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1980,,,,,,No survey,Erickson et al. 2017,63
-Theodore,1981,535,,,535,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1982,1368,,,1368,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1983,1519,,,1519,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1984,1251,,,1251,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1985,1458,,,1458,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1986,1281,,,1281,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1987,1548,,,1548,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1988,1906,,,1906,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1989,1026,,,1026,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1990,642,,,642,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1991,508,,,508,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1992,1053,,,1053,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1993,1110,,,1110,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1994,577,,,577,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1995,694,,,694,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1996,368,,,368,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1997,1607,,,1607,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1998,1807,,,1807,Single aerial survey,,Erickson et al. 2017,63
-Theodore,1999,2221,,,2221,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2000,1271,,,1271,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2001,1237,,,1237,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2002,934,,,934,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2003,1059,,,1059,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2004,491,,,491,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2005,478,,,478,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2006,958,,,958,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2007,486,,,486,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2008,345,,,345,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2009,352,,,352,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2010,202,,,202,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2011,327,,,327,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2012,179,,,179,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2013,476,,,476,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2014,312,,,312,Single aerial survey,,Erickson et al. 2017,63
-Theodore,2015,426,,,426,Single aerial survey,,Erickson et al. 2017,63
-Willow,1981,991,,,991,Single aerial survey,,Erickson et al. 2017,64
-Willow,1982,592,,,592,Single aerial survey,,Erickson et al. 2017,64
-Willow,1983,,,,,,No survey,Erickson et al. 2017,64
-Willow,1984,2789,,,2789,Single aerial survey,,Erickson et al. 2017,64
-Willow,1985,1856,,,1856,Single aerial survey,,Erickson et al. 2017,64
-Willow,1986,2059,,,2059,Single aerial survey,,Erickson et al. 2017,64
-Willow,1987,2768,,,2768,Single aerial survey,,Erickson et al. 2017,64
-Willow,1988,2496,,,2496,Single aerial survey,,Erickson et al. 2017,64
-Willow,1989,5060,,,5060,Single aerial survey,,Erickson et al. 2017,64
-Willow,1990,2365,,,2365,Single aerial survey,,Erickson et al. 2017,64
-Willow,1991,2006,,,2006,Single aerial survey,,Erickson et al. 2017,64
-Willow,1992,1660,,,1660,Single aerial survey,,Erickson et al. 2017,64
-Willow,1993,2227,,,2227,Single aerial survey,,Erickson et al. 2017,64
-Willow,1994,1479,,,1479,Single aerial survey,,Erickson et al. 2017,64
-Willow,1995,3792,,,3792,Single aerial survey,,Erickson et al. 2017,64
-Willow,1996,1776,,,1776,Single aerial survey,,Erickson et al. 2017,64
-Willow,1997,4841,,,4841,Single aerial survey,,Erickson et al. 2017,64
-Willow,1998,3500,,,3500,Single aerial survey,,Erickson et al. 2017,64
-Willow,1999,2081,,,2081,Single aerial survey,,Erickson et al. 2017,64
-Willow,2000,2601,,,2601,Single aerial survey,,Erickson et al. 2017,64
-Willow,2001,3188,,,3188,Single aerial survey,,Erickson et al. 2017,64
-Willow,2002,2758,,,2758,Single aerial survey,,Erickson et al. 2017,64
-Willow,2003,3964,,,3964,Single aerial survey,,Erickson et al. 2017,64
-Willow,2004,2985,,,2985,Single aerial survey,,Erickson et al. 2017,64
-Willow,2005,2463,,,2463,Single aerial survey,,Erickson et al. 2017,64
-Willow,2006,2217,,,2217,Single aerial survey,,Erickson et al. 2017,64
-Willow,2007,1373,,,1373,Single aerial survey,,Erickson et al. 2017,64
-Willow,2008,1255,,,1255,Single aerial survey,,Erickson et al. 2017,64
-Willow,2009,1133,,,1133,Single aerial survey,,Erickson et al. 2017,64
-Willow,2010,1173,,,1173,Single aerial survey,,Erickson et al. 2017,64
-Willow,2011,1061,,,1061,Single aerial survey,,Erickson et al. 2017,64
-Willow,2012,756,,,756,Single aerial survey,,Erickson et al. 2017,64
-Willow,2013,1752,,,1752,Single aerial survey,,Erickson et al. 2017,64
-Willow,2014,1335,,,1335,Single aerial survey,,Erickson et al. 2017,64
-Willow,2015,2046,,,2046,Single aerial survey,,Erickson et al. 2017,64
+Population,ReturnYear,SpawnerSurvey,WeirCount,WeirRemovals,Escapement,EscapementMethod,EscapementMethodDetail,Comments,Reference,Page
+Alexander,1974,2193,,,2193,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1975,1878,,,1878,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1976,5412,,,5412,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1977,9246,,,9246,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1978,5854,,,5854,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1979,6215,,,6215,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1980,,,,,,,No survey,Erickson et al. 2017,44
+Alexander,1981,,,,,,,No survey,Erickson et al. 2017,44
+Alexander,1982,2546,,,2546,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1983,3755,,,3755,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1984,4620,,,4620,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1985,6241,,,6241,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1986,5225,,,5225,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1987,2152,,,2152,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1988,6273,,,6273,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1989,3497,,,3497,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1990,2596,,,2596,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1991,2727,,,2727,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1992,3710,,,3710,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1993,2763,,,2763,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1994,1514,,,1514,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1995,2090,,,2090,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1996,2319,,,2319,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1997,5598,,,5598,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1998,2807,,,2807,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,1999,3974,,,3974,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2000,2331,,,2331,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2001,2282,,,2282,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2002,1936,,,1936,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2003,2012,,,2012,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2004,2215,,,2215,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2005,2140,,,2140,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2006,885,,,885,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2007,480,,,480,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2008,150,,,150,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2009,275,,,275,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2010,177,,,177,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2011,343,,,343,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2012,181,,,181,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2013,588,,,588,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2014,911,,,911,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Alexander,2015,1117,,,1117,Aerial survey,Single aerial survey,,Erickson et al. 2017,44
+Anchor,2003,,13273,,13273,Weir,Weir count,Chinook salmon were monitored in the mainstem Anchor River below the confluence of the North/South forks using DIDSON sonar and/or resistance board weir and/or instream video during 2003–2012. Monitoring occurred throughout the run; except in 2003; when an expansion was applied. Aerial surveys also conducted during previous years; but they were found to be unreliable (Kerkvliet et al. 2016) so we did not include them in our analysis.,Otis et al. 2016,30
+Anchor,2004,,12016,,12016,Weir,Weir count,,Otis et al. 2016,30
+Anchor,2005,,11156,,11156,Weir,Weir count,,Otis et al. 2016,30
+Anchor,2006,,8945,,8945,Weir,Weir count,,Otis et al. 2016,30
+Anchor,2007,,9622,,9622,Weir,Weir count,,Otis et al. 2016,30
+Anchor,2008,,5806,,5806,Weir,Weir count,,Otis et al. 2016,30
+Anchor,2009,,3455,,3455,Weir,Weir count,,Otis et al. 2016,30
+Anchor,2010,,4449,,4449,Weir,Weir count,,Otis et al. 2016,30
+Anchor,2011,,3545,,3545,Weir,Weir count,,Otis et al. 2016,30
+Anchor,2012,,4509,,4509,Weir,Weir count,,Otis et al. 2016,30
+Anchor,2013,,4388,,4388,Weir,Weir count,A series of floods rendered the mainstem Anchor River site unsuitable for escapement monitoring. A combination of mainstem DIDSON sonar and weir/video systems operated on both the North and South forks was used to assess escapement throughout the run in 2013. ,Otis et al. 2016,30
+Anchor,2014,,2497,,2497,Weir,Weir count,DIDSON sonar and/or resistance board weirs equipped with instream video were used to monitor Chinook salmon escapement throughout the run on both the North and South forks of the Anchor River during 2014–2015. ,Otis et al. 2016,30
+Anchor,2015,,10049,,10049,Weir,Weir count,DIDSON sonar and/or resistance board weirs equipped with instream video were used to monitor Chinook salmon escapement throughout the run on both the North and South forks of the Anchor River during 2014–2015. ,Otis et al. 2016,30
+Campbell,1982,68,,,68,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,1983,,,,,,,No survey,Erickson et al. 2017,45
+Campbell,1984,423,,,423,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,1985,,,,,,,No survey,Erickson et al. 2017,45
+Campbell,1986,733,,,733,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,1987,571,,,571,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,1988,,,,,,,No survey,Erickson et al. 2017,45
+Campbell,1989,218,,,218,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,1990,458,,,458,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,1991,590,,,590,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,1992,931,,,931,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,1993,937,,,937,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,1994,1076,,,1076,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,1995,734,,,734,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,1996,369,,,369,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,1997,1119,,,1119,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,1998,761,,,761,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,1999,1035,,,1035,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,2000,591,,,591,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,2001,717,,,717,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,2002,744,,,744,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,2003,745,,,745,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,2004,964,,,964,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,2005,1097,,,1097,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,2006,1052,,,1052,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,2007,588,,,588,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,2008,439,,,439,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,2009,554,,,554,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,2010,290,,,290,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,2011,260,,,260,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,2012,,,,,,,No survey,Erickson et al. 2017,45
+Campbell,2013,,,,,,,No survey,Erickson et al. 2017,45
+Campbell,2014,274,,,274,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Campbell,2015,654,,,654,Foot survey,Single foot survey,,Erickson et al. 2017,45
+Chuitna,1979,1246,,,1246,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1980,,,,,,,No survey,Erickson et al. 2017,46
+Chuitna,1981,1362,,,1362,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1982,3438,,,3438,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1983,4043,,,4043,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1984,2845,,,2845,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1985,1600,,,1600,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1986,3946,,,3946,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1987,,,,,,,No survey,Erickson et al. 2017,46
+Chuitna,1988,3024,,,3024,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1989,990,,,990,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1990,480,,,480,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1991,537,,,537,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1992,1337,,,1337,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1993,2085,,,2085,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1994,1012,,,1012,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1995,1162,,,1162,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1996,1343,,,1343,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1997,2232,,,2232,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1998,1869,,,1869,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,1999,3721,,,3721,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2000,1456,,,1456,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2001,1501,,,1501,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2002,1394,,,1394,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2003,2339,,,2339,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2004,2938,,,2938,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2005,1307,,,1307,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2006,1911,,,1911,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2007,1180,,,1180,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2008,586,,,586,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2009,1040,,,1040,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2010,735,,,735,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2011,719,,,719,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2012,502,,,502,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2013,1690,,,1690,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2014,1398,,,1398,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chuitna,2015,1965,,,1965,Aerial survey,Single aerial survey,,Erickson et al. 2017,46
+Chulitna,1982,863,,,863,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,1983,4058,,,4058,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,1984,4191,,,4191,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,1985,783,,,783,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,1986,,,,,,,No survey,Erickson et al. 2017,47
+Chulitna,1987,5252,,,5252,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,1988,,,,,,,No survey,Erickson et al. 2017,47
+Chulitna,1989,,,,,,,No survey,Erickson et al. 2017,47
+Chulitna,1990,2681,,,2681,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,1991,4410,,,4410,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,1992,2527,,,2527,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,1993,2070,,,2070,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,1994,1806,,,1806,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,1995,3460,,,3460,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,1996,4172,,,4172,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,1997,5618,,,5618,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,1998,2586,,,2586,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,1999,5455,,,5455,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2000,4218,,,4218,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2001,2353,,,2353,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2002,9002,,,9002,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2003,,,,,,,No survey,Erickson et al. 2017,47
+Chulitna,2004,2162,,,2162,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2005,2838,,,2838,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2006,2862,,,2862,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2007,5166,,,5166,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2008,2514,,,2514,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2009,2093,,,2093,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2010,1052,,,1052,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2011,1875,,,1875,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2012,667,,,667,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2013,1262,,,1262,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2014,1011,,,1011,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Chulitna,2015,3137,,,3137,Aerial survey,Single aerial survey,,Erickson et al. 2017,47
+Clear,1979,864,,,864,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1980,,,,,,,No survey,Erickson et al. 2017,48
+Clear,1981,,,,,,,No survey,Erickson et al. 2017,48
+Clear,1982,982,,,982,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1983,938,,,938,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1984,1520,,,1520,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1985,2430,,,2430,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1986,,,,,,,No survey,Erickson et al. 2017,48
+Clear,1987,,,,,,,No survey,Erickson et al. 2017,48
+Clear,1988,4850,,,4850,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1989,,,,,,,No survey,Erickson et al. 2017,48
+Clear,1990,2380,,,2380,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1991,1974,,,1974,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1992,1530,,,1530,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1993,886,,,886,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1994,1204,,,1204,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1995,1928,,,1928,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1996,2091,,,2091,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1997,5100,,,5100,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1998,3894,,,3894,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,1999,2216,,,2216,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2000,2142,,,2142,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2001,2096,,,2096,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2002,3496,,,3496,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2003,,,,,,,No survey,Erickson et al. 2017,48
+Clear,2004,3417,,,3417,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2005,1924,,,1924,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2006,1520,,,1520,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2007,3310,,,3310,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2008,1795,,,1795,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2009,1205,,,1205,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2010,903,,,903,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2011,512,,,512,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2012,1177,,,1177,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2013,1471,,,1471,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2014,1390,,,1390,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Clear,2015,1205,,,1205,Aerial survey,Single aerial survey,,Erickson et al. 2017,48
+Crooked,2004,,2641,445,2196,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked,2005,,2108,199,1909,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked,2006,,1589,73,1516,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked,2007,,1038,73,965,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked,2008,,1018,139,879,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked,2009,,674,57,617,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked,2010,,1090,2,1088,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked,2011,,677,23,654,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked,2012,,633,2,631,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked,2013,,1211,109,1102,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked,2014,,1522,111,1411,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked,2015,,1639,183,1456,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked.Hatchery,2004,,2232,72,2160,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked.Hatchery,2005,,1060,33,1027,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked.Hatchery,2006,,1057,4,1053,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked.Hatchery,2007,,489,2,487,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked.Hatchery,2008,,396,94,302,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked.Hatchery,2009,,255,138,117,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked.Hatchery,2010,,262,2,260,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked.Hatchery,2011,,256,128,128,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked.Hatchery,2012,,163,63,100,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked.Hatchery,2013,,198,87,111,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked.Hatchery,2014,,911,174,737,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Crooked.Hatchery,2015,,601,154,447,Weir,Weir count minus removals,"See ""Crooked"" tab for details",Begich et al. 2017,105
+Deep,1976,1075,,,1075,Aerial survey,Single aerial survey,Escapement was estimated from Aerial survey data unless otherwise specified. Escapement was not surveyed or monitored during years with no escapement value. ,Otis et al. 2016,31
+Deep,1977,848,,,848,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1978,582,,,582,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1979,726,,,726,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1980,,,,,,,No survey,Otis et al. 2016,31
+Deep,1981,427,,,427,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1982,977,,,977,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1983,550,,,550,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1984,380,,,380,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1985,644,,,644,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1986,976,,,976,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1987,968,,,968,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1988,409,,,409,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1989,561,,,561,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1990,347,,,347,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1991,294,,,294,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1992,63,,,63,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1993,486,,,486,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1994,364,,,364,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1995,229,,,229,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1996,193,,,193,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1997,136,,,136,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1998,676,,,676,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,1999,1190,,,1190,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2000,556,,,556,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2001,551,,,551,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2002,696,,,696,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2003,1008,,,1008,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2004,1075,,,1075,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2005,1076,,,1076,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2006,507,,,507,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2007,553,,,553,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2008,205,,,205,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2009,483,,,483,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2010,387,,,387,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2011,696,,,696,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2012,447,,,447,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2013,475,,,475,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2014,601,,,601,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deep,2015,535,,,535,Aerial survey,Single aerial survey,,Otis et al. 2016,31
+Deshka,1974,5279,,,15201,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1975,4737,,,14088,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1976,21693,,,48916,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1977,39642,,,85784,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1978,24639,,,54967,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1979,27385,,,60607,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1980,,,,,,,No survey,Erickson et al. 2017,50
+Deshka,1981,,,,,,,No survey,Erickson et al. 2017,50
+Deshka,1982,16000,,,37222,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1983,19237,,,43871,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1984,16892,,,39054,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1985,18151,,,41640,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1986,21080,,,47657,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1987,15028,,,35226,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1988,19200,,,43795,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1989,,,,,,,No survey,Erickson et al. 2017,50
+Deshka,1990,18166,,,41671,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1991,8112,,,21020,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1992,7736,,,20248,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1993,5769,,,16207,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1994,2665,,,9832,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1995,5150,10048,,10048,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,1996,6343,14349,,14349,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,1997,19047,35587,,35587,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,1998,15556,,,36310,Aerial survey,Expansion of aerial surveys based on weir count : aerial survey regression,,Erickson et al. 2017,50
+Deshka,1999,12904,29649,,29088,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2000,,35242,,33965,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2001,,29004,,27966,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2002,8749,29428,,28535,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2003,,40069,,39257,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2004,28778,57934,,56659,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2005,11495,37725,,36433,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2006,6499,31150,,29922,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2007,6712,18714,,17594,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2008,,7533,,7284,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2009,3954,11960,,11641,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2010,,18594,,18223,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2011,7522,19026,,18553,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2012,,14096,,13952,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2013,,18531,,18378,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2014,,16335,,16099,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Deshka,2015,,24316,,23627,Weir,Weir count minus sport harvest above weir,,Erickson et al. 2017,50
+Funny,2006,,2779,,2779,Weir,Weir count,,McKinley and Fleischman 2013,31
+Funny,2007,,2075,,2075,Weir,Weir count,,McKinley and Fleischman 2013,31
+Funny,2008,,1246,,1246,Weir,Weir count,,McKinley and Fleischman 2013,31
+Funny,2009,,1114,,1114,Weir,Weir count,,McKinley and Fleischman 2013,31
+Funny,2010,,1187,,1187,Weir,Weir count,,McKinley and Fleischman 2013,31
+Funny,2011,,990,,990,Weir,Weir count,,McKinley and Fleischman 2013,31
+Funny,2012,,879,,879,Weir,Weir count,,McKinley and Fleischman 2013,31
+Funny,2013,,988,,988,Weir,Weir count,,Begich et al. 2017,111
+Funny,2014,,1308,,1308,Weir,Weir count,,Begich et al. 2017,111
+Funny,2015,,1727,,1727,Weir,Weir count,,Begich et al. 2017,111
+Goose,1981,262,,,262,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1982,140,,,140,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1983,477,,,477,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1984,258,,,258,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1985,401,,,401,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1986,630,,,630,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1987,416,,,416,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1988,1076,,,1076,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1989,835,,,835,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1990,552,,,552,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1991,968,,,968,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1992,369,,,369,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1993,347,,,347,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1994,375,,,375,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1995,374,,,374,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1996,305,,,305,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1997,308,,,308,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1998,415,,,415,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,1999,268,,,268,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2000,348,,,348,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2001,,,,,,,No survey,Erickson et al. 2017,51
+Goose,2002,565,,,565,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2003,175,,,175,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2004,417,,,417,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2005,468,,,468,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2006,306,,,306,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2007,105,,,105,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2008,117,,,117,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2009,65,,,65,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2010,76,,,76,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2011,80,,,80,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2012,57,,,57,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2013,62,,,62,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2014,232,,,232,Aerial survey,Single aerial survey,,Erickson et al. 2017,51
+Goose,2015,,,,,,,No survey,Erickson et al. 2017,51
+Kenai.Early,1986,,,,11944,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,1987,,,,8193,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,1988,,,,4591,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,1989,,,,3896,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,1990,,,,8035,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,1991,,,,8675,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,1992,,,,9689,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,1993,,,,3148,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,1994,,,,4989,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,1995,,,,2673,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,1996,,,,3141,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,1997,,,,4711,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,1998,,,,10760,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,1999,,,,5351,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2000,,,,8972,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2001,,,,11621,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2002,,,,9961,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2003,,,,17611,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2004,,,,20074,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2005,,,,17000,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2006,,,,13487,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2007,,,,10137,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2008,,,,6710,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2009,,,,6275,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2010,,,,4538,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2011,,,,6029,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2012,,,,2912,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2013,,,,4530,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2014,,,,5776,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Early,2015,,,,6190,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,101-102
+Kenai.Late,1986,,,,52868,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,1987,,,,50450,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,1988,,,,42065,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,1989,,,,26679,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,1990,,,,27303,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,1991,,,,31037,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,1992,,,,34734,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,1993,,,,32435,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,1994,,,,29603,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,1995,,,,32161,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,1996,,,,34678,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,1997,,,,28365,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,1998,,,,39595,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,1999,,,,31245,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2000,,,,33049,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2001,,,,38466,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2002,,,,46122,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2003,,,,68990,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2004,,,,64702,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2005,,,,61513,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2006,,,,49780,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2007,,,,37680,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2008,,,,32712,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2009,,,,22036,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2010,,,,11639,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2011,,,,16819,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2012,,,,21512,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2013,,,,19419,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2014,,,,17522,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Kenai.Late,2015,,,,22871,Sonar,Sonar count minus sport harvest above sonar,"Includes all sizes of Chinook; not just ""large"" Chinook as reported in Fleischman and Reimer 2017 stock assessment.  Begich et al. 2017 also subtracts estimated catch-and-release mortality, but we did not take that into account.",Begich et al. 2017,103-104
+Lake,1979,4196,,,4196,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1980,,,,,,,No survey,Erickson et al. 2017,54
+Lake,1981,,,,,,,No survey,Erickson et al. 2017,54
+Lake,1982,3577,,,3577,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1983,7075,,,7075,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1984,,,,,,,No survey,Erickson et al. 2017,54
+Lake,1985,5803,,,5803,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1986,,,,,,,No survey,Erickson et al. 2017,54
+Lake,1987,4898,,,4898,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1988,6633,,,6633,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1989,,,,,,,No survey,Erickson et al. 2017,54
+Lake,1990,2075,,,2075,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1991,3011,,,3011,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1992,2322,,,2322,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1993,2869,,,2869,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1994,1898,,,1898,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1995,3017,,,3017,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1996,3514,,,3514,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1997,3841,,,3841,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1998,5056,,,5056,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,1999,2877,,,2877,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2000,4035,,,4035,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2001,4661,,,4661,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2002,4852,,,4852,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2003,8153,,,8153,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2004,7598,,,7598,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2005,6345,,,6345,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2006,5300,,,5300,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2007,4081,,,4081,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2008,2004,,,2004,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2009,1394,,,1394,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2010,1617,,,1617,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2011,2563,,,2563,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2012,2366,,,2366,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2013,3655,,,3655,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2014,3506,,,3506,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lake,2015,4686,,,4686,Aerial survey,Single aerial survey,,Erickson et al. 2017,54
+Lewis,1979,546,,,546,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1980,,,,,,,No survey,Erickson et al. 2017,55
+Lewis,1981,560,,,560,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1982,606,,,606,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1983,,,,,,,No survey,Erickson et al. 2017,55
+Lewis,1984,947,,,947,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1985,861,,,861,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1986,722,,,722,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1987,875,,,875,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1988,616,,,616,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1989,452,,,452,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1990,207,,,207,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1991,303,,,303,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1992,445,,,445,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1993,531,,,531,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1994,164,,,164,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1995,146,,,146,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1996,257,,,257,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1997,777,,,777,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1998,626,,,626,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,1999,675,,,675,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2000,480,,,480,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2001,502,,,502,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2002,439,,,439,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2003,878,,,878,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2004,1000,,,1000,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2005,441,,,441,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2006,341,,,341,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2007,0,,,0,Aerial survey,Single aerial survey,Lack of a channel following a flood event prevented upstream fish passage,Erickson et al. 2017,55
+Lewis,2008,120,,,120,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2009,111,,,111,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2010,56,,,56,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2011,92,,,92,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2012,107,,,107,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2013,61,,,61,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2014,61,,,61,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+Lewis,2015,5,,,5,Aerial survey,Single aerial survey,,Erickson et al. 2017,55
+LittleSusitna,1983,929,,,2138,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,1984,558,,,1275,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,1985,1005,,,2315,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,1986,,,,,,,No survey,Erickson et al. 2017,56
+LittleSusitna,1987,1386,,,3201,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,1988,3197,7712,,7712,Weir,Weir count,,Erickson et al. 2017,56
+LittleSusitna,1989,2184,4367,,4367,Weir,Weir count,Escapement not surveyed or monitored during years with no escapement value. No aerial survey conducted in 1989; however; in 1988; 1989; 1994; and 1995 a weir was operated on the Little Susitna River. Based on the relationship of Weirs to aerial surveys in 1988; 1994; and 1995; 50% of the 1989 Weir of 4;367 Chinook salmon was used for an index of escapement.,Erickson et al. 2017,56
+LittleSusitna,1990,922,,,2122,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,1991,892,,,2052,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,1992,1441,,,3329,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,1993,,,,,,,No survey,Erickson et al. 2017,56
+LittleSusitna,1994,1221,2981,,2981,Weir,Weir count,,Erickson et al. 2017,56
+LittleSusitna,1995,1714,2893,,2893,Weir,Weir count,,Erickson et al. 2017,56
+LittleSusitna,1996,1079,,,2487,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,1997,,,,,,,No survey,Erickson et al. 2017,56
+LittleSusitna,1998,1091,,,2515,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,1999,,,,,,,No survey,Erickson et al. 2017,56
+LittleSusitna,2000,1094,,,2522,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,2001,1238,,,2857,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,2002,1660,,,3839,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,2003,1114,,,2569,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,2004,1694,,,3918,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,2005,2095,,,4850,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,2006,1855,,,4292,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,2007,1731,,,4004,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,2008,1297,,,2994,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,2009,1028,,,2368,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,2010,589,,,1347,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,2011,887,,,2040,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,2012,1154,,,2662,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,2013,1651,,,3818,Aerial survey,Expansion of aerial surveys based on ratio of paired aerial survey and weir count data,,Erickson et al. 2017,56
+LittleSusitna,2014,1759,3135,,3135,Weir,Weir count,,Erickson et al. 2017,56
+LittleSusitna,2015,1507,5026,,5026,Weir,Weir count,,Erickson et al. 2017,56
+LittleWillow,1979,327,,,327,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1980,,,,,,,No survey,Erickson et al. 2017,57
+LittleWillow,1981,459,,,459,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1982,316,,,316,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1983,1042,,,1042,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1984,,,,,,,No survey,Erickson et al. 2017,57
+LittleWillow,1985,1305,,,1305,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1986,2133,,,2133,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1987,1320,,,1320,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1988,1515,,,1515,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1989,1325,,,1325,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1990,1115,,,1115,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1991,498,,,498,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1992,673,,,673,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1993,705,,,705,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1994,712,,,712,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1995,1210,,,1210,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1996,1077,,,1077,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1997,2390,,,2390,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1998,1782,,,1782,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,1999,1837,,,1837,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2000,1121,,,1121,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2001,2084,,,2084,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2002,1680,,,1680,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2003,879,,,879,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2004,2227,,,2227,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2005,1784,,,1784,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2006,816,,,816,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2007,1103,,,1103,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2008,,,,,,,No survey,Erickson et al. 2017,57
+LittleWillow,2009,776,,,776,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2010,468,,,468,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2011,713,,,713,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2012,494,,,494,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2013,858,,,858,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2014,684,,,684,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+LittleWillow,2015,788,,,788,Aerial survey,Single aerial survey,,Erickson et al. 2017,57
+Montana,1981,814,,,814,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,1982,,,,,,,No survey,Erickson et al. 2017,58
+Montana,1983,,,,,,,No survey,Erickson et al. 2017,58
+Montana,1984,,,,,,,No survey,Erickson et al. 2017,58
+Montana,1985,,,,,,,No survey,Erickson et al. 2017,58
+Montana,1986,,,,,,,No survey,Erickson et al. 2017,58
+Montana,1987,1320,,,1320,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,1988,2016,,,2016,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,1989,,,,,,,No survey,Erickson et al. 2017,58
+Montana,1990,1269,,,1269,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,1991,1215,,,1215,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,1992,1560,,,1560,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,1993,1281,,,1281,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,1994,1143,,,1143,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,1995,2110,,,2110,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,1996,1841,,,1841,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,1997,3073,,,3073,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,1998,2936,,,2936,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,1999,2088,,,2088,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2000,1271,,,1271,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2001,1930,,,1930,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2002,2357,,,2357,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2003,2576,,,2576,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2004,2117,,,2117,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2005,2600,,,2600,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2006,1850,,,1850,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2007,1936,,,1936,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2008,1357,,,1357,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2009,1460,,,1460,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2010,755,,,755,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2011,494,,,494,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2012,416,,,416,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2013,1304,,,1304,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2014,953,,,953,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Montana,2015,1416,,,1416,Aerial survey,Single aerial survey,,Erickson et al. 2017,58
+Ninilchik,1999,,1644,68,1576,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2000,,1634,81,1553,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2001,,1414,175,1239,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2002,,1516,176,1340,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2003,,1258,131,1127,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2004,,1525,132,1393,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2005,,2241,165,2076,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2006,,1530,101,1429,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2007,,954,129,825,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2008,,1019,140,879,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2009,,781,41,740,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2010,,852,0,852,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2011,,1111,99,1012,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2012,,789,26,763,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2013,,888,34,854,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2014,,1369,92,1277,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2015,,1356,88,1268,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik,2016,,1676,145,1531,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,Otis et al. 2016 and M. Booz; ADFG-SF; pers. comm.; 3/17/17,32
+Ninilchik.Hatchery,1999,,641,68,573,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2000,,853,168,685,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2001,,673,130,543,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2002,,559,164,395,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2003,,425,89,336,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2004,,536,67,469,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2005,,462,53,409,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2006,,321,69,252,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2007,,98,20,78,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2008,,119,31,88,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2009,,126,39,87,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2010,,41,0,41,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2011,,68,35,33,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2012,,101,21,80,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2013,,369,215,154,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2014,,1315,1026,289,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Ninilchik.Hatchery,2015,,813,585,228,Weir,"Weir counts expanded spatially (to account for spawning below the weir) - removals. See calculations in ""HatcheryEnhanced"" worksheet.",Weir counts for 2006-2015 expanded temporally to account for weir operation during only part of the run.,M. Booz; ADFG-SF; pers. comm.; 3/17/17,
+Peters,1983,,,,,,,"In 1983, only a tributary was surveyed and not Peters Creek mainstem.  Survey count = 2272 (excluded from analysis)",,
+Peters,1984,324,,,324,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1985,2901,,,2901,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1986,1915,,,1915,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1987,1302,,,1302,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1988,3927,,,3927,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1989,959,,,959,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1990,2027,,,2027,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1991,2458,,,2458,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1992,996,,,996,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1993,1668,,,1668,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1994,573,,,573,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1995,1041,,,1041,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1996,749,,,749,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1997,2637,,,2637,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1998,4367,,,4367,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,1999,3298,,,3298,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,2000,1648,,,1648,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,2001,4226,,,4226,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,2002,2959,,,2959,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,2003,3998,,,3998,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,2004,3757,,,3757,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,2005,1508,,,1508,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,2006,1114,,,1114,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,2007,1225,,,1225,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,2008,,,,,,,No survey,Erickson et al. 2017,59
+Peters,2009,1283,,,1283,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,2010,,,,,,,No survey,Erickson et al. 2017,59
+Peters,2011,1103,,,1103,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,2012,459,,,459,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,2013,1643,,,1643,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,2014,1443,,,1443,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Peters,2015,1514,,,1514,Aerial survey,Single aerial survey,,Erickson et al. 2017,59
+Prairie,1981,1875,,,1875,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1982,3844,,,3844,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1983,3200,,,3200,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1984,9000,,,9000,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1985,6500,,,6500,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1986,8500,,,8500,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1987,9138,,,9138,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1988,9280,,,9280,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1989,9463,,,9463,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1990,9113,,,9113,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1991,6770,,,6770,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1992,4453,,,4453,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1993,3023,,,3023,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1994,2254,,,2254,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1995,3884,,,3884,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1996,5037,,,5037,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1997,7710,,,7710,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1998,4465,,,4465,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,1999,5871,,,5871,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2000,3790,,,3790,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2001,5191,,,5191,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2002,7914,,,7914,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2003,4095,,,4095,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2004,5570,,,5570,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2005,3862,,,3862,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2006,3570,,,3570,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2007,5036,,,5036,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2008,3039,,,3039,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2009,3500,,,3500,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2010,3022,,,3022,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2011,2038,,,2038,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2012,1185,,,1185,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2013,3304,,,3304,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2014,2812,,,2812,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Prairie,2015,3290,,,3290,Aerial survey,Single aerial survey,,Erickson et al. 2017,60
+Quartz,1982,,337,,337,Weir,Weir count,,McKinley and Fleischman 2013,31
+Quartz,1983,,351,,351,Weir,Weir count,,McKinley and Fleischman 2013,31
+Quartz,1984,,497,,497,Weir,Weir count,,McKinley and Fleischman 2013,31
+Quartz,1985,,,,,,,No weir,,
+Quartz,1986,,,,,,,No weir,,
+Quartz,1987,,,,,,,No weir,,
+Quartz,1988,,,,,,,No weir,,
+Quartz,1989,,,,,,,No weir,,
+Quartz,1990,,,,,,,No weir,,
+Quartz,1991,,,,,,,No weir,,
+Quartz,1992,,,,,,,No weir,,
+Quartz,1993,,,,,,,No weir,,
+Quartz,1994,,,,,,,No weir,,
+Quartz,1995,,,,,,,No weir,,
+Quartz,1996,,,,,,,No weir,,
+Quartz,1997,,,,,,,No weir,,
+Quartz,1998,,,,,,,No weir,,
+Quartz,1999,,,,,,,No weir,,
+Quartz,2000,,,,,,,No weir,,
+Quartz,2001,,,,,,,No weir,,
+Quartz,2002,,,,,,,No weir,,
+Quartz,2003,,,,,,,No weir,,
+Quartz,2004,,,,,,,No weir,,
+Quartz,2005,,,,,,,No weir,,
+Quartz,2006,,,,,,,No weir,,
+Quartz,2007,,,,,,,No weir,,
+Quartz,2008,,,,,,,No weir,,
+Quartz,2009,,,,,,,No weir,,
+Quartz,2010,,,,,,,No weir,,
+Quartz,2011,,,,,,,No weir,,
+Quartz,2012,,,,,,,No weir,,
+Quartz,2013,,280,,280,Weir,Weir count,,Begich et al. 2017,111
+Quartz,2014,,325,,325,Weir,Weir count,,Begich et al. 2017,111
+Quartz,2015,,448,,448,Weir,Weir count,,Begich et al. 2017,111
+Sheep,1979,778,,,778,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1980,,,,,,,No survey,Erickson et al. 2017,61
+Sheep,1981,1013,,,1013,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1982,527,,,527,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1983,975,,,975,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1984,1028,,,1028,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1985,1634,,,1634,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1986,1285,,,1285,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1987,895,,,895,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1988,1215,,,1215,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1989,610,,,610,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1990,634,,,634,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1991,154,,,154,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1992,,,,,,,No survey,Erickson et al. 2017,61
+Sheep,1993,,,,,,,No survey,Erickson et al. 2017,61
+Sheep,1994,542,,,542,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1995,1049,,,1049,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1996,1028,,,1028,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1997,,,,,,,No survey,Erickson et al. 2017,61
+Sheep,1998,1160,,,1160,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,1999,,,,,,,No survey,Erickson et al. 2017,61
+Sheep,2000,1162,,,1162,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,2001,,,,,,,No survey,Erickson et al. 2017,61
+Sheep,2002,854,,,854,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,2003,,,,,,,No survey,Erickson et al. 2017,61
+Sheep,2004,285,,,285,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,2005,760,,,760,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,2006,580,,,580,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,2007,400,,,400,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,2008,,,,,,,No survey,Erickson et al. 2017,61
+Sheep,2009,500,,,500,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,2010,,,,,,,No survey,Erickson et al. 2017,61
+Sheep,2011,350,,,350,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,2012,363,,,363,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,2013,,,,,,,No survey,Erickson et al. 2017,61
+Sheep,2014,262,,,262,Aerial survey,Single aerial survey,,Erickson et al. 2017,61
+Sheep,2015,,,,,,,No survey,Erickson et al. 2017,61
+Slikok,2008,,59,,59,Weir,Weir count,,McKinley and Fleischman 2013,31
+Slikok,2009,,70,,70,Weir,Weir count,,McKinley and Fleischman 2013,31
+Slikok,2010,,28,,28,Weir,Weir count,,McKinley and Fleischman 2013,31
+Slikok,2011,,44,,44,Weir,Weir count,,McKinley and Fleischman 2013,31
+Slikok,2012,,27,,27,Weir,Weir count,Slikok weir ceased operating in 2012,McKinley and Fleischman 2013,31
+Talachulitna,1979,1648,,,1648,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1980,,,,,,,No survey,Erickson et al. 2017,62
+Talachulitna,1981,2025,,,2025,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1982,3101,,,3101,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1983,10014,,,10014,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1984,6138,,,6138,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1985,5145,,,5145,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1986,3686,,,3686,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1987,,,,,,,No survey,Erickson et al. 2017,62
+Talachulitna,1988,4112,,,4112,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1989,,,,,,,No survey,Erickson et al. 2017,62
+Talachulitna,1990,2694,,,2694,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1991,2457,,,2457,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1992,3648,,,3648,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1993,3269,,,3269,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1994,1575,,,1575,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1995,2521,,,2521,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1996,2748,,,2748,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1997,4494,,,4494,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1998,2759,,,2759,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,1999,4890,,,4890,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2000,2414,,,2414,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2001,3309,,,3309,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2002,7824,,,7824,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2003,9573,,,9573,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2004,8352,,,8352,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2005,4406,,,4406,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2006,6152,,,6152,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2007,3871,,,3871,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2008,2964,,,2964,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2009,2608,,,2608,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2010,1499,,,1499,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2011,1368,,,1368,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2012,847,,,847,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2013,2285,,,2285,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2014,2256,,,2256,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Talachulitna,2015,2582,,,2582,Aerial survey,Single aerial survey,,Erickson et al. 2017,62
+Theodore,1979,512,,,512,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1980,,,,,,,No survey,Erickson et al. 2017,63
+Theodore,1981,535,,,535,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1982,1368,,,1368,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1983,1519,,,1519,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1984,1251,,,1251,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1985,1458,,,1458,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1986,1281,,,1281,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1987,1548,,,1548,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1988,1906,,,1906,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1989,1026,,,1026,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1990,642,,,642,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1991,508,,,508,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1992,1053,,,1053,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1993,1110,,,1110,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1994,577,,,577,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1995,694,,,694,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1996,368,,,368,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1997,1607,,,1607,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1998,1807,,,1807,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,1999,2221,,,2221,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2000,1271,,,1271,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2001,1237,,,1237,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2002,934,,,934,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2003,1059,,,1059,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2004,491,,,491,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2005,478,,,478,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2006,958,,,958,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2007,486,,,486,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2008,345,,,345,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2009,352,,,352,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2010,202,,,202,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2011,327,,,327,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2012,179,,,179,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2013,476,,,476,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2014,312,,,312,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Theodore,2015,426,,,426,Aerial survey,Single aerial survey,,Erickson et al. 2017,63
+Willow,1981,991,,,991,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1982,592,,,592,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1983,,,,,,,No survey,Erickson et al. 2017,64
+Willow,1984,2789,,,2789,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1985,1856,,,1856,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1986,2059,,,2059,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1987,2768,,,2768,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1988,2496,,,2496,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1989,5060,,,5060,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1990,2365,,,2365,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1991,2006,,,2006,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1992,1660,,,1660,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1993,2227,,,2227,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1994,1479,,,1479,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1995,3792,,,3792,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1996,1776,,,1776,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1997,4841,,,4841,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1998,3500,,,3500,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,1999,2081,,,2081,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2000,2601,,,2601,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2001,3188,,,3188,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2002,2758,,,2758,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2003,3964,,,3964,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2004,2985,,,2985,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2005,2463,,,2463,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2006,2217,,,2217,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2007,1373,,,1373,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2008,1255,,,1255,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2009,1133,,,1133,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2010,1173,,,1173,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2011,1061,,,1061,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2012,756,,,756,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2013,1752,,,1752,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2014,1335,,,1335,Aerial survey,Single aerial survey,,Erickson et al. 2017,64
+Willow,2015,2046,,,2046,Aerial survey,Single aerial survey,,Erickson et al. 2017,64

@@ -200,21 +200,19 @@ ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Deshka age comp by component.
 ageByRegion.plot <- ggplot(data = agePlot, aes(x = ReturnYear, y = Prop, color = Region)) +
   facet_grid(Age ~ .) +
   geom_point(shape = 1, fill = NA) +
-  labs(x = "Return year", y = "Age Prop") +
-  scale_x_continuous(breaks = seq(1980, 2015, 5)) +
-  geom_smooth(method = 'lm', se = F)
+  labs(x = "Return year", y = "Age Proportion") +
+  scale_x_continuous(breaks = seq(1980, 2015, 5)) 
 ageByRegion.plot
 ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region.png")
 
 ageByRegionComp.plot <- ggplot(data = agePlot, aes(x = ReturnYear, y = Prop, color = RegionComponent)) +
   facet_grid(Age ~ .) +
   geom_point(shape = 1, fill = NA) +
-  labs(x = "Return year", y = "Age Prop") +
+  labs(x = "Return year", y = "Age Proportion") +
   scale_x_continuous(breaks = seq(1980, 2015, 5)) +
   scale_color_manual(name = "Region and run component", values = c("dark red", "red", "orange",
                                                                    "dark blue", "blue", "cyan",
-                                                                   "green")) +
-  geom_smooth(method = 'lm', se = F)
+                                                                   "green")) 
 ageByRegionComp.plot
 ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region & run component.png")
 
@@ -384,7 +382,8 @@ modsel.mlrolr
 Component <- c(rep("Escapement", 3*36), rep("Sport Harvest", 3*36))
 Region <- rep(c(rep("North",36), rep("Kenai",36), rep("South", 36)), 2)
 ReturnYear <- rep(1980:2015, 2*3)
-xdata <- data.frame(Component, Region, ReturnYear)
+xdata <- data.frame(Component, Region, ReturnYear) %>%
+  mutate(Region = factor(Region, levels = c("North", "Kenai", "South")))
 
 # 2) Convert ReturnYear to zReturnYear using same scale as before
 zReturnYear <- age %>%
@@ -405,11 +404,27 @@ agePredicted <- cbind(xdata, predictions) %>%
 AgePredictedByRegion.plot <- ggplot(data = agePredicted, aes(x = ReturnYear, y = Prop, color = Region,
                                                              linetype = Component)) +
   facet_grid(Age ~ .) +
-  labs(x = "Return year", y = "Age Prop") +
+  labs(x = "Return year", y = "Age Proportion") +
   scale_x_continuous(breaks = seq(1980, 2015, 5)) +
   geom_smooth(se = F)
 AgePredictedByRegion.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Predicted age comp by region.png")
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region_model fit.png")
+
+# 4) Plot the model fit (curves) on top of the raw data (points)
+AgeByRegion.Data.plot <- ggplot(data = agePlot, aes(x = ReturnYear, y = Prop, color = Region,
+                                                    shape = Component)) +
+  facet_grid(Age ~ .) +
+  geom_point(fill = NA) +
+  labs(x = "Return year", y = "Age Proportion") +
+  scale_x_continuous(breaks = seq(1980, 2015, 5)) +
+  scale_color_discrete(name = "Region") +
+  scale_shape_manual(name = "Run component", values = c(1:3))
+AgeByRegion.Data.plot
+
+AgeByRegion.Data.Predicted.plot <- AgeByRegion.Data.plot +
+  geom_smooth(data = filter(agePredicted, Component == "Escapement"))
+AgeByRegion.Data.Predicted.plot
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region and run component_data and fit.png")
 
 # Old code, no longer used:----------------
 
@@ -651,7 +666,7 @@ ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Predicted age comp by region.
 #   facet_grid(Age ~ .) +
 #   geom_line() +
 #   # geom_point(shape = 1, fill = NA) +
-#   labs(x = "Return year", y = "Age Prop") +
+#   labs(x = "Return year", y = "Age Proportion") +
 #   scale_color_discrete(name = "Gear type") +
 #   scale_x_continuous(breaks = seq(1980, 2015, 5))
 # ageByGearKenai.plot
@@ -668,7 +683,7 @@ ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Predicted age comp by region.
 #   facet_grid(Age ~ .) +
 #   geom_line() +
 #   geom_point(shape = 1, fill = NA) +
-#   labs(x = "Return year", y = "Age Prop") +
+#   labs(x = "Return year", y = "Age Proportion") +
 #   scale_color_discrete(name = "Gear type") +
 #   scale_x_continuous(breaks = seq(1980, 2015, 5))
 # ageByGearDeshka.plot
