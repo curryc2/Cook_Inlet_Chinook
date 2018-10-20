@@ -1,77 +1,77 @@
-Fishery,Area_Season,ReportingGroup_ESSN,ReportingGroup_NSN,ReportingGroup_MS,Year,StockCompMean,StockComp5Percentile,StockComp95Percentile,Comments,Reference,Page
-ESSN,All,Kenai River tributaries,,,2010,0.011,0.001,0.031,,Eskelin and Barclay 2017,31
-ESSN,All,Kenai River tributaries,,,2011,0.001,0,0.008,,Eskelin and Barclay 2017,31
-ESSN,All,Kenai River tributaries,,,2013,0.001,0,0.01,,Eskelin and Barclay 2017,31
-ESSN,All,Kenai River tributaries,,,2014,0.002,0,0.012,,Eskelin and Barclay 2017,31
-ESSN,All,Kenai River tributaries,,,2015,0.002,0,0.011,,Eskelin and Barclay 2017,31
-ESSN,All,Kenai River tributaries,,,2016,0.004,0,0.012,,Eskelin and Barclay 2017,31
-ESSN,All,Kenai River mainstem,,,2010,0.643,0.581,0.703,,Eskelin and Barclay 2017,31
-ESSN,All,Kenai River mainstem,,,2011,0.667,0.601,0.733,,Eskelin and Barclay 2017,31
-ESSN,All,Kenai River mainstem,,,2013,0.766,0.727,0.804,,Eskelin and Barclay 2017,31
-ESSN,All,Kenai River mainstem,,,2014,0.609,0.555,0.664,,Eskelin and Barclay 2017,31
-ESSN,All,Kenai River mainstem,,,2015,0.77,0.709,0.814,,Eskelin and Barclay 2017,31
-ESSN,All,Kenai River mainstem,,,2016,0.736,0.687,0.77,,Eskelin and Barclay 2017,31
-ESSN,All,Kasilof River mainstem,,,2010,0.326,0.271,0.383,,Eskelin and Barclay 2017,31
-ESSN,All,Kasilof River mainstem,,,2011,0.33,0.265,0.395,,Eskelin and Barclay 2017,31
-ESSN,All,Kasilof River mainstem,,,2013,0.213,0.178,0.25,,Eskelin and Barclay 2017,31
-ESSN,All,Kasilof River mainstem,,,2014,0.387,0.333,0.441,,Eskelin and Barclay 2017,31
-ESSN,All,Kasilof River mainstem,,,2015,0.201,0.16,0.26,,Eskelin and Barclay 2017,31
-ESSN,All,Kasilof River mainstem,,,2016,0.247,0.215,0.293,,Eskelin and Barclay 2017,31
-ESSN,All,Cook Inlet other_ESSN,,,2010,0.02,0.003,0.047,"""Cook Inlet other_ESSN"" reporting group includes Northern Cook Inlet and southern Kenai Peninsula stocks.  The ""ESSN"" is to distinguish it from a separate ""Cook Inlet other"" reporting group used in the marine sport fishery MSA study.  Based on the timing and locations of ""Cook Inlet other"" catches; the authors speculate that these may be primarily southern Kenai Peninsula stocks (Crooked Creek; Deep Creek; Ninilchik; and Anchor) migrating north of their natal streams and being harvested before turning south to swim upstream.",Eskelin and Barclay 2017,31
-ESSN,All,Cook Inlet other_ESSN,,,2011,0.002,0,0.011,"""Cook Inlet other_ESSN"" reporting group includes Northern Cook Inlet and southern Kenai Peninsula stocks.  The ""ESSN"" is to distinguish it from a separate ""Cook Inlet other"" reporting group used in the marine sport fishery MSA study.  Based on the timing and locations of ""Cook Inlet other"" catches; the authors speculate that these may be primarily southern Kenai Peninsula stocks (Crooked Creek; Deep Creek; Ninilchik; and Anchor) migrating north of their natal streams and being harvested before turning south to swim upstream.",Eskelin and Barclay 2017,31
-ESSN,All,Cook Inlet other_ESSN,,,2013,0.019,0.01,0.03,"""Cook Inlet other_ESSN"" reporting group includes Northern Cook Inlet and southern Kenai Peninsula stocks.  The ""ESSN"" is to distinguish it from a separate ""Cook Inlet other"" reporting group used in the marine sport fishery MSA study.  Based on the timing and locations of ""Cook Inlet other"" catches; the authors speculate that these may be primarily southern Kenai Peninsula stocks (Crooked Creek; Deep Creek; Ninilchik; and Anchor) migrating north of their natal streams and being harvested before turning south to swim upstream.",Eskelin and Barclay 2017,31
-ESSN,All,Cook Inlet other_ESSN,,,2014,0.002,0,0.01,"""Cook Inlet other_ESSN"" reporting group includes Northern Cook Inlet and southern Kenai Peninsula stocks.  The ""ESSN"" is to distinguish it from a separate ""Cook Inlet other"" reporting group used in the marine sport fishery MSA study.  Based on the timing and locations of ""Cook Inlet other"" catches; the authors speculate that these may be primarily southern Kenai Peninsula stocks (Crooked Creek; Deep Creek; Ninilchik; and Anchor) migrating north of their natal streams and being harvested before turning south to swim upstream.",Eskelin and Barclay 2017,31
-ESSN,All,Cook Inlet other_ESSN,,,2015,0.027,0.014,0.042,"""Cook Inlet other_ESSN"" reporting group includes Northern Cook Inlet and southern Kenai Peninsula stocks.  The ""ESSN"" is to distinguish it from a separate ""Cook Inlet other"" reporting group used in the marine sport fishery MSA study.  Based on the timing and locations of ""Cook Inlet other"" catches; the authors speculate that these may be primarily southern Kenai Peninsula stocks (Crooked Creek; Deep Creek; Ninilchik; and Anchor) migrating north of their natal streams and being harvested before turning south to swim upstream.",Eskelin and Barclay 2017,31
-ESSN,All,Cook Inlet other_ESSN,,,2016,0.014,0.007,0.024,"""Cook Inlet other_ESSN"" reporting group includes Northern Cook Inlet and southern Kenai Peninsula stocks.  The ""ESSN"" is to distinguish it from a separate ""Cook Inlet other"" reporting group used in the marine sport fishery MSA study.  Based on the timing and locations of ""Cook Inlet other"" catches; the authors speculate that these may be primarily southern Kenai Peninsula stocks (Crooked Creek; Deep Creek; Ninilchik; and Anchor) migrating north of their natal streams and being harvested before turning south to swim upstream.",Eskelin and Barclay 2017,31
-MarineSport,CentralCI_EarlySummer,,,Outside Cook Inlet,2014,75.3,71.1,79.4,,Barclay et al. 2016,33
-MarineSport,CentralCI_EarlySummer,,,West/Susitna,2014,13.8,9.3,18.3,,Barclay et al. 2016,33
-MarineSport,CentralCI_EarlySummer,,,Cook Inlet other_MS,2014,10.4,6.7,14.9,"""Cook Inlet other_MS"" reporting group includes northern CI east of the Big Su (Little Su; Knik Arm; and Turnagain Arm drainages) and Kenai Peninsula drainages south of the Kenai (Kasilof to Anchor)",Barclay et al. 2016,33
-MarineSport,CentralCI_EarlySummer,,,Kenai,2014,0.5,0,2.1,,Barclay et al. 2016,33
-MarineSport,LowerCI_Summer,,,Outside Cook Inlet,2014,97.9,96.6,99,,Barclay et al. 2016,33
-MarineSport,LowerCI_Summer,,,West/Susitna,2014,0.1,0,0.5,,Barclay et al. 2016,33
-MarineSport,LowerCI_Summer,,,Cook Inlet other_MS,2014,1.5,0.4,2.9,"""Cook Inlet other_MS"" reporting group includes northern CI east of the Big Su (Little Su; Knik Arm; and Turnagain Arm drainages) and Kenai Peninsula drainages south of the Kenai (Kasilof to Anchor)",Barclay et al. 2016,33
-MarineSport,LowerCI_Summer,,,Kenai,2014,0.5,0,1.7,,Barclay et al. 2016,33
-MarineSport,LowerCI_Winter,,,Outside Cook Inlet,2014,99.8,99.2,100,,Barclay et al. 2016,33
-MarineSport,LowerCI_Winter,,,West/Susitna,2014,0.1,0,0.4,,Barclay et al. 2016,33
-MarineSport,LowerCI_Winter,,,Cook Inlet other_MS,2014,0.1,0,0.4,"""Cook Inlet other_MS"" reporting group includes northern CI east of the Big Su (Little Su; Knik Arm; and Turnagain Arm drainages) and Kenai Peninsula drainages south of the Kenai (Kasilof to Anchor)",Barclay et al. 2016,33
-MarineSport,LowerCI_Winter,,,Kenai,2014,0.1,0,0.4,,Barclay et al. 2016,33
-MarineSport,CentralCI_EarlySummer,,,Outside Cook Inlet,2015,80.4,77.1,83.6,,Barclay et al. 2016,33
-MarineSport,CentralCI_EarlySummer,,,West/Susitna,2015,6.4,3.7,9.7,,Barclay et al. 2016,33
-MarineSport,CentralCI_EarlySummer,,,Cook Inlet other_MS,2015,12.7,9.1,16.4,"""Cook Inlet other_MS"" reporting group includes northern CI east of the Big Su (Little Su; Knik Arm; and Turnagain Arm drainages) and Kenai Peninsula drainages south of the Kenai (Kasilof to Anchor)",Barclay et al. 2016,33
-MarineSport,CentralCI_EarlySummer,,,Kenai,2015,0.4,0,2,,Barclay et al. 2016,33
-MarineSport,LowerCI_Summer,,,Outside Cook Inlet,2015,99,98,99.7,,Barclay et al. 2016,33
-MarineSport,LowerCI_Summer,,,West/Susitna,2015,0.7,0,1.6,,Barclay et al. 2016,33
-MarineSport,LowerCI_Summer,,,Cook Inlet other_MS,2015,0.2,0,0.8,"""Cook Inlet other_MS"" reporting group includes northern CI east of the Big Su (Little Su; Knik Arm; and Turnagain Arm drainages) and Kenai Peninsula drainages south of the Kenai (Kasilof to Anchor)",Barclay et al. 2016,33
-MarineSport,LowerCI_Summer,,,Kenai,2015,0.1,0,0.6,,Barclay et al. 2016,33
-MarineSport,LowerCI_Winter,,,Outside Cook Inlet,2015,99.8,99.4,100,,Barclay et al. 2016,33
-MarineSport,LowerCI_Winter,,,West/Susitna,2015,0.1,0,0.3,,Barclay et al. 2016,33
-MarineSport,LowerCI_Winter,,,Cook Inlet other_MS,2015,0.1,0,0.3,"""Cook Inlet other_MS"" reporting group includes northern CI east of the Big Su (Little Su; Knik Arm; and Turnagain Arm drainages) and Kenai Peninsula drainages south of the Kenai (Kasilof to Anchor)",Barclay et al. 2016,33
-MarineSport,LowerCI_Winter,,,Kenai,2015,0.1,0,0.3,,Barclay et al. 2016,33
-MarineSport,CentralCI_EarlySummer,,,Outside Cook Inlet,2016,89.9,87,92.6,,Barclay et al. 2016,34
-MarineSport,CentralCI_EarlySummer,,,West/Susitna,2016,4.2,0.2,7.7,,Barclay et al. 2016,34
-MarineSport,CentralCI_EarlySummer,,,Cook Inlet other_MS,2016,4.2,1.1,9.1,"""Cook Inlet other_MS"" reporting group includes northern CI east of the Big Su (Little Su; Knik Arm; and Turnagain Arm drainages) and Kenai Peninsula drainages south of the Kenai (Kasilof to Anchor)",Barclay et al. 2016,34
-MarineSport,CentralCI_EarlySummer,,,Kenai,2016,1.7,0,3.9,,Barclay et al. 2016,34
-NSN,All,,UCI Northwest,,2014,34.9,23,45.9,,A. St. Saviour; unpublished data,
-NSN,All,,Susitna/Matanuska,,2014,33.3,22,45.9,,A. St. Saviour; unpublished data,
-NSN,All,,Knik/Turnagain,,2014,30.3,23.8,37.1,,A. St. Saviour; unpublished data,
-NSN,All,,Kenai Peninsula,,2014,1.6,0.2,3.9,,A. St. Saviour; unpublished data,
-NSN,All,,UCI Northwest,,2015,24.4,18.4,30.5,,A. St. Saviour; unpublished data,
-NSN,All,,Susitna/Matanuska,,2015,17.6,11.4,24.4,,A. St. Saviour; unpublished data,
-NSN,All,,Knik/Turnagain,,2015,58,52.9,62.6,,A. St. Saviour; unpublished data,
-NSN,All,,Kenai Peninsula,,2015,0.1,0,0.4,,A. St. Saviour; unpublished data,
-NSN,All,,UCI Northwest,,2016,29.9,21.9,38.3,,A. St. Saviour; unpublished data,
-NSN,All,,Susitna/Matanuska,,2016,32.3,23.3,40.8,,A. St. Saviour; unpublished data,
-NSN,All,,Knik/Turnagain,,2016,37.7,34,41.7,,A. St. Saviour; unpublished data,
-NSN,All,,Kenai Peninsula,,2016,0.1,0,0.5,,A. St. Saviour; unpublished data,
-Tyonek,All,,UCI Northwest,,2014,56.6,25.2,86.3,,A. St. Saviour; unpublished data,
-Tyonek,All,,Susitna/Matanuska,,2014,39.2,9.9,70.8,,A. St. Saviour; unpublished data,
-Tyonek,All,,Knik/Turnagain,,2014,2.5,0,11.9,,A. St. Saviour; unpublished data,
-Tyonek,All,,Kenai Peninsula,,2014,1.8,0,6.7,,A. St. Saviour; unpublished data,
-Tyonek,All,,UCI Northwest,,2015,79,66.2,88.9,,A. St. Saviour; unpublished data,
-Tyonek,All,,Susitna/Matanuska,,2015,11.2,2.7,24.6,,A. St. Saviour; unpublished data,
-Tyonek,All,,Knik/Turnagain,,2015,9.6,2,17.1,,A. St. Saviour; unpublished data,
-Tyonek,All,,Kenai Peninsula,,2015,0.1,0,0.8,,A. St. Saviour; unpublished data,
-Tyonek,All,,UCI Northwest,,2016,72.3,54.7,87.4,,A. St. Saviour; unpublished data,
-Tyonek,All,,Susitna/Matanuska,,2016,19.5,4.2,39.1,,A. St. Saviour; unpublished data,
-Tyonek,All,,Knik/Turnagain,,2016,8.1,0.5,16.1,,A. St. Saviour; unpublished data,
-Tyonek,All,,Kenai Peninsula,,2016,0.1,0,0.8,,A. St. Saviour; unpublished data,
+Fishery,Area_Season,ReportingGroup,Year,StockCompMean,StockComp5Percentile,StockComp95Percentile,Comments,Reference,Page
+ESSN,All,Kenai River tributaries,2010,0.011,0.001,0.031,,Eskelin and Barclay 2017,31
+ESSN,All,Kenai River tributaries,2011,0.001,0,0.008,,Eskelin and Barclay 2017,31
+ESSN,All,Kenai River tributaries,2013,0.001,0,0.01,,Eskelin and Barclay 2017,31
+ESSN,All,Kenai River tributaries,2014,0.002,0,0.012,,Eskelin and Barclay 2017,31
+ESSN,All,Kenai River tributaries,2015,0.002,0,0.011,,Eskelin and Barclay 2017,31
+ESSN,All,Kenai River tributaries,2016,0.004,0,0.012,,Eskelin and Barclay 2017,31
+ESSN,All,Kenai River mainstem,2010,0.643,0.581,0.703,,Eskelin and Barclay 2017,31
+ESSN,All,Kenai River mainstem,2011,0.667,0.601,0.733,,Eskelin and Barclay 2017,31
+ESSN,All,Kenai River mainstem,2013,0.766,0.727,0.804,,Eskelin and Barclay 2017,31
+ESSN,All,Kenai River mainstem,2014,0.609,0.555,0.664,,Eskelin and Barclay 2017,31
+ESSN,All,Kenai River mainstem,2015,0.77,0.709,0.814,,Eskelin and Barclay 2017,31
+ESSN,All,Kenai River mainstem,2016,0.736,0.687,0.77,,Eskelin and Barclay 2017,31
+ESSN,All,Kasilof River mainstem,2010,0.326,0.271,0.383,,Eskelin and Barclay 2017,31
+ESSN,All,Kasilof River mainstem,2011,0.33,0.265,0.395,,Eskelin and Barclay 2017,31
+ESSN,All,Kasilof River mainstem,2013,0.213,0.178,0.25,,Eskelin and Barclay 2017,31
+ESSN,All,Kasilof River mainstem,2014,0.387,0.333,0.441,,Eskelin and Barclay 2017,31
+ESSN,All,Kasilof River mainstem,2015,0.201,0.16,0.26,,Eskelin and Barclay 2017,31
+ESSN,All,Kasilof River mainstem,2016,0.247,0.215,0.293,,Eskelin and Barclay 2017,31
+ESSN,All,Cook Inlet other_ESSN,2010,0.02,0.003,0.047,"""Cook Inlet other_ESSN"" reporting group includes Northern Cook Inlet and southern Kenai Peninsula stocks.  The ""ESSN"" is to distinguish it from a separate ""Cook Inlet other"" reporting group used in the marine sport fishery MSA study.  Based on the timing and locations of ""Cook Inlet other"" catches; the authors speculate that these may be primarily southern Kenai Peninsula stocks (Crooked Creek; Deep Creek; Ninilchik; and Anchor) migrating north of their natal streams and being harvested before turning south to swim upstream.",Eskelin and Barclay 2017,31
+ESSN,All,Cook Inlet other_ESSN,2011,0.002,0,0.011,"""Cook Inlet other_ESSN"" reporting group includes Northern Cook Inlet and southern Kenai Peninsula stocks.  The ""ESSN"" is to distinguish it from a separate ""Cook Inlet other"" reporting group used in the marine sport fishery MSA study.  Based on the timing and locations of ""Cook Inlet other"" catches; the authors speculate that these may be primarily southern Kenai Peninsula stocks (Crooked Creek; Deep Creek; Ninilchik; and Anchor) migrating north of their natal streams and being harvested before turning south to swim upstream.",Eskelin and Barclay 2017,31
+ESSN,All,Cook Inlet other_ESSN,2013,0.019,0.01,0.03,"""Cook Inlet other_ESSN"" reporting group includes Northern Cook Inlet and southern Kenai Peninsula stocks.  The ""ESSN"" is to distinguish it from a separate ""Cook Inlet other"" reporting group used in the marine sport fishery MSA study.  Based on the timing and locations of ""Cook Inlet other"" catches; the authors speculate that these may be primarily southern Kenai Peninsula stocks (Crooked Creek; Deep Creek; Ninilchik; and Anchor) migrating north of their natal streams and being harvested before turning south to swim upstream.",Eskelin and Barclay 2017,31
+ESSN,All,Cook Inlet other_ESSN,2014,0.002,0,0.01,"""Cook Inlet other_ESSN"" reporting group includes Northern Cook Inlet and southern Kenai Peninsula stocks.  The ""ESSN"" is to distinguish it from a separate ""Cook Inlet other"" reporting group used in the marine sport fishery MSA study.  Based on the timing and locations of ""Cook Inlet other"" catches; the authors speculate that these may be primarily southern Kenai Peninsula stocks (Crooked Creek; Deep Creek; Ninilchik; and Anchor) migrating north of their natal streams and being harvested before turning south to swim upstream.",Eskelin and Barclay 2017,31
+ESSN,All,Cook Inlet other_ESSN,2015,0.027,0.014,0.042,"""Cook Inlet other_ESSN"" reporting group includes Northern Cook Inlet and southern Kenai Peninsula stocks.  The ""ESSN"" is to distinguish it from a separate ""Cook Inlet other"" reporting group used in the marine sport fishery MSA study.  Based on the timing and locations of ""Cook Inlet other"" catches; the authors speculate that these may be primarily southern Kenai Peninsula stocks (Crooked Creek; Deep Creek; Ninilchik; and Anchor) migrating north of their natal streams and being harvested before turning south to swim upstream.",Eskelin and Barclay 2017,31
+ESSN,All,Cook Inlet other_ESSN,2016,0.014,0.007,0.024,"""Cook Inlet other_ESSN"" reporting group includes Northern Cook Inlet and southern Kenai Peninsula stocks.  The ""ESSN"" is to distinguish it from a separate ""Cook Inlet other"" reporting group used in the marine sport fishery MSA study.  Based on the timing and locations of ""Cook Inlet other"" catches; the authors speculate that these may be primarily southern Kenai Peninsula stocks (Crooked Creek; Deep Creek; Ninilchik; and Anchor) migrating north of their natal streams and being harvested before turning south to swim upstream.",Eskelin and Barclay 2017,31
+MarineSport,CentralCI_EarlySummer,Outside Cook Inlet,2014,75.3,71.1,79.4,,Barclay et al. 2016,33
+MarineSport,CentralCI_EarlySummer,West/Susitna,2014,13.8,9.3,18.3,,Barclay et al. 2016,33
+MarineSport,CentralCI_EarlySummer,Cook Inlet other_MS,2014,10.4,6.7,14.9,"""Cook Inlet other_MS"" reporting group includes northern CI east of the Big Su (Little Su; Knik Arm; and Turnagain Arm drainages) and Kenai Peninsula drainages south of the Kenai (Kasilof to Anchor)",Barclay et al. 2016,33
+MarineSport,CentralCI_EarlySummer,Kenai,2014,0.5,0,2.1,,Barclay et al. 2016,33
+MarineSport,LowerCI_Summer,Outside Cook Inlet,2014,97.9,96.6,99,,Barclay et al. 2016,33
+MarineSport,LowerCI_Summer,West/Susitna,2014,0.1,0,0.5,,Barclay et al. 2016,33
+MarineSport,LowerCI_Summer,Cook Inlet other_MS,2014,1.5,0.4,2.9,"""Cook Inlet other_MS"" reporting group includes northern CI east of the Big Su (Little Su; Knik Arm; and Turnagain Arm drainages) and Kenai Peninsula drainages south of the Kenai (Kasilof to Anchor)",Barclay et al. 2016,33
+MarineSport,LowerCI_Summer,Kenai,2014,0.5,0,1.7,,Barclay et al. 2016,33
+MarineSport,LowerCI_Winter,Outside Cook Inlet,2014,99.8,99.2,100,,Barclay et al. 2016,33
+MarineSport,LowerCI_Winter,West/Susitna,2014,0.1,0,0.4,,Barclay et al. 2016,33
+MarineSport,LowerCI_Winter,Cook Inlet other_MS,2014,0.1,0,0.4,"""Cook Inlet other_MS"" reporting group includes northern CI east of the Big Su (Little Su; Knik Arm; and Turnagain Arm drainages) and Kenai Peninsula drainages south of the Kenai (Kasilof to Anchor)",Barclay et al. 2016,33
+MarineSport,LowerCI_Winter,Kenai,2014,0.1,0,0.4,,Barclay et al. 2016,33
+MarineSport,CentralCI_EarlySummer,Outside Cook Inlet,2015,80.4,77.1,83.6,,Barclay et al. 2016,33
+MarineSport,CentralCI_EarlySummer,West/Susitna,2015,6.4,3.7,9.7,,Barclay et al. 2016,33
+MarineSport,CentralCI_EarlySummer,Cook Inlet other_MS,2015,12.7,9.1,16.4,"""Cook Inlet other_MS"" reporting group includes northern CI east of the Big Su (Little Su; Knik Arm; and Turnagain Arm drainages) and Kenai Peninsula drainages south of the Kenai (Kasilof to Anchor)",Barclay et al. 2016,33
+MarineSport,CentralCI_EarlySummer,Kenai,2015,0.4,0,2,,Barclay et al. 2016,33
+MarineSport,LowerCI_Summer,Outside Cook Inlet,2015,99,98,99.7,,Barclay et al. 2016,33
+MarineSport,LowerCI_Summer,West/Susitna,2015,0.7,0,1.6,,Barclay et al. 2016,33
+MarineSport,LowerCI_Summer,Cook Inlet other_MS,2015,0.2,0,0.8,"""Cook Inlet other_MS"" reporting group includes northern CI east of the Big Su (Little Su; Knik Arm; and Turnagain Arm drainages) and Kenai Peninsula drainages south of the Kenai (Kasilof to Anchor)",Barclay et al. 2016,33
+MarineSport,LowerCI_Summer,Kenai,2015,0.1,0,0.6,,Barclay et al. 2016,33
+MarineSport,LowerCI_Winter,Outside Cook Inlet,2015,99.8,99.4,100,,Barclay et al. 2016,33
+MarineSport,LowerCI_Winter,West/Susitna,2015,0.1,0,0.3,,Barclay et al. 2016,33
+MarineSport,LowerCI_Winter,Cook Inlet other_MS,2015,0.1,0,0.3,"""Cook Inlet other_MS"" reporting group includes northern CI east of the Big Su (Little Su; Knik Arm; and Turnagain Arm drainages) and Kenai Peninsula drainages south of the Kenai (Kasilof to Anchor)",Barclay et al. 2016,33
+MarineSport,LowerCI_Winter,Kenai,2015,0.1,0,0.3,,Barclay et al. 2016,33
+MarineSport,CentralCI_EarlySummer,Outside Cook Inlet,2016,89.9,87,92.6,,Barclay et al. 2016,34
+MarineSport,CentralCI_EarlySummer,West/Susitna,2016,4.2,0.2,7.7,,Barclay et al. 2016,34
+MarineSport,CentralCI_EarlySummer,Cook Inlet other_MS,2016,4.2,1.1,9.1,"""Cook Inlet other_MS"" reporting group includes northern CI east of the Big Su (Little Su; Knik Arm; and Turnagain Arm drainages) and Kenai Peninsula drainages south of the Kenai (Kasilof to Anchor)",Barclay et al. 2016,34
+MarineSport,CentralCI_EarlySummer,Kenai,2016,1.7,0,3.9,,Barclay et al. 2016,34
+NSN,All,UCI Northwest,2014,34.9,23,45.9,,A. St. Saviour; unpublished data,
+NSN,All,Susitna/Matanuska,2014,33.3,22,45.9,,A. St. Saviour; unpublished data,
+NSN,All,Knik/Turnagain,2014,30.3,23.8,37.1,,A. St. Saviour; unpublished data,
+NSN,All,Kenai Peninsula,2014,1.6,0.2,3.9,,A. St. Saviour; unpublished data,
+NSN,All,UCI Northwest,2015,24.4,18.4,30.5,,A. St. Saviour; unpublished data,
+NSN,All,Susitna/Matanuska,2015,17.6,11.4,24.4,,A. St. Saviour; unpublished data,
+NSN,All,Knik/Turnagain,2015,58,52.9,62.6,,A. St. Saviour; unpublished data,
+NSN,All,Kenai Peninsula,2015,0.1,0,0.4,,A. St. Saviour; unpublished data,
+NSN,All,UCI Northwest,2016,29.9,21.9,38.3,,A. St. Saviour; unpublished data,
+NSN,All,Susitna/Matanuska,2016,32.3,23.3,40.8,,A. St. Saviour; unpublished data,
+NSN,All,Knik/Turnagain,2016,37.7,34,41.7,,A. St. Saviour; unpublished data,
+NSN,All,Kenai Peninsula,2016,0.1,0,0.5,,A. St. Saviour; unpublished data,
+Tyonek,All,UCI Northwest,2014,56.6,25.2,86.3,,A. St. Saviour; unpublished data,
+Tyonek,All,Susitna/Matanuska,2014,39.2,9.9,70.8,,A. St. Saviour; unpublished data,
+Tyonek,All,Knik/Turnagain,2014,2.5,0,11.9,,A. St. Saviour; unpublished data,
+Tyonek,All,Kenai Peninsula,2014,1.8,0,6.7,,A. St. Saviour; unpublished data,
+Tyonek,All,UCI Northwest,2015,79,66.2,88.9,,A. St. Saviour; unpublished data,
+Tyonek,All,Susitna/Matanuska,2015,11.2,2.7,24.6,,A. St. Saviour; unpublished data,
+Tyonek,All,Knik/Turnagain,2015,9.6,2,17.1,,A. St. Saviour; unpublished data,
+Tyonek,All,Kenai Peninsula,2015,0.1,0,0.8,,A. St. Saviour; unpublished data,
+Tyonek,All,UCI Northwest,2016,72.3,54.7,87.4,,A. St. Saviour; unpublished data,
+Tyonek,All,Susitna/Matanuska,2016,19.5,4.2,39.1,,A. St. Saviour; unpublished data,
+Tyonek,All,Knik/Turnagain,2016,8.1,0.5,16.1,,A. St. Saviour; unpublished data,
+Tyonek,All,Kenai Peninsula,2016,0.1,0,0.8,,A. St. Saviour; unpublished data,

@@ -1,4 +1,4 @@
-Group,GroupType,StockRecruit,Region,HatcheryWild,ReportingGroup.ESSN,ReportingGroup.NSN,ReportingGroup.MS
+Group,GroupType,StockRecruit,Region,HatcheryWild,ReportingGroup_ESSN,ReportingGroup_NSN,ReportingGroup_MS
 Anchor,Population,T,South,Wild,Cook Inlet other1,Kenai Peninsula,Cook Inlet other2
 Crooked,Population,T,South,Wild,Cook Inlet other1,Kenai Peninsula,Cook Inlet other2
 Crooked.Hatchery,Population,F,South,Hatchery,Cook Inlet other1,Kenai Peninsula,Cook Inlet other2
