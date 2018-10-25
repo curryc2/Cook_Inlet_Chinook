@@ -1,26 +1,34 @@
-Group,GroupType,Region,HatcheryWild
-Alexander,Population,North,Wild
-Anchor,Population,South,Wild
-Campbell,Population,North,Wild
-Chuitna,Population,North,Wild
-Chulitna,Population,North,Wild
-Crooked,Population,South,Wild
-Crooked.Hatchery,Population,South,Hatchery
-Deep,Population,South,Wild
-Deshka,Population,North,Wild
-ESSN,Fishery,Kenai,Wild
-Funny,Population,South,Wild
-Kenai.Late,Population,Kenai,Wild
-Lewis,Population,North,Wild
-LittleSusitna,Population,North,Wild
-LittleWillow,Population,North,Wild
-Montana,Population,North,Wild
-Ninilchik,Population,South,Wild
-Ninilchik.Hatchery,Population,South,Hatchery
-NSN,Fishery,North,Mixed
-Quartz,Population,South,Wild
-Slikok,Population,South,Wild
-Theodore,Population,North,Wild
-Tyonek,Fishery,North,Mixed
-Willow,Population,North,Wild
-WSSN,Fishery,North,Mixed
+Group,GroupType,StockRecruit,Region,HatcheryWild,ReportingGroup_ESSN,ReportingGroup_NSN,ReportingGroup_MS
+Anchor,Population,T,South,Wild,Cook Inlet other1,Kenai Peninsula,Cook Inlet other2
+Crooked,Population,T,South,Wild,Cook Inlet other1,Kenai Peninsula,Cook Inlet other2
+Crooked.Hatchery,Population,F,South,Hatchery,Cook Inlet other1,Kenai Peninsula,Cook Inlet other2
+Deep,Population,T,South,Wild,Cook Inlet other1,Kenai Peninsula,Cook Inlet other2
+Kenai.Early,Population,F,Kenai,Wild,Kenai River tributaries,Kenai Peninsula,Kenai
+Kenai.Late,Population,T,Kenai,Wild,Kenai River mainstem,Kenai Peninsula,Kenai
+Ninilchik,Population,T,South,Wild,Cook Inlet other1,Kenai Peninsula,Cook Inlet other2
+Ninilchik.Hatchery,Population,F,South,Hatchery,Cook Inlet other1,Kenai Peninsula,Cook Inlet other2
+Campbell,Population,T,North,Wild,Cook Inlet other1,Knik/Turnagain,Cook Inlet other2
+LittleSusitna,Population,T,North,Wild,Cook Inlet other1,Knik/Turnagain,Cook Inlet other2
+ESSN,Fishery,F,Kenai,Wild,NA,NA,NA
+NSN,Fishery,F,North,Mixed,NA,NA,NA
+Tyonek,Fishery,F,North,Mixed,NA,NA,NA
+WSSN,Fishery,F,North,Mixed,NA,NA,NA
+Funny,Subpopulation,F,South,Wild,NA,NA,NA
+Quartz,Subpopulation,F,South,Wild,NA,NA,NA
+Slikok,Subpopulation,F,South,Wild,NA,NA,NA
+Chulitna,Population,T,North,Wild,Cook Inlet other1,Susitna/Matanuska,West/Susitna
+Clear,Population,F,North,Wild,Cook Inlet other1,Susitna/Matanuska,West/Susitna
+Deshka,Population,T,North,Wild,Cook Inlet other1,Susitna/Matanuska,West/Susitna
+Goose,Population,F,North,Wild,Cook Inlet other1,Susitna/Matanuska,West/Susitna
+LittleWillow,Population,T,North,Wild,Cook Inlet other1,Susitna/Matanuska,West/Susitna
+Montana,Population,T,North,Wild,Cook Inlet other1,Susitna/Matanuska,West/Susitna
+Prairie,Population,F,North,Wild,Cook Inlet other1,Susitna/Matanuska,West/Susitna
+Sheep,Population,F,North,Wild,Cook Inlet other1,Susitna/Matanuska,West/Susitna
+Willow,Population,T,North,Wild,Cook Inlet other1,Susitna/Matanuska,West/Susitna
+Alexander,Population,T,North,Wild,Cook Inlet other1,UCI Northwest,West/Susitna
+Chuitna,Population,T,North,Wild,Cook Inlet other1,UCI Northwest,West/Susitna
+Lake,Population,F,North,Wild,Cook Inlet other1,UCI Northwest,West/Susitna
+Lewis,Population,F,North,Wild,Cook Inlet other1,UCI Northwest,West/Susitna
+Peters,Population,F,North,Wild,Cook Inlet other1,UCI Northwest,West/Susitna
+Talachulitna,Population,F,North,Wild,Cook Inlet other1,UCI Northwest,West/Susitna
+Theodore,Population,T,North,Wild,Cook Inlet other1,UCI Northwest,West/Susitna

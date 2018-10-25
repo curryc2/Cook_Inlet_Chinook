@@ -14,61 +14,80 @@ library(ggplot2)
 library(stringr)
 library(GGally)
 
-theme_set(theme_classic(14))
+theme_set(theme_bw(14))
 setwd("~/Desktop/Cook Inlet Chinook/Analysis")
 
 # Read in data
 commRaw <- read_csv("./data/CommHarvest.csv")
-sportRaw <- read_csv("./data/SportHarvest_Fresh.csv") %>%
-  mutate(KSP = as.numeric(KSP),
-         KSA = as.numeric(KSA))
-sportAreas <- read_csv("./data/SportHarvest_Areas.csv")
-marineSport <- read_csv("./data/SportHarvest_Marine.csv")
-mixedStock <- read_csv("./data/MixedStockAnalysis.csv")
+sportRaw <- read_csv("./data/SportHarvest_SWHS.csv")  %>%
+  # Calculate Chinook harvest as "KS" = king salmon + "KI" = immature king salmon (used from 1981-1992 only)
+  mutate(Chinook = rowSums(cbind(KS, KI), na.rm = T)) %>%
+  filter(Value == "Estimates") %>%
+  rename(Region.SWHS = Region)
+sportAreas <- read_csv("./data/sportHarvestAreas.csv") %>%
+  select(-ChinookHarvestTotal)
+marineSportRaw <- read_csv("./data/SportHarvest_Marine.csv")
+mixedStock <- read_csv("./data/MixedStockAnalysis.csv") 
 puOld <- read_csv("./data/PUHarvest_pre1996.csv")
 puNew <- read_csv("./data/PUHarvest_post1996.csv")
 sub <- read_csv("./data/SubHarvest.csv")
 kenai <- read_csv("./data/Kenai.csv")
+kasilofLate <- read_csv("./data/KasilofLate.csv")
 crooked <- read_csv("./data/CrookedCreek.csv")
+escape <- read_csv("./data/Escapement.csv")
+sites <- read_csv("./data/Sites.csv")
 
 # Munge and clean up data--------------------
 
-# Commercial------------------
-comm <- commRaw %>%
-  select(-Reference, -Page) %>%
-  gather(key = "Fishery", value = "Harvest", 2:5)
-
-# Generate a time series of total king salmon commercial harvest in Cook Inlet
-commHarvestByYear <- comm %>%
-  group_by(Year) %>%
-  summarize(Commercial = sum(Harvest))
-
 # Freshwater Sport---------------
+
+# Make a table of all Area.Fished values listed in the SWHS for Cook Inlet (freshwater only, with Chinook harvest > 0)
+# sportHarvestAreasAll <- sportRaw %>%
+#   filter(Type == "Freshwater") %>%
+#   filter(Chinook > 0) %>%
+#   # Remove regional totals
+#   filter(!str_detect(Area.Fished, "Total")) %>%
+#   filter(!str_detect(Area.Fished, "TOTAL")) %>%
+#   select(Area.Fished, Region.SWHS, Chinook) %>%
+#   group_by(Area.Fished, Region.SWHS) %>%
+#   summarize(ChinookHarvestTotal = sum(Chinook)) %>%
+#   arrange(Region.SWHS, Area.Fished) %>%
+#   distinct() %>%
+#   write_csv("./data/SportHarvestAreasAll.csv")
+# Study populations and MSA reporting groups added to this table manually to create the sportHarvestAreasAll.csv file
+
 # Select the Chinook data and join with population table
-sportFull <- sportRaw %>%
-  select(Year:KSA, KS) %>%
-  left_join(sportAreas, by = c("Region", "Area.Fished"))
+sportFresh <- sportRaw %>%
+  filter(Type == "Freshwater") %>%
+  select(Year, Region.SWHS, Area.Fished, Chinook) %>%
+  # Remove marginal sums (regional totals)
+  filter(!str_detect(Area.Fished, "Total")) %>%
+  filter(!str_detect(Area.Fished, "TOTAL")) %>%
+  # Remove rows with 0 Chinook harvest
+  filter(Chinook > 0) %>%
+  distinct() %>%
+  left_join(sportAreas, by = c("Region.SWHS", "Area.Fished"))
 
 # Generate a time series of total king salmon sport harvest in fresh waters of Cook Inlet
-fwSportHarvestByYear <- sportFull %>%
-  filter(Value == "Estimates" & Type == "Freshwater") %>%
+fwSportHarvestByYear <- sportFresh %>%
   group_by(Year) %>%
-  summarize(SportFW = sum(KS, na.rm = T))
+  summarize(SportFW = sum(Chinook, na.rm = T))
 
-# Filter out just our study streams and summarize multiple sites / population
-sportSimple <- sportFull %>%
-  filter(!is.na(Population) & Value == "Estimates") %>%
-  group_by(Population, Year) %>%
-  summarize(SportHarvest = sum(KS, na.rm = T))
+# These annual sums match the regional totals I downloaded
+# separately from the ADFG SWHS website for 1996-2015.
 
-# Compile the sport harvest data for the Kenai late run (from Begich et al. 2017)
-sportKenai <- kenai %>%
-  mutate(SportHarvest = rowSums(cbind(SportHarvestBelowSonar, SportHarvestAboveSonar), 
-                                na.rm = T)) %>%
-  select(Population, Year, SportHarvest) %>%
-  filter(Year < 2016) # remove 0 for 2016 (actually no data)
+# Show the Deshka River only to verify against sport harvest numbers in Erickson et al. 2017
+sportDeshka <- sportFresh %>%
+  filter(Population == "Deshka") %>%
+  group_by(Year) %>%
+  summarize(Chinook = sum(Chinook))
+# These sport harvest numbers match those reported in Erickson et al. 2017, except that Erickson et al. has a typo
+# for 1990.  I verified that the 1990 sport harvest calculated here is correct based on the original source (Mills 1991,
+# p. 85).
 
-# Can we estimate the sport harvest of natural-origin Chinook in the Crooked Creek stock?
+# Deal with hatchery-enhanced populations (commented out) ----------
+# Can we estimate the sport harvest of natural-origin Chinook in the Crooked Creek and Ninilchik populations?
+# 1: Crooked
 # The sport harvest data are broken down by hatchery vs. natural origin for only a subset of
 # years.  I looked at whether the ratio of natural origin Chinook / total Chinook in the harvest
 # was similar to the ratio in weir counts, but it wasn't even close.
@@ -83,10 +102,141 @@ sportKenai <- kenai %>%
 #          HarvestRatio = Harvest_natural / Harvest_total,
 #          WeirRatio = WeirCount_natural / WeirCount_total)
 
-# Combine the Kenai late run sport harvest data with the data for the other populations
-sport <- bind_rows(sportSimple, sportKenai) %>%
-  filter(Population != "Kenai" & Population != "Crooked/Kasilof" & Population != "Crooked")
+# 2: Ninilchik
+# Are there real data breaking down sport harvest by
+# hatchery vs. natural origin?  The spreadsheet from Mike Booz just divides them 50/50
+# for some years and 75/25 for other years.  If they don't have data on the breakdown
+# can I use the Crooked Creek model based on how many days the fishery was open to 
+# retention of natural vs hatchery fish?
+# # Expansion factor for Ninilchik River (this proportion of spawning occurs
+# # above the weir, so divide escapement by this factor to account for spawning below weir).
+# # Source: Mike Booz pers. comm.
+# ninExp <- 0.65 
 
+# Build the best available dataset of freshwater sport harvest (commented out)----------
+# This includes all FW sport harvest in Cook Inlet basin from SWHS,
+# except that more detailed data from Begich et al. 2017
+# are used to break down Kenai and Kasilof harvest by early vs late runs (for most years)
+# Compile the sport harvest data for the Kenai and Kasilof broken down by early/late runs (from Begich et al. 2017)
+# sportKenai <- kenai %>%
+#   mutate(Chinook = rowSums(cbind(SportHarvestBelowSonar, SportHarvestAboveSonar), 
+#                            na.rm = T)) %>%
+#   select(Population, Year, Chinook) %>%
+#   filter(Year < 2016) %>% # remove 0 for 2016 (we actually have no data)
+#   mutate(Region.SWHS = "Kenai Peninsula",
+#          Area.Fished = "Kenai River",
+#          ReportingGroup_ESSN = ifelse(Population == "Kenai.Early", "Kenai River tributaries", "Kenai River mainstem"),
+#          ReportingGroup_NSN = "Kenai Peninsula",
+#          ReportingGroup_MS = "Kenai")
+# 
+# sportKasilofLate <- kasilofLate %>%
+#   rename(Chinook = Harvest_InriverSport) %>%
+#   select(Population, Year, Chinook) %>%
+#   mutate(Region.SWHS = "Kenai Peninsula",
+#          Area.Fished = "Kasilof River",
+#          ReportingGroup_ESSN = "Kasilof River mainstem",
+#          ReportingGroup_NSN = "Kenai Peninsula",
+#          ReportingGroup_MS = "Kenai")
+# 
+# sportCrooked <- crooked %>%
+#   rename(Chinook = Harvest_total) %>%
+#   select(Population, Year, Chinook) %>%
+#   filter(Year < 2016) %>% # remove 0 for 2016 (we actually have no data)
+#   mutate(Region.SWHS = "Kenai Peninsula",
+#          Area.Fished = "Kasilof River",
+#          ReportingGroup_ESSN = "Cook Inlet other_ESSN",
+#          ReportingGroup_NSN = "Kenai Peninsula",
+#          ReportingGroup_MS = "Kenai")
+# 
+# # Combine Kenai and Kasilof early / late run data
+# sportKenaiKasilof <- bind_rows(sportKenai, sportKasilofLate, sportCrooked)
+# 
+# # # Calculate proportional contributions of early and late runs to the Kenai and Kasilof River 
+# # # sport harvest 
+# # sportKenaiKasilof_meanEarlyLate <- sportKenaiKasilof %>%
+# #   select(Area.Fished, Year, Population, Chinook) %>%
+# #   spread(key = Population, value = Chinook) %>%
+# #   mutate(propKenaiEarly = Kenai.Early / (Kenai.Early + Kenai.Late),
+# #          propCrooked = Crooked / (Crooked + Kasilof.Late))
+# # 
+# # # The Kenai early run made up ~45% of the total Kenai sport harvest from 1986-1990, but then
+# # # declined over time.  Use the 5-yr average from 1986-1990 to estimate the proportion during
+# # # previous years
+# 
+# # Replace the non
+# # TODO: This code chunk isn't working.  I think the filters are inadvertently dropping a bunch 
+# # of NAs
+# sportFresh <- sportFresh %>%
+#   select(Population, Year, Chinook, Region.SWHS, Area.Fished, ReportingGroup_ESSN, 
+#          ReportingGroup_NSN, ReportingGroup_MS) %>%
+#   # For the years in which we have Kenai and Kasilof sport harvest broken down by early / late 
+#   # runs from Begich, remove the ambiguous / redundant Kenai/Kasilof harvest data from the SWHS.
+#   filter(!(ReportingGroup_ESSN == "Kenai River undetermined" & Year > 1985)) %>%
+#   filter(!(ReportingGroup_ESSN == "Kenai River tributaries" & Year > 1985)) %>%
+#   filter(!(ReportingGroup_ESSN == "Kenai River mainstem" & Year > 1985)) %>%
+#   filter(!(ReportingGroup_ESSN == "Kasilof River undetermined" & Year > 1995)) %>%
+#   filter(!(ReportingGroup_ESSN == "Kasilof River mainstem" & Year > 1995)) %>%
+#   # Add the population-specific Kenai and Kasilof data from Begich et al. 2017
+#   bind_rows(sportKenaiKasilof) %>%
+#   # Remove 2016 (because Begich et al. data only go through 2015)
+#   filter(Year < 2016)
+# 
+# levels(factor(sportFresh$ReportingGroup_ESSN))
+# # Calculate Kenai River sport harvest by year and run
+# sportKenaiSummary <- sportFresh %>%
+#   filter(Population == "Kenai.Late") %>%
+#   group_by(Year) %>%
+#   summarize(SportHarvest = sum(Chinook))
+# 
+# # Check that we haven't lost or gained any total sport harvest
+# totalChk_SWHS <- sum(sportFresh$Chinook)
+# totalChk_sportFresh <- sum(sportFresh$Chinook)
+# totalChk_SWHS - totalChk_sportFresh
+# 
+# totalChk_sportFresh <- sum(sportFresh$Chinook)
+# totalChk_fwSportHarvestByYear <- sum(fwSportHarvestByYear$SportFW)
+# # why are these different?
+# 
+# totalChk_check <- sportFresh %>%
+#   group_by(Year) %>%
+#   summarize(harvest_sportFresh = sum(Chinook, na.rm = T)) %>%
+#   left_join(fwSportHarvestByYear, by = "Year") %>%
+#   mutate(diff = harvest_sportFresh - SportFW)
+# # TODO: These columns don't match: the new sportFresh dataframe is off by varying amounts
+# # starting in 1986
+# 
+# # Make the same comparison, but with Kenai/Kasilof harvest only
+# totalChkKK_check <- sportFresh %>%
+#   filter(str_detect(ReportingGroup_ESSN, "Kenai") | str_detect(ReportingGroup_ESSN, "Kasilof"))
+#   group_by(Year) %>%
+#   summarize(harvest_sportFresh = sum(Chinook, na.rm = T)) %>%
+#   left_join(fwSportHarvestByYear, by = "Year") %>%
+#   mutate(diff = harvest_sportFresh - SportFW)
+
+# Generate dataframes of sport harvest in each NSN / Tyonek reporting group, by year, and
+# in each study population (within reporting groups) by year.
+# ESSN is not needed because ESSN reporting groups map directly to our study populations 
+# or to non-study populations (and "Cook Inlet other" RG is only around 1% of the harvest).
+
+sportByRG_NSN <- sportFresh %>%
+  group_by(Year, ReportingGroup_NSN) %>%
+  summarize(SportHarvest_RG = sum(Chinook))
+
+sportByPopByRG_NSN <- sportFresh %>%
+  mutate(Population = ifelse(is.na(Population), "Other", Population)) %>%
+  group_by(Year, ReportingGroup_NSN, Population) %>%
+  summarize(SportHarvest_Pop = sum(Chinook)) %>%
+  left_join(sportByRG_NSN, by = c("Year", "ReportingGroup_NSN"))
+
+# Check sums
+sum(sportByRG_NSN$SportHarvest_RG) - sum(sportByPopByRG_NSN$SportHarvest_Pop)
+
+# Filter out just our study streams and summarize multiple sites / population
+sportSimple <- sportFresh %>%
+  filter(!is.na(Population)) %>%
+  distinct() %>%
+  group_by(Population, Year) %>%
+  summarize(SportHarvest = sum(Chinook, na.rm = T))
 # Clean up data for populations lacking a complete timeseries in the Statewide Harvest Survey.
 # Harvest can be assumed to be 0 in some population X year combinations when sport fishing was
 # closed (closed rivers are generally not included in the survey).
@@ -95,7 +245,7 @@ sport <- bind_rows(sportSimple, sportKenai) %>%
 # (Source: ADF&G 2011. Chuitna River, Theodore River, and Lewis River King Salmon Stock Status
 # and Action Plan, 2011. Report to Alaska Board of Fisheries.)
 
-sportWide <- spread(sport, key = Population, value = SportHarvest)
+sportWide <- spread(sportSimple, key = Population, value = SportHarvest)
 
 sportWideCorr <- sportWide %>%
   mutate(Alexander = ifelse(Year > 2007, 0, Alexander),
@@ -111,22 +261,16 @@ sportWideCorr <- sportWide %>%
 
 # Exclude time series with > 2 NAs for sport harvest (in years with escapement data)
 # Based on this criterion, I excluded Chulitna and Lewis from the sport harvest analysis.
-# Also exclude Ninilchik because we don't know the breakdown of hatchery vs natural origin
+# Also exclude Crooked, Ninilchik, and Willow because we don't know the breakdown of hatchery vs natural origin
 # fish in the sport harvest
 sport <- sportWideCorr %>%
-  gather(key = "Population", value = "SportHarvest", 2:16) %>%
-  filter(Population != "Chulitna", Population != "Lewis", Population != "Ninilchik")
+  gather(key = "Population", value = "SportHarvest", Alexander:Willow) %>%
+  filter(Population != "Chulitna" & Population != "Lewis" & 
+           Population != "Crooked/Kasilof" & Population != "Crooked" & Population != "Ninilchik" & 
+           Population != "Willow")
 
 # Clean up
-rm(sportFull, sportKenai, sportSimple, sportWide, sportWideCorr)
-
-# Marine Sport---------------
-marineSport <- marineSport %>%
-  mutate(CentralCI_Total = rowSums(cbind(CentralCI_EarlySummer, CentralCI_LateSummer), na.rm = T),
-         SportMarine = rowSums(cbind(CentralCI_Total, LowerCI_Total, UnknownLocation), na.rm = T))
-
-marineSportHarvestByYear <- marineSport %>%
-  select(Year, SportMarine)
+rm(sportFresh, sportDeshka, sportRaw, sportSimple, sportWide, sportWideCorr)
 
 # Freshwater subsistence, personal use, and educational---------------
 
@@ -178,7 +322,30 @@ fwSubPUEdHarvestByYear <- kenai %>%
   group_by(Year) %>%
   summarize(SubPUEdFW = sum(SubPUEd, na.rm = T)) 
 
-# Subsistence (marine)------------
+# Commercial------------------
+comm <- commRaw %>%
+  select(-Reference, -Page) %>%
+  gather(key = "Fishery", value = "Harvest", Drift:NSN) %>%
+  mutate(Area_Season = "All") %>%
+  select(Fishery, Area_Season, Year, Harvest)
+
+# Generate a time series of total king salmon commercial harvest in Cook Inlet
+commHarvestByYear <- comm %>%
+  group_by(Year) %>%
+  summarize(Commercial = sum(Harvest))
+
+# Marine Sport---------------
+marineSport <- marineSportRaw %>%
+  select(Year:CentralCI_LateSummer) %>%
+  gather(key = "Area_Season", value = "Harvest", CentralCI_EarlySummer:CentralCI_LateSummer) %>%
+  mutate(Fishery = "MarineSport" )%>%
+  select(Fishery, Area_Season, Year, Harvest)
+
+marineSportHarvestByYear <- marineSport %>%
+  group_by(Year) %>%
+  summarize(SportMarine = sum(Harvest))
+  
+# Marine subsistence------------
 
 # Compile subsistence harvest data
 # Generate a time series of total king salmon subsistence harvest in marine waters of Cook Inlet
@@ -189,6 +356,119 @@ marineSubHarvestByYear <- sub %>%
   filter(Fishery != "FederalKenaiKasilof" & Fishery != "NorthernCentral") %>%
   group_by(Year) %>%
   summarize(SubsistenceMarine = sum(Chinook))
+
+tyonek <- sub %>%
+  filter(Fishery == "Tyonek") %>%
+  select(Fishery, Year, Harvest = Chinook) %>%
+  mutate(Area_Season = "All") %>%
+  select(Fishery, Area_Season, Year, Harvest)
+
+# Mixed stock analysis----------------------------
+# First, assign harvest from fisheries (or areas and seasons for marine sport fishery) to reporting groups.
+# Compile harvest from all mixed stock fisheries (commercial, sport, and subsistence) that
+# have MSA data available
+mixedStockHarvest <- comm %>%
+  filter(Fishery == "ESSN" | Fishery == "NSN") %>%
+  bind_rows(tyonek, marineSport) %>%
+  filter(Year > 1979 & Year < 2016) %>%
+  filter(Area_Season != "CentralCI_LateSummer")
+
+# Convert mixed stock analysis results from percent to proportions (0-1) when necessary
+mixedStock <- mixedStock %>%
+  mutate(StockCompMean = ifelse(Fishery == "ESSN", StockCompMean, StockCompMean / 100),
+         StockComp95Percentile = ifelse(Fishery == "ESSN", StockComp95Percentile, 
+                                        StockComp95Percentile / 100),
+         StockComp5Percentile = ifelse(Fishery == "ESSN", StockComp5Percentile, 
+                                       StockComp5Percentile / 100))
+
+# Calculate the mean stock composition across all years with available data
+mixedStockMean <- mixedStock %>%
+  group_by(Fishery, Area_Season, ReportingGroup) %>%
+  # group_by(Fishery, Area_Season, ReportingGroup_ESSN, ReportingGroup_NSN, ReportingGroup_MS) %>%
+  summarize(meanStockComp = mean(StockCompMean))
+
+# Join mixed stock analysis data to harvest data
+mixedStockHarvestByRG <- mixedStockHarvest %>%
+  rename(Harvest_Area_Season = Harvest) %>%
+  left_join(mixedStockMean, by = c("Fishery", "Area_Season")) %>%
+  left_join(mixedStock, by = c("Fishery", "Area_Season", "Year", "ReportingGroup")) %>%
+  select(Fishery:StockCompMean) %>%
+  rename(yearlyStockComp = StockCompMean) %>%
+  mutate(estStockComp = ifelse(!is.na(yearlyStockComp), yearlyStockComp, meanStockComp),
+         Harvest_RG = Harvest_Area_Season * estStockComp)
+
+# check sums
+sum(mixedStockHarvestByRG$Harvest_RG) - sum(mixedStockHarvest$Harvest)
+
+checkMSH <- mixedStockHarvestByRG %>%
+  group_by(Fishery, Area_Season, Year) %>%
+  summarize(totalHarvestAllRGs = round(sum(Harvest_RG))) %>%
+  left_join(mixedStockHarvest, by = c("Fishery", "Area_Season", "Year")) %>%
+  mutate(diff = totalHarvestAllRGs - Harvest)
+# These are pretty close, just off by rounding errors of < 10 fish
+
+# Second, assign harvest from reporting groups to individual populations--------
+
+# For ESSN, simply assign all "Kenai River mainstem" harvest to Kenai.Late population--------
+mixedStockHarvestByPop <- mixedStockHarvestByRG %>%
+  filter(ReportingGroup == "Kenai River mainstem") %>%
+  mutate(Population = "Kenai.Late") %>%
+  select(-Area_Season) %>%
+  rename(TotalHarvest = Harvest_Area_Season) %>%
+  mutate(MixedStockHarvest = round(Harvest_RG))
+
+# # TODO: For NSN and Tyonek... (commented out)-----------
+# Break down commercial harvest by study population, assuming that each study population
+# makes up the same proportion of its respective reporting group in the 
+# commercial harvest as it does in the escapement + sport harvest combined.
+# # Generate dataframes of escapement in each NSN / Tyonek reporting group, by year, and
+# # in each study population (within reporting groups) by year.
+# # ESSN is not needed because 3 main ESSN reporting groups map directly to 1 study population 
+# # and 2 non-study populations (and "Cook Inlet other" RG is only around 1% of the harvest).
+# 
+# escByRG_NSN <- escape %>%
+#   rename(Year = ReturnYear) %>%
+#   filter(Year > 1979 & Year < 2016) %>%
+#   left_join(sites, by = c("Population" = "Group")) %>%
+#   filter(GroupType == "Population") %>%
+#   group_by(Year, ReportingGroup_NSN) %>%
+#   summarize(Escapement_RG = sum(Escapement, na.rm = T),
+#             Pops_esc_RG = n())
+# 
+# escByPopByRG_NSN <- escape %>%
+#   rename(Year = ReturnYear) %>%
+#   filter(Year > 1979 & Year < 2016) %>%
+#   left_join(sites, by = c("Population" = "Group")) %>%
+#   filter(GroupType == "Population") %>%
+#   group_by(Year, ReportingGroup_NSN, Population) %>%
+#   summarize(Escapement_Pop = sum(Escapement, na.rm = T))
+# 
+# # Check sums
+# sum(escByRG_NSN$Escapement_RG) - sum(escByPopByRG_NSN$Escapement_Pop)
+# 
+# inriverPopByRG <- full_join(escByPopByRG_NSN, sportByPopByRG_NSN, 
+#                             by = c("Year", "ReportingGroup_NSN", "Population"))
+# 
+# # Join commercial harvest with escapement and sport harvest by proportions 
+# 
+# mixedStockHarvestByPop <- mixedStockHarvestByRG %>%
+#   # Remove marine sport harvest (for now)
+#   filter(Fishery != "MarineSport") %>%
+#   # Remove reporting groups that do not include any study populations
+#   filter(ReportingGroup != "Kenai River tributaries" & 
+#            ReportingGroup != "Kasilof River mainstem") %>%
+#   # Remove reporting groups that made up < 2% of the harvest (for now)
+#   filter(meanStockComp > 0.02) %>%
+#   # Join the escapement by population (within reporting groups) dataframe
+#   left_join(escByPopByRG_NSN, by = c("ReportingGroup" = "ReportingGroup_NSN"))
+
+# 1) calculate the proportion of the aggregate in-river runs (escapement + sport harvest) to each reporting group
+# made up by each population
+
+# 2) assign the harvest from reporting groups to individual populations
+
+# 3) add up the harvest and make sure it matches the total harvest by fishery that we started with
+
 
 # Clean up
 rm(commRaw, puNew, puNew.corr, puNew.long, puOld, sportAreas, sportRaw)
@@ -204,9 +484,9 @@ harvestByYearWide <- commHarvestByYear %>%
            rowSums(cbind(Commercial, SportFW, SportMarine, SubPUEdFW, SubsistenceMarine), na.rm = T))
 
 # What % of the Chinook harvest in Cook Inlet takes place in freshwater?
-mean(harvestByYearWide$PercentFW)
-min(harvestByYearWide$PercentFW)
-max(harvestByYearWide$PercentFW)
+meanPercentFW <- mean(harvestByYearWide$PercentFW)
+minPercentFW <- min(harvestByYearWide$PercentFW)
+maxPercentFW <- max(harvestByYearWide$PercentFW)
 
 # What % of Chinook harvested in the marine sport fishery during 2014-15 were from Cook Inlet stocks?
 marineSportCIStocks <- marineSport %>%
@@ -214,7 +494,7 @@ marineSportCIStocks <- marineSport %>%
   gather(key = "Area_Season", value = "Harvest", 2:5) %>%
   filter(Year == 2014 | Year == 2015) %>%
   left_join(mixedStock, by = c("Year", "Area_Season")) %>%
-  filter(`Reporting group` == "Outside Cook Inlet" | is.na(`Reporting group`)) %>%
+  filter(ReportingGroup == "Outside Cook Inlet" | is.na(ReportingGroup)) %>%
   # Use MSA data from Barclay et al. 2016 for 3 of the 4 space/time strata.  Assume the 4th stratum
   # with no data (Central Cook Inlet_Late Summer) has the same stock composition as Central Cook Inlet_
   # Early Summer (mean estimate), with a minimum estimate of 0% and a maximum estimate of 100%.
@@ -238,9 +518,6 @@ marineSportCIStocks <- marineSport %>%
          PercCIMin = HarvestCIStocksMin/Harvest,
          PercCIMax = HarvestCIStocksMax/Harvest)
          
-marineSportCIStocks
-
-
 harvestByYear <- harvestByYearWide %>%
   gather(key = "Fishery", value = "Harvest", 2:6) %>%
   mutate(Fishery = factor(as.factor(Fishery), labels = c("Commercial",
@@ -256,9 +533,9 @@ harvestByYear <- harvestByYearWide %>%
 harvest.plot <- ggplot(data = harvestByYear, aes(x = Year, y = Harvest, color = Fishery)) +
   geom_line() +
   scale_x_continuous(name = "Year", breaks = seq(1980, 2015, by = 10), limits = c(1980, 2015)) +
-  scale_y_continuous(name = "Chinook salmon harvest", labels = scales::comma) 
+  scale_y_continuous(name = "Harvest", labels = scales::comma) 
 harvest.plot
-ggsave("./figs/HarvestByFishery.png")
+ggsave("./figs/Harvest by fishery.png", width = 6, height = 4)
 
 # Pairwise correlations btw harvest in each fishing sector
 harvest.pairs.plot <- ggpairs(data = harvestByYearWide, columns = 2:6)

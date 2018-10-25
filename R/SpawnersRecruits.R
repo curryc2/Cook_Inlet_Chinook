@@ -21,16 +21,17 @@
 
 # Load packages, source scripts, and read in data-------------
 
+source("~/Desktop/Cook Inlet Chinook/Analysis/R/Harvest_compile.R")
+
 library(dplyr)
 library(tidyr)
 library(lubridate)
 library(readr)
 library(stringr)
 
-theme_set(theme_classic(14))
-
-source("~/Desktop/Cook Inlet Chinook/Analysis/R/Harvest_compile.R")
 setwd("~/Desktop/Cook Inlet Chinook/Analysis")
+
+theme_set(theme_bw(14))
 
 sites <- read_csv("./data/Sites.csv")
 escapeFull <- read_csv("./data/Escapement.csv")
@@ -46,31 +47,26 @@ aerialExp.max <- 0.6
 # Reshape age composition data into "wide" format, with one row for each group and return year, and
 # different columns for the escapement and sport harvest run components
 ageSimpleWide <- ageSimple %>%
+  # Rename "ESSN" group as "Kenai.Late" so the empirical ESSN age comps will be used for the 
+  # Kenai late run (will need to come up with a more general solution if we end up incorporating
+  # mixed stock harvest from other fisheries)
+  mutate(Group = ifelse(Group == "ESSN", "Kenai.Late", Group)) %>%
   select(Group, Component, ReturnYear, Age, Prop) %>%
   spread(key = "Component", value = "Prop") %>%
-  select(-`Commercial Harvest`, -`Subsistence Harvest`) %>%
-  rename(PropEsc = Escapement, PropSport = `Sport Harvest`)
+  select(-`Subsistence Harvest`) %>%
+  rename(PropEsc = Escapement, PropComm = `Commercial Harvest`, PropSport = `Sport Harvest`)
 
 agePredictedWide <- agePredicted %>%
   select(-zReturnYear) %>%
   spread(key = "Component", value = "Prop") %>%
-  rename(PropEscPredicted = Escapement, PropSportPredicted = `Sport Harvest`)
-  
-# TODO: check my notes on Ninilchik: are there real data breaking down sport harvest by
-# hatchery vs. natural origin?  The spreadsheet from Mike Booz just divides them 50/50
-# for some years and 75/25 for other years.  If they don't have data on the breakdown
-# can I use the Crooked Creek model based on how many days the fishery was open to 
-# retention of natural vs hatchery fish?
-# # Expansion factor for Ninilchik River (this proportion of spawning occurs
-# # above the weir, so divide escapement by this factor to account for spawning below weir).
-# # Source: Mike Booz pers. comm.
-# ninExp <- 0.65 
+  rename(PropEscPredicted = Escapement, PropCommPredicted = `Commercial Harvest`, 
+         PropSportPredicted = `Sport Harvest`)
 
 # Spawners-----------
 spawnersByRY <- escapeFull %>%
   select(Population, ReturnYear, EscapeIndex = Escapement, EscapementMethod,
          WeirRemovals) %>%
-  filter(ReturnYear > 1979) %>%
+  filter(ReturnYear > 1979 & ReturnYear < 2016) %>%
   # For aerial survey data, expand Spawners2 using the min, nominal, and max
   # estimates of what fraction of spawners are counted
   mutate(Spawners1 = EscapeIndex,
@@ -83,23 +79,81 @@ spawnersByRY <- escapeFull %>%
          Spawners2.max = ifelse(EscapementMethod == "Single aerial survey",
                                 round(EscapeIndex / aerialExp.min),
                                 EscapeIndex))
-  
+
+# Trim down the dataset for plotting
+# Remove populations with < 10 years of escapement data
+escapeYears <- spawnersByRY %>%
+  filter(!is.na(Spawners2.nom)) %>%
+  group_by(Population) %>%
+  summarize(nYears = n()) %>%
+  mutate(Include = nYears > 10)
+
+spawnersByRY_trimmed <- spawnersByRY %>%
+  left_join(escapeYears, by = "Population") %>%
+  filter(Include == T) %>%
+  # Remove hatchery-origin fish
+  filter(Population != "Crooked.Hatchery" & Population != "Ninilchik.Hatchery") 
+
+# Plot the trends in escapement by return year
+EscapementAllPops.plot <- ggplot(data = spawnersByRY_trimmed,
+                          aes(x = ReturnYear, y = Spawners2.nom / 1000)) +
+  geom_line() +
+  geom_point(size = 1) + # Plotting points as well as lines to show isolated points with NA on either side
+  scale_y_continuous(name = "Escapement (1,000s)", labels = scales::comma) +
+  scale_x_continuous(name = "Return Year", breaks = seq(1980, 2015, 10)) +
+  # facet_wrap(.~Population, scales = "fixed")
+  facet_wrap(.~Population, scales = "free_y") +
+  expand_limits(y = 0) +
+  theme_bw(12)
+EscapementAllPops.plot
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Escapement_all pops.png")
+
+# Make same plot for study populations only
+spawnersByRY_studyPops <- spawnersByRY_trimmed %>%
+  left_join(sites, by = c("Population" = "Group")) %>%
+  filter(StockRecruit == T)
+
+EscapementStudyPops.plot <- ggplot(data = spawnersByRY_studyPops,
+                          aes(x = ReturnYear, y = Spawners2.nom / 1000)) +
+  geom_line() +
+  geom_point(size = 1) + # Plotting points as well as lines to show isolated points with NA on either side
+  scale_y_continuous(name = "Escapement (1,000s)", labels = scales::comma) +
+  scale_x_continuous(name = "Return Year", breaks = seq(1980, 2015, 10)) +
+  # facet_wrap(.~Population, scales = "fixed")
+  facet_wrap(.~Population, scales = "free_y") +
+  expand_limits(y = 0) +
+  theme_bw(12)
+EscapementStudyPops.plot
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Escapement_study pops.png")
+
+# How much did escapement vary (%) between best and worst years, by population?
+escapeVariability <- spawnersByRY_trimmed %>%
+  group_by(Population) %>%
+  summarize(nYears = n(),
+            maxEsc = max(Spawners2.nom, na.rm = T),
+            minEsc = min(Spawners2.nom, na.rm = T),
+            sdEsc = sd(Spawners2.nom, na.rm = T),
+            meanEsc = mean(Spawners2.nom, na.rm = T)) %>%
+  mutate(cvEsc = sdEsc / meanEsc,
+         variabilityEsc = maxEsc / minEsc)
+
 # Recruits-----------
 # Join the escapement, terminal harvest, and age comp data and the mean age comps 
 # (for filling in missing age comps)
-recruitsByRYxBY <- spawnersByRY %>%
+recruitsByRYxBY <- spawnersByRY_studyPops %>%
+  filter(StockRecruit == T) %>%
   left_join(sport, by = c("Population", "ReturnYear" = "Year")) %>%
   left_join(kenai, by = c("Population", "ReturnYear" = "Year")) %>%
+  left_join(mixedStockHarvestByPop, by = c("Population", "ReturnYear" = "Year")) %>%
   # Make 5 rows for each population X return year (1 for each age)
   mutate(Age1.1 = NA, Age1.2 = NA, Age1.3 = NA, Age1.4 = NA, Age1.5 = NA) %>%
   gather(key = "Age", value = "Prop", Age1.1:Age1.5) %>%
   select(-Prop) %>%
   # Join the age data and the global mean age composition
-  # TODO: these joins aren't working
-  left_join(sites, by = c("Population" = "Group")) %>%
+  # left_join(sites, by = c("Population" = "Group")) %>%
   left_join(ageSimpleWide, by = c("Population" = "Group", "ReturnYear", "Age")) %>%
   left_join(agePredictedWide, by = c("Region", "ReturnYear", "Age")) %>%
-  # Remove the marine fisheries (have age comps but no escapement data)
+  # Remove the mixed-stock fisheries (have age comps but no escapement data)
   filter(Population != "NSN" & Population != "ESSN" & Population != "WSSN" & 
            Population != "Tyonek") %>%
   # Now make a bunch of calculations...
@@ -108,6 +162,7 @@ recruitsByRYxBY <- spawnersByRY %>%
           # or the predictions from the MLR age-composition model if not
          PropEscEst = if_else(is.na(PropEsc), PropEscPredicted, PropEsc), # Age comp of escapement
          PropSportEst = if_else(is.na(PropSport), PropSportPredicted, PropSport), # Age comp of sport harvest
+         PropCommEst = if_else(is.na(PropComm), PropCommPredicted, PropComm), # Age comp of comm harvest
          # Calculate various age metrics in years
          AgeFW = as.numeric(str_sub(Age, start = 4, end = 4)),
          AgeSW = as.numeric(str_sub(Age, start = 6, end = 6)),
@@ -130,7 +185,8 @@ recruitsByRYxBY <- spawnersByRY %>%
                                                      SportHarvestBelowSonar,
                                                      SportHarvestAboveSonar, 
                                                      na.rm = T)) * PropSportEst,
-           SportHarvest * PropSportEst)
+           SportHarvest * PropSportEst),
+         MixedStockHarvestByRYxBY = MixedStockHarvest * PropCommEst
   )
 
 # Calculate spawners and recruits from the 5 major age classes (1.1, 1.2, 1.3, 1.4, 1.5)
@@ -145,12 +201,17 @@ recruitsByBrood <- recruitsByRYxBY %>%
             Spawners2.max = sum(Spawners2.maxByRYxBY),
             WeirRemovals = sum(WeirRemovalsByRYxBY, na.rm = T),
             TermHarvest = sum(TermHarvestByRYxBY, na.rm = T),
+            MixedStockHarvest = sum(MixedStockHarvestByRYxBY, na.rm = T),
+            
             # Use these values to calculate Recruits1 and Recruits2 
             # (min, nominal, and max)
             Recruits1 = round(Spawners1 + WeirRemovals),
-            Recruits2.min = round(Spawners2.min + WeirRemovals + TermHarvest),
-            Recruits2.nom = round(Spawners2.nom + WeirRemovals + TermHarvest),
-            Recruits2.max = round(Spawners2.max + WeirRemovals + TermHarvest),
+            Recruits2.min = round(Spawners2.min + WeirRemovals + TermHarvest + 
+                                    MixedStockHarvest),
+            Recruits2.nom = round(Spawners2.nom + WeirRemovals + TermHarvest + 
+                                    MixedStockHarvest),
+            Recruits2.max = round(Spawners2.max + WeirRemovals + TermHarvest + 
+                                    MixedStockHarvest),
             # Remove recruit estimates for brood years lacking data from any of the
             # 5 major age classes
             NumAgeClasses = sum(!is.na(Spawners1ByRYxBY)))  %>%
@@ -170,24 +231,28 @@ coreRecruitsByBrood <- recruitsByRYxBY %>%
             Spawners2.max = sum(Spawners2.maxByRYxBY, na.rm = T),
             WeirRemovals = sum(WeirRemovalsByRYxBY, na.rm = T),
             TermHarvest = sum(TermHarvestByRYxBY, na.rm = T),
+            MixedStockHarvest = sum(MixedStockHarvestByRYxBY, na.rm = T),
             # Use these values to calculate CoreRecruits1 and CoreRecruits2 
             # (min, nominal, and max)
             CoreRecruits1 = round(Spawners1 + WeirRemovals),
-            CoreRecruits2.min = round(Spawners2.min + WeirRemovals + TermHarvest),
-            CoreRecruits2.nom = round(Spawners2.nom + WeirRemovals + TermHarvest),
-            CoreRecruits2.max = round(Spawners2.max + WeirRemovals + TermHarvest),
+            CoreRecruits2.min = round(Spawners2.min + WeirRemovals + TermHarvest + 
+                                        MixedStockHarvest),
+            CoreRecruits2.nom = round(Spawners2.nom + WeirRemovals + TermHarvest + 
+                                        MixedStockHarvest),
+            CoreRecruits2.max = round(Spawners2.max + WeirRemovals + TermHarvest + 
+                                        MixedStockHarvest),
             NumCoreAgeClasses = sum(CoreAgeClass)) %>%
   filter(NumCoreAgeClasses == 3) %>%
   select(Population, BroodYear, CoreRecruits1:NumCoreAgeClasses)
 
 # Combine the spawners (by return year) and recruits (by brood year) data into a
   # single dataframe and write to csv
-spawnersRecruits <- spawnersByRY %>%
+spawnersRecruits <- spawnersByRY_studyPops %>%
   rename(BroodYear = ReturnYear) %>%
   left_join(recruitsByBrood, by = c("Population", "BroodYear")) %>%
   left_join(coreRecruitsByBrood, by = c("Population", "BroodYear")) %>%
   # Trim years and populations outside the study and remove intermediate variables
-  filter(BroodYear > 1979) %>%
+  filter(BroodYear > 1979 & BroodYear < 2010) %>%
   filter(Population != "Funny" & Population != "Slikok" & Population != "Quartz" & Population != 
            "Lewis" & Population != "Crooked.Hatchery" & Population != "Ninilchik.Hatchery") %>%
   
@@ -200,60 +265,69 @@ spawnersRecruits <- spawnersByRY %>%
          CoreRecruitsPerSpawner = ifelse(Spawners2.nom > 0,
                                               CoreRecruits2.nom / Spawners2.nom, NA)
   ) %>%
+  select(Population:Spawners2.max, Recruits1:CoreRecruitsPerSpawner) %>%
   write_csv("./data/SpawnersRecruits.csv")
-  
+
+# Evaluate how well core-age recruits predicted all recruits, and how many additional
+# population-brood years of data we gained by analyzing core-age recruits
+coreAge.lm <- lm(Recruits2.nom ~ CoreRecruits2.nom, data = spawnersRecruits)
+summary(coreAge.lm)
+
+# Call:
+#   lm(formula = Recruits2.nom ~ CoreRecruits2.nom, data = spawnersRecruits)
+# 
+# Residuals:
+#   Min      1Q  Median      3Q     Max 
+# -1583.1   -42.7    -0.8    33.6  3506.2 
+# 
+# Coefficients:
+#   Estimate Std. Error t value Pr(>|t|)    
+# (Intercept)       -36.089855  28.310469  -1.275    0.203    
+# CoreRecruits2.nom   1.033512   0.001977 522.802   <2e-16 ***
+#   ---
+#   Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+# 
+# Residual standard error: 429.4 on 299 degrees of freedom
+# (68 observations deleted due to missingness)
+# Multiple R-squared:  0.9989,	Adjusted R-squared:  0.9989 
+# F-statistic: 2.733e+05 on 1 and 299 DF,  p-value: < 2.2e-16
+
+nRecruits <- spawnersRecruits %>%
+  filter(!is.na(Recruits2.nom)) %>%
+  summarize(nRecruits = n())
+# 301 population-years of recruits (ages 1-5) / spawner
+nCoreRecruits <- spawnersRecruits %>%
+  filter(!is.na(CoreRecruits2.nom)) %>%
+  summarize(nCoreRecruits = n())
+# 332 population-years of core-age recruits (ages 2-4) / spawner
+
 # Plot the results -----------------
 
 # Plot an index of brood year productivity (recruits [escapement + terminal harvest] /
 # spawner) for each population over time, using the nominal estimate for visibility of
 # spawners to aerial surveys [45%]). Plot years with complete broods only
 productivity <- ggplot(data = spawnersRecruits, 
-                              aes(x = BroodYear, y = RecruitsPerSpawner,
-                                  color = Population)) +
+                              aes(x = BroodYear, y = RecruitsPerSpawner)) +
   geom_line() +
   geom_hline(yintercept = 1) +
   scale_x_continuous(name = "Brood Year", breaks = seq(1980, 2010, by = 10), 
                      limits = c(1980, 2010)) +
-  scale_y_continuous(name = "Productivity index\n(escapement + terminal harvest / spawner)", 
-                     labels = scales::comma) 
+  scale_y_continuous(name = "Recruits / Spawner", 
+                     labels = scales::comma) +
+  facet_wrap(.~Population, scales = "free_y") +
+  expand_limits(y = 0)
 productivity
-ggsave("./figs/Brood year productivity index.png")
+ggsave("./figs/Recruits per spawner.png", width = 8, height = 6)
 
 coreProductivity <- ggplot(data = spawnersRecruits, 
-                          aes(x = BroodYear, y = CoreRecruitsPerSpawner,
-                              color = Population)) +
+                          aes(x = BroodYear, y = CoreRecruitsPerSpawner)) +
   geom_line() +
   geom_hline(yintercept = 1) +
   scale_x_continuous(name = "Brood Year", breaks = seq(1980, 2010, by = 10), 
                      limits = c(1980, 2010)) +
-  scale_y_continuous(name = "Core-age productivity index\n(escapement + terminal harvest / spawner)", 
-                     labels = scales::comma) 
+  scale_y_continuous(name = "Core-Age Recruits / Spawner", 
+                     labels = scales::comma) +
+  facet_wrap(.~Population, scales = "free_y") +
+  expand_limits(y = 0)
 coreProductivity
-ggsave("./figs/Core-age brood year productivity index.png")
-
-# Same plots but excluding aerial survey data
-spawnersRecruitsNoAerial <- filter(spawnersRecruits, 
-                                     !str_detect(EscapementMethod, "aerial"))
-productivityNoAerial <- ggplot(data = spawnersRecruitsNoAerial, 
-                                        aes(x = BroodYear, y = RecruitsPerSpawner,
-                                            color = Population)) +
-  geom_line() +
-  geom_hline(yintercept = 1) +
-  scale_x_continuous(name = "Brood Year", breaks = seq(1980, 2010, by = 10), 
-                     limits = c(1980, 2010)) +
-  scale_y_continuous(name = "Productivity index\n(escapement + terminal harvest / spawner)", 
-                     labels = scales::comma) 
-productivityNoAerial
-ggsave("./figs/Brood year productivity index_no aerial surveys.png")
-
-coreProductivityNoAerial <- ggplot(data = spawnersRecruitsNoAerial, 
-                               aes(x = BroodYear, y = CoreRecruitsPerSpawner,
-                                   color = Population)) +
-  geom_line() +
-  geom_hline(yintercept = 1) +
-  scale_x_continuous(name = "Brood Year", breaks = seq(1980, 2010, by = 10), 
-                     limits = c(1980, 2010)) +
-  scale_y_continuous(name = "Core-age productivity index\n(escapement + terminal harvest / spawner)", 
-                     labels = scales::comma) 
-coreProductivityNoAerial
-ggsave("./figs/Core-age brood year productivity index_no aerial surveys.png")
+ggsave("./figs/Core-age recruits per spawner.png", width = 8, height = 6)
