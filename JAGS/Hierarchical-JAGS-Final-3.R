@@ -39,22 +39,22 @@ wd <- file.path(getwd(),"JAGS")
 # setwd(wd)
 dir.output <- file.path(wd,"Output")
 dir.figs <- file.path(wd,"Plots")
-dir.data <- file.path(wd,"Data","10.2.18_update")
+dir.data <- file.path(wd,"Data","10.25.18_update")
 
 
 #CONTROL SECTION ==========================================================
 #############################
-phase <- 1 #1 or 2
+phase <- 3 #3 4 5
 
-fit <- TRUE
+fit <- FALSE
 
 #Update Fig and Output directories
-dir.output <- file.path(dir.output,"Final",paste0("Phase_",phase))
+dir.output <- file.path(dir.output,"Final_New",paste0("Phase_",phase))
 dir.create(dir.output, recursive=TRUE)
-dir.figs <- file.path(dir.figs,"Final",paste0("Phase_",phase))
+dir.figs <- file.path(dir.figs,"Final_New",paste0("Phase_",phase))
 dir.create(dir.figs, recursive=TRUE)
 
-n.sim <- 5e4
+n.sim <- 5e4#5e4
 n.thin <- 10
 n.chain <- 3
 
@@ -62,7 +62,7 @@ n.chain <- 3
 # ofst <- 1
 
 #Whether to plot SR relationships
-plot.SR <- TRUE
+plot.SR <- FALSE
 
 #############################
 
@@ -126,13 +126,16 @@ if(plot.SR==TRUE) {
 
 #Load Environmental Data ==================================================
 
-#SNAP Streamflow data
-precip.dat <- read.csv(file.path(dir.data,'precip.csv'), header=TRUE, stringsAsFactors=FALSE)[,-1]
-#Spread it out
-precip.dat.2 <- precip.dat %>%  spread(Covariate, Value)
+# #SNAP Streamflow data
+# precip.dat <- read.csv(file.path(dir.data,'precip.csv'), header=TRUE, stringsAsFactors=FALSE)[,-1]
+# #Spread it out
+# precip.dat.2 <- precip.dat %>%  spread(Covariate, Value)
+# 
+# #Temperature
+# temp.dat <- read.csv(file.path(dir.data,'tempCovars.csv'), header=TRUE, stringsAsFactors=FALSE)
 
-#Temperature
-temp.dat <- read.csv(file.path(dir.data,'tempCovars.csv'), header=TRUE, stringsAsFactors=FALSE)
+#Covariates
+temp.dat <- read.csv(file.path(dir.data,'covars.csv'), header=TRUE, stringsAsFactors=FALSE)
 
 #Breakup 
 breakup.dat <- read.csv(file.path(dir.data,'breakup.csv'), header=TRUE, stringsAsFactors=FALSE)
@@ -146,49 +149,55 @@ npgo.dat <- read.csv(file.path(dir.data,'covars.list.csv'), header=TRUE, strings
 #       facet_wrap(~siteID)
 # g
 #Standardize Covariates ===================================================
-temp.dat.2 <- temp.dat %>% group_by(perName) %>% mutate('std.wksGT10'=(wksGT10 - mean(wksGT10 , na.rm=TRUE))/sd(wksGT10, na.rm=TRUE),
-                                                     'std.wksGT13'=(wksGT13 - mean(wksGT13 , na.rm=TRUE))/sd(wksGT13, na.rm=TRUE),
-                                                     'std.wksGT15'=(wksGT15 - mean(wksGT15 , na.rm=TRUE))/sd(wksGT15, na.rm=TRUE),
-                                                     'std.wksGT16'=(wksGT16 - mean(wksGT16 , na.rm=TRUE))/sd(wksGT16, na.rm=TRUE),
-                                                     'std.wksGT18'=(wksGT18 - mean(wksGT18 , na.rm=TRUE))/sd(wksGT18, na.rm=TRUE))
-                                                     
-precip.dat.3 <- precip.dat.2 %>% group_by(perName) %>% mutate('std.ASON_avg'=(ASON_avg - mean(ASON_avg , na.rm=TRUE))/sd(ASON_avg, na.rm=TRUE),
-                                                              'std.ASON_max'=(ASON_max - mean(ASON_max , na.rm=TRUE))/sd(ASON_max, na.rm=TRUE),
-                                                              'std.MJJA_avg'=(MJJA_avg - mean(MJJA_avg , na.rm=TRUE))/sd(MJJA_avg, na.rm=TRUE),
-                                                              'std.MJJA_max'=(MJJA_max - mean(MJJA_max , na.rm=TRUE))/sd(MJJA_max, na.rm=TRUE))
+#Flow Metrics - Standardized Within Populations
+temp.dat.2 <- temp.dat %>% group_by(Population) %>% 
+                mutate('std.ASON_max'=(ASON_max - mean(ASON_max , na.rm=TRUE))/sd(ASON_max, na.rm=TRUE),
+                       'std.RB_ASON'=(RB_ASON - mean(RB_ASON , na.rm=TRUE))/sd(RB_ASON, na.rm=TRUE),
+                       'std.RB_MJ'=(RB_MJ - mean(RB_MJ , na.rm=TRUE))/sd(RB_MJ, na.rm=TRUE),
+                       'std.MJJA_avg'=(MJJA_avg - mean(MJJA_avg , na.rm=TRUE))/sd(MJJA_avg, na.rm=TRUE),
+                       'std.MDIS_MJJA'=(MDIS_MJJA - mean(MDIS_MJJA , na.rm=TRUE))/sd(MDIS_MJJA, na.rm=TRUE))
 
+#Temperature Metrics - (Standardized across all populations)
+
+
+temp.dat.3 <- temp.dat.2 %>% mutate('std.wksGT13'=(wksGT13 - mean(wksGT13 , na.rm=TRUE))/sd(wksGT13, na.rm=TRUE),
+                                    'std.maxWkJA'=(maxWkJA - mean(maxWkJA , na.rm=TRUE))/sd(maxWkJA, na.rm=TRUE),
+                                    'std.wksGT15'=(wksGT15 - mean(wksGT15 , na.rm=TRUE))/sd(wksGT15, na.rm=TRUE),
+                                    'std.meanWkJJA'=(meanWkJJA - mean(meanWkJJA , na.rm=TRUE))/sd(meanWkJJA, na.rm=TRUE))
+
+#Standardize the 
 breakup.dat.2 <- breakup.dat %>% mutate('std.BreakupDOY'=(BreakupDOY - mean(BreakupDOY))/sd(BreakupDOY))
 
 npgo.dat.2 <- npgo.dat %>% filter(Covar=='NPGO')
 
 #Join Covariate Data to SR data ===========================================
 
-cov.dat <- temp.dat.2 %>% left_join(precip.dat.3, by=c('Year'='year', 'perName'='perName'))
+cov.dat <- temp.dat.3
 #Join Breakup data
-cov.dat.2 <- cov.dat %>% left_join(breakup.dat.2, by=c('Year'='Year'))
+# cov.dat.2 <- cov.dat %>% left_join(breakup.dat.2, by=c('Year'='Year'))
 #Join npgo
-cov.dat.3 <- cov.dat.2 %>% left_join(npgo.dat.2, by=c('Year'='Year'))
-
+# cov.dat.3 <- cov.dat.2 %>% left_join(npgo.dat.2, by=c('Year'='Year'))
+# cov.dat.4 <- cov.dat # Completely pointless, but saves me time recoding below
 #Join the Location ID lookup
-cov.dat.4 <- cov.dat.3 %>% left_join(LookupStreamID, by=c('perName'='perName'))
+# cov.dat.4 <- cov.dat.3 %>% left_join(LookupStreamID, by=c('perName'='perName'))
 
 #Create Inputs for JAGS ===================================================
-intersect(cov.dat.4$Population, sr.dat$Population)
-length(intersect(cov.dat.4$Population, sr.dat$Population))
+intersect(cov.dat$Population, sr.dat$Population)
+length(intersect(cov.dat$Population, sr.dat$Population))
 
 # setdiff(cov.dat.3$perName, sr.dat$Population) #In covar not in sr
 # setdiff(sr.dat$Population, cov.dat.3$perName) #In sr not in covar
 
-input.dat <- cov.dat.4[!is.na(cov.dat.4$Population),]
+input.dat <- cov.dat[!is.na(cov.dat$Population),]
 
 # pops <- sort(unique(sr.dat$Population))
-pops <- na.omit(intersect(sr.dat$Population, cov.dat.4$Population))
+pops <- na.omit(intersect(sr.dat$Population, cov.dat$Population))
 n.pops <- length(pops)
 
 #Look at correlations
 # correlation <- input.dat %>%  filter(Population %in% pops) %>% select(std.ASON_avg, std.ASON_max,
-                                                                      # std.MJJA_avg, std.MJJA_max,
-                                                                      # maxTemp, wksGT15, wksGT21, wksGT13, std.BreakupDOY)
+# std.MJJA_avg, std.MJJA_max,
+# maxTemp, wksGT15, wksGT21, wksGT13, std.BreakupDOY)
 
 # correlation <- cor(correlation[,-1], use='pairwise.complete.obs')
 # pdf(file.path(dir.figs,"Correlations.pdf"), height=8, width=8)
@@ -223,123 +232,216 @@ for(p in 1:n.pops) {
   }#next y
 }#next p
 
+#Make sure we are specifying the correct phase
+if(phase!=3 & phase!=4 & phase!=5) {
+  stop(paste("Ye fucked up, phase needs to be 3-5, currently it is:",phase))
+}
 
-#Covariate input
-# names.covars <- c('ASON_avg-0','ASON_max-0','MJJA_avg-1','MJJA_max-1',
-#                   'maxTemp-0','maxTemp-1',
-#                   'wksGT13-0','wksGT21-0','wksGT15-1')
 
-if(phase==1) {
-
+#Phase 3 ==========================================
+if(phase==3) {
+  
   #After update to remove correlated parameters
-  names.covars <- c('ASON_avg-0','ASON_max-0', 'MJJA_max-1',
-                    'wksGT16-0','wksGT10-0',
-                    'wksGT15-1',
-                    'Breakup-2','NPGO-2')
+  names.covars <- c('wksGT13','wksGT15', 
+                    'maxP_spawn','RB_spawn','RB_emerge',
+                    'avgP_grow','medianQ',
+                    'breakup','NPGO')
   
   # if(do.temp==TRUE) { names.covars <- c(names.covars,'Max.temp') }
   # names.covars <- c('ASON_max','MJJA_max')
   n.covars <- length(names.covars)
   covars <- array(data=NA,dim=c(n.pops, max(n.years), n.covars))
-
+  
   p <- 1
   for(p in 1:n.pops) {
     y <- 1
     for(y in 1:n.years[p]) {
       year <- years[p,y]
       
-      #Streamflow
-      
-      #ASON_avg-0
-      temp.cov <- input.dat$std.ASON_avg[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
+      #TEMPERATURE ========
+      #wksGT13-0
+      temp.cov <- input.dat$std.wksGT13[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
       covars[p,y,1] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
       
+      #wksGT15-1
+      temp.cov <- input.dat$std.wksGT15[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
+      covars[p,y,2] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #DISCHARGE =========
       #ASON_max-0
       temp.cov <- input.dat$std.ASON_max[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
-      covars[p,y,2] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      covars[p,y,3] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #RB_ASON-0
+      temp.cov <- input.dat$std.RB_ASON[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
+      covars[p,y,4] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #RB_MJ-1
+      temp.cov <- input.dat$std.RB_MJ[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
+      covars[p,y,5] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
       
       #MJJA_avg-1
       temp.cov <- input.dat$std.MJJA_avg[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
-      covars[p,y,3] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
-      
-      #Daily Temperature - NONSTANDARDIZED
-      #wksGT16-0 - High temperature during spawning
-      temp.cov <- input.dat$wksGT16[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
-      covars[p,y,4] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
-      
-      #wksGT10-0 - High temperature effect during egg incubation
-      temp.cov <- input.dat$wksGT10[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
-      covars[p,y,5] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
-      
-      #wksGT15-1 - High temperature during juvenile rearing 1-st summer
-      temp.cov <- input.dat$wksGT15[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
       covars[p,y,6] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
       
-      #breakup-2 - Date of Breakup in year of outmigration influences 
-      temp.cov <- input.dat$std.BreakupDOY[input.dat$Population==pops[p] & input.dat$Year==(year+2)]
+      #MDIS_MJJA-1
+      temp.cov <- input.dat$std.MDIS_MJJA[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
       covars[p,y,7] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
       
-      #NPGO-2
-      temp.cov <- npgo.dat.2$std[npgo.dat.2$Year==(year+2)]
+      #GENERAL COVARS ========
+      
+      #breakup-2 - Date of Breakup in year of outmigration influences 
+      temp.cov <- breakup.dat.2$std.BreakupDOY[breakup.dat.2$Year==(year+2)]
       covars[p,y,8] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
       
-    }#next y
-  }#next p
-  
-}else {
-  
-  #After update to remove correlated parameters
-  names.covars <- c('ASON_avg-0','ASON_max-0', 'MJJA_max-1',
-                    'wksGT13-0',
-                    'wksGT18-1',
-                    'Breakup-2','NPGO-2')
-  
-  # if(do.temp==TRUE) { names.covars <- c(names.covars,'Max.temp') }
-  # names.covars <- c('ASON_max','MJJA_max')
-  n.covars <- length(names.covars)
-  covars <- array(data=NA,dim=c(n.pops, max(n.years), n.covars))
-  
-  p <- 1
-  for(p in 1:n.pops) {
-    y <- 1
-    for(y in 1:n.years[p]) {
-      year <- years[p,y]
-      
-      #Streamflow
-      
-      #ASON_avg-0
-      temp.cov <- input.dat$std.ASON_avg[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
-      covars[p,y,1] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
-      
-      #ASON_max-0
-      temp.cov <- input.dat$std.ASON_max[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
-      covars[p,y,2] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
-      
-      #MJJA_avg-1
-      temp.cov <- input.dat$std.MJJA_avg[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
-      covars[p,y,3] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
-      
-      #Daily Temperature - NONSTANDARDIZED
-      #wksGT13-0 - High temperature during spawning
-      temp.cov <- input.dat$wksGT13[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
-      covars[p,y,4] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
-      
-      #wksGT18-1 - High temperature during juvenile rearing 1-st summer
-      temp.cov <- input.dat$wksGT18[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
-      covars[p,y,5] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
-      
-      #breakup-2 - Date of Breakup in year of outmigration influences 
-      temp.cov <- input.dat$std.BreakupDOY[input.dat$Population==pops[p] & input.dat$Year==(year+2)]
-      covars[p,y,6] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
-      
       #NPGO-2
       temp.cov <- npgo.dat.2$std[npgo.dat.2$Year==(year+2)]
-      covars[p,y,7] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      covars[p,y,9] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
       
     }#next y
   }#next p
   
 }
+
+#Phase 4 ==========================================
+if(phase==4) {
+  
+  #After update to remove correlated parameters
+  names.covars <- c('maxT_spawn','avgT_grow', 
+                    'maxP_spawn','RB_spawn','RB_emerge',
+                    'avgP_grow','medianQ',
+                    'breakup','NPGO')
+  
+  # if(do.temp==TRUE) { names.covars <- c(names.covars,'Max.temp') }
+  # names.covars <- c('ASON_max','MJJA_max')
+  n.covars <- length(names.covars)
+  covars <- array(data=NA,dim=c(n.pops, max(n.years), n.covars))
+  
+  p <- 1
+  for(p in 1:n.pops) {
+    y <- 1
+    for(y in 1:n.years[p]) {
+      year <- years[p,y]
+      
+      #TEMPERATURE ========
+      #maxWkJA-0
+      temp.cov <- input.dat$std.maxWkJA[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
+      covars[p,y,1] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #meanWKJJA-1
+      temp.cov <- input.dat$std.meanWkJJA[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
+      covars[p,y,2] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #DISCHARGE =========
+      #ASON_max-0
+      temp.cov <- input.dat$std.ASON_max[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
+      covars[p,y,3] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #RB_ASON-0
+      temp.cov <- input.dat$std.RB_ASON[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
+      covars[p,y,4] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #RB_MJ-1
+      temp.cov <- input.dat$std.RB_MJ[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
+      covars[p,y,5] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #MJJA_avg-1
+      temp.cov <- input.dat$std.MJJA_avg[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
+      covars[p,y,6] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #MDIS_MJJA-1
+      temp.cov <- input.dat$std.MDIS_MJJA[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
+      covars[p,y,7] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #GENERAL COVARS ========
+      
+      #breakup-2 - Date of Breakup in year of outmigration influences 
+      temp.cov <- breakup.dat.2$std.BreakupDOY[breakup.dat.2$Year==(year+2)]
+      covars[p,y,8] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #NPGO-2
+      temp.cov <- npgo.dat.2$std[npgo.dat.2$Year==(year+2)]
+      covars[p,y,9] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+    }#next y
+  }#next p
+  
+}
+
+#Phase 4 ==========================================
+if(phase==5) {
+  
+  #After update to remove correlated parameters
+  names.covars <- c(#'maxT_spawn','avgT_grow', 
+                    'Quad_maxT_spawn','Quad_avgT_grow', 
+                    'maxP_spawn','RB_spawn','RB_emerge',
+                    'avgP_grow','medianQ',
+                    'breakup','NPGO')
+  
+  # if(do.temp==TRUE) { names.covars <- c(names.covars,'Max.temp') }
+  # names.covars <- c('ASON_max','MJJA_max')
+  n.covars <- length(names.covars)
+  covars <- array(data=NA,dim=c(n.pops, max(n.years), n.covars))
+  
+  p <- 1
+  for(p in 1:n.pops) {
+    y <- 1
+    for(y in 1:n.years[p]) {
+      year <- years[p,y]
+      
+      #TEMPERATURE ========
+      #maxWkJA-0
+      # temp.cov <- input.dat$std.maxWkJA[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
+      # covars[p,y,1] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      # 
+      # #meanWKJJA-1
+      # temp.cov <- input.dat$std.meanWkJJA[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
+      # covars[p,y,2] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #QUADRATIC maxWkJA-0
+      temp.cov <- (input.dat$std.maxWkJA[input.dat$Population==pops[p] & input.dat$Year==(year+0)])^2
+      covars[p,y,1] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #QUADRATIC meanWKJJA-1
+      temp.cov <- (input.dat$std.meanWkJJA[input.dat$Population==pops[p] & input.dat$Year==(year+1)])^2
+      covars[p,y,2] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #DISCHARGE =========
+      #ASON_max-0
+      temp.cov <- input.dat$std.ASON_max[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
+      covars[p,y,3] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #RB_ASON-0
+      temp.cov <- input.dat$std.RB_ASON[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
+      covars[p,y,4] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #RB_MJ-1
+      temp.cov <- input.dat$std.RB_MJ[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
+      covars[p,y,5] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #MJJA_avg-1
+      temp.cov <- input.dat$std.MJJA_avg[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
+      covars[p,y,6] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #MDIS_MJJA-1
+      temp.cov <- input.dat$std.MDIS_MJJA[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
+      covars[p,y,7] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #GENERAL COVARS ========
+      
+      #breakup-2 - Date of Breakup in year of outmigration influences 
+      temp.cov <- breakup.dat.2$std.BreakupDOY[breakup.dat.2$Year==(year+2)]
+      covars[p,y,8] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+      #NPGO-2
+      temp.cov <- npgo.dat.2$std[npgo.dat.2$Year==(year+2)]
+      covars[p,y,9] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+      
+    }#next y
+  }#next p
+  
+}
+
 # Try BRM model =============================================================
 # brm <- brm(CoreRecruitsPerSpawner ~ Population + Population:Spawners2.nom, data=temp.dat.4)
 # # pairs(brm) 
@@ -376,7 +478,7 @@ JAGS_heir <- function() {
     exp.alpha[p] ~ dunif(0,25)
     alpha[p] <- log(exp.alpha[p])#log(exp.alpha[p])
     beta[p] ~ dunif(1,1e+6)
-    sigma.oe[p] ~ dnorm(0, pow(5,-2));T(1e-3,25)#dgamma(1,1)
+    sigma.oe[p] ~ dnorm(0, pow(1,-2));T(1e-3,2)#dgamma(1,1)
     
     #Covariate Effects
     for(c in 1:n.covars) {
@@ -389,7 +491,8 @@ JAGS_heir <- function() {
     for(y in 1:n.years[p]) {
       
       for(c in 1:n.covars) {
-        cov.eff[p,y,c] <- prod(coef[p,c],covars[p,y,c])
+        # cov.eff[p,y,c] <- prod(coef[p,c],covars[p,y,c])
+        cov.eff[p,y,c] <- coef[p,c]*covars[p,y,c]
       }
       
       #Standard Hilborn Ricker
@@ -402,20 +505,26 @@ JAGS_heir <- function() {
       
       
       #Corrected Predicted Recruitment 
-      corr.pred.rec[p,y] <- pred.rec[p,y]*exp(-(sigma.oe[p]*sigma.oe[p])/2)
+      # corr.pred.rec[p,y] <- pred.rec[p,y]*exp(-(sigma.oe[p]*sigma.oe[p])/2)
       
       #Baseline Recruitment without Covariates
       base.rec[p,y] <- spawn[p,y]*exp(alpha[p]*(1-(spawn[p,y]/beta[p])))
-      corr.base.rec[p,y] <- base.rec[p,y]*exp(-(sigma.oe[p]*sigma.oe[p])/2)
+      # corr.base.rec[p,y] <- base.rec[p,y]*exp(-(sigma.oe[p]*sigma.oe[p])/2)
       
       
     }#next y
+    
+    #Fill in Ragged Components
+    for(y in (n.years[p]+1):max(n.years)) {
+      pred.rec[p,y] <- 0
+    }
   }#next p
   
   #LIKELIHOODS
   for(p in 1:n.pops) {
     for(y in 1:n.years[p]) {
       ln.rec[p,y] ~ dnorm(log(pred.rec[p,y]), pow(sigma.oe[p],-2))
+      # loglik[counter] <- log(dnorm(log(pred.rec[p,y]), pow(sigma.oe[p],-2)))
     }#next y
   }#next p
   
@@ -428,15 +537,15 @@ parameters.to.save <- c('alpha','exp.alpha',
                         'coef',
                         'sigma.oe',
                         'cov.eff',
-                        'pred.rec','corr.pred.rec',
-                        'base.rec','corr.base.rec',
+                        'pred.rec',#'corr.pred.rec',
+                        'base.rec',#'corr.base.rec',
                         'dist.coef')
 
 Data=list("n.pops","n.years","n.covars",
           "spawn","ln.rec","covars")
 
 InitFn = function() {
-  exp.alpha <- runif(n.pops,1,5)
+  exp.alpha <- runif(n.pops,1,2)
   beta <- runif(n.pops,1e3,1e5)
   obs.sigma <- runif(n.pops,0.1,1)
   
@@ -456,8 +565,8 @@ out <- NULL
 out.mcmc <- NULL
 
 if(fit==TRUE) {
-
-  out <- jags.parallel(model.file=JAGS_heir, inits=NULL, working.directory=NULL, data=Data, parameters.to.save=parameters.to.save,
+  
+  out <- jags.parallel(model.file=JAGS_heir, inits=InitFn, working.directory=NULL, data=Data, parameters.to.save=parameters.to.save,
                        n.chains=n.chain, n.thin=n.thin, n.iter=Nsim+Nburnin, n.burnin=Nburnin,
                        export_obj_names=c('n.chain','n.thin','Nsim','Nburnin'))   
   #Save
@@ -500,7 +609,7 @@ for(c in 1:n.covars) {
            xlim=c(-0.5,0.5), rope=0)
   abline(v=0, lty=1, lwd=2, col=rgb(1,0,0,alpha=0.5))
 }
-mtext(paste0('Hyper Means'), side=3, outer=TRUE, font=2, line=1)
+mtext(paste0('Full Covariate Prior Distribution (dist.coef)'), side=3, outer=TRUE, font=2, line=1)
 
 #Individual Covariates
 par(mfcol=c(3,3), mar=c(2,5,3,1), oma=c(2,2,1,1))
@@ -606,6 +715,37 @@ plot(g8.b)
 # out$BUGSoutput$sims.list$dist.coef
 # out$BUGSoutput$sims.list
 
+# Plot Fits =========
+par(mfrow=c(2,2), mar=c(2,2,2,0), oma=c(2,2,1,1))
+p <- 2
+for(p in 1:n.pops) {
+  pred <- apply(out$BUGSoutput$sims.list$pred.rec[,p,1:n.years[p]],2, 
+                quantile, probs=c(0.025,0.25,0.5,0.75,0.975))
+  
+  ylim <- c(0,max(rec[p,], pred, na.rm=TRUE))
+  
+  temp.yrs <- years[p,1:n.years[p]]
+  
+  plot(x=temp.yrs, y=rec[p,1:n.years[p]], pch=21, bg=rgb(0,0,1,alpha=0.5), ylim=ylim)
+  
+  polygon(x=c(temp.yrs,rev(temp.yrs)), y=c(pred[1,],rev(pred[5,])), col=rgb(1,0,0, alpha=0.2),
+            border=FALSE)
+  polygon(x=c(temp.yrs,rev(temp.yrs)), y=c(pred[2,],rev(pred[4,])), col=rgb(1,0,0, alpha=0.2),
+          border=FALSE)
+  
+  lines(x=temp.yrs, y=pred[3,], col='red')
+  mtext(pops[p], side=3, line=0.25, font=2)
+  if(p %in% c(1,5,9,13)) {
+    mtext('Recruitment', side=2, font=2, outer=TRUE, line=0.5)
+    mtext('Year', side=1, font=2, outer=TRUE, line=0.5)
+  }
+  
+  
+  # lines(apply(corr.pred.rec[,p,1:n.years[p]], 2, median), col='gray')
+  # lines(apply(base.rec[,p,1:n.years[p]], 2, median), col='darkgreen')
+}#next p
+
+
 dev.off()
 #Pairs plot
 
@@ -616,24 +756,30 @@ dev.off()
 # exp(0.1)
 
 # plotPost(out$BUGSoutput$sims.list)
-
-p <- 5
-pred.rec <- out$BUGSoutput$sims.list$pred.rec
-plot(x=spawn[p,], y=rec[p,], pch=21, bg=rgb(0,0,1,alpha=0.5))
-points(x=spawn[p,1:n.years[p]], y=apply(pred.rec[,p,1:n.years[p]], 2, median), col='red')
-# points(x=spawn[p,1:n.years[p]], y=apply(base.rec[,p,1:n.years[p]], 2, median), col='red')
-
-
-pred.rec <- out$BUGSoutput$sims.list$pred.rec
-corr.pred.rec <- out$BUGSoutput$sims.list$corr.pred.rec
-base.rec <- out$BUGSoutput$sims.list$base.rec
-
-ylim <- c(0,max(rec[p,], apply(pred.rec[,p,1:n.years[p]],2,median), na.rm=TRUE))
-
-plot(rec[p,], pch=21, bg=rgb(0,0,1,alpha=0.5), ylim=ylim)
-lines(apply(pred.rec[,p,1:n.years[p]], 2, median), col='red')
-# lines(apply(corr.pred.rec[,p,1:n.years[p]], 2, median), col='gray')
-lines(apply(base.rec[,p,1:n.years[p]], 2, median), col='darkgreen')
-
-
-
+# 
+# p <- 3
+# pred.rec <- out$BUGSoutput$sims.list$pred.rec
+# plot(x=spawn[p,], y=rec[p,], pch=21, bg=rgb(0,0,1,alpha=0.5), ylim=c(0, max(rec[p,],apply(pred.rec[,p,1:n.years[p]], 2, median), na.rm=TRUE)))
+# 
+# points(x=spawn[p,1:n.years[p]], y=apply(pred.rec[,p,1:n.years[p]], 2, median), col='red')
+# # points(x=spawn[p,1:n.years[p]], y=apply(base.rec[,p,1:n.years[p]], 2, median), col='red')
+# 
+# plot(x=rec[p,], y=apply(pred.rec[,p,], 2, median))
+# 
+# alpha <- out$BUGSoutput$sims.list$alpha[,p]
+# beta <- out$BUGSoutput$sims.list$beta[,p]
+# pred.rec <- spawn[p,]*exp(alpha*(1-spawn[p,]/beta))
+# 
+# pred.rec <- out$BUGSoutput$sims.list$pred.rec
+# corr.pred.rec <- out$BUGSoutput$sims.list$corr.pred.rec
+# base.rec <- out$BUGSoutput$sims.list$base.rec
+# 
+# ylim <- c(0,max(rec[p,], apply(pred.rec[,p,1:n.years[p]],2,median), na.rm=TRUE))
+# 
+# plot(rec[p,], pch=21, bg=rgb(0,0,1,alpha=0.5), ylim=ylim)
+# lines(apply(pred.rec[,p,1:n.years[p]], 2, median), col='red')
+# # lines(apply(corr.pred.rec[,p,1:n.years[p]], 2, median), col='gray')
+# lines(apply(base.rec[,p,1:n.years[p]], 2, median), col='darkgreen')
+# 
+# 
+# 

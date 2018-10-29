@@ -1,5 +1,5 @@
 #==================================================================================================
-#Project Name: COOK INLET CHINOOK ENVIRONMENTAL EFFECTS - Bayesian Hierarchical Model - FINAL
+#Project Name: COOK INLET CHINOOK ENVIRONMENTAL EFFECTS - Bayesian Hierarchical Model - FINAL - With Standardized Weeks
 #Creator: Curry James Cunningham, NOAA/NMFS, ABL
 #Date: 6.10.18
 #
@@ -44,14 +44,14 @@ dir.data <- file.path(wd,"Data","10.2.18_update")
 
 #CONTROL SECTION ==========================================================
 #############################
-phase <- 1 #1 or 2
+phase <- 2 #1 or 2
 
-fit <- TRUE
+fit <- FALSE
 
 #Update Fig and Output directories
-dir.output <- file.path(dir.output,"Final",paste0("Phase_",phase))
+dir.output <- file.path(dir.output,"Final_2",paste0("Phase_",phase))
 dir.create(dir.output, recursive=TRUE)
-dir.figs <- file.path(dir.figs,"Final",paste0("Phase_",phase))
+dir.figs <- file.path(dir.figs,"Final_2",paste0("Phase_",phase))
 dir.create(dir.figs, recursive=TRUE)
 
 n.sim <- 5e4
@@ -62,7 +62,7 @@ n.chain <- 3
 # ofst <- 1
 
 #Whether to plot SR relationships
-plot.SR <- TRUE
+plot.SR <- FALSE
 
 #############################
 
@@ -147,11 +147,11 @@ npgo.dat <- read.csv(file.path(dir.data,'covars.list.csv'), header=TRUE, strings
 # g
 #Standardize Covariates ===================================================
 temp.dat.2 <- temp.dat %>% group_by(perName) %>% mutate('std.wksGT10'=(wksGT10 - mean(wksGT10 , na.rm=TRUE))/sd(wksGT10, na.rm=TRUE),
-                                                     'std.wksGT13'=(wksGT13 - mean(wksGT13 , na.rm=TRUE))/sd(wksGT13, na.rm=TRUE),
-                                                     'std.wksGT15'=(wksGT15 - mean(wksGT15 , na.rm=TRUE))/sd(wksGT15, na.rm=TRUE),
-                                                     'std.wksGT16'=(wksGT16 - mean(wksGT16 , na.rm=TRUE))/sd(wksGT16, na.rm=TRUE),
-                                                     'std.wksGT18'=(wksGT18 - mean(wksGT18 , na.rm=TRUE))/sd(wksGT18, na.rm=TRUE))
-                                                     
+                                                        'std.wksGT13'=(wksGT13 - mean(wksGT13 , na.rm=TRUE))/sd(wksGT13, na.rm=TRUE),
+                                                        'std.wksGT15'=(wksGT15 - mean(wksGT15 , na.rm=TRUE))/sd(wksGT15, na.rm=TRUE),
+                                                        'std.wksGT16'=(wksGT16 - mean(wksGT16 , na.rm=TRUE))/sd(wksGT16, na.rm=TRUE),
+                                                        'std.wksGT18'=(wksGT18 - mean(wksGT18 , na.rm=TRUE))/sd(wksGT18, na.rm=TRUE))
+
 precip.dat.3 <- precip.dat.2 %>% group_by(perName) %>% mutate('std.ASON_avg'=(ASON_avg - mean(ASON_avg , na.rm=TRUE))/sd(ASON_avg, na.rm=TRUE),
                                                               'std.ASON_max'=(ASON_max - mean(ASON_max , na.rm=TRUE))/sd(ASON_max, na.rm=TRUE),
                                                               'std.MJJA_avg'=(MJJA_avg - mean(MJJA_avg , na.rm=TRUE))/sd(MJJA_avg, na.rm=TRUE),
@@ -187,8 +187,8 @@ n.pops <- length(pops)
 
 #Look at correlations
 # correlation <- input.dat %>%  filter(Population %in% pops) %>% select(std.ASON_avg, std.ASON_max,
-                                                                      # std.MJJA_avg, std.MJJA_max,
-                                                                      # maxTemp, wksGT15, wksGT21, wksGT13, std.BreakupDOY)
+# std.MJJA_avg, std.MJJA_max,
+# maxTemp, wksGT15, wksGT21, wksGT13, std.BreakupDOY)
 
 # correlation <- cor(correlation[,-1], use='pairwise.complete.obs')
 # pdf(file.path(dir.figs,"Correlations.pdf"), height=8, width=8)
@@ -230,9 +230,9 @@ for(p in 1:n.pops) {
 #                   'wksGT13-0','wksGT21-0','wksGT15-1')
 
 if(phase==1) {
-
+  
   #After update to remove correlated parameters
-  names.covars <- c('ASON_avg-0','ASON_max-0', 'MJJA_max-1',
+  names.covars <- c('ASON_avg-0','ASON_max-0', 'MJJA_avg-1',
                     'wksGT16-0','wksGT10-0',
                     'wksGT15-1',
                     'Breakup-2','NPGO-2')
@@ -241,7 +241,7 @@ if(phase==1) {
   # names.covars <- c('ASON_max','MJJA_max')
   n.covars <- length(names.covars)
   covars <- array(data=NA,dim=c(n.pops, max(n.years), n.covars))
-
+  
   p <- 1
   for(p in 1:n.pops) {
     y <- 1
@@ -264,15 +264,15 @@ if(phase==1) {
       
       #Daily Temperature - NONSTANDARDIZED
       #wksGT16-0 - High temperature during spawning
-      temp.cov <- input.dat$wksGT16[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
+      temp.cov <- input.dat$std.wksGT16[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
       covars[p,y,4] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
       
       #wksGT10-0 - High temperature effect during egg incubation
-      temp.cov <- input.dat$wksGT10[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
+      temp.cov <- input.dat$std.wksGT10[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
       covars[p,y,5] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
       
       #wksGT15-1 - High temperature during juvenile rearing 1-st summer
-      temp.cov <- input.dat$wksGT15[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
+      temp.cov <- input.dat$std.wksGT15[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
       covars[p,y,6] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
       
       #breakup-2 - Date of Breakup in year of outmigration influences 
@@ -289,7 +289,7 @@ if(phase==1) {
 }else {
   
   #After update to remove correlated parameters
-  names.covars <- c('ASON_avg-0','ASON_max-0', 'MJJA_max-1',
+  names.covars <- c('ASON_avg-0','ASON_max-0', 'MJJA_avg-1',
                     'wksGT13-0',
                     'wksGT18-1',
                     'Breakup-2','NPGO-2')
@@ -321,11 +321,11 @@ if(phase==1) {
       
       #Daily Temperature - NONSTANDARDIZED
       #wksGT13-0 - High temperature during spawning
-      temp.cov <- input.dat$wksGT13[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
+      temp.cov <- input.dat$std.wksGT13[input.dat$Population==pops[p] & input.dat$Year==(year+0)]
       covars[p,y,4] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
       
       #wksGT18-1 - High temperature during juvenile rearing 1-st summer
-      temp.cov <- input.dat$wksGT18[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
+      temp.cov <- input.dat$std.wksGT18[input.dat$Population==pops[p] & input.dat$Year==(year+1)]
       covars[p,y,5] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
       
       #breakup-2 - Date of Breakup in year of outmigration influences 
@@ -456,7 +456,7 @@ out <- NULL
 out.mcmc <- NULL
 
 if(fit==TRUE) {
-
+  
   out <- jags.parallel(model.file=JAGS_heir, inits=NULL, working.directory=NULL, data=Data, parameters.to.save=parameters.to.save,
                        n.chains=n.chain, n.thin=n.thin, n.iter=Nsim+Nburnin, n.burnin=Nburnin,
                        export_obj_names=c('n.chain','n.thin','Nsim','Nburnin'))   
@@ -500,7 +500,7 @@ for(c in 1:n.covars) {
            xlim=c(-0.5,0.5), rope=0)
   abline(v=0, lty=1, lwd=2, col=rgb(1,0,0,alpha=0.5))
 }
-mtext(paste0('Hyper Means'), side=3, outer=TRUE, font=2, line=1)
+mtext(paste0('Full Effects Distribution'), side=3, outer=TRUE, font=2, line=1)
 
 #Individual Covariates
 par(mfcol=c(3,3), mar=c(2,5,3,1), oma=c(2,2,1,1))
@@ -515,6 +515,25 @@ for(c in 1:n.covars) {
 mtext('Coefficient (Effect)', side=1, outer=TRUE, font=2, line=0.5)
 mtext('Population', side=2, outer=TRUE, font=2, line=0.5)
 
+#Caterplot with standardized axes
+#Determine x-axis limits
+# x.mins <- apply(out$BUGSoutput$sims.list$coef, c(2,3), quantile, probs=0.025)
+# x.maxs <- apply(out$BUGSoutput$sims.list$coef, c(2,3), quantile, probs=0.975)
+# 
+# par(mfcol=c(3,3), mar=c(2,5,3,1), oma=c(2,2,1,1))
+# c <- 1
+# for(c in 1:n.covars) {
+#   caterplot(out$BUGSoutput$sims.list$coef[,,c],
+#             labels=pops, reorder=FALSE, quantiles=list(0.025,0.25,0.75,0.975), style='gray', col='blue',
+#             xlim=c(min(x.mins),max(x.maxs)))
+#   mtext(names.covars[c], side=3, outer=FALSE, line=1)
+#   caterpoints(apply(out$BUGSoutput$sims.list$coef[,,c],2,median), reorder=FALSE, pch=21, col='red', bg='orange')
+#   abline(v=0, lty=1, lwd=2, col=rgb(1,0,0, alpha=0.5))
+# }
+# mtext('Coefficient (Effect)', side=1, outer=TRUE, font=2, line=0.5)
+# mtext('Population', side=2, outer=TRUE, font=2, line=0.5)
+
+
 #Plot with bayesplot
 mu.coef.list <- out$BUGSoutput$sims.list$mu.coef
 colnames(mu.coef.list) <- names.covars
@@ -522,9 +541,10 @@ colnames(mu.coef.list) <- names.covars
 g <- mcmc_areas(mu.coef.list) + ggtitle('Group Means (mu.coef)') + vline_0()
 #+ grid_lines()
 plot(g)
+plot(g+coord_cartesian(xlim=c(-1,1)))
 g.a <- mcmc_areas_ridges(mu.coef.list) + ggtitle('Group Means (mu.coef)') + vline_0()
 plot(g.a)
-
+plot(g.a+coord_cartesian(xlim=c(-1,1)))
 #Pairs plot
 g2 <- mcmc_pairs(mu.coef.list[,1:5])
 plot(g2)
@@ -538,8 +558,10 @@ colnames(sigma.coef.list) <- names.covars
 color_scheme_set('blue')
 g3 <- mcmc_areas(sigma.coef.list) + ggtitle('Group Standard Deviations (sigma.coef)') 
 plot(g3)
-g3.b <- mcmc_areas_ridges(sigma.coef.list)
+plot(g3+coord_cartesian(xlim=c(0,2)))
+g3.b <- mcmc_areas_ridges(sigma.coef.list) + ggtitle('Group Standard Deviations (sigma.coef)') 
 plot(g3.b)
+plot(g3.b+coord_cartesian(xlim=c(0,2)))
 
 #Full Prior Distribution by coefficient
 dist.coef.list <- out$BUGSoutput$sims.list$dist.coef
@@ -617,7 +639,7 @@ dev.off()
 
 # plotPost(out$BUGSoutput$sims.list)
 
-p <- 5
+p <- 11
 pred.rec <- out$BUGSoutput$sims.list$pred.rec
 plot(x=spawn[p,], y=rec[p,], pch=21, bg=rgb(0,0,1,alpha=0.5))
 points(x=spawn[p,1:n.years[p]], y=apply(pred.rec[,p,1:n.years[p]], 2, median), col='red')
@@ -635,5 +657,6 @@ lines(apply(pred.rec[,p,1:n.years[p]], 2, median), col='red')
 # lines(apply(corr.pred.rec[,p,1:n.years[p]], 2, median), col='gray')
 lines(apply(base.rec[,p,1:n.years[p]], 2, median), col='darkgreen')
 
+g <- ggplot(filter(cov.dat.4, !is.na(Population)), aes(wksGT16)) + geom_histogram() + facet_wrap(~Population, scales='free_y')
 
-
+hist(cov.dat.4$wksGT16[!is.na(cov.dat.4$Population)], col='blue')
