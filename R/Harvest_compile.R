@@ -335,6 +335,10 @@ commHarvestByYear <- comm %>%
   summarize(Commercial = sum(Harvest))
 
 # Marine Sport---------------
+# Compile marine sport harvest data
+# Exclude Lower Cook Inlet area because 98-100% of the Chinook harvested there are from
+# populations outside CI, based on mixed-stock analysis of the 2014-15 harvest 
+# (Barclay et al. 2016)
 marineSport <- marineSportRaw %>%
   select(Year:CentralCI_LateSummer) %>%
   gather(key = "Area_Season", value = "Harvest", CentralCI_EarlySummer:CentralCI_LateSummer) %>%
@@ -474,6 +478,48 @@ mixedStockHarvestByPop <- mixedStockHarvestByRG %>%
 rm(commRaw, puNew, puNew.corr, puNew.long, puOld, sportAreas, sportRaw)
 
 # Compile all harvest data and calculate values for manuscript text--------------
+#TODO:
+# What % of the Chinook harvest in Cook Inlet is accounted for in the stock-recruit analysis?
+# Exclude marine sport harvest from this estimate because most of those fish are not from
+# Cook Inlet stocks
+
+harvestAccountedFor <- comm %>%
+  mutate(AccountedFor = ifelse(Fishery == "ESSN", T, F)) %>%
+  group_by(Year, AccountedFor) %>%
+  summarize(Harvest = sum(Harvest, na.rm = T)) %>%
+  filter(Year < 2016 & Year > 1979) %>%
+  spread(key = "AccountedFor", value = "Harvest") %>%
+  rename(CommAccountedFor = `TRUE`, CommNotAccountedFor = `FALSE`) %>%
+  left_join(fwSportHarvestByYear, by = "Year") %>%
+  left_join(marineSportHarvestByYear, by = "Year") %>%
+  left_join(fwSubPUEdHarvestByYear, by = "Year") %>%
+  left_join(marineSubHarvestByYear, by = "Year") %>%
+  mutate(HarvestAccountedFor = rowSums(cbind(SportFW, SubPUEdFW, CommAccountedFor), na.rm = T),
+         HarvestNotAccountedFor = rowSums(cbind(CommNotAccountedFor, 
+                                                SubsistenceMarine), na.rm = T),
+         PercentAccountedFor = HarvestAccountedFor / (HarvestAccountedFor +
+                                                        HarvestNotAccountedFor))
+
+meanPercentAccountedFor <- mean(harvestAccountedFor$PercentAccountedFor)
+minPercentAccountedFor <- min(harvestAccountedFor$PercentAccountedFor)
+maxPercentAccountedFor <- max(harvestAccountedFor$PercentAccountedFor)
+
+# How well does the harvest that was not accounted for correlate with the harvest that was
+# accounted for?
+# reshape the data long for plotting
+harvestAccountedFor.long <- harvestAccountedFor %>%
+  select(Year, HarvestAccountedFor, HarvestNotAccountedFor) %>%
+  gather(key = "Fishery", value = "Harvest", -Year)
+harvestAccountedFor.plot <- ggplot(data = harvestAccountedFor, aes(x = HarvestAccountedFor, 
+                                                                   y = HarvestNotAccountedFor,
+                                                                   label = Year)) +
+  geom_text()
+harvestAccountedFor.plot
+
+harvestAccountedFor.lm <- lm(HarvestNotAccountedFor ~ HarvestAccountedFor, 
+                             data = harvestAccountedFor)
+summary(harvestAccountedFor.lm)
+
 harvestByYearWide <- commHarvestByYear %>%
   left_join(fwSportHarvestByYear, by = "Year") %>%
   left_join(marineSportHarvestByYear, by = "Year") %>%
@@ -481,13 +527,20 @@ harvestByYearWide <- commHarvestByYear %>%
   left_join(marineSubHarvestByYear, by = "Year") %>%
   filter(Year > 1979)  %>%
   mutate(PercentFW = rowSums(cbind(SportFW, SubPUEdFW), na.rm = T) / 
-           rowSums(cbind(Commercial, SportFW, SportMarine, SubPUEdFW, SubsistenceMarine), na.rm = T))
+           rowSums(cbind(Commercial, SportFW, SubPUEdFW, SportMarine, 
+                         SubsistenceMarine), na.rm = T),
+         TotalHarvest = rowSums(cbind(SportFW, SubPUEdFW, Commercial, SportMarine, 
+                                      SubsistenceMarine), na.rm = T))
 
 # What % of the Chinook harvest in Cook Inlet takes place in freshwater?
 meanPercentFW <- mean(harvestByYearWide$PercentFW)
 minPercentFW <- min(harvestByYearWide$PercentFW)
 maxPercentFW <- max(harvestByYearWide$PercentFW)
 
+# What was the mean total harvest 
+
+# TODO: Double-check how I accounted for the UCI-Late Summer stratum, which has no MSA data.
+# Do I need to revise the methods text to clarify this?
 # What % of Chinook harvested in the marine sport fishery during 2014-15 were from Cook Inlet stocks?
 marineSportCIStocks <- marineSport %>%
   select(Year:LowerCI_Winter) %>%
@@ -530,12 +583,12 @@ harvestByYear <- harvestByYearWide %>%
 
 # Plots--------------
 # Plot the harvest trends
-harvest.plot <- ggplot(data = harvestByYear, aes(x = Year, y = Harvest, color = Fishery)) +
+harvest.plot <- ggplot(data = harvestByYear, aes(x = Year, y = Harvest/1000, color = Fishery)) +
   geom_line() +
-  scale_x_continuous(name = "Year", breaks = seq(1980, 2015, by = 10), limits = c(1980, 2015)) +
-  scale_y_continuous(name = "Harvest", labels = scales::comma) 
+  scale_x_continuous(name = "Return Year", breaks = seq(1980, 2015, by = 10), limits = c(1980, 2015)) +
+  scale_y_continuous(name = "Harvest (1,000s)") 
 harvest.plot
-ggsave("./figs/Harvest by fishery.png", width = 6, height = 4)
+ggsave("./figs/Harvest by fishery.png", width = 8, height = 6)
 
 # Pairwise correlations btw harvest in each fishing sector
 harvest.pairs.plot <- ggpairs(data = harvestByYearWide, columns = 2:6)
