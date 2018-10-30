@@ -285,8 +285,6 @@ age.mlr10.loglik <- nnet:::logLik.multinom(age.mlr10)
 # The best regional model explained 10% of the variability in age composition (nearly as much as the
 # population-specific model)
 
-# Hosmer-Lemeshow test?
-
 # Method 2: Fit an identical set of ordinal logistic regression (OLR) models----------------
 # This approach is simpler because it assumes each fixed effect has the same overall effect on
 # the entire age distribution (i.e., it is associated with Chinook younger or older across the board),
@@ -425,8 +423,40 @@ AgeByRegion.Data.plot
 AgeByRegion.Data.Predicted.plot <- AgeByRegion.Data.plot +
   geom_smooth(data = filter(agePredicted, Component == "Escapement"))
 AgeByRegion.Data.Predicted.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region and run component_data and fit.png")
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region and run component_data and fit.png",
+       width = 8, height = 6)
 
+# 5) Plot the model fit on top of the data, with run component faceted in columns
+AgeByRegionComp.Data.plot <- ggplot(data = agePlot, aes(x = ReturnYear, y = Prop, color = Region)) +
+  facet_grid(Age ~ Component) +
+  geom_point(shape = 1, fill = NA) +
+  labs(x = "Return year", y = "Age Proportion") +
+  scale_x_continuous(breaks = seq(1980, 2015, 10)) +
+  scale_color_discrete(name = "Region")
+AgeByRegionComp.Data.plot
+
+AgeByRegionComp.Data.Predicted.plot <- AgeByRegionComp.Data.plot +
+  geom_smooth(data = agePredicted)
+AgeByRegionComp.Data.Predicted.plot
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region_run component faceted_data and fit.pdf",
+       width = 8, height = 6)
+
+agePredVsObs <- left_join(ageSimple, agePredicted, by = c("Region", "ReturnYear", "Component",
+                                                          "Age")) %>%
+  rename(Observed = Prop.x, Predicted = Prop.y) %>%
+  filter(Component != "Subsistence Harvest") %>%
+  mutate(Component = factor(Component, levels = c("Escapement", "Commercial Harvest",
+                                                  "Sport Harvest")),
+         Region = factor(Region, levels = c("North", "Kenai", "South")))
+
+AgePredictedVsObs.plot <- ggplot(data = agePredVsObs, aes(x = Observed, y = Predicted,
+                                                          color = Age)) +
+  geom_point(shape = 1, fill = NA) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
+  facet_grid(Region~Component)
+AgePredictedVsObs.plot
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp obs vs pred.png",
+       width = 8, height = 6)
 # Old code, no longer used:----------------
 
 # # Make subsets of the main age dataset for more specific analyses:
