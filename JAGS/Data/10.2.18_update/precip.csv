@@ -1,0 +1,2041 @@
+"","year","siteID","Covariate","Value","perName","fish.model"
+"1",1980,"EF_chulitna","ASON_avg",55.580445,"EF Chulitna",1
+"2",1981,"EF_chulitna","ASON_avg",72.34937956,"EF Chulitna",1
+"3",1982,"EF_chulitna","ASON_avg",77.19127095,"EF Chulitna",1
+"4",1983,"EF_chulitna","ASON_avg",70.48630743,"EF Chulitna",1
+"5",1984,"EF_chulitna","ASON_avg",53.13714175,"EF Chulitna",1
+"6",1985,"EF_chulitna","ASON_avg",77.04471545,"EF Chulitna",1
+"7",1986,"EF_chulitna","ASON_avg",81.06696601,"EF Chulitna",1
+"8",1987,"EF_chulitna","ASON_avg",68.43025256,"EF Chulitna",1
+"9",1988,"EF_chulitna","ASON_avg",56.56824987,"EF Chulitna",1
+"10",1989,"EF_chulitna","ASON_avg",77.78155726,"EF Chulitna",1
+"11",1990,"EF_chulitna","ASON_avg",87.90222502,"EF Chulitna",1
+"12",1991,"EF_chulitna","ASON_avg",49.71095416,"EF Chulitna",1
+"13",1992,"EF_chulitna","ASON_avg",95.40885764,"EF Chulitna",1
+"14",1993,"EF_chulitna","ASON_avg",126.7796318,"EF Chulitna",1
+"15",1994,"EF_chulitna","ASON_avg",79.93795463,"EF Chulitna",1
+"16",1995,"EF_chulitna","ASON_avg",41.37312789,"EF Chulitna",1
+"17",1996,"EF_chulitna","ASON_avg",66.63735561,"EF Chulitna",1
+"18",1997,"EF_chulitna","ASON_avg",60.94886599,"EF Chulitna",1
+"19",1998,"EF_chulitna","ASON_avg",45.56718013,"EF Chulitna",1
+"20",1999,"EF_chulitna","ASON_avg",50.07980322,"EF Chulitna",1
+"21",2000,"EF_chulitna","ASON_avg",97.6345744,"EF Chulitna",1
+"22",2001,"EF_chulitna","ASON_avg",60.5374411,"EF Chulitna",1
+"23",2002,"EF_chulitna","ASON_avg",78.02866922,"EF Chulitna",1
+"24",2003,"EF_chulitna","ASON_avg",74.62986764,"EF Chulitna",1
+"25",2004,"EF_chulitna","ASON_avg",100.7809159,"EF Chulitna",1
+"26",2005,"EF_chulitna","ASON_avg",67.51647424,"EF Chulitna",1
+"27",2006,"EF_chulitna","ASON_avg",57.63949517,"EF Chulitna",1
+"28",2007,"EF_chulitna","ASON_avg",71.20774514,"EF Chulitna",1
+"29",2008,"EF_chulitna","ASON_avg",55.06161751,"EF Chulitna",1
+"30",2009,"EF_chulitna","ASON_avg",53.42190838,"EF Chulitna",1
+"31",1980,"alexander","ASON_avg",57.53158507,"Alexander",1
+"32",1981,"alexander","ASON_avg",78.33076953,"Alexander",1
+"33",1982,"alexander","ASON_avg",75.94627013,"Alexander",1
+"34",1983,"alexander","ASON_avg",63.29510497,"Alexander",1
+"35",1984,"alexander","ASON_avg",46.08508155,"Alexander",1
+"36",1985,"alexander","ASON_avg",66.21317017,"Alexander",1
+"37",1986,"alexander","ASON_avg",104.2615382,"Alexander",1
+"38",1987,"alexander","ASON_avg",76.6036132,"Alexander",1
+"39",1988,"alexander","ASON_avg",60.68333331,"Alexander",1
+"40",1989,"alexander","ASON_avg",95.024592,"Alexander",1
+"41",1990,"alexander","ASON_avg",79.17249432,"Alexander",1
+"42",1991,"alexander","ASON_avg",52.10011659,"Alexander",1
+"43",1992,"alexander","ASON_avg",93.9476689,"Alexander",1
+"44",1993,"alexander","ASON_avg",128.4213284,"Alexander",1
+"45",1994,"alexander","ASON_avg",69.58310036,"Alexander",1
+"46",1995,"alexander","ASON_avg",40.34195826,"Alexander",1
+"47",1996,"alexander","ASON_avg",56.42400937,"Alexander",1
+"48",1997,"alexander","ASON_avg",75.22319346,"Alexander",1
+"49",1998,"alexander","ASON_avg",43.53682981,"Alexander",1
+"50",1999,"alexander","ASON_avg",64.43939396,"Alexander",1
+"51",2000,"alexander","ASON_avg",86.31212145,"Alexander",1
+"52",2001,"alexander","ASON_avg",57.05582762,"Alexander",1
+"53",2002,"alexander","ASON_avg",78.18193446,"Alexander",1
+"54",2003,"alexander","ASON_avg",66.3089744,"Alexander",1
+"55",2004,"alexander","ASON_avg",107.1547784,"Alexander",1
+"56",2005,"alexander","ASON_avg",76.33717949,"Alexander",1
+"57",2006,"alexander","ASON_avg",62.12027964,"Alexander",1
+"58",2007,"alexander","ASON_avg",83.70571089,"Alexander",1
+"59",2008,"alexander","ASON_avg",59.86328679,"Alexander",1
+"60",2009,"alexander","ASON_avg",56.83578097,"Alexander",1
+"61",1980,"anchor","ASON_avg",94.54268707,"Anchor",1
+"62",1981,"anchor","ASON_avg",112.0608845,"Anchor",1
+"63",1982,"anchor","ASON_avg",72.93673471,"Anchor",1
+"64",1983,"anchor","ASON_avg",98.14982977,"Anchor",1
+"65",1984,"anchor","ASON_avg",61.18809522,"Anchor",1
+"66",1985,"anchor","ASON_avg",51.65221084,"Anchor",1
+"67",1986,"anchor","ASON_avg",104.3743197,"Anchor",1
+"68",1987,"anchor","ASON_avg",100.5988096,"Anchor",1
+"69",1988,"anchor","ASON_avg",63.23435379,"Anchor",1
+"70",1989,"anchor","ASON_avg",78.820578,"Anchor",1
+"71",1990,"anchor","ASON_avg",94.74966027,"Anchor",1
+"72",1991,"anchor","ASON_avg",65.06496608,"Anchor",1
+"73",1992,"anchor","ASON_avg",95.15391161,"Anchor",1
+"74",1993,"anchor","ASON_avg",99.64659886,"Anchor",1
+"75",1994,"anchor","ASON_avg",81.86989794,"Anchor",1
+"76",1995,"anchor","ASON_avg",53.23486387,"Anchor",1
+"77",1996,"anchor","ASON_avg",42.49574828,"Anchor",1
+"78",1997,"anchor","ASON_avg",133.2482991,"Anchor",1
+"79",1998,"anchor","ASON_avg",80.97653063,"Anchor",1
+"80",1999,"anchor","ASON_avg",90.98469403,"Anchor",1
+"81",2000,"anchor","ASON_avg",108.0195578,"Anchor",1
+"82",2001,"anchor","ASON_avg",72.86564636,"Anchor",1
+"83",2002,"anchor","ASON_avg",91.11921771,"Anchor",1
+"84",2003,"anchor","ASON_avg",63.46581636,"Anchor",1
+"85",2004,"anchor","ASON_avg",90.09591821,"Anchor",1
+"86",2005,"anchor","ASON_avg",72.46241494,"Anchor",1
+"87",2006,"anchor","ASON_avg",49.8382653,"Anchor",1
+"88",2007,"anchor","ASON_avg",113.7071426,"Anchor",1
+"89",2008,"anchor","ASON_avg",68.18146254,"Anchor",1
+"90",2009,"anchor","ASON_avg",85.08724487,"Anchor",1
+"91",1980,"campbell","ASON_avg",62.91344102,"NF Campbell",1
+"92",1981,"campbell","ASON_avg",104.09785,"NF Campbell",1
+"93",1982,"campbell","ASON_avg",92.3446239,"NF Campbell",1
+"94",1983,"campbell","ASON_avg",60.04892471,"NF Campbell",1
+"95",1984,"campbell","ASON_avg",43.77043005,"NF Campbell",1
+"96",1985,"campbell","ASON_avg",52.69731205,"NF Campbell",1
+"97",1986,"campbell","ASON_avg",88.7198924,"NF Campbell",1
+"98",1987,"campbell","ASON_avg",61.95537643,"NF Campbell",1
+"99",1988,"campbell","ASON_avg",69.50376357,"NF Campbell",1
+"100",1989,"campbell","ASON_avg",89.07795678,"NF Campbell",1
+"101",1990,"campbell","ASON_avg",68.89354865,"NF Campbell",1
+"102",1991,"campbell","ASON_avg",86.76612901,"NF Campbell",1
+"103",1992,"campbell","ASON_avg",73.55913978,"NF Campbell",1
+"104",1993,"campbell","ASON_avg",107.5844085,"NF Campbell",1
+"105",1994,"campbell","ASON_avg",62.82150531,"NF Campbell",1
+"106",1995,"campbell","ASON_avg",37.3575269,"NF Campbell",1
+"107",1996,"campbell","ASON_avg",70.34677437,"NF Campbell",1
+"108",1997,"campbell","ASON_avg",67.61182789,"NF Campbell",1
+"109",1998,"campbell","ASON_avg",41.17849469,"NF Campbell",1
+"110",1999,"campbell","ASON_avg",70.87741949,"NF Campbell",1
+"111",2000,"campbell","ASON_avg",67.08494622,"NF Campbell",1
+"112",2001,"campbell","ASON_avg",50.65967723,"NF Campbell",1
+"113",2002,"campbell","ASON_avg",74.39193547,"NF Campbell",1
+"114",2003,"campbell","ASON_avg",63.40860208,"NF Campbell",1
+"115",2004,"campbell","ASON_avg",98.6505376,"NF Campbell",1
+"116",2005,"campbell","ASON_avg",72.60215067,"NF Campbell",1
+"117",2006,"campbell","ASON_avg",61.16290324,"NF Campbell",1
+"118",2007,"campbell","ASON_avg",79.08817181,"NF Campbell",1
+"119",2008,"campbell","ASON_avg",62.50645169,"NF Campbell",1
+"120",2009,"campbell","ASON_avg",65.0408605,"NF Campbell",1
+"121",1980,"chuitna","ASON_avg",98.89424052,"Chuitna",1
+"122",1981,"chuitna","ASON_avg",126.6416923,"Chuitna",1
+"123",1982,"chuitna","ASON_avg",110.8679919,"Chuitna",1
+"124",1983,"chuitna","ASON_avg",106.0930173,"Chuitna",1
+"125",1984,"chuitna","ASON_avg",72.64882763,"Chuitna",1
+"126",1985,"chuitna","ASON_avg",99.30453615,"Chuitna",1
+"127",1986,"chuitna","ASON_avg",154.4095308,"Chuitna",1
+"128",1987,"chuitna","ASON_avg",127.5502037,"Chuitna",1
+"129",1988,"chuitna","ASON_avg",88.16386312,"Chuitna",1
+"130",1989,"chuitna","ASON_avg",137.2148319,"Chuitna",1
+"131",1990,"chuitna","ASON_avg",125.680428,"Chuitna",1
+"132",1991,"chuitna","ASON_avg",82.06727817,"Chuitna",1
+"133",1992,"chuitna","ASON_avg",142.8562692,"Chuitna",1
+"134",1993,"chuitna","ASON_avg",181.0257389,"Chuitna",1
+"135",1994,"chuitna","ASON_avg",105.3606015,"Chuitna",1
+"136",1995,"chuitna","ASON_avg",67.56090729,"Chuitna",1
+"137",1996,"chuitna","ASON_avg",78.6562183,"Chuitna",1
+"138",1997,"chuitna","ASON_avg",129.3919469,"Chuitna",1
+"139",1998,"chuitna","ASON_avg",79.24745149,"Chuitna",1
+"140",1999,"chuitna","ASON_avg",110.6103463,"Chuitna",1
+"141",2000,"chuitna","ASON_avg",136.5196229,"Chuitna",1
+"142",2001,"chuitna","ASON_avg",91.66309902,"Chuitna",1
+"143",2002,"chuitna","ASON_avg",123.1371049,"Chuitna",1
+"144",2003,"chuitna","ASON_avg",96.85117199,"Chuitna",1
+"145",2004,"chuitna","ASON_avg",151.8246683,"Chuitna",1
+"146",2005,"chuitna","ASON_avg",115.2283384,"Chuitna",1
+"147",2006,"chuitna","ASON_avg",90.72935762,"Chuitna",1
+"148",2007,"chuitna","ASON_avg",146.5779819,"Chuitna",1
+"149",2008,"chuitna","ASON_avg",91.42838957,"Chuitna",1
+"150",2009,"chuitna","ASON_avg",96.65341427,"Chuitna",1
+"151",1980,"crooked","ASON_avg",72.75378795,"Crooked",1
+"152",1981,"crooked","ASON_avg",89.17361148,"Crooked",1
+"153",1982,"crooked","ASON_avg",66.88699524,"Crooked",1
+"154",1983,"crooked","ASON_avg",72.75126249,"Crooked",1
+"155",1984,"crooked","ASON_avg",54.65404074,"Crooked",1
+"156",1985,"crooked","ASON_avg",49.16603544,"Crooked",1
+"157",1986,"crooked","ASON_avg",89.16982304,"Crooked",1
+"158",1987,"crooked","ASON_avg",77.92613641,"Crooked",1
+"159",1988,"crooked","ASON_avg",56.01957086,"Crooked",1
+"160",1989,"crooked","ASON_avg",73.07007582,"Crooked",1
+"161",1990,"crooked","ASON_avg",75.81881314,"Crooked",1
+"162",1991,"crooked","ASON_avg",57.41856049,"Crooked",1
+"163",1992,"crooked","ASON_avg",77.25631318,"Crooked",1
+"164",1993,"crooked","ASON_avg",91.76515152,"Crooked",1
+"165",1994,"crooked","ASON_avg",65.0656565,"Crooked",1
+"166",1995,"crooked","ASON_avg",47.59154042,"Crooked",1
+"167",1996,"crooked","ASON_avg",43.51515139,"Crooked",1
+"168",1997,"crooked","ASON_avg",98.0984847,"Crooked",1
+"169",1998,"crooked","ASON_avg",57.71085863,"Crooked",1
+"170",1999,"crooked","ASON_avg",73.5334594,"Crooked",1
+"171",2000,"crooked","ASON_avg",81.24494992,"Crooked",1
+"172",2001,"crooked","ASON_avg",55.55681836,"Crooked",1
+"173",2002,"crooked","ASON_avg",77.4507575,"Crooked",1
+"174",2003,"crooked","ASON_avg",56.22474746,"Crooked",1
+"175",2004,"crooked","ASON_avg",79.91287859,"Crooked",1
+"176",2005,"crooked","ASON_avg",64.40972195,"Crooked",1
+"177",2006,"crooked","ASON_avg",48.61868695,"Crooked",1
+"178",2007,"crooked","ASON_avg",89.40909085,"Crooked",1
+"179",2008,"crooked","ASON_avg",58.12563138,"Crooked",1
+"180",2009,"crooked","ASON_avg",65.47790432,"Crooked",1
+"181",1980,"deep","ASON_avg",90.85190984,"Deep",1
+"182",1981,"deep","ASON_avg",111.1645834,"Deep",1
+"183",1982,"deep","ASON_avg",76.07743049,"Deep",1
+"184",1983,"deep","ASON_avg",93.1038197,"Deep",1
+"185",1984,"deep","ASON_avg",60.35190977,"Deep",1
+"186",1985,"deep","ASON_avg",52.71579872,"Deep",1
+"187",1986,"deep","ASON_avg",104.1935762,"Deep",1
+"188",1987,"deep","ASON_avg",96.47291653,"Deep",1
+"189",1988,"deep","ASON_avg",64.37899302,"Deep",1
+"190",1989,"deep","ASON_avg",80.91197941,"Deep",1
+"191",1990,"deep","ASON_avg",93.18871536,"Deep",1
+"192",1991,"deep","ASON_avg",67.22673602,"Deep",1
+"193",1992,"deep","ASON_avg",96.40486119,"Deep",1
+"194",1993,"deep","ASON_avg",104.3404509,"Deep",1
+"195",1994,"deep","ASON_avg",81.33402776,"Deep",1
+"196",1995,"deep","ASON_avg",51.9097222,"Deep",1
+"197",1996,"deep","ASON_avg",46.01041667,"Deep",1
+"198",1997,"deep","ASON_avg",127.3052085,"Deep",1
+"199",1998,"deep","ASON_avg",74.34097208,"Deep",1
+"200",1999,"deep","ASON_avg",88.44496528,"Deep",1
+"201",2000,"deep","ASON_avg",105.5567708,"Deep",1
+"202",2001,"deep","ASON_avg",70.81111109,"Deep",1
+"203",2002,"deep","ASON_avg",89.21597212,"Deep",1
+"204",2003,"deep","ASON_avg",64.48055548,"Deep",1
+"205",2004,"deep","ASON_avg",94.57465272,"Deep",1
+"206",2005,"deep","ASON_avg",73.85937481,"Deep",1
+"207",2006,"deep","ASON_avg",51.04565975,"Deep",1
+"208",2007,"deep","ASON_avg",113.2901039,"Deep",1
+"209",2008,"deep","ASON_avg",68.76545142,"Deep",1
+"210",2009,"deep","ASON_avg",83.04461803,"Deep",1
+"211",1980,"deshka","ASON_avg",53.86750753,"Deshka",1
+"212",1981,"deshka","ASON_avg",80.3107507,"Deshka",1
+"213",1982,"deshka","ASON_avg",86.12318331,"Deshka",1
+"214",1983,"deshka","ASON_avg",60.06966963,"Deshka",1
+"215",1984,"deshka","ASON_avg",45.63939946,"Deshka",1
+"216",1985,"deshka","ASON_avg",71.0292492,"Deshka",1
+"217",1986,"deshka","ASON_avg",112.2382584,"Deshka",1
+"218",1987,"deshka","ASON_avg",76.24384381,"Deshka",1
+"219",1988,"deshka","ASON_avg",65.99669666,"Deshka",1
+"220",1989,"deshka","ASON_avg",106.814174,"Deshka",1
+"221",1990,"deshka","ASON_avg",84.31111107,"Deshka",1
+"222",1991,"deshka","ASON_avg",55.37153162,"Deshka",1
+"223",1992,"deshka","ASON_avg",103.2037838,"Deshka",1
+"224",1993,"deshka","ASON_avg",142.9506906,"Deshka",1
+"225",1994,"deshka","ASON_avg",78.06648649,"Deshka",1
+"226",1995,"deshka","ASON_avg",37.42996995,"Deshka",1
+"227",1996,"deshka","ASON_avg",66.53994,"Deshka",1
+"228",1997,"deshka","ASON_avg",71.18852854,"Deshka",1
+"229",1998,"deshka","ASON_avg",44.8663664,"Deshka",1
+"230",1999,"deshka","ASON_avg",59.96654663,"Deshka",1
+"231",2000,"deshka","ASON_avg",92.34180197,"Deshka",1
+"232",2001,"deshka","ASON_avg",60.529009,"Deshka",1
+"233",2002,"deshka","ASON_avg",79.48354352,"Deshka",1
+"234",2003,"deshka","ASON_avg",70.83741737,"Deshka",1
+"235",2004,"deshka","ASON_avg",115.9700903,"Deshka",1
+"236",2005,"deshka","ASON_avg",83.68174166,"Deshka",1
+"237",2006,"deshka","ASON_avg",66.32036038,"Deshka",1
+"238",2007,"deshka","ASON_avg",77.01057054,"Deshka",1
+"239",2008,"deshka","ASON_avg",64.16054059,"Deshka",1
+"240",2009,"deshka","ASON_avg",56.24336335,"Deshka",1
+"241",1980,"kenai_early","ASON_avg",131.898459,"Kenai_early",NA
+"242",1981,"kenai_early","ASON_avg",168.392717,"Kenai_early",NA
+"243",1982,"kenai_early","ASON_avg",128.9847387,"Kenai_early",NA
+"244",1983,"kenai_early","ASON_avg",120.5093684,"Kenai_early",NA
+"245",1984,"kenai_early","ASON_avg",87.0439709,"Kenai_early",NA
+"246",1985,"kenai_early","ASON_avg",75.53339389,"Kenai_early",NA
+"247",1986,"kenai_early","ASON_avg",154.1681779,"Kenai_early",NA
+"248",1987,"kenai_early","ASON_avg",137.3170141,"Kenai_early",NA
+"249",1988,"kenai_early","ASON_avg",103.9824719,"Kenai_early",NA
+"250",1989,"kenai_early","ASON_avg",136.5407978,"Kenai_early",NA
+"251",1990,"kenai_early","ASON_avg",126.6976432,"Kenai_early",NA
+"252",1991,"kenai_early","ASON_avg",120.9218799,"Kenai_early",NA
+"253",1992,"kenai_early","ASON_avg",137.4678153,"Kenai_early",NA
+"254",1993,"kenai_early","ASON_avg",158.9253556,"Kenai_early",NA
+"255",1994,"kenai_early","ASON_avg",115.868389,"Kenai_early",NA
+"256",1995,"kenai_early","ASON_avg",74.8738289,"Kenai_early",NA
+"257",1996,"kenai_early","ASON_avg",82.62224253,"Kenai_early",NA
+"258",1997,"kenai_early","ASON_avg",159.427621,"Kenai_early",NA
+"259",1998,"kenai_early","ASON_avg",93.2231794,"Kenai_early",NA
+"260",1999,"kenai_early","ASON_avg",131.4285282,"Kenai_early",NA
+"261",2000,"kenai_early","ASON_avg",137.703989,"Kenai_early",NA
+"262",2001,"kenai_early","ASON_avg",97.99456038,"Kenai_early",NA
+"263",2002,"kenai_early","ASON_avg",133.7881536,"Kenai_early",NA
+"264",2003,"kenai_early","ASON_avg",105.1711997,"Kenai_early",NA
+"265",2004,"kenai_early","ASON_avg",159.3939255,"Kenai_early",NA
+"266",2005,"kenai_early","ASON_avg",119.3052285,"Kenai_early",NA
+"267",2006,"kenai_early","ASON_avg",92.43729223,"Kenai_early",NA
+"268",2007,"kenai_early","ASON_avg",161.6610759,"Kenai_early",NA
+"269",2008,"kenai_early","ASON_avg",112.2601992,"Kenai_early",NA
+"270",2009,"kenai_early","ASON_avg",118.3251737,"Kenai_early",NA
+"271",1980,"kenai_late","ASON_avg",141.6257946,"Kenai_late",1
+"272",1981,"kenai_late","ASON_avg",181.4522481,"Kenai_late",1
+"273",1982,"kenai_late","ASON_avg",138.518314,"Kenai_late",1
+"274",1983,"kenai_late","ASON_avg",124.0820736,"Kenai_late",1
+"275",1984,"kenai_late","ASON_avg",90.90833328,"Kenai_late",1
+"276",1985,"kenai_late","ASON_avg",76.65831402,"Kenai_late",1
+"277",1986,"kenai_late","ASON_avg",162.4617636,"Kenai_late",1
+"278",1987,"kenai_late","ASON_avg",146.235407,"Kenai_late",1
+"279",1988,"kenai_late","ASON_avg",111.9683721,"Kenai_late",1
+"280",1989,"kenai_late","ASON_avg",151.318314,"Kenai_late",1
+"281",1990,"kenai_late","ASON_avg",134.0291279,"Kenai_late",1
+"282",1991,"kenai_late","ASON_avg",136.8454457,"Kenai_late",1
+"283",1992,"kenai_late","ASON_avg",154.8341474,"Kenai_late",1
+"284",1993,"kenai_late","ASON_avg",174.0459691,"Kenai_late",1
+"285",1994,"kenai_late","ASON_avg",125.7027714,"Kenai_late",1
+"286",1995,"kenai_late","ASON_avg",76.21637603,"Kenai_late",1
+"287",1996,"kenai_late","ASON_avg",87.44903101,"Kenai_late",1
+"288",1997,"kenai_late","ASON_avg",164.054535,"Kenai_late",1
+"289",1998,"kenai_late","ASON_avg",94.65501937,"Kenai_late",1
+"290",1999,"kenai_late","ASON_avg",140.0027713,"Kenai_late",1
+"291",2000,"kenai_late","ASON_avg",146.159651,"Kenai_late",1
+"292",2001,"kenai_late","ASON_avg",106.0995542,"Kenai_late",1
+"293",2002,"kenai_late","ASON_avg",139.9622093,"Kenai_late",1
+"294",2003,"kenai_late","ASON_avg",115.4896512,"Kenai_late",1
+"295",2004,"kenai_late","ASON_avg",186.5023451,"Kenai_late",1
+"296",2005,"kenai_late","ASON_avg",131.9743994,"Kenai_late",1
+"297",2006,"kenai_late","ASON_avg",102.3914923,"Kenai_late",1
+"298",2007,"kenai_late","ASON_avg",158.7156783,"Kenai_late",1
+"299",2008,"kenai_late","ASON_avg",124.5120543,"Kenai_late",1
+"300",2009,"kenai_late","ASON_avg",126.9929264,"Kenai_late",1
+"301",1980,"lewis","ASON_avg",85.27890015,"Lewis",NA
+"302",1981,"lewis","ASON_avg",111.9118967,"Lewis",NA
+"303",1982,"lewis","ASON_avg",105.6694729,"Lewis",NA
+"304",1983,"lewis","ASON_avg",90.65768787,"Lewis",NA
+"305",1984,"lewis","ASON_avg",65.60718283,"Lewis",NA
+"306",1985,"lewis","ASON_avg",88.46801357,"Lewis",NA
+"307",1986,"lewis","ASON_avg",146.1526374,"Lewis",NA
+"308",1987,"lewis","ASON_avg",110.0746354,"Lewis",NA
+"309",1988,"lewis","ASON_avg",84.14870956,"Lewis",NA
+"310",1989,"lewis","ASON_avg",128.5409651,"Lewis",NA
+"311",1990,"lewis","ASON_avg",111.6554431,"Lewis",NA
+"312",1991,"lewis","ASON_avg",73.18406287,"Lewis",NA
+"313",1992,"lewis","ASON_avg",134.5914703,"Lewis",NA
+"314",1993,"lewis","ASON_avg",177.3759819,"Lewis",NA
+"315",1994,"lewis","ASON_avg",100.5336706,"Lewis",NA
+"316",1995,"lewis","ASON_avg",57.32772152,"Lewis",NA
+"317",1996,"lewis","ASON_avg",75.79685734,"Lewis",NA
+"318",1997,"lewis","ASON_avg",113.0774405,"Lewis",NA
+"319",1998,"lewis","ASON_avg",60.01346821,"Lewis",NA
+"320",1999,"lewis","ASON_avg",90.20314301,"Lewis",NA
+"321",2000,"lewis","ASON_avg",125.0959594,"Lewis",NA
+"322",2001,"lewis","ASON_avg",81.2884401,"Lewis",NA
+"323",2002,"lewis","ASON_avg",110.6661058,"Lewis",NA
+"324",2003,"lewis","ASON_avg",93.29461359,"Lewis",NA
+"325",2004,"lewis","ASON_avg",151.8439955,"Lewis",NA
+"326",2005,"lewis","ASON_avg",105.1649835,"Lewis",NA
+"327",2006,"lewis","ASON_avg",80.15656539,"Lewis",NA
+"328",2007,"lewis","ASON_avg",125.0589226,"Lewis",NA
+"329",2008,"lewis","ASON_avg",84.71492753,"Lewis",NA
+"330",2009,"lewis","ASON_avg",82.15432096,"Lewis",NA
+"331",1980,"little_susitna","ASON_avg",54.85104224,"Little Susitna",1
+"332",1981,"little_susitna","ASON_avg",85.40232411,"Little Susitna",1
+"333",1982,"little_susitna","ASON_avg",77.2245896,"Little Susitna",1
+"334",1983,"little_susitna","ASON_avg",57.23012358,"Little Susitna",1
+"335",1984,"little_susitna","ASON_avg",39.04639363,"Little Susitna",1
+"336",1985,"little_susitna","ASON_avg",56.21905555,"Little Susitna",1
+"337",1986,"little_susitna","ASON_avg",84.08623873,"Little Susitna",1
+"338",1987,"little_susitna","ASON_avg",61.5255488,"Little Susitna",1
+"339",1988,"little_susitna","ASON_avg",60.61437012,"Little Susitna",1
+"340",1989,"little_susitna","ASON_avg",84.23390531,"Little Susitna",1
+"341",1990,"little_susitna","ASON_avg",66.98016986,"Little Susitna",1
+"342",1991,"little_susitna","ASON_avg",65.14932666,"Little Susitna",1
+"343",1992,"little_susitna","ASON_avg",76.02905372,"Little Susitna",1
+"344",1993,"little_susitna","ASON_avg",113.284357,"Little Susitna",1
+"345",1994,"little_susitna","ASON_avg",61.73602657,"Little Susitna",1
+"346",1995,"little_susitna","ASON_avg",33.86487738,"Little Susitna",1
+"347",1996,"little_susitna","ASON_avg",61.55838415,"Little Susitna",1
+"348",1997,"little_susitna","ASON_avg",62.59952032,"Little Susitna",1
+"349",1998,"little_susitna","ASON_avg",38.99566498,"Little Susitna",1
+"350",1999,"little_susitna","ASON_avg",59.42095554,"Little Susitna",1
+"351",2000,"little_susitna","ASON_avg",69.56954455,"Little Susitna",1
+"352",2001,"little_susitna","ASON_avg",47.1767201,"Little Susitna",1
+"353",2002,"little_susitna","ASON_avg",70.36727545,"Little Susitna",1
+"354",2003,"little_susitna","ASON_avg",60.37428516,"Little Susitna",1
+"355",2004,"little_susitna","ASON_avg",90.87585314,"Little Susitna",1
+"356",2005,"little_susitna","ASON_avg",67.19839515,"Little Susitna",1
+"357",2006,"little_susitna","ASON_avg",56.84089651,"Little Susitna",1
+"358",2007,"little_susitna","ASON_avg",72.41071758,"Little Susitna",1
+"359",2008,"little_susitna","ASON_avg",55.95775684,"Little Susitna",1
+"360",2009,"little_susitna","ASON_avg",55.49963101,"Little Susitna",1
+"361",1980,"little_willow","ASON_avg",61.66595264,"Little Willow",1
+"362",1981,"little_willow","ASON_avg",98.39190495,"Little Willow",1
+"363",1982,"little_willow","ASON_avg",92.66619042,"Little Willow",1
+"364",1983,"little_willow","ASON_avg",66.51619049,"Little Willow",1
+"365",1984,"little_willow","ASON_avg",44.28619036,"Little Willow",1
+"366",1985,"little_willow","ASON_avg",68.97595232,"Little Willow",1
+"367",1986,"little_willow","ASON_avg",102.635238,"Little Willow",1
+"368",1987,"little_willow","ASON_avg",75.93499998,"Little Willow",1
+"369",1988,"little_willow","ASON_avg",71.52404742,"Little Willow",1
+"370",1989,"little_willow","ASON_avg",103.545952,"Little Willow",1
+"371",1990,"little_willow","ASON_avg",83.1964285,"Little Willow",1
+"372",1991,"little_willow","ASON_avg",72.43523821,"Little Willow",1
+"373",1992,"little_willow","ASON_avg",100.7211906,"Little Willow",1
+"374",1993,"little_willow","ASON_avg",145.5966669,"Little Willow",1
+"375",1994,"little_willow","ASON_avg",79.59833342,"Little Willow",1
+"376",1995,"little_willow","ASON_avg",38.17357143,"Little Willow",1
+"377",1996,"little_willow","ASON_avg",74.19880953,"Little Willow",1
+"378",1997,"little_willow","ASON_avg",73.99309527,"Little Willow",1
+"379",1998,"little_willow","ASON_avg",46.64523821,"Little Willow",1
+"380",1999,"little_willow","ASON_avg",65.06357118,"Little Willow",1
+"381",2000,"little_willow","ASON_avg",89.95309526,"Little Willow",1
+"382",2001,"little_willow","ASON_avg",59.24023799,"Little Willow",1
+"383",2002,"little_willow","ASON_avg",83.61904735,"Little Willow",1
+"384",2003,"little_willow","ASON_avg",74.26595223,"Little Willow",1
+"385",2004,"little_willow","ASON_avg",112.7750001,"Little Willow",1
+"386",2005,"little_willow","ASON_avg",79.7307143,"Little Willow",1
+"387",2006,"little_willow","ASON_avg",65.23690475,"Little Willow",1
+"388",2007,"little_willow","ASON_avg",84.45952391,"Little Willow",1
+"389",2008,"little_willow","ASON_avg",67.28714296,"Little Willow",1
+"390",2009,"little_willow","ASON_avg",66.84214281,"Little Willow",1
+"391",1980,"montana","ASON_avg",66.97134328,"Montana",1
+"392",1981,"montana","ASON_avg",95.17881705,"Montana",1
+"393",1982,"montana","ASON_avg",95.63778065,"Montana",1
+"394",1983,"montana","ASON_avg",80.17812942,"Montana",1
+"395",1984,"montana","ASON_avg",54.07794591,"Montana",1
+"396",1985,"montana","ASON_avg",83.3739112,"Montana",1
+"397",1986,"montana","ASON_avg",107.350298,"Montana",1
+"398",1987,"montana","ASON_avg",79.38468589,"Montana",1
+"399",1988,"montana","ASON_avg",77.72466768,"Montana",1
+"400",1989,"montana","ASON_avg",114.9082989,"Montana",1
+"401",1990,"montana","ASON_avg",88.40508948,"Montana",1
+"402",1991,"montana","ASON_avg",66.42411721,"Montana",1
+"403",1992,"montana","ASON_avg",101.7689133,"Montana",1
+"404",1993,"montana","ASON_avg",156.3759744,"Montana",1
+"405",1994,"montana","ASON_avg",78.52453006,"Montana",1
+"406",1995,"montana","ASON_avg",45.15474562,"Montana",1
+"407",1996,"montana","ASON_avg",75.78771184,"Montana",1
+"408",1997,"montana","ASON_avg",77.90852827,"Montana",1
+"409",1998,"montana","ASON_avg",58.11233384,"Montana",1
+"410",1999,"montana","ASON_avg",70.94108203,"Montana",1
+"411",2000,"montana","ASON_avg",88.68615323,"Montana",1
+"412",2001,"montana","ASON_avg",59.32691418,"Montana",1
+"413",2002,"montana","ASON_avg",96.36244833,"Montana",1
+"414",2003,"montana","ASON_avg",80.26593295,"Montana",1
+"415",2004,"montana","ASON_avg",111.3427325,"Montana",1
+"416",2005,"montana","ASON_avg",87.06694186,"Montana",1
+"417",2006,"montana","ASON_avg",84.45942233,"Montana",1
+"418",2007,"montana","ASON_avg",84.7943605,"Montana",1
+"419",2008,"montana","ASON_avg",70.0848235,"Montana",1
+"420",2009,"montana","ASON_avg",65.32874811,"Montana",1
+"421",1980,"ninilchik","ASON_avg",77.16608301,"Ninilchik",1
+"422",1981,"ninilchik","ASON_avg",93.59603027,"Ninilchik",1
+"423",1982,"ninilchik","ASON_avg",65.98978404,"Ninilchik",1
+"424",1983,"ninilchik","ASON_avg",78.95008757,"Ninilchik",1
+"425",1984,"ninilchik","ASON_avg",54.86835953,"Ninilchik",1
+"426",1985,"ninilchik","ASON_avg",49.64915358,"Ninilchik",1
+"427",1986,"ninilchik","ASON_avg",91.97168734,"Ninilchik",1
+"428",1987,"ninilchik","ASON_avg",82.69819041,"Ninilchik",1
+"429",1988,"ninilchik","ASON_avg",56.2320491,"Ninilchik",1
+"430",1989,"ninilchik","ASON_avg",72.93140698,"Ninilchik",1
+"431",1990,"ninilchik","ASON_avg",80.74226505,"Ninilchik",1
+"432",1991,"ninilchik","ASON_avg",56.8091069,"Ninilchik",1
+"433",1992,"ninilchik","ASON_avg",84.18885003,"Ninilchik",1
+"434",1993,"ninilchik","ASON_avg",94.35113841,"Ninilchik",1
+"435",1994,"ninilchik","ASON_avg",69.53765328,"Ninilchik",1
+"436",1995,"ninilchik","ASON_avg",47.46001167,"Ninilchik",1
+"437",1996,"ninilchik","ASON_avg",41.40542919,"Ninilchik",1
+"438",1997,"ninilchik","ASON_avg",107.6030355,"Ninilchik",1
+"439",1998,"ninilchik","ASON_avg",63.16783421,"Ninilchik",1
+"440",1999,"ninilchik","ASON_avg",76.26007013,"Ninilchik",1
+"441",2000,"ninilchik","ASON_avg",89.86544081,"Ninilchik",1
+"442",2001,"ninilchik","ASON_avg",60.02189153,"Ninilchik",1
+"443",2002,"ninilchik","ASON_avg",78.87769979,"Ninilchik",1
+"444",2003,"ninilchik","ASON_avg",56.94454178,"Ninilchik",1
+"445",2004,"ninilchik","ASON_avg",81.93607682,"Ninilchik",1
+"446",2005,"ninilchik","ASON_avg",65.2953884,"Ninilchik",1
+"447",2006,"ninilchik","ASON_avg",47.44979575,"Ninilchik",1
+"448",2007,"ninilchik","ASON_avg",95.61237573,"Ninilchik",1
+"449",2008,"ninilchik","ASON_avg",59.25890247,"Ninilchik",1
+"450",2009,"ninilchik","ASON_avg",70.22591957,"Ninilchik",1
+"451",1980,"theodore","ASON_avg",82.46363617,"Theodore",1
+"452",1981,"theodore","ASON_avg",108.6103031,"Theodore",1
+"453",1982,"theodore","ASON_avg",102.93,"Theodore",1
+"454",1983,"theodore","ASON_avg",89.34545485,"Theodore",1
+"455",1984,"theodore","ASON_avg",64.54333323,"Theodore",1
+"456",1985,"theodore","ASON_avg",89.49393949,"Theodore",1
+"457",1986,"theodore","ASON_avg",141.3121213,"Theodore",1
+"458",1987,"theodore","ASON_avg",107.8272731,"Theodore",1
+"459",1988,"theodore","ASON_avg",82.02363663,"Theodore",1
+"460",1989,"theodore","ASON_avg",127.017879,"Theodore",1
+"461",1990,"theodore","ASON_avg",109.1106061,"Theodore",1
+"462",1991,"theodore","ASON_avg",71.96151537,"Theodore",1
+"463",1992,"theodore","ASON_avg",127.6612118,"Theodore",1
+"464",1993,"theodore","ASON_avg",171.2742421,"Theodore",1
+"465",1994,"theodore","ASON_avg",94.82272734,"Theodore",1
+"466",1995,"theodore","ASON_avg",57.69757595,"Theodore",1
+"467",1996,"theodore","ASON_avg",74.53484822,"Theodore",1
+"468",1997,"theodore","ASON_avg",107.879394,"Theodore",1
+"469",1998,"theodore","ASON_avg",60.84757589,"Theodore",1
+"470",1999,"theodore","ASON_avg",91.41666643,"Theodore",1
+"471",2000,"theodore","ASON_avg",118.9133331,"Theodore",1
+"472",2001,"theodore","ASON_avg",78.55212157,"Theodore",1
+"473",2002,"theodore","ASON_avg",109.0521214,"Theodore",1
+"474",2003,"theodore","ASON_avg",90.23454576,"Theodore",1
+"475",2004,"theodore","ASON_avg",144.7336368,"Theodore",1
+"476",2005,"theodore","ASON_avg",103.9951515,"Theodore",1
+"477",2006,"theodore","ASON_avg",82.37636369,"Theodore",1
+"478",2007,"theodore","ASON_avg",120.81303,"Theodore",1
+"479",2008,"theodore","ASON_avg",82.35636344,"Theodore",1
+"480",2009,"theodore","ASON_avg",80.01030307,"Theodore",1
+"481",1980,"willow","ASON_avg",70.13022704,"Willow",1
+"482",1981,"willow","ASON_avg",115.03181,"Willow",1
+"483",1982,"willow","ASON_avg",102.6052867,"Willow",1
+"484",1983,"willow","ASON_avg",74.42562723,"Willow",1
+"485",1984,"willow","ASON_avg",47.72550771,"Willow",1
+"486",1985,"willow","ASON_avg",74.86663672,"Willow",1
+"487",1986,"willow","ASON_avg",112.475657,"Willow",1
+"488",1987,"willow","ASON_avg",85.12156504,"Willow",1
+"489",1988,"willow","ASON_avg",79.84109912,"Willow",1
+"490",1989,"willow","ASON_avg",113.5928915,"Willow",1
+"491",1990,"willow","ASON_avg",92.59259274,"Willow",1
+"492",1991,"willow","ASON_avg",85.31586038,"Willow",1
+"493",1992,"willow","ASON_avg",109.1738353,"Willow",1
+"494",1993,"willow","ASON_avg",160.7414876,"Willow",1
+"495",1994,"willow","ASON_avg",88.96923562,"Willow",1
+"496",1995,"willow","ASON_avg",41.93936674,"Willow",1
+"497",1996,"willow","ASON_avg",84.19444449,"Willow",1
+"498",1997,"willow","ASON_avg",83.2976405,"Willow",1
+"499",1998,"willow","ASON_avg",52.31197732,"Willow",1
+"500",1999,"willow","ASON_avg",74.66606935,"Willow",1
+"501",2000,"willow","ASON_avg",100.0225509,"Willow",1
+"502",2001,"willow","ASON_avg",66.10722813,"Willow",1
+"503",2002,"willow","ASON_avg",91.91203712,"Willow",1
+"504",2003,"willow","ASON_avg",82.13127245,"Willow",1
+"505",2004,"willow","ASON_avg",125.9964159,"Willow",1
+"506",2005,"willow","ASON_avg",88.6164877,"Willow",1
+"507",2006,"willow","ASON_avg",71.2949522,"Willow",1
+"508",2007,"willow","ASON_avg",96.64486315,"Willow",1
+"509",2008,"willow","ASON_avg",75.59617669,"Willow",1
+"510",2009,"willow","ASON_avg",76.61663682,"Willow",1
+"511",1980,"EF_chulitna","ASON_max",109.677792,"EF Chulitna",1
+"512",1981,"EF_chulitna","ASON_max",158.8344031,"EF Chulitna",1
+"513",1982,"EF_chulitna","ASON_max",128.1463415,"EF Chulitna",1
+"514",1983,"EF_chulitna","ASON_max",166.5404365,"EF Chulitna",1
+"515",1984,"EF_chulitna","ASON_max",128.4762516,"EF Chulitna",1
+"516",1985,"EF_chulitna","ASON_max",162.2439024,"EF Chulitna",1
+"517",1986,"EF_chulitna","ASON_max",157.5301669,"EF Chulitna",1
+"518",1987,"EF_chulitna","ASON_max",79.45186136,"EF Chulitna",1
+"519",1988,"EF_chulitna","ASON_max",84.12323492,"EF Chulitna",1
+"520",1989,"EF_chulitna","ASON_max",123.6161746,"EF Chulitna",1
+"521",1990,"EF_chulitna","ASON_max",130.9358152,"EF Chulitna",1
+"522",1991,"EF_chulitna","ASON_max",74.90757381,"EF Chulitna",1
+"523",1992,"EF_chulitna","ASON_max",129.279846,"EF Chulitna",1
+"524",1993,"EF_chulitna","ASON_max",191.2785623,"EF Chulitna",1
+"525",1994,"EF_chulitna","ASON_max",109.6829268,"EF Chulitna",1
+"526",1995,"EF_chulitna","ASON_max",84.62772786,"EF Chulitna",1
+"527",1996,"EF_chulitna","ASON_max",123.8896021,"EF Chulitna",1
+"528",1997,"EF_chulitna","ASON_max",134.703466,"EF Chulitna",1
+"529",1998,"EF_chulitna","ASON_max",132.6713736,"EF Chulitna",1
+"530",1999,"EF_chulitna","ASON_max",108.7984596,"EF Chulitna",1
+"531",2000,"EF_chulitna","ASON_max",131.071887,"EF Chulitna",1
+"532",2001,"EF_chulitna","ASON_max",76.17971759,"EF Chulitna",1
+"533",2002,"EF_chulitna","ASON_max",138.6341463,"EF Chulitna",1
+"534",2003,"EF_chulitna","ASON_max",95.84595635,"EF Chulitna",1
+"535",2004,"EF_chulitna","ASON_max",131.1578947,"EF Chulitna",1
+"536",2005,"EF_chulitna","ASON_max",139.0320924,"EF Chulitna",1
+"537",2006,"EF_chulitna","ASON_max",176.8806162,"EF Chulitna",1
+"538",2007,"EF_chulitna","ASON_max",122.7766367,"EF Chulitna",1
+"539",2008,"EF_chulitna","ASON_max",86.1720154,"EF Chulitna",1
+"540",2009,"EF_chulitna","ASON_max",113.6097561,"EF Chulitna",1
+"541",1980,"alexander","ASON_max",73.76993007,"Alexander",1
+"542",1981,"alexander","ASON_max",129.1440559,"Alexander",1
+"543",1982,"alexander","ASON_max",176.0293706,"Alexander",1
+"544",1983,"alexander","ASON_max",97.4993007,"Alexander",1
+"545",1984,"alexander","ASON_max",123.2111888,"Alexander",1
+"546",1985,"alexander","ASON_max",173.241958,"Alexander",1
+"547",1986,"alexander","ASON_max",127.0181818,"Alexander",1
+"548",1987,"alexander","ASON_max",127.7391608,"Alexander",1
+"549",1988,"alexander","ASON_max",96.2979021,"Alexander",1
+"550",1989,"alexander","ASON_max",143.265035,"Alexander",1
+"551",1990,"alexander","ASON_max",135.6174825,"Alexander",1
+"552",1991,"alexander","ASON_max",91.18321678,"Alexander",1
+"553",1992,"alexander","ASON_max",120.9146853,"Alexander",1
+"554",1993,"alexander","ASON_max",209.5713287,"Alexander",1
+"555",1994,"alexander","ASON_max",84.18741259,"Alexander",1
+"556",1995,"alexander","ASON_max",107.2300699,"Alexander",1
+"557",1996,"alexander","ASON_max",91.32307692,"Alexander",1
+"558",1997,"alexander","ASON_max",110.8342657,"Alexander",1
+"559",1998,"alexander","ASON_max",87.05034965,"Alexander",1
+"560",1999,"alexander","ASON_max",98.33846154,"Alexander",1
+"561",2000,"alexander","ASON_max",111.8958042,"Alexander",1
+"562",2001,"alexander","ASON_max",61.13916084,"Alexander",1
+"563",2002,"alexander","ASON_max",137.3874126,"Alexander",1
+"564",2003,"alexander","ASON_max",78.94475525,"Alexander",1
+"565",2004,"alexander","ASON_max",149.2153846,"Alexander",1
+"566",2005,"alexander","ASON_max",195.227972,"Alexander",1
+"567",2006,"alexander","ASON_max",165.413986,"Alexander",1
+"568",2007,"alexander","ASON_max",147.5405594,"Alexander",1
+"569",2008,"alexander","ASON_max",96.19090909,"Alexander",1
+"570",2009,"alexander","ASON_max",68.09020979,"Alexander",1
+"571",1980,"anchor","ASON_max",97.4877551,"Anchor",1
+"572",1981,"anchor","ASON_max",140.1214286,"Anchor",1
+"573",1982,"anchor","ASON_max",196.5040816,"Anchor",1
+"574",1983,"anchor","ASON_max",127.8765306,"Anchor",1
+"575",1984,"anchor","ASON_max",139.2826531,"Anchor",1
+"576",1985,"anchor","ASON_max",122.6510204,"Anchor",1
+"577",1986,"anchor","ASON_max",156.2112245,"Anchor",1
+"578",1987,"anchor","ASON_max",189.1622449,"Anchor",1
+"579",1988,"anchor","ASON_max",88.88367347,"Anchor",1
+"580",1989,"anchor","ASON_max",158.5540816,"Anchor",1
+"581",1990,"anchor","ASON_max",159.8020408,"Anchor",1
+"582",1991,"anchor","ASON_max",126.7846939,"Anchor",1
+"583",1992,"anchor","ASON_max",142.2846939,"Anchor",1
+"584",1993,"anchor","ASON_max",160.4959184,"Anchor",1
+"585",1994,"anchor","ASON_max",122.0683674,"Anchor",1
+"586",1995,"anchor","ASON_max",151.9489796,"Anchor",1
+"587",1996,"anchor","ASON_max",118.0204082,"Anchor",1
+"588",1997,"anchor","ASON_max",176.5071429,"Anchor",1
+"589",1998,"anchor","ASON_max",119.6795918,"Anchor",1
+"590",1999,"anchor","ASON_max",153.0132653,"Anchor",1
+"591",2000,"anchor","ASON_max",153.8214286,"Anchor",1
+"592",2001,"anchor","ASON_max",85.83367347,"Anchor",1
+"593",2002,"anchor","ASON_max",161.0591837,"Anchor",1
+"594",2003,"anchor","ASON_max",88.23469388,"Anchor",1
+"595",2004,"anchor","ASON_max",178.9459184,"Anchor",1
+"596",2005,"anchor","ASON_max",196.0071429,"Anchor",1
+"597",2006,"anchor","ASON_max",110.8,"Anchor",1
+"598",2007,"anchor","ASON_max",149.7877551,"Anchor",1
+"599",2008,"anchor","ASON_max",137.0479592,"Anchor",1
+"600",2009,"anchor","ASON_max",105.0061225,"Anchor",1
+"601",1980,"campbell","ASON_max",97.07096774,"NF Campbell",1
+"602",1981,"campbell","ASON_max",159.3,"NF Campbell",1
+"603",1982,"campbell","ASON_max",156.2193548,"NF Campbell",1
+"604",1983,"campbell","ASON_max",102.7193548,"NF Campbell",1
+"605",1984,"campbell","ASON_max",98.13870968,"NF Campbell",1
+"606",1985,"campbell","ASON_max",114.5483871,"NF Campbell",1
+"607",1986,"campbell","ASON_max",105.9967742,"NF Campbell",1
+"608",1987,"campbell","ASON_max",81.37419355,"NF Campbell",1
+"609",1988,"campbell","ASON_max",111.6387097,"NF Campbell",1
+"610",1989,"campbell","ASON_max",134.9870968,"NF Campbell",1
+"611",1990,"campbell","ASON_max",119.6032258,"NF Campbell",1
+"612",1991,"campbell","ASON_max",112.8935484,"NF Campbell",1
+"613",1992,"campbell","ASON_max",86.51935484,"NF Campbell",1
+"614",1993,"campbell","ASON_max",148.3032258,"NF Campbell",1
+"615",1994,"campbell","ASON_max",78.20967742,"NF Campbell",1
+"616",1995,"campbell","ASON_max",101.0290323,"NF Campbell",1
+"617",1996,"campbell","ASON_max",79.21290323,"NF Campbell",1
+"618",1997,"campbell","ASON_max",110.0967742,"NF Campbell",1
+"619",1998,"campbell","ASON_max",102.1193548,"NF Campbell",1
+"620",1999,"campbell","ASON_max",121.1580645,"NF Campbell",1
+"621",2000,"campbell","ASON_max",95.57096774,"NF Campbell",1
+"622",2001,"campbell","ASON_max",58.54516129,"NF Campbell",1
+"623",2002,"campbell","ASON_max",125.183871,"NF Campbell",1
+"624",2003,"campbell","ASON_max",77.69354839,"NF Campbell",1
+"625",2004,"campbell","ASON_max",134.7516129,"NF Campbell",1
+"626",2005,"campbell","ASON_max",137.1774194,"NF Campbell",1
+"627",2006,"campbell","ASON_max",159.8387097,"NF Campbell",1
+"628",2007,"campbell","ASON_max",147.6387097,"NF Campbell",1
+"629",2008,"campbell","ASON_max",112.2580645,"NF Campbell",1
+"630",2009,"campbell","ASON_max",92.3,"NF Campbell",1
+"631",1980,"chuitna","ASON_max",115.5428135,"Chuitna",1
+"632",1981,"chuitna","ASON_max",171.5474006,"Chuitna",1
+"633",1982,"chuitna","ASON_max",273.5351682,"Chuitna",1
+"634",1983,"chuitna","ASON_max",128.117737,"Chuitna",1
+"635",1984,"chuitna","ASON_max",171.3761468,"Chuitna",1
+"636",1985,"chuitna","ASON_max",263.3012232,"Chuitna",1
+"637",1986,"chuitna","ASON_max",216.4831804,"Chuitna",1
+"638",1987,"chuitna","ASON_max",231.6605505,"Chuitna",1
+"639",1988,"chuitna","ASON_max",137.0214067,"Chuitna",1
+"640",1989,"chuitna","ASON_max",232.2033639,"Chuitna",1
+"641",1990,"chuitna","ASON_max",225.2828746,"Chuitna",1
+"642",1991,"chuitna","ASON_max",153.0550459,"Chuitna",1
+"643",1992,"chuitna","ASON_max",192.2538226,"Chuitna",1
+"644",1993,"chuitna","ASON_max",328.4831804,"Chuitna",1
+"645",1994,"chuitna","ASON_max",125.8394495,"Chuitna",1
+"646",1995,"chuitna","ASON_max",179.8975535,"Chuitna",1
+"647",1996,"chuitna","ASON_max",138.9189603,"Chuitna",1
+"648",1997,"chuitna","ASON_max",160.2431193,"Chuitna",1
+"649",1998,"chuitna","ASON_max",123.3180428,"Chuitna",1
+"650",1999,"chuitna","ASON_max",175.2660551,"Chuitna",1
+"651",2000,"chuitna","ASON_max",173.380734,"Chuitna",1
+"652",2001,"chuitna","ASON_max",98.0030581,"Chuitna",1
+"653",2002,"chuitna","ASON_max",230.3623853,"Chuitna",1
+"654",2003,"chuitna","ASON_max",114.0718654,"Chuitna",1
+"655",2004,"chuitna","ASON_max",244.8134557,"Chuitna",1
+"656",2005,"chuitna","ASON_max",307.2262997,"Chuitna",1
+"657",2006,"chuitna","ASON_max",211.3195719,"Chuitna",1
+"658",2007,"chuitna","ASON_max",229.3012232,"Chuitna",1
+"659",2008,"chuitna","ASON_max",163.9067278,"Chuitna",1
+"660",2009,"chuitna","ASON_max",114.6819572,"Chuitna",1
+"661",1980,"crooked","ASON_max",88.65909091,"Crooked",1
+"662",1981,"crooked","ASON_max",123.4356061,"Crooked",1
+"663",1982,"crooked","ASON_max",186.3143939,"Crooked",1
+"664",1983,"crooked","ASON_max",76.35606061,"Crooked",1
+"665",1984,"crooked","ASON_max",125.9318182,"Crooked",1
+"666",1985,"crooked","ASON_max",126.25,"Crooked",1
+"667",1986,"crooked","ASON_max",141.8257576,"Crooked",1
+"668",1987,"crooked","ASON_max",164.0151515,"Crooked",1
+"669",1988,"crooked","ASON_max",101.0606061,"Crooked",1
+"670",1989,"crooked","ASON_max",149.4280303,"Crooked",1
+"671",1990,"crooked","ASON_max",147.9962121,"Crooked",1
+"672",1991,"crooked","ASON_max",117.5227273,"Crooked",1
+"673",1992,"crooked","ASON_max",101.7007576,"Crooked",1
+"674",1993,"crooked","ASON_max",162.7272727,"Crooked",1
+"675",1994,"crooked","ASON_max",105.1287879,"Crooked",1
+"676",1995,"crooked","ASON_max",138.0454546,"Crooked",1
+"677",1996,"crooked","ASON_max",105.1325758,"Crooked",1
+"678",1997,"crooked","ASON_max",147.1212121,"Crooked",1
+"679",1998,"crooked","ASON_max",91.42424242,"Crooked",1
+"680",1999,"crooked","ASON_max",136.6401515,"Crooked",1
+"681",2000,"crooked","ASON_max",106.530303,"Crooked",1
+"682",2001,"crooked","ASON_max",60.08712121,"Crooked",1
+"683",2002,"crooked","ASON_max",150.9431818,"Crooked",1
+"684",2003,"crooked","ASON_max",81.97348485,"Crooked",1
+"685",2004,"crooked","ASON_max",166.3863636,"Crooked",1
+"686",2005,"crooked","ASON_max",184.1666667,"Crooked",1
+"687",2006,"crooked","ASON_max",133.5113636,"Crooked",1
+"688",2007,"crooked","ASON_max",133.1931818,"Crooked",1
+"689",2008,"crooked","ASON_max",125.1818182,"Crooked",1
+"690",2009,"crooked","ASON_max",77.26893939,"Crooked",1
+"691",1980,"deep","ASON_max",97.13958333,"Deep",1
+"692",1981,"deep","ASON_max",135.753125,"Deep",1
+"693",1982,"deep","ASON_max",197.434375,"Deep",1
+"694",1983,"deep","ASON_max",116.0291667,"Deep",1
+"695",1984,"deep","ASON_max",135.190625,"Deep",1
+"696",1985,"deep","ASON_max",127.4333333,"Deep",1
+"697",1986,"deep","ASON_max",153.3479167,"Deep",1
+"698",1987,"deep","ASON_max",182.2375,"Deep",1
+"699",1988,"deep","ASON_max",92.81875,"Deep",1
+"700",1989,"deep","ASON_max",159.89375,"Deep",1
+"701",1990,"deep","ASON_max",159.0135417,"Deep",1
+"702",1991,"deep","ASON_max",127.23125,"Deep",1
+"703",1992,"deep","ASON_max",141.359375,"Deep",1
+"704",1993,"deep","ASON_max",165.996875,"Deep",1
+"705",1994,"deep","ASON_max",117.965625,"Deep",1
+"706",1995,"deep","ASON_max",150.5458333,"Deep",1
+"707",1996,"deep","ASON_max",115.3604167,"Deep",1
+"708",1997,"deep","ASON_max",167.3677083,"Deep",1
+"709",1998,"deep","ASON_max",107.00625,"Deep",1
+"710",1999,"deep","ASON_max",150.5552083,"Deep",1
+"711",2000,"deep","ASON_max",150.3697917,"Deep",1
+"712",2001,"deep","ASON_max",84.86770833,"Deep",1
+"713",2002,"deep","ASON_max",161.35,"Deep",1
+"714",2003,"deep","ASON_max",88.43541667,"Deep",1
+"715",2004,"deep","ASON_max",178.6479167,"Deep",1
+"716",2005,"deep","ASON_max",196.075,"Deep",1
+"717",2006,"deep","ASON_max",118.478125,"Deep",1
+"718",2007,"deep","ASON_max",148.115625,"Deep",1
+"719",2008,"deep","ASON_max",136.5010417,"Deep",1
+"720",2009,"deep","ASON_max",101.6114583,"Deep",1
+"721",1980,"deshka","ASON_max",72.3945946,"Deshka",1
+"722",1981,"deshka","ASON_max",142.350991,"Deshka",1
+"723",1982,"deshka","ASON_max",174.2028829,"Deshka",1
+"724",1983,"deshka","ASON_max",110.4147748,"Deshka",1
+"725",1984,"deshka","ASON_max",127.2854054,"Deshka",1
+"726",1985,"deshka","ASON_max",174.781982,"Deshka",1
+"727",1986,"deshka","ASON_max",116.3906306,"Deshka",1
+"728",1987,"deshka","ASON_max",108.1127928,"Deshka",1
+"729",1988,"deshka","ASON_max",99.87783784,"Deshka",1
+"730",1989,"deshka","ASON_max",158.5704505,"Deshka",1
+"731",1990,"deshka","ASON_max",128.218018,"Deshka",1
+"732",1991,"deshka","ASON_max",84.94450451,"Deshka",1
+"733",1992,"deshka","ASON_max",132.2684685,"Deshka",1
+"734",1993,"deshka","ASON_max",210.4918919,"Deshka",1
+"735",1994,"deshka","ASON_max",102.2504505,"Deshka",1
+"736",1995,"deshka","ASON_max",97.67711712,"Deshka",1
+"737",1996,"deshka","ASON_max",104.6825225,"Deshka",1
+"738",1997,"deshka","ASON_max",129.8630631,"Deshka",1
+"739",1998,"deshka","ASON_max",104.1034234,"Deshka",1
+"740",1999,"deshka","ASON_max",105.2183784,"Deshka",1
+"741",2000,"deshka","ASON_max",125.0763964,"Deshka",1
+"742",2001,"deshka","ASON_max",68.13153153,"Deshka",1
+"743",2002,"deshka","ASON_max",123.3063063,"Deshka",1
+"744",2003,"deshka","ASON_max",85.59135135,"Deshka",1
+"745",2004,"deshka","ASON_max",141.4100901,"Deshka",1
+"746",2005,"deshka","ASON_max",194.532973,"Deshka",1
+"747",2006,"deshka","ASON_max",187.4468469,"Deshka",1
+"748",2007,"deshka","ASON_max",149.7207207,"Deshka",1
+"749",2008,"deshka","ASON_max",88.51027027,"Deshka",1
+"750",2009,"deshka","ASON_max",75.78522523,"Deshka",1
+"751",1980,"kenai_early","ASON_max",150.7443336,"Kenai_early",NA
+"752",1981,"kenai_early","ASON_max",192.8259293,"Kenai_early",NA
+"753",1982,"kenai_early","ASON_max",289.3807797,"Kenai_early",NA
+"754",1983,"kenai_early","ASON_max",123.0099728,"Kenai_early",NA
+"755",1984,"kenai_early","ASON_max",187.9528559,"Kenai_early",NA
+"756",1985,"kenai_early","ASON_max",183.1840435,"Kenai_early",NA
+"757",1986,"kenai_early","ASON_max",200.2511333,"Kenai_early",NA
+"758",1987,"kenai_early","ASON_max",235.2574796,"Kenai_early",NA
+"759",1988,"kenai_early","ASON_max",139.7923844,"Kenai_early",NA
+"760",1989,"kenai_early","ASON_max",256.6690843,"Kenai_early",NA
+"761",1990,"kenai_early","ASON_max",227.0661831,"Kenai_early",NA
+"762",1991,"kenai_early","ASON_max",192.7669991,"Kenai_early",NA
+"763",1992,"kenai_early","ASON_max",174.6808704,"Kenai_early",NA
+"764",1993,"kenai_early","ASON_max",249.681777,"Kenai_early",NA
+"765",1994,"kenai_early","ASON_max",165.1958296,"Kenai_early",NA
+"766",1995,"kenai_early","ASON_max",220.4125113,"Kenai_early",NA
+"767",1996,"kenai_early","ASON_max",157.8322756,"Kenai_early",NA
+"768",1997,"kenai_early","ASON_max",227.4152312,"Kenai_early",NA
+"769",1998,"kenai_early","ASON_max",119.5394379,"Kenai_early",NA
+"770",1999,"kenai_early","ASON_max",219.8540345,"Kenai_early",NA
+"771",2000,"kenai_early","ASON_max",177.6310064,"Kenai_early",NA
+"772",2001,"kenai_early","ASON_max",112.3427017,"Kenai_early",NA
+"773",2002,"kenai_early","ASON_max",234.8395286,"Kenai_early",NA
+"774",2003,"kenai_early","ASON_max",134.513146,"Kenai_early",NA
+"775",2004,"kenai_early","ASON_max",256.4850408,"Kenai_early",NA
+"776",2005,"kenai_early","ASON_max",266.9936537,"Kenai_early",NA
+"777",2006,"kenai_early","ASON_max",187.8449683,"Kenai_early",NA
+"778",2007,"kenai_early","ASON_max",246.6047144,"Kenai_early",NA
+"779",2008,"kenai_early","ASON_max",208.8377153,"Kenai_early",NA
+"780",2009,"kenai_early","ASON_max",128.0262919,"Kenai_early",NA
+"781",1980,"kenai_late","ASON_max",150.2322093,"Kenai_late",1
+"782",1981,"kenai_late","ASON_max",213.2363954,"Kenai_late",1
+"783",1982,"kenai_late","ASON_max",284.9033721,"Kenai_late",1
+"784",1983,"kenai_late","ASON_max",123.537093,"Kenai_late",1
+"785",1984,"kenai_late","ASON_max",178.1052326,"Kenai_late",1
+"786",1985,"kenai_late","ASON_max",183.4073256,"Kenai_late",1
+"787",1986,"kenai_late","ASON_max",186.7395349,"Kenai_late",1
+"788",1987,"kenai_late","ASON_max",234.4280233,"Kenai_late",1
+"789",1988,"kenai_late","ASON_max",141.5404651,"Kenai_late",1
+"790",1989,"kenai_late","ASON_max",270.4801163,"Kenai_late",1
+"791",1990,"kenai_late","ASON_max",222.477093,"Kenai_late",1
+"792",1991,"kenai_late","ASON_max",186.9526744,"Kenai_late",1
+"793",1992,"kenai_late","ASON_max",200.5356977,"Kenai_late",1
+"794",1993,"kenai_late","ASON_max",257.125,"Kenai_late",1
+"795",1994,"kenai_late","ASON_max",167.4477907,"Kenai_late",1
+"796",1995,"kenai_late","ASON_max",222.2205814,"Kenai_late",1
+"797",1996,"kenai_late","ASON_max",154.0786047,"Kenai_late",1
+"798",1997,"kenai_late","ASON_max",220.5463954,"Kenai_late",1
+"799",1998,"kenai_late","ASON_max",116.5512791,"Kenai_late",1
+"800",1999,"kenai_late","ASON_max",215.4056977,"Kenai_late",1
+"801",2000,"kenai_late","ASON_max",191.4698837,"Kenai_late",1
+"802",2001,"kenai_late","ASON_max",125.5444186,"Kenai_late",1
+"803",2002,"kenai_late","ASON_max",232.2141861,"Kenai_late",1
+"804",2003,"kenai_late","ASON_max",134.7912791,"Kenai_late",1
+"805",2004,"kenai_late","ASON_max",251.6589535,"Kenai_late",1
+"806",2005,"kenai_late","ASON_max",258.6109302,"Kenai_late",1
+"807",2006,"kenai_late","ASON_max",209.9305814,"Kenai_late",1
+"808",2007,"kenai_late","ASON_max",261.9083721,"Kenai_late",1
+"809",2008,"kenai_late","ASON_max",209.4211628,"Kenai_late",1
+"810",2009,"kenai_late","ASON_max",138.5597674,"Kenai_late",1
+"811",1980,"lewis","ASON_max",97.32323232,"Lewis",NA
+"812",1981,"lewis","ASON_max",165.5589226,"Lewis",NA
+"813",1982,"lewis","ASON_max",254.9292929,"Lewis",NA
+"814",1983,"lewis","ASON_max",120.2323232,"Lewis",NA
+"815",1984,"lewis","ASON_max",161.6026936,"Lewis",NA
+"816",1985,"lewis","ASON_max",235.6161616,"Lewis",NA
+"817",1986,"lewis","ASON_max",182.6835017,"Lewis",NA
+"818",1987,"lewis","ASON_max",188.6767677,"Lewis",NA
+"819",1988,"lewis","ASON_max",124.8787879,"Lewis",NA
+"820",1989,"lewis","ASON_max",203.5723906,"Lewis",NA
+"821",1990,"lewis","ASON_max",194.4444444,"Lewis",NA
+"822",1991,"lewis","ASON_max",135.016835,"Lewis",NA
+"823",1992,"lewis","ASON_max",182.0976431,"Lewis",NA
+"824",1993,"lewis","ASON_max",291.037037,"Lewis",NA
+"825",1994,"lewis","ASON_max",125.6127946,"Lewis",NA
+"826",1995,"lewis","ASON_max",160.0538721,"Lewis",NA
+"827",1996,"lewis","ASON_max",119.7205387,"Lewis",NA
+"828",1997,"lewis","ASON_max",137.7946128,"Lewis",NA
+"829",1998,"lewis","ASON_max",102.4208754,"Lewis",NA
+"830",1999,"lewis","ASON_max",146.959596,"Lewis",NA
+"831",2000,"lewis","ASON_max",169.0976431,"Lewis",NA
+"832",2001,"lewis","ASON_max",91.31313131,"Lewis",NA
+"833",2002,"lewis","ASON_max",200.3164983,"Lewis",NA
+"834",2003,"lewis","ASON_max",102.6734007,"Lewis",NA
+"835",2004,"lewis","ASON_max",215.7104377,"Lewis",NA
+"836",2005,"lewis","ASON_max",272.4074074,"Lewis",NA
+"837",2006,"lewis","ASON_max",207.4006734,"Lewis",NA
+"838",2007,"lewis","ASON_max",204.3063973,"Lewis",NA
+"839",2008,"lewis","ASON_max",142.6026936,"Lewis",NA
+"840",2009,"lewis","ASON_max",88.48148148,"Lewis",NA
+"841",1980,"little_susitna","ASON_max",111.9911456,"Little Susitna",1
+"842",1981,"little_susitna","ASON_max",132.9596016,"Little Susitna",1
+"843",1982,"little_susitna","ASON_max",155.3386829,"Little Susitna",1
+"844",1983,"little_susitna","ASON_max",119.4178196,"Little Susitna",1
+"845",1984,"little_susitna","ASON_max",97.86773658,"Little Susitna",1
+"846",1985,"little_susitna","ASON_max",146.0110681,"Little Susitna",1
+"847",1986,"little_susitna","ASON_max",121.2307692,"Little Susitna",1
+"848",1987,"little_susitna","ASON_max",92.56059768,"Little Susitna",1
+"849",1988,"little_susitna","ASON_max",91.46541229,"Little Susitna",1
+"850",1989,"little_susitna","ASON_max",122.5810736,"Little Susitna",1
+"851",1990,"little_susitna","ASON_max",123.4991699,"Little Susitna",1
+"852",1991,"little_susitna","ASON_max",101.0332042,"Little Susitna",1
+"853",1992,"little_susitna","ASON_max",82.72717211,"Little Susitna",1
+"854",1993,"little_susitna","ASON_max",177.2125069,"Little Susitna",1
+"855",1994,"little_susitna","ASON_max",75.9518539,"Little Susitna",1
+"856",1995,"little_susitna","ASON_max",95.01494189,"Little Susitna",1
+"857",1996,"little_susitna","ASON_max",82.77808522,"Little Susitna",1
+"858",1997,"little_susitna","ASON_max",113.2191478,"Little Susitna",1
+"859",1998,"little_susitna","ASON_max",97.60819037,"Little Susitna",1
+"860",1999,"little_susitna","ASON_max",109.1256226,"Little Susitna",1
+"861",2000,"little_susitna","ASON_max",85.02545656,"Little Susitna",1
+"862",2001,"little_susitna","ASON_max",52.80077477,"Little Susitna",1
+"863",2002,"little_susitna","ASON_max",123.9778639,"Little Susitna",1
+"864",2003,"little_susitna","ASON_max",75.86884339,"Little Susitna",1
+"865",2004,"little_susitna","ASON_max",139.5827338,"Little Susitna",1
+"866",2005,"little_susitna","ASON_max",148.9612618,"Little Susitna",1
+"867",2006,"little_susitna","ASON_max",161.2108467,"Little Susitna",1
+"868",2007,"little_susitna","ASON_max",145.3514112,"Little Susitna",1
+"869",2008,"little_susitna","ASON_max",103.9623686,"Little Susitna",1
+"870",2009,"little_susitna","ASON_max",86.58771444,"Little Susitna",1
+"871",1980,"little_willow","ASON_max",119.9714286,"Little Willow",1
+"872",1981,"little_willow","ASON_max",147.4071429,"Little Willow",1
+"873",1982,"little_willow","ASON_max",175.6171429,"Little Willow",1
+"874",1983,"little_willow","ASON_max",139.9685714,"Little Willow",1
+"875",1984,"little_willow","ASON_max",112.4214286,"Little Willow",1
+"876",1985,"little_willow","ASON_max",176.4142857,"Little Willow",1
+"877",1986,"little_willow","ASON_max",137.0114286,"Little Willow",1
+"878",1987,"little_willow","ASON_max",104.2514286,"Little Willow",1
+"879",1988,"little_willow","ASON_max",98.43857143,"Little Willow",1
+"880",1989,"little_willow","ASON_max",145.7428571,"Little Willow",1
+"881",1990,"little_willow","ASON_max",138.3542857,"Little Willow",1
+"882",1991,"little_willow","ASON_max",105.5528571,"Little Willow",1
+"883",1992,"little_willow","ASON_max",122.2757143,"Little Willow",1
+"884",1993,"little_willow","ASON_max",214.4285714,"Little Willow",1
+"885",1994,"little_willow","ASON_max",104.5042857,"Little Willow",1
+"886",1995,"little_willow","ASON_max",104.4642857,"Little Willow",1
+"887",1996,"little_willow","ASON_max",98.64571429,"Little Willow",1
+"888",1997,"little_willow","ASON_max",133.0028571,"Little Willow",1
+"889",1998,"little_willow","ASON_max",111.2657143,"Little Willow",1
+"890",1999,"little_willow","ASON_max",118.1671429,"Little Willow",1
+"891",2000,"little_willow","ASON_max",118.7485714,"Little Willow",1
+"892",2001,"little_willow","ASON_max",70.45,"Little Willow",1
+"893",2002,"little_willow","ASON_max",135.3671429,"Little Willow",1
+"894",2003,"little_willow","ASON_max",86.40714286,"Little Willow",1
+"895",2004,"little_willow","ASON_max",155.4542857,"Little Willow",1
+"896",2005,"little_willow","ASON_max",165.89,"Little Willow",1
+"897",2006,"little_willow","ASON_max",187.8257143,"Little Willow",1
+"898",2007,"little_willow","ASON_max",161.83,"Little Willow",1
+"899",2008,"little_willow","ASON_max",111.4628571,"Little Willow",1
+"900",2009,"little_willow","ASON_max",100.0371429,"Little Willow",1
+"901",1980,"montana","ASON_max",131.0220083,"Montana",1
+"902",1981,"montana","ASON_max",200.7235213,"Montana",1
+"903",1982,"montana","ASON_max",215.9133425,"Montana",1
+"904",1983,"montana","ASON_max",192.0701513,"Montana",1
+"905",1984,"montana","ASON_max",163.0536451,"Montana",1
+"906",1985,"montana","ASON_max",231.4621733,"Montana",1
+"907",1986,"montana","ASON_max",165.2118294,"Montana",1
+"908",1987,"montana","ASON_max",130.5337001,"Montana",1
+"909",1988,"montana","ASON_max",128.9270977,"Montana",1
+"910",1989,"montana","ASON_max",208.3370014,"Montana",1
+"911",1990,"montana","ASON_max",168.3314993,"Montana",1
+"912",1991,"montana","ASON_max",113.6327373,"Montana",1
+"913",1992,"montana","ASON_max",113.4924347,"Montana",1
+"914",1993,"montana","ASON_max",282.2338377,"Montana",1
+"915",1994,"montana","ASON_max",98.65749656,"Montana",1
+"916",1995,"montana","ASON_max",123.9394773,"Montana",1
+"917",1996,"montana","ASON_max",144.2420908,"Montana",1
+"918",1997,"montana","ASON_max",191.0701513,"Montana",1
+"919",1998,"montana","ASON_max",151.0082531,"Montana",1
+"920",1999,"montana","ASON_max",149.8253095,"Montana",1
+"921",2000,"montana","ASON_max",101.0151307,"Montana",1
+"922",2001,"montana","ASON_max",73.17193948,"Montana",1
+"923",2002,"montana","ASON_max",166.8899587,"Montana",1
+"924",2003,"montana","ASON_max",120.6850069,"Montana",1
+"925",2004,"montana","ASON_max",188.4704264,"Montana",1
+"926",2005,"montana","ASON_max",219.0495186,"Montana",1
+"927",2006,"montana","ASON_max",266.4910592,"Montana",1
+"928",2007,"montana","ASON_max",194.7620358,"Montana",1
+"929",2008,"montana","ASON_max",123.8211829,"Montana",1
+"930",2009,"montana","ASON_max",131.8129299,"Montana",1
+"931",1980,"ninilchik","ASON_max",85.88616462,"Ninilchik",1
+"932",1981,"ninilchik","ASON_max",114.4518389,"Ninilchik",1
+"933",1982,"ninilchik","ASON_max",180.0367776,"Ninilchik",1
+"934",1983,"ninilchik","ASON_max",91.84763573,"Ninilchik",1
+"935",1984,"ninilchik","ASON_max",120.3992995,"Ninilchik",1
+"936",1985,"ninilchik","ASON_max",123.0017513,"Ninilchik",1
+"937",1986,"ninilchik","ASON_max",140.5323993,"Ninilchik",1
+"938",1987,"ninilchik","ASON_max",165.8283713,"Ninilchik",1
+"939",1988,"ninilchik","ASON_max",95.16112084,"Ninilchik",1
+"940",1989,"ninilchik","ASON_max",144.9211909,"Ninilchik",1
+"941",1990,"ninilchik","ASON_max",144.9492119,"Ninilchik",1
+"942",1991,"ninilchik","ASON_max",113.0227671,"Ninilchik",1
+"943",1992,"ninilchik","ASON_max",119.3660245,"Ninilchik",1
+"944",1993,"ninilchik","ASON_max",158.9947461,"Ninilchik",1
+"945",1994,"ninilchik","ASON_max",104.7005254,"Ninilchik",1
+"946",1995,"ninilchik","ASON_max",134.7618214,"Ninilchik",1
+"947",1996,"ninilchik","ASON_max",103.8021016,"Ninilchik",1
+"948",1997,"ninilchik","ASON_max",146.915937,"Ninilchik",1
+"949",1998,"ninilchik","ASON_max",97.02276708,"Ninilchik",1
+"950",1999,"ninilchik","ASON_max",133.7180385,"Ninilchik",1
+"951",2000,"ninilchik","ASON_max",124.4308231,"Ninilchik",1
+"952",2001,"ninilchik","ASON_max",69.09982487,"Ninilchik",1
+"953",2002,"ninilchik","ASON_max",147.2591944,"Ninilchik",1
+"954",2003,"ninilchik","ASON_max",79.36602452,"Ninilchik",1
+"955",2004,"ninilchik","ASON_max",162.2854641,"Ninilchik",1
+"956",2005,"ninilchik","ASON_max",180.5481611,"Ninilchik",1
+"957",2006,"ninilchik","ASON_max",124.5446585,"Ninilchik",1
+"958",2007,"ninilchik","ASON_max",127.267951,"Ninilchik",1
+"959",2008,"ninilchik","ASON_max",121.3345009,"Ninilchik",1
+"960",2009,"ninilchik","ASON_max",81.19614711,"Ninilchik",1
+"961",1980,"theodore","ASON_max",99.79090909,"Theodore",1
+"962",1981,"theodore","ASON_max",168.1545455,"Theodore",1
+"963",1982,"theodore","ASON_max",253.66,"Theodore",1
+"964",1983,"theodore","ASON_max",124.9181818,"Theodore",1
+"965",1984,"theodore","ASON_max",163.72,"Theodore",1
+"966",1985,"theodore","ASON_max",242.0545455,"Theodore",1
+"967",1986,"theodore","ASON_max",186.5527273,"Theodore",1
+"968",1987,"theodore","ASON_max",192.5545455,"Theodore",1
+"969",1988,"theodore","ASON_max",127.9072727,"Theodore",1
+"970",1989,"theodore","ASON_max",206.9418182,"Theodore",1
+"971",1990,"theodore","ASON_max",197.7018182,"Theodore",1
+"972",1991,"theodore","ASON_max",134.8490909,"Theodore",1
+"973",1992,"theodore","ASON_max",166.4563636,"Theodore",1
+"974",1993,"theodore","ASON_max",297.6381818,"Theodore",1
+"975",1994,"theodore","ASON_max",112.3781818,"Theodore",1
+"976",1995,"theodore","ASON_max",159.2672727,"Theodore",1
+"977",1996,"theodore","ASON_max",119.9545455,"Theodore",1
+"978",1997,"theodore","ASON_max",140.4381818,"Theodore",1
+"979",1998,"theodore","ASON_max",108.8690909,"Theodore",1
+"980",1999,"theodore","ASON_max",148.0309091,"Theodore",1
+"981",2000,"theodore","ASON_max",153.0872727,"Theodore",1
+"982",2001,"theodore","ASON_max",83.7,"Theodore",1
+"983",2002,"theodore","ASON_max",202.7563636,"Theodore",1
+"984",2003,"theodore","ASON_max",103.6672727,"Theodore",1
+"985",2004,"theodore","ASON_max",217.7018182,"Theodore",1
+"986",2005,"theodore","ASON_max",277.8981818,"Theodore",1
+"987",2006,"theodore","ASON_max",211.9363636,"Theodore",1
+"988",2007,"theodore","ASON_max",208.98,"Theodore",1
+"989",2008,"theodore","ASON_max",142.8854546,"Theodore",1
+"990",2009,"theodore","ASON_max",91.88181818,"Theodore",1
+"991",1980,"willow","ASON_max",150.047491,"Willow",1
+"992",1981,"willow","ASON_max",161.9148746,"Willow",1
+"993",1982,"willow","ASON_max",188.953405,"Willow",1
+"994",1983,"willow","ASON_max",163.4130824,"Willow",1
+"995",1984,"willow","ASON_max",118.8870968,"Willow",1
+"996",1985,"willow","ASON_max",190.3987455,"Willow",1
+"997",1986,"willow","ASON_max",156.3270609,"Willow",1
+"998",1987,"willow","ASON_max",114.9130824,"Willow",1
+"999",1988,"willow","ASON_max",109.5913979,"Willow",1
+"1000",1989,"willow","ASON_max",156.9749104,"Willow",1
+"1001",1990,"willow","ASON_max",153.1317204,"Willow",1
+"1002",1991,"willow","ASON_max",121.202509,"Willow",1
+"1003",1992,"willow","ASON_max",131.9650538,"Willow",1
+"1004",1993,"willow","ASON_max",228.7750896,"Willow",1
+"1005",1994,"willow","ASON_max",117.9578853,"Willow",1
+"1006",1995,"willow","ASON_max",114.6666667,"Willow",1
+"1007",1996,"willow","ASON_max",106.7007169,"Willow",1
+"1008",1997,"willow","ASON_max",146.1594982,"Willow",1
+"1009",1998,"willow","ASON_max",125.2992832,"Willow",1
+"1010",1999,"willow","ASON_max",134.7464158,"Willow",1
+"1011",2000,"willow","ASON_max",132.9507169,"Willow",1
+"1012",2001,"willow","ASON_max",80.71863799,"Willow",1
+"1013",2002,"willow","ASON_max",150.9596774,"Willow",1
+"1014",2003,"willow","ASON_max",95.53315412,"Willow",1
+"1015",2004,"willow","ASON_max",172.9112903,"Willow",1
+"1016",2005,"willow","ASON_max",176.7392473,"Willow",1
+"1017",2006,"willow","ASON_max",205.9238351,"Willow",1
+"1018",2007,"willow","ASON_max",179.9274194,"Willow",1
+"1019",2008,"willow","ASON_max",127.3548387,"Willow",1
+"1020",2009,"willow","ASON_max",113.5286738,"Willow",1
+"1021",1980,"EF_chulitna","MJJA_avg",91.1944801,"EF Chulitna",1
+"1022",1981,"EF_chulitna","MJJA_avg",122.5542362,"EF Chulitna",1
+"1023",1982,"EF_chulitna","MJJA_avg",71.12291399,"EF Chulitna",1
+"1024",1983,"EF_chulitna","MJJA_avg",77.23844673,"EF Chulitna",1
+"1025",1984,"EF_chulitna","MJJA_avg",85.436457,"EF Chulitna",1
+"1026",1985,"EF_chulitna","MJJA_avg",70.72978177,"EF Chulitna",1
+"1027",1986,"EF_chulitna","MJJA_avg",104.9050064,"EF Chulitna",1
+"1028",1987,"EF_chulitna","MJJA_avg",68.03626444,"EF Chulitna",1
+"1029",1988,"EF_chulitna","MJJA_avg",72.17073171,"EF Chulitna",1
+"1030",1989,"EF_chulitna","MJJA_avg",91.38318357,"EF Chulitna",1
+"1031",1990,"EF_chulitna","MJJA_avg",87.30584082,"EF Chulitna",1
+"1032",1991,"EF_chulitna","MJJA_avg",54.44255456,"EF Chulitna",1
+"1033",1992,"EF_chulitna","MJJA_avg",66.77406932,"EF Chulitna",1
+"1034",1993,"EF_chulitna","MJJA_avg",71.9034018,"EF Chulitna",1
+"1035",1994,"EF_chulitna","MJJA_avg",57.80327343,"EF Chulitna",1
+"1036",1995,"EF_chulitna","MJJA_avg",76.43677792,"EF Chulitna",1
+"1037",1996,"EF_chulitna","MJJA_avg",77.5767009,"EF Chulitna",1
+"1038",1997,"EF_chulitna","MJJA_avg",71.14794609,"EF Chulitna",1
+"1039",1998,"EF_chulitna","MJJA_avg",102.3408216,"EF Chulitna",1
+"1040",1999,"EF_chulitna","MJJA_avg",99.91078306,"EF Chulitna",1
+"1041",2000,"EF_chulitna","MJJA_avg",70.75706033,"EF Chulitna",1
+"1042",2001,"EF_chulitna","MJJA_avg",79.10943517,"EF Chulitna",1
+"1043",2002,"EF_chulitna","MJJA_avg",96.21758665,"EF Chulitna",1
+"1044",2003,"EF_chulitna","MJJA_avg",79.73427471,"EF Chulitna",1
+"1045",2004,"EF_chulitna","MJJA_avg",47.64634146,"EF Chulitna",1
+"1046",2005,"EF_chulitna","MJJA_avg",79.91431322,"EF Chulitna",1
+"1047",2006,"EF_chulitna","MJJA_avg",100.982991,"EF Chulitna",1
+"1048",2007,"EF_chulitna","MJJA_avg",78.61456996,"EF Chulitna",1
+"1049",2008,"EF_chulitna","MJJA_avg",74.03273428,"EF Chulitna",1
+"1050",2009,"EF_chulitna","MJJA_avg",65.39441592,"EF Chulitna",1
+"1051",1980,"alexander","MJJA_avg",75.3777972,"Alexander",1
+"1052",1981,"alexander","MJJA_avg",95.4965035,"Alexander",1
+"1053",1982,"alexander","MJJA_avg",67.34073427,"Alexander",1
+"1054",1983,"alexander","MJJA_avg",49.58951049,"Alexander",1
+"1055",1984,"alexander","MJJA_avg",62.07954546,"Alexander",1
+"1056",1985,"alexander","MJJA_avg",59.54825175,"Alexander",1
+"1057",1986,"alexander","MJJA_avg",65.84632867,"Alexander",1
+"1058",1987,"alexander","MJJA_avg",49.42237762,"Alexander",1
+"1059",1988,"alexander","MJJA_avg",56.69370629,"Alexander",1
+"1060",1989,"alexander","MJJA_avg",80.63111888,"Alexander",1
+"1061",1990,"alexander","MJJA_avg",51.67972028,"Alexander",1
+"1062",1991,"alexander","MJJA_avg",47.98199301,"Alexander",1
+"1063",1992,"alexander","MJJA_avg",44.36800699,"Alexander",1
+"1064",1993,"alexander","MJJA_avg",62.84248252,"Alexander",1
+"1065",1994,"alexander","MJJA_avg",46.04965035,"Alexander",1
+"1066",1995,"alexander","MJJA_avg",59.87989511,"Alexander",1
+"1067",1996,"alexander","MJJA_avg",52.81241259,"Alexander",1
+"1068",1997,"alexander","MJJA_avg",56.47167832,"Alexander",1
+"1069",1998,"alexander","MJJA_avg",61.79195804,"Alexander",1
+"1070",1999,"alexander","MJJA_avg",68.36433566,"Alexander",1
+"1071",2000,"alexander","MJJA_avg",51.45751748,"Alexander",1
+"1072",2001,"alexander","MJJA_avg",47.88793706,"Alexander",1
+"1073",2002,"alexander","MJJA_avg",62.23461539,"Alexander",1
+"1074",2003,"alexander","MJJA_avg",59.56433566,"Alexander",1
+"1075",2004,"alexander","MJJA_avg",37.42517483,"Alexander",1
+"1076",2005,"alexander","MJJA_avg",39.3277972,"Alexander",1
+"1077",2006,"alexander","MJJA_avg",77.76241259,"Alexander",1
+"1078",2007,"alexander","MJJA_avg",44.55227273,"Alexander",1
+"1079",2008,"alexander","MJJA_avg",43.59003497,"Alexander",1
+"1080",2009,"alexander","MJJA_avg",40.81905594,"Alexander",1
+"1081",1980,"anchor","MJJA_avg",54.04285714,"Anchor",1
+"1082",1981,"anchor","MJJA_avg",61.3127551,"Anchor",1
+"1083",1982,"anchor","MJJA_avg",34.88520408,"Anchor",1
+"1084",1983,"anchor","MJJA_avg",32.96454082,"Anchor",1
+"1085",1984,"anchor","MJJA_avg",54.4377551,"Anchor",1
+"1086",1985,"anchor","MJJA_avg",55.41683674,"Anchor",1
+"1087",1986,"anchor","MJJA_avg",59.37244898,"Anchor",1
+"1088",1987,"anchor","MJJA_avg",32.04897959,"Anchor",1
+"1089",1988,"anchor","MJJA_avg",44.02959184,"Anchor",1
+"1090",1989,"anchor","MJJA_avg",52.05178571,"Anchor",1
+"1091",1990,"anchor","MJJA_avg",38.98596939,"Anchor",1
+"1092",1991,"anchor","MJJA_avg",51.27015306,"Anchor",1
+"1093",1992,"anchor","MJJA_avg",42.33367347,"Anchor",1
+"1094",1993,"anchor","MJJA_avg",45.19132653,"Anchor",1
+"1095",1994,"anchor","MJJA_avg",31.72091837,"Anchor",1
+"1096",1995,"anchor","MJJA_avg",58.90561225,"Anchor",1
+"1097",1996,"anchor","MJJA_avg",31.5,"Anchor",1
+"1098",1997,"anchor","MJJA_avg",40.67806122,"Anchor",1
+"1099",1998,"anchor","MJJA_avg",47.80382653,"Anchor",1
+"1100",1999,"anchor","MJJA_avg",43.53826531,"Anchor",1
+"1101",2000,"anchor","MJJA_avg",41.75561225,"Anchor",1
+"1102",2001,"anchor","MJJA_avg",37.16683674,"Anchor",1
+"1103",2002,"anchor","MJJA_avg",49.13673469,"Anchor",1
+"1104",2003,"anchor","MJJA_avg",45.31734694,"Anchor",1
+"1105",2004,"anchor","MJJA_avg",21.32780612,"Anchor",1
+"1106",2005,"anchor","MJJA_avg",36.27984694,"Anchor",1
+"1107",2006,"anchor","MJJA_avg",53.52193878,"Anchor",1
+"1108",2007,"anchor","MJJA_avg",31.91454082,"Anchor",1
+"1109",2008,"anchor","MJJA_avg",44.18877551,"Anchor",1
+"1110",2009,"anchor","MJJA_avg",32.5125,"Anchor",1
+"1111",1980,"campbell","MJJA_avg",68.11370968,"NF Campbell",1
+"1112",1981,"campbell","MJJA_avg",82.25806452,"NF Campbell",1
+"1113",1982,"campbell","MJJA_avg",54.98548387,"NF Campbell",1
+"1114",1983,"campbell","MJJA_avg",43.06854839,"NF Campbell",1
+"1115",1984,"campbell","MJJA_avg",53.66370968,"NF Campbell",1
+"1116",1985,"campbell","MJJA_avg",50.52822581,"NF Campbell",1
+"1117",1986,"campbell","MJJA_avg",54.01854839,"NF Campbell",1
+"1118",1987,"campbell","MJJA_avg",39.01854839,"NF Campbell",1
+"1119",1988,"campbell","MJJA_avg",48.37822581,"NF Campbell",1
+"1120",1989,"campbell","MJJA_avg",72.25483871,"NF Campbell",1
+"1121",1990,"campbell","MJJA_avg",40.03951613,"NF Campbell",1
+"1122",1991,"campbell","MJJA_avg",65.73145161,"NF Campbell",1
+"1123",1992,"campbell","MJJA_avg",45.70241936,"NF Campbell",1
+"1124",1993,"campbell","MJJA_avg",52.72016129,"NF Campbell",1
+"1125",1994,"campbell","MJJA_avg",32.77580645,"NF Campbell",1
+"1126",1995,"campbell","MJJA_avg",59.95,"NF Campbell",1
+"1127",1996,"campbell","MJJA_avg",43.6483871,"NF Campbell",1
+"1128",1997,"campbell","MJJA_avg",52.32741936,"NF Campbell",1
+"1129",1998,"campbell","MJJA_avg",55.28548387,"NF Campbell",1
+"1130",1999,"campbell","MJJA_avg",61.24758065,"NF Campbell",1
+"1131",2000,"campbell","MJJA_avg",49.9983871,"NF Campbell",1
+"1132",2001,"campbell","MJJA_avg",40.17177419,"NF Campbell",1
+"1133",2002,"campbell","MJJA_avg",55.10806452,"NF Campbell",1
+"1134",2003,"campbell","MJJA_avg",45.86129032,"NF Campbell",1
+"1135",2004,"campbell","MJJA_avg",32.52016129,"NF Campbell",1
+"1136",2005,"campbell","MJJA_avg",52.15,"NF Campbell",1
+"1137",2006,"campbell","MJJA_avg",71.22177419,"NF Campbell",1
+"1138",2007,"campbell","MJJA_avg",48.22016129,"NF Campbell",1
+"1139",2008,"campbell","MJJA_avg",46.05403226,"NF Campbell",1
+"1140",2009,"campbell","MJJA_avg",47.24354839,"NF Campbell",1
+"1141",1980,"chuitna","MJJA_avg",105.7786697,"Chuitna",1
+"1142",1981,"chuitna","MJJA_avg",124.3910551,"Chuitna",1
+"1143",1982,"chuitna","MJJA_avg",85.82989297,"Chuitna",1
+"1144",1983,"chuitna","MJJA_avg",68.26414373,"Chuitna",1
+"1145",1984,"chuitna","MJJA_avg",89.19915902,"Chuitna",1
+"1146",1985,"chuitna","MJJA_avg",87.52866973,"Chuitna",1
+"1147",1986,"chuitna","MJJA_avg",97.05389908,"Chuitna",1
+"1148",1987,"chuitna","MJJA_avg",67.83103976,"Chuitna",1
+"1149",1988,"chuitna","MJJA_avg",80.34136086,"Chuitna",1
+"1150",1989,"chuitna","MJJA_avg",105.9686544,"Chuitna",1
+"1151",1990,"chuitna","MJJA_avg",71.79090214,"Chuitna",1
+"1152",1991,"chuitna","MJJA_avg",74.51911315,"Chuitna",1
+"1153",1992,"chuitna","MJJA_avg",65.6735474,"Chuitna",1
+"1154",1993,"chuitna","MJJA_avg",87.14487768,"Chuitna",1
+"1155",1994,"chuitna","MJJA_avg",66.3058104,"Chuitna",1
+"1156",1995,"chuitna","MJJA_avg",89.90328746,"Chuitna",1
+"1157",1996,"chuitna","MJJA_avg",72.6735474,"Chuitna",1
+"1158",1997,"chuitna","MJJA_avg",76.33715596,"Chuitna",1
+"1159",1998,"chuitna","MJJA_avg",86.09250765,"Chuitna",1
+"1160",1999,"chuitna","MJJA_avg",91.87729358,"Chuitna",1
+"1161",2000,"chuitna","MJJA_avg",78.50344037,"Chuitna",1
+"1162",2001,"chuitna","MJJA_avg",65.88914373,"Chuitna",1
+"1163",2002,"chuitna","MJJA_avg",86.72285933,"Chuitna",1
+"1164",2003,"chuitna","MJJA_avg",85.55160551,"Chuitna",1
+"1165",2004,"chuitna","MJJA_avg",49.36200306,"Chuitna",1
+"1166",2005,"chuitna","MJJA_avg",60.33027523,"Chuitna",1
+"1167",2006,"chuitna","MJJA_avg",106.6295872,"Chuitna",1
+"1168",2007,"chuitna","MJJA_avg",63.2396789,"Chuitna",1
+"1169",2008,"chuitna","MJJA_avg",66.41896025,"Chuitna",1
+"1170",2009,"chuitna","MJJA_avg",56.77752294,"Chuitna",1
+"1171",1980,"crooked","MJJA_avg",55.14867424,"Crooked",1
+"1172",1981,"crooked","MJJA_avg",66.00568182,"Crooked",1
+"1173",1982,"crooked","MJJA_avg",37.26136364,"Crooked",1
+"1174",1983,"crooked","MJJA_avg",34.69034091,"Crooked",1
+"1175",1984,"crooked","MJJA_avg",55.22916667,"Crooked",1
+"1176",1985,"crooked","MJJA_avg",52.67424242,"Crooked",1
+"1177",1986,"crooked","MJJA_avg",57.68276515,"Crooked",1
+"1178",1987,"crooked","MJJA_avg",31.00094697,"Crooked",1
+"1179",1988,"crooked","MJJA_avg",44.90246212,"Crooked",1
+"1180",1989,"crooked","MJJA_avg",55.93371212,"Crooked",1
+"1181",1990,"crooked","MJJA_avg",36.83143939,"Crooked",1
+"1182",1991,"crooked","MJJA_avg",49,"Crooked",1
+"1183",1992,"crooked","MJJA_avg",41.24337121,"Crooked",1
+"1184",1993,"crooked","MJJA_avg",46.72632576,"Crooked",1
+"1185",1994,"crooked","MJJA_avg",29.95833333,"Crooked",1
+"1186",1995,"crooked","MJJA_avg",57.35511364,"Crooked",1
+"1187",1996,"crooked","MJJA_avg",32.96780303,"Crooked",1
+"1188",1997,"crooked","MJJA_avg",42.49905303,"Crooked",1
+"1189",1998,"crooked","MJJA_avg",45.20549242,"Crooked",1
+"1190",1999,"crooked","MJJA_avg",46.49621212,"Crooked",1
+"1191",2000,"crooked","MJJA_avg",40.81344697,"Crooked",1
+"1192",2001,"crooked","MJJA_avg",36.11742424,"Crooked",1
+"1193",2002,"crooked","MJJA_avg",49.54166667,"Crooked",1
+"1194",2003,"crooked","MJJA_avg",44.18371212,"Crooked",1
+"1195",2004,"crooked","MJJA_avg",21.54545455,"Crooked",1
+"1196",2005,"crooked","MJJA_avg",34.4157197,"Crooked",1
+"1197",2006,"crooked","MJJA_avg",56.83617424,"Crooked",1
+"1198",2007,"crooked","MJJA_avg",32.49337121,"Crooked",1
+"1199",2008,"crooked","MJJA_avg",42.37784091,"Crooked",1
+"1200",2009,"crooked","MJJA_avg",33.73579546,"Crooked",1
+"1201",1980,"deep","MJJA_avg",62.84791667,"Deep",1
+"1202",1981,"deep","MJJA_avg",72.66666667,"Deep",1
+"1203",1982,"deep","MJJA_avg",42.71197917,"Deep",1
+"1204",1983,"deep","MJJA_avg",37.83671875,"Deep",1
+"1205",1984,"deep","MJJA_avg",60.30703125,"Deep",1
+"1206",1985,"deep","MJJA_avg",63.17578125,"Deep",1
+"1207",1986,"deep","MJJA_avg",67.84166667,"Deep",1
+"1208",1987,"deep","MJJA_avg",38.21432292,"Deep",1
+"1209",1988,"deep","MJJA_avg",49.04088542,"Deep",1
+"1210",1989,"deep","MJJA_avg",62.64192708,"Deep",1
+"1211",1990,"deep","MJJA_avg",43.42239583,"Deep",1
+"1212",1991,"deep","MJJA_avg",59.20442708,"Deep",1
+"1213",1992,"deep","MJJA_avg",47.56536458,"Deep",1
+"1214",1993,"deep","MJJA_avg",51.16796875,"Deep",1
+"1215",1994,"deep","MJJA_avg",36.72369792,"Deep",1
+"1216",1995,"deep","MJJA_avg",68.08333333,"Deep",1
+"1217",1996,"deep","MJJA_avg",36.271875,"Deep",1
+"1218",1997,"deep","MJJA_avg",47.30963542,"Deep",1
+"1219",1998,"deep","MJJA_avg",55.63671875,"Deep",1
+"1220",1999,"deep","MJJA_avg",50.49765625,"Deep",1
+"1221",2000,"deep","MJJA_avg",50.93151042,"Deep",1
+"1222",2001,"deep","MJJA_avg",44.38177083,"Deep",1
+"1223",2002,"deep","MJJA_avg",56.0484375,"Deep",1
+"1224",2003,"deep","MJJA_avg",51.16067708,"Deep",1
+"1225",2004,"deep","MJJA_avg",25.928125,"Deep",1
+"1226",2005,"deep","MJJA_avg",41.40390625,"Deep",1
+"1227",2006,"deep","MJJA_avg",60.74583333,"Deep",1
+"1228",2007,"deep","MJJA_avg",38.61067708,"Deep",1
+"1229",2008,"deep","MJJA_avg",52.57265625,"Deep",1
+"1230",2009,"deep","MJJA_avg",37.78828125,"Deep",1
+"1231",1980,"deshka","MJJA_avg",76.82864865,"Deshka",1
+"1232",1981,"deshka","MJJA_avg",100.6797297,"Deshka",1
+"1233",1982,"deshka","MJJA_avg",79.34774775,"Deshka",1
+"1234",1983,"deshka","MJJA_avg",54.75981982,"Deshka",1
+"1235",1984,"deshka","MJJA_avg",64.67774775,"Deshka",1
+"1236",1985,"deshka","MJJA_avg",66.10567568,"Deshka",1
+"1237",1986,"deshka","MJJA_avg",68.72063063,"Deshka",1
+"1238",1987,"deshka","MJJA_avg",54.82540541,"Deshka",1
+"1239",1988,"deshka","MJJA_avg",60.25153153,"Deshka",1
+"1240",1989,"deshka","MJJA_avg",92.01054054,"Deshka",1
+"1241",1990,"deshka","MJJA_avg",60.77936937,"Deshka",1
+"1242",1991,"deshka","MJJA_avg",47.4318018,"Deshka",1
+"1243",1992,"deshka","MJJA_avg",45.39423423,"Deshka",1
+"1244",1993,"deshka","MJJA_avg",68.78477478,"Deshka",1
+"1245",1994,"deshka","MJJA_avg",49.98783784,"Deshka",1
+"1246",1995,"deshka","MJJA_avg",60.21918919,"Deshka",1
+"1247",1996,"deshka","MJJA_avg",58.62504505,"Deshka",1
+"1248",1997,"deshka","MJJA_avg",62.85576577,"Deshka",1
+"1249",1998,"deshka","MJJA_avg",68.42585586,"Deshka",1
+"1250",1999,"deshka","MJJA_avg",76.82990991,"Deshka",1
+"1251",2000,"deshka","MJJA_avg",50.26432432,"Deshka",1
+"1252",2001,"deshka","MJJA_avg",53.41189189,"Deshka",1
+"1253",2002,"deshka","MJJA_avg",69.19540541,"Deshka",1
+"1254",2003,"deshka","MJJA_avg",63.76666667,"Deshka",1
+"1255",2004,"deshka","MJJA_avg",43.61378378,"Deshka",1
+"1256",2005,"deshka","MJJA_avg",40.74243243,"Deshka",1
+"1257",2006,"deshka","MJJA_avg",85.38558559,"Deshka",1
+"1258",2007,"deshka","MJJA_avg",48.72837838,"Deshka",1
+"1259",2008,"deshka","MJJA_avg",42.93990991,"Deshka",1
+"1260",2009,"deshka","MJJA_avg",45.1872973,"Deshka",1
+"1261",1980,"kenai_early","MJJA_avg",87.65140526,"Kenai_early",NA
+"1262",1981,"kenai_early","MJJA_avg",104.9773345,"Kenai_early",NA
+"1263",1982,"kenai_early","MJJA_avg",61.56482321,"Kenai_early",NA
+"1264",1983,"kenai_early","MJJA_avg",51.89415231,"Kenai_early",NA
+"1265",1984,"kenai_early","MJJA_avg",78.73594742,"Kenai_early",NA
+"1266",1985,"kenai_early","MJJA_avg",78.01382593,"Kenai_early",NA
+"1267",1986,"kenai_early","MJJA_avg",82.47416138,"Kenai_early",NA
+"1268",1987,"kenai_early","MJJA_avg",52.01813237,"Kenai_early",NA
+"1269",1988,"kenai_early","MJJA_avg",68.25181324,"Kenai_early",NA
+"1270",1989,"kenai_early","MJJA_avg",89.56119674,"Kenai_early",NA
+"1271",1990,"kenai_early","MJJA_avg",58.40185857,"Kenai_early",NA
+"1272",1991,"kenai_early","MJJA_avg",86.84360834,"Kenai_early",NA
+"1273",1992,"kenai_early","MJJA_avg",67.75135993,"Kenai_early",NA
+"1274",1993,"kenai_early","MJJA_avg",72.2105621,"Kenai_early",NA
+"1275",1994,"kenai_early","MJJA_avg",49.6137806,"Kenai_early",NA
+"1276",1995,"kenai_early","MJJA_avg",86.05281052,"Kenai_early",NA
+"1277",1996,"kenai_early","MJJA_avg",49.87805984,"Kenai_early",NA
+"1278",1997,"kenai_early","MJJA_avg",66.593835,"Kenai_early",NA
+"1279",1998,"kenai_early","MJJA_avg",75.63712602,"Kenai_early",NA
+"1280",1999,"kenai_early","MJJA_avg",68.47393472,"Kenai_early",NA
+"1281",2000,"kenai_early","MJJA_avg",63.16160471,"Kenai_early",NA
+"1282",2001,"kenai_early","MJJA_avg",56.06708976,"Kenai_early",NA
+"1283",2002,"kenai_early","MJJA_avg",75.82955576,"Kenai_early",NA
+"1284",2003,"kenai_early","MJJA_avg",65.77085222,"Kenai_early",NA
+"1285",2004,"kenai_early","MJJA_avg",46.10516772,"Kenai_early",NA
+"1286",2005,"kenai_early","MJJA_avg",65.69401632,"Kenai_early",NA
+"1287",2006,"kenai_early","MJJA_avg",88.21328196,"Kenai_early",NA
+"1288",2007,"kenai_early","MJJA_avg",60.77357208,"Kenai_early",NA
+"1289",2008,"kenai_early","MJJA_avg",62.43041704,"Kenai_early",NA
+"1290",2009,"kenai_early","MJJA_avg",60.96192203,"Kenai_early",NA
+"1291",1980,"kenai_late","MJJA_avg",88.05491279,"Kenai_late",1
+"1292",1981,"kenai_late","MJJA_avg",110.0876163,"Kenai_late",1
+"1293",1982,"kenai_late","MJJA_avg",62.71465116,"Kenai_late",1
+"1294",1983,"kenai_late","MJJA_avg",52.96590116,"Kenai_late",1
+"1295",1984,"kenai_late","MJJA_avg",75.0725,"Kenai_late",1
+"1296",1985,"kenai_late","MJJA_avg",75.8043314,"Kenai_late",1
+"1297",1986,"kenai_late","MJJA_avg",80.85956395,"Kenai_late",1
+"1298",1987,"kenai_late","MJJA_avg",53.52659884,"Kenai_late",1
+"1299",1988,"kenai_late","MJJA_avg",69.08706395,"Kenai_late",1
+"1300",1989,"kenai_late","MJJA_avg",91.64034884,"Kenai_late",1
+"1301",1990,"kenai_late","MJJA_avg",59.2572093,"Kenai_late",1
+"1302",1991,"kenai_late","MJJA_avg",89.61180233,"Kenai_late",1
+"1303",1992,"kenai_late","MJJA_avg",69.82334302,"Kenai_late",1
+"1304",1993,"kenai_late","MJJA_avg",73.76517442,"Kenai_late",1
+"1305",1994,"kenai_late","MJJA_avg",51.74284884,"Kenai_late",1
+"1306",1995,"kenai_late","MJJA_avg",83.62991279,"Kenai_late",1
+"1307",1996,"kenai_late","MJJA_avg",50.04645349,"Kenai_late",1
+"1308",1997,"kenai_late","MJJA_avg",68.26674419,"Kenai_late",1
+"1309",1998,"kenai_late","MJJA_avg",76.99674419,"Kenai_late",1
+"1310",1999,"kenai_late","MJJA_avg",66.32863372,"Kenai_late",1
+"1311",2000,"kenai_late","MJJA_avg",61.92430233,"Kenai_late",1
+"1312",2001,"kenai_late","MJJA_avg",55.88927326,"Kenai_late",1
+"1313",2002,"kenai_late","MJJA_avg",75.87831395,"Kenai_late",1
+"1314",2003,"kenai_late","MJJA_avg",65.88709302,"Kenai_late",1
+"1315",2004,"kenai_late","MJJA_avg",50.12209302,"Kenai_late",1
+"1316",2005,"kenai_late","MJJA_avg",69.55424419,"Kenai_late",1
+"1317",2006,"kenai_late","MJJA_avg",90.97947674,"Kenai_late",1
+"1318",2007,"kenai_late","MJJA_avg",63.97752907,"Kenai_late",1
+"1319",2008,"kenai_late","MJJA_avg",59.24142442,"Kenai_late",1
+"1320",2009,"kenai_late","MJJA_avg",63.91840116,"Kenai_late",1
+"1321",1980,"lewis","MJJA_avg",94.85016835,"Lewis",NA
+"1322",1981,"lewis","MJJA_avg",121.0395623,"Lewis",NA
+"1323",1982,"lewis","MJJA_avg",81.70286195,"Lewis",NA
+"1324",1983,"lewis","MJJA_avg",60.3543771,"Lewis",NA
+"1325",1984,"lewis","MJJA_avg",79.89983165,"Lewis",NA
+"1326",1985,"lewis","MJJA_avg",72.63131313,"Lewis",NA
+"1327",1986,"lewis","MJJA_avg",84.19360269,"Lewis",NA
+"1328",1987,"lewis","MJJA_avg",60.69191919,"Lewis",NA
+"1329",1988,"lewis","MJJA_avg",70.3973064,"Lewis",NA
+"1330",1989,"lewis","MJJA_avg",98.67508418,"Lewis",NA
+"1331",1990,"lewis","MJJA_avg",61.50589226,"Lewis",NA
+"1332",1991,"lewis","MJJA_avg",62.82491583,"Lewis",NA
+"1333",1992,"lewis","MJJA_avg",56.08838384,"Lewis",NA
+"1334",1993,"lewis","MJJA_avg",76.89478115,"Lewis",NA
+"1335",1994,"lewis","MJJA_avg",55.4006734,"Lewis",NA
+"1336",1995,"lewis","MJJA_avg",76.7946128,"Lewis",NA
+"1337",1996,"lewis","MJJA_avg",64.49158249,"Lewis",NA
+"1338",1997,"lewis","MJJA_avg",69.59848485,"Lewis",NA
+"1339",1998,"lewis","MJJA_avg",74.70286195,"Lewis",NA
+"1340",1999,"lewis","MJJA_avg",84.6456229,"Lewis",NA
+"1341",2000,"lewis","MJJA_avg",64.62457913,"Lewis",NA
+"1342",2001,"lewis","MJJA_avg",60.17087542,"Lewis",NA
+"1343",2002,"lewis","MJJA_avg",77.84006734,"Lewis",NA
+"1344",2003,"lewis","MJJA_avg",73.06902357,"Lewis",NA
+"1345",2004,"lewis","MJJA_avg",43.90993266,"Lewis",NA
+"1346",2005,"lewis","MJJA_avg",48.18939394,"Lewis",NA
+"1347",2006,"lewis","MJJA_avg",96.88636364,"Lewis",NA
+"1348",2007,"lewis","MJJA_avg",55.55050505,"Lewis",NA
+"1349",2008,"lewis","MJJA_avg",57.31481482,"Lewis",NA
+"1350",2009,"lewis","MJJA_avg",50.02861953,"Lewis",NA
+"1351",1980,"little_susitna","MJJA_avg",81.80879912,"Little Susitna",1
+"1352",1981,"little_susitna","MJJA_avg",93.27545656,"Little Susitna",1
+"1353",1982,"little_susitna","MJJA_avg",63.49667958,"Little Susitna",1
+"1354",1983,"little_susitna","MJJA_avg",56.2252352,"Little Susitna",1
+"1355",1984,"little_susitna","MJJA_avg",66.12313226,"Little Susitna",1
+"1356",1985,"little_susitna","MJJA_avg",55.8065855,"Little Susitna",1
+"1357",1986,"little_susitna","MJJA_avg",61.19216934,"Little Susitna",1
+"1358",1987,"little_susitna","MJJA_avg",54.11579967,"Little Susitna",1
+"1359",1988,"little_susitna","MJJA_avg",55.87797454,"Little Susitna",1
+"1360",1989,"little_susitna","MJJA_avg",79.62631433,"Little Susitna",1
+"1361",1990,"little_susitna","MJJA_avg",52.45503597,"Little Susitna",1
+"1362",1991,"little_susitna","MJJA_avg",61.18566685,"Little Susitna",1
+"1363",1992,"little_susitna","MJJA_avg",49.46624239,"Little Susitna",1
+"1364",1993,"little_susitna","MJJA_avg",60.78832319,"Little Susitna",1
+"1365",1994,"little_susitna","MJJA_avg",43.85390149,"Little Susitna",1
+"1366",1995,"little_susitna","MJJA_avg",65.90661317,"Little Susitna",1
+"1367",1996,"little_susitna","MJJA_avg",51.21831765,"Little Susitna",1
+"1368",1997,"little_susitna","MJJA_avg",59.80188157,"Little Susitna",1
+"1369",1998,"little_susitna","MJJA_avg",64.87327061,"Little Susitna",1
+"1370",1999,"little_susitna","MJJA_avg",72.61925844,"Little Susitna",1
+"1371",2000,"little_susitna","MJJA_avg",53.96776425,"Little Susitna",1
+"1372",2001,"little_susitna","MJJA_avg",50.99349751,"Little Susitna",1
+"1373",2002,"little_susitna","MJJA_avg",65.66851135,"Little Susitna",1
+"1374",2003,"little_susitna","MJJA_avg",55.63613724,"Little Susitna",1
+"1375",2004,"little_susitna","MJJA_avg",39.84366353,"Little Susitna",1
+"1376",2005,"little_susitna","MJJA_avg",57.24584947,"Little Susitna",1
+"1377",2006,"little_susitna","MJJA_avg",81.66062535,"Little Susitna",1
+"1378",2007,"little_susitna","MJJA_avg",56.10514665,"Little Susitna",1
+"1379",2008,"little_susitna","MJJA_avg",54.44576646,"Little Susitna",1
+"1380",2009,"little_susitna","MJJA_avg",51.75484228,"Little Susitna",1
+"1381",1980,"little_willow","MJJA_avg",96.80785714,"Little Willow",1
+"1382",1981,"little_willow","MJJA_avg",113.7853571,"Little Willow",1
+"1383",1982,"little_willow","MJJA_avg",79.12428571,"Little Willow",1
+"1384",1983,"little_willow","MJJA_avg",67.78607143,"Little Willow",1
+"1385",1984,"little_willow","MJJA_avg",77.79892857,"Little Willow",1
+"1386",1985,"little_willow","MJJA_avg",67.25392857,"Little Willow",1
+"1387",1986,"little_willow","MJJA_avg",73.64428571,"Little Willow",1
+"1388",1987,"little_willow","MJJA_avg",66.62357143,"Little Willow",1
+"1389",1988,"little_willow","MJJA_avg",66.965,"Little Willow",1
+"1390",1989,"little_willow","MJJA_avg",97.1325,"Little Willow",1
+"1391",1990,"little_willow","MJJA_avg",66.20821429,"Little Willow",1
+"1392",1991,"little_willow","MJJA_avg",65.94178571,"Little Willow",1
+"1393",1992,"little_willow","MJJA_avg",56.63357143,"Little Willow",1
+"1394",1993,"little_willow","MJJA_avg",73.58392857,"Little Willow",1
+"1395",1994,"little_willow","MJJA_avg",54.01071429,"Little Willow",1
+"1396",1995,"little_willow","MJJA_avg",75.12357143,"Little Willow",1
+"1397",1996,"little_willow","MJJA_avg",62.92928571,"Little Willow",1
+"1398",1997,"little_willow","MJJA_avg",70.92357143,"Little Willow",1
+"1399",1998,"little_willow","MJJA_avg",78.93071429,"Little Willow",1
+"1400",1999,"little_willow","MJJA_avg",88.75821429,"Little Willow",1
+"1401",2000,"little_willow","MJJA_avg",61.95107143,"Little Willow",1
+"1402",2001,"little_willow","MJJA_avg",63.11071429,"Little Willow",1
+"1403",2002,"little_willow","MJJA_avg",80.12785714,"Little Willow",1
+"1404",2003,"little_willow","MJJA_avg",67.81892857,"Little Willow",1
+"1405",2004,"little_willow","MJJA_avg",47.27321429,"Little Willow",1
+"1406",2005,"little_willow","MJJA_avg",69.12392857,"Little Willow",1
+"1407",2006,"little_willow","MJJA_avg",98.10535714,"Little Willow",1
+"1408",2007,"little_willow","MJJA_avg",69.16892857,"Little Willow",1
+"1409",2008,"little_willow","MJJA_avg",63.74428571,"Little Willow",1
+"1410",2009,"little_willow","MJJA_avg",62.97357143,"Little Willow",1
+"1411",1980,"montana","MJJA_avg",121.267194,"Montana",1
+"1412",1981,"montana","MJJA_avg",149.94326,"Montana",1
+"1413",1982,"montana","MJJA_avg",106.0660248,"Montana",1
+"1414",1983,"montana","MJJA_avg",89.95082531,"Montana",1
+"1415",1984,"montana","MJJA_avg",100.3253095,"Montana",1
+"1416",1985,"montana","MJJA_avg",90.24862448,"Montana",1
+"1417",1986,"montana","MJJA_avg",102.9401651,"Montana",1
+"1418",1987,"montana","MJJA_avg",86.40061898,"Montana",1
+"1419",1988,"montana","MJJA_avg",88.29539202,"Montana",1
+"1420",1989,"montana","MJJA_avg",129.0629299,"Montana",1
+"1421",1990,"montana","MJJA_avg",91.21973865,"Montana",1
+"1422",1991,"montana","MJJA_avg",72.65233838,"Montana",1
+"1423",1992,"montana","MJJA_avg",69.98246217,"Montana",1
+"1424",1993,"montana","MJJA_avg",99.57599725,"Montana",1
+"1425",1994,"montana","MJJA_avg",72.16953233,"Montana",1
+"1426",1995,"montana","MJJA_avg",88.76444292,"Montana",1
+"1427",1996,"montana","MJJA_avg",85.67228336,"Montana",1
+"1428",1997,"montana","MJJA_avg",93.80708391,"Montana",1
+"1429",1998,"montana","MJJA_avg",104.3174003,"Montana",1
+"1430",1999,"montana","MJJA_avg",118.0488308,"Montana",1
+"1431",2000,"montana","MJJA_avg",73.46423659,"Montana",1
+"1432",2001,"montana","MJJA_avg",84.07977992,"Montana",1
+"1433",2002,"montana","MJJA_avg",107.1939477,"Montana",1
+"1434",2003,"montana","MJJA_avg",91.40337001,"Montana",1
+"1435",2004,"montana","MJJA_avg",61.12070151,"Montana",1
+"1436",2005,"montana","MJJA_avg",81.26856946,"Montana",1
+"1437",2006,"montana","MJJA_avg",129.8535076,"Montana",1
+"1438",2007,"montana","MJJA_avg",85.31946355,"Montana",1
+"1439",2008,"montana","MJJA_avg",76.5343879,"Montana",1
+"1440",2009,"montana","MJJA_avg",78.40715268,"Montana",1
+"1441",1980,"ninilchik","MJJA_avg",56.1821366,"Ninilchik",1
+"1442",1981,"ninilchik","MJJA_avg",66.02145359,"Ninilchik",1
+"1443",1982,"ninilchik","MJJA_avg",37.69220666,"Ninilchik",1
+"1444",1983,"ninilchik","MJJA_avg",35.04465849,"Ninilchik",1
+"1445",1984,"ninilchik","MJJA_avg",56.23598949,"Ninilchik",1
+"1446",1985,"ninilchik","MJJA_avg",55.11908932,"Ninilchik",1
+"1447",1986,"ninilchik","MJJA_avg",59.50963222,"Ninilchik",1
+"1448",1987,"ninilchik","MJJA_avg",32.79203152,"Ninilchik",1
+"1449",1988,"ninilchik","MJJA_avg",45.47022767,"Ninilchik",1
+"1450",1989,"ninilchik","MJJA_avg",55.95796848,"Ninilchik",1
+"1451",1990,"ninilchik","MJJA_avg",38.71409807,"Ninilchik",1
+"1452",1991,"ninilchik","MJJA_avg",50.20753065,"Ninilchik",1
+"1453",1992,"ninilchik","MJJA_avg",42.25,"Ninilchik",1
+"1454",1993,"ninilchik","MJJA_avg",47.47197898,"Ninilchik",1
+"1455",1994,"ninilchik","MJJA_avg",32.09281962,"Ninilchik",1
+"1456",1995,"ninilchik","MJJA_avg",58.54334501,"Ninilchik",1
+"1457",1996,"ninilchik","MJJA_avg",33.16593695,"Ninilchik",1
+"1458",1997,"ninilchik","MJJA_avg",42.38922942,"Ninilchik",1
+"1459",1998,"ninilchik","MJJA_avg",46.79947461,"Ninilchik",1
+"1460",1999,"ninilchik","MJJA_avg",46.45359019,"Ninilchik",1
+"1461",2000,"ninilchik","MJJA_avg",42.4028021,"Ninilchik",1
+"1462",2001,"ninilchik","MJJA_avg",37.43301226,"Ninilchik",1
+"1463",2002,"ninilchik","MJJA_avg",50.64842382,"Ninilchik",1
+"1464",2003,"ninilchik","MJJA_avg",46.09194396,"Ninilchik",1
+"1465",2004,"ninilchik","MJJA_avg",22.43695272,"Ninilchik",1
+"1466",2005,"ninilchik","MJJA_avg",35.60858144,"Ninilchik",1
+"1467",2006,"ninilchik","MJJA_avg",56.02014011,"Ninilchik",1
+"1468",2007,"ninilchik","MJJA_avg",33.53152364,"Ninilchik",1
+"1469",2008,"ninilchik","MJJA_avg",43.85639229,"Ninilchik",1
+"1470",2009,"ninilchik","MJJA_avg",33.70140105,"Ninilchik",1
+"1471",1980,"theodore","MJJA_avg",90.91727273,"Theodore",1
+"1472",1981,"theodore","MJJA_avg",115.2990909,"Theodore",1
+"1473",1982,"theodore","MJJA_avg",77.89454546,"Theodore",1
+"1474",1983,"theodore","MJJA_avg",60.03863636,"Theodore",1
+"1475",1984,"theodore","MJJA_avg",78.00136364,"Theodore",1
+"1476",1985,"theodore","MJJA_avg",71.73090909,"Theodore",1
+"1477",1986,"theodore","MJJA_avg",82.52090909,"Theodore",1
+"1478",1987,"theodore","MJJA_avg",58.66590909,"Theodore",1
+"1479",1988,"theodore","MJJA_avg",68.79909091,"Theodore",1
+"1480",1989,"theodore","MJJA_avg",96.85318182,"Theodore",1
+"1481",1990,"theodore","MJJA_avg",59.93409091,"Theodore",1
+"1482",1991,"theodore","MJJA_avg",60.99045455,"Theodore",1
+"1483",1992,"theodore","MJJA_avg",55.61727273,"Theodore",1
+"1484",1993,"theodore","MJJA_avg",76.09409091,"Theodore",1
+"1485",1994,"theodore","MJJA_avg",54.46318182,"Theodore",1
+"1486",1995,"theodore","MJJA_avg",73.89,"Theodore",1
+"1487",1996,"theodore","MJJA_avg",63.38818182,"Theodore",1
+"1488",1997,"theodore","MJJA_avg",68.23863636,"Theodore",1
+"1489",1998,"theodore","MJJA_avg",72.88727273,"Theodore",1
+"1490",1999,"theodore","MJJA_avg",81.85181818,"Theodore",1
+"1491",2000,"theodore","MJJA_avg",63.26545455,"Theodore",1
+"1492",2001,"theodore","MJJA_avg",57.445,"Theodore",1
+"1493",2002,"theodore","MJJA_avg",75.45136364,"Theodore",1
+"1494",2003,"theodore","MJJA_avg",71.87681818,"Theodore",1
+"1495",2004,"theodore","MJJA_avg",43.53636364,"Theodore",1
+"1496",2005,"theodore","MJJA_avg",48.15636364,"Theodore",1
+"1497",2006,"theodore","MJJA_avg",94.54,"Theodore",1
+"1498",2007,"theodore","MJJA_avg",54.71727273,"Theodore",1
+"1499",2008,"theodore","MJJA_avg",54.83681818,"Theodore",1
+"1500",2009,"theodore","MJJA_avg",49.41318182,"Theodore",1
+"1501",1980,"willow","MJJA_avg",107.155466,"Willow",1
+"1502",1981,"willow","MJJA_avg",121.1810036,"Willow",1
+"1503",1982,"willow","MJJA_avg",81.08243728,"Willow",1
+"1504",1983,"willow","MJJA_avg",76.61335125,"Willow",1
+"1505",1984,"willow","MJJA_avg",86.23655914,"Willow",1
+"1506",1985,"willow","MJJA_avg",71.0625,"Willow",1
+"1507",1986,"willow","MJJA_avg",78.68794803,"Willow",1
+"1508",1987,"willow","MJJA_avg",73.50336022,"Willow",1
+"1509",1988,"willow","MJJA_avg",72.37948029,"Willow",1
+"1510",1989,"willow","MJJA_avg",103.1431452,"Willow",1
+"1511",1990,"willow","MJJA_avg",70.2484319,"Willow",1
+"1512",1991,"willow","MJJA_avg",76.09094982,"Willow",1
+"1513",1992,"willow","MJJA_avg",63.59632617,"Willow",1
+"1514",1993,"willow","MJJA_avg",79.34811828,"Willow",1
+"1515",1994,"willow","MJJA_avg",58.1812276,"Willow",1
+"1516",1995,"willow","MJJA_avg",84.14202509,"Willow",1
+"1517",1996,"willow","MJJA_avg",67.17316308,"Willow",1
+"1518",1997,"willow","MJJA_avg",78.13866488,"Willow",1
+"1519",1998,"willow","MJJA_avg",85.3172043,"Willow",1
+"1520",1999,"willow","MJJA_avg",95.35595878,"Willow",1
+"1521",2000,"willow","MJJA_avg",68.5047043,"Willow",1
+"1522",2001,"willow","MJJA_avg",67.88844086,"Willow",1
+"1523",2002,"willow","MJJA_avg",86.64471326,"Willow",1
+"1524",2003,"willow","MJJA_avg",72.76635305,"Willow",1
+"1525",2004,"willow","MJJA_avg",51.98969534,"Willow",1
+"1526",2005,"willow","MJJA_avg",78.73947133,"Willow",1
+"1527",2006,"willow","MJJA_avg",106.7921147,"Willow",1
+"1528",2007,"willow","MJJA_avg",76.55510753,"Willow",1
+"1529",2008,"willow","MJJA_avg",71.92316308,"Willow",1
+"1530",2009,"willow","MJJA_avg",70.20071685,"Willow",1
+"1531",1980,"EF_chulitna","MJJA_max",138.0513479,"EF Chulitna",1
+"1532",1981,"EF_chulitna","MJJA_max",179.6521181,"EF Chulitna",1
+"1533",1982,"EF_chulitna","MJJA_max",123.1617458,"EF Chulitna",1
+"1534",1983,"EF_chulitna","MJJA_max",166.5404365,"EF Chulitna",1
+"1535",1984,"EF_chulitna","MJJA_max",128.4762516,"EF Chulitna",1
+"1536",1985,"EF_chulitna","MJJA_max",84.91014121,"EF Chulitna",1
+"1537",1986,"EF_chulitna","MJJA_max",207.8292683,"EF Chulitna",1
+"1538",1987,"EF_chulitna","MJJA_max",129.3594352,"EF Chulitna",1
+"1539",1988,"EF_chulitna","MJJA_max",104.1553273,"EF Chulitna",1
+"1540",1989,"EF_chulitna","MJJA_max",123.6161746,"EF Chulitna",1
+"1541",1990,"EF_chulitna","MJJA_max",130.9358152,"EF Chulitna",1
+"1542",1991,"EF_chulitna","MJJA_max",97.6110398,"EF Chulitna",1
+"1543",1992,"EF_chulitna","MJJA_max",108.3594352,"EF Chulitna",1
+"1544",1993,"EF_chulitna","MJJA_max",133.6251605,"EF Chulitna",1
+"1545",1994,"EF_chulitna","MJJA_max",80.10783055,"EF Chulitna",1
+"1546",1995,"EF_chulitna","MJJA_max",109.394095,"EF Chulitna",1
+"1547",1996,"EF_chulitna","MJJA_max",123.8896021,"EF Chulitna",1
+"1548",1997,"EF_chulitna","MJJA_max",134.703466,"EF Chulitna",1
+"1549",1998,"EF_chulitna","MJJA_max",143.6700899,"EF Chulitna",1
+"1550",1999,"EF_chulitna","MJJA_max",170.2207959,"EF Chulitna",1
+"1551",2000,"EF_chulitna","MJJA_max",120.5378691,"EF Chulitna",1
+"1552",2001,"EF_chulitna","MJJA_max",163.4736842,"EF Chulitna",1
+"1553",2002,"EF_chulitna","MJJA_max",145.1591784,"EF Chulitna",1
+"1554",2003,"EF_chulitna","MJJA_max",113.2901155,"EF Chulitna",1
+"1555",2004,"EF_chulitna","MJJA_max",62.55969191,"EF Chulitna",1
+"1556",2005,"EF_chulitna","MJJA_max",131.7933248,"EF Chulitna",1
+"1557",2006,"EF_chulitna","MJJA_max",176.8806162,"EF Chulitna",1
+"1558",2007,"EF_chulitna","MJJA_max",120.1681643,"EF Chulitna",1
+"1559",2008,"EF_chulitna","MJJA_max",99.61617458,"EF Chulitna",1
+"1560",2009,"EF_chulitna","MJJA_max",113.6097561,"EF Chulitna",1
+"1561",1980,"alexander","MJJA_max",93.45734266,"Alexander",1
+"1562",1981,"alexander","MJJA_max",129.1440559,"Alexander",1
+"1563",1982,"alexander","MJJA_max",83.75524476,"Alexander",1
+"1564",1983,"alexander","MJJA_max",97.4993007,"Alexander",1
+"1565",1984,"alexander","MJJA_max",123.2111888,"Alexander",1
+"1566",1985,"alexander","MJJA_max",89.23636364,"Alexander",1
+"1567",1986,"alexander","MJJA_max",104.1559441,"Alexander",1
+"1568",1987,"alexander","MJJA_max",70.59090909,"Alexander",1
+"1569",1988,"alexander","MJJA_max",96.2979021,"Alexander",1
+"1570",1989,"alexander","MJJA_max",136.6083916,"Alexander",1
+"1571",1990,"alexander","MJJA_max",74.94895105,"Alexander",1
+"1572",1991,"alexander","MJJA_max",67.11818182,"Alexander",1
+"1573",1992,"alexander","MJJA_max",76.90629371,"Alexander",1
+"1574",1993,"alexander","MJJA_max",126.7811189,"Alexander",1
+"1575",1994,"alexander","MJJA_max",62.41888112,"Alexander",1
+"1576",1995,"alexander","MJJA_max",74.23916084,"Alexander",1
+"1577",1996,"alexander","MJJA_max",91.32307692,"Alexander",1
+"1578",1997,"alexander","MJJA_max",110.8342657,"Alexander",1
+"1579",1998,"alexander","MJJA_max",87.05034965,"Alexander",1
+"1580",1999,"alexander","MJJA_max",97.0993007,"Alexander",1
+"1581",2000,"alexander","MJJA_max",78.18671329,"Alexander",1
+"1582",2001,"alexander","MJJA_max",78.72517483,"Alexander",1
+"1583",2002,"alexander","MJJA_max",101.3447553,"Alexander",1
+"1584",2003,"alexander","MJJA_max",78.94475525,"Alexander",1
+"1585",2004,"alexander","MJJA_max",56.31888112,"Alexander",1
+"1586",2005,"alexander","MJJA_max",65.5027972,"Alexander",1
+"1587",2006,"alexander","MJJA_max",165.413986,"Alexander",1
+"1588",2007,"alexander","MJJA_max",65.08181818,"Alexander",1
+"1589",2008,"alexander","MJJA_max",62.97692308,"Alexander",1
+"1590",2009,"alexander","MJJA_max",68.09020979,"Alexander",1
+"1591",1980,"anchor","MJJA_max",77.56428571,"Anchor",1
+"1592",1981,"anchor","MJJA_max",104.8163265,"Anchor",1
+"1593",1982,"anchor","MJJA_max",38.73571429,"Anchor",1
+"1594",1983,"anchor","MJJA_max",62.92346939,"Anchor",1
+"1595",1984,"anchor","MJJA_max",112.0653061,"Anchor",1
+"1596",1985,"anchor","MJJA_max",75.84183674,"Anchor",1
+"1597",1986,"anchor","MJJA_max",81.55204082,"Anchor",1
+"1598",1987,"anchor","MJJA_max",42.61326531,"Anchor",1
+"1599",1988,"anchor","MJJA_max",88.88367347,"Anchor",1
+"1600",1989,"anchor","MJJA_max",79.40510204,"Anchor",1
+"1601",1990,"anchor","MJJA_max",49.21938776,"Anchor",1
+"1602",1991,"anchor","MJJA_max",63.25612245,"Anchor",1
+"1603",1992,"anchor","MJJA_max",72.98163265,"Anchor",1
+"1604",1993,"anchor","MJJA_max",84.87653061,"Anchor",1
+"1605",1994,"anchor","MJJA_max",37.97040816,"Anchor",1
+"1606",1995,"anchor","MJJA_max",85.46938776,"Anchor",1
+"1607",1996,"anchor","MJJA_max",51.49693878,"Anchor",1
+"1608",1997,"anchor","MJJA_max",66.63367347,"Anchor",1
+"1609",1998,"anchor","MJJA_max",56.22244898,"Anchor",1
+"1610",1999,"anchor","MJJA_max",80.21836735,"Anchor",1
+"1611",2000,"anchor","MJJA_max",82.55612245,"Anchor",1
+"1612",2001,"anchor","MJJA_max",55.38469388,"Anchor",1
+"1613",2002,"anchor","MJJA_max",78.14387755,"Anchor",1
+"1614",2003,"anchor","MJJA_max",65.45714286,"Anchor",1
+"1615",2004,"anchor","MJJA_max",27.04285714,"Anchor",1
+"1616",2005,"anchor","MJJA_max",44.71734694,"Anchor",1
+"1617",2006,"anchor","MJJA_max",110.8,"Anchor",1
+"1618",2007,"anchor","MJJA_max",43.90102041,"Anchor",1
+"1619",2008,"anchor","MJJA_max",76.77040816,"Anchor",1
+"1620",2009,"anchor","MJJA_max",57.03979592,"Anchor",1
+"1621",1980,"campbell","MJJA_max",96.50645161,"NF Campbell",1
+"1622",1981,"campbell","MJJA_max",159.3,"NF Campbell",1
+"1623",1982,"campbell","MJJA_max",79.53548387,"NF Campbell",1
+"1624",1983,"campbell","MJJA_max",102.7193548,"NF Campbell",1
+"1625",1984,"campbell","MJJA_max",98.13870968,"NF Campbell",1
+"1626",1985,"campbell","MJJA_max",106.9290323,"NF Campbell",1
+"1627",1986,"campbell","MJJA_max",105.9967742,"NF Campbell",1
+"1628",1987,"campbell","MJJA_max",60.88709677,"NF Campbell",1
+"1629",1988,"campbell","MJJA_max",111.6387097,"NF Campbell",1
+"1630",1989,"campbell","MJJA_max",116.9806452,"NF Campbell",1
+"1631",1990,"campbell","MJJA_max",64.22580645,"NF Campbell",1
+"1632",1991,"campbell","MJJA_max",112.8935484,"NF Campbell",1
+"1633",1992,"campbell","MJJA_max",84.16451613,"NF Campbell",1
+"1634",1993,"campbell","MJJA_max",127.8451613,"NF Campbell",1
+"1635",1994,"campbell","MJJA_max",51.68387097,"NF Campbell",1
+"1636",1995,"campbell","MJJA_max",97.11612903,"NF Campbell",1
+"1637",1996,"campbell","MJJA_max",79.21290323,"NF Campbell",1
+"1638",1997,"campbell","MJJA_max",110.0967742,"NF Campbell",1
+"1639",1998,"campbell","MJJA_max",102.1193548,"NF Campbell",1
+"1640",1999,"campbell","MJJA_max",121.1580645,"NF Campbell",1
+"1641",2000,"campbell","MJJA_max",77.61935484,"NF Campbell",1
+"1642",2001,"campbell","MJJA_max",71.81935484,"NF Campbell",1
+"1643",2002,"campbell","MJJA_max",103.6870968,"NF Campbell",1
+"1644",2003,"campbell","MJJA_max",77.69354839,"NF Campbell",1
+"1645",2004,"campbell","MJJA_max",37.69677419,"NF Campbell",1
+"1646",2005,"campbell","MJJA_max",107.2580645,"NF Campbell",1
+"1647",2006,"campbell","MJJA_max",159.8387097,"NF Campbell",1
+"1648",2007,"campbell","MJJA_max",65.33870968,"NF Campbell",1
+"1649",2008,"campbell","MJJA_max",108.5709677,"NF Campbell",1
+"1650",2009,"campbell","MJJA_max",92.3,"NF Campbell",1
+"1651",1980,"chuitna","MJJA_max",132.3302752,"Chuitna",1
+"1652",1981,"chuitna","MJJA_max",171.5474006,"Chuitna",1
+"1653",1982,"chuitna","MJJA_max",107.1559633,"Chuitna",1
+"1654",1983,"chuitna","MJJA_max",128.117737,"Chuitna",1
+"1655",1984,"chuitna","MJJA_max",171.3761468,"Chuitna",1
+"1656",1985,"chuitna","MJJA_max",121.8470948,"Chuitna",1
+"1657",1986,"chuitna","MJJA_max",139.3547401,"Chuitna",1
+"1658",1987,"chuitna","MJJA_max",94.82568807,"Chuitna",1
+"1659",1988,"chuitna","MJJA_max",137.0214067,"Chuitna",1
+"1660",1989,"chuitna","MJJA_max",170.1926606,"Chuitna",1
+"1661",1990,"chuitna","MJJA_max",104.0902141,"Chuitna",1
+"1662",1991,"chuitna","MJJA_max",98.44495413,"Chuitna",1
+"1663",1992,"chuitna","MJJA_max",109.2385321,"Chuitna",1
+"1664",1993,"chuitna","MJJA_max",164.5198777,"Chuitna",1
+"1665",1994,"chuitna","MJJA_max",90.74006116,"Chuitna",1
+"1666",1995,"chuitna","MJJA_max",113.2385321,"Chuitna",1
+"1667",1996,"chuitna","MJJA_max",118.6314985,"Chuitna",1
+"1668",1997,"chuitna","MJJA_max",136.3119266,"Chuitna",1
+"1669",1998,"chuitna","MJJA_max",113.0840979,"Chuitna",1
+"1670",1999,"chuitna","MJJA_max",134.146789,"Chuitna",1
+"1671",2000,"chuitna","MJJA_max",123.1192661,"Chuitna",1
+"1672",2001,"chuitna","MJJA_max",104.3119266,"Chuitna",1
+"1673",2002,"chuitna","MJJA_max",135.1039755,"Chuitna",1
+"1674",2003,"chuitna","MJJA_max",110.2018349,"Chuitna",1
+"1675",2004,"chuitna","MJJA_max",55.89296636,"Chuitna",1
+"1676",2005,"chuitna","MJJA_max",80.20489297,"Chuitna",1
+"1677",2006,"chuitna","MJJA_max",211.3195719,"Chuitna",1
+"1678",2007,"chuitna","MJJA_max",90.29969419,"Chuitna",1
+"1679",2008,"chuitna","MJJA_max",97.76452599,"Chuitna",1
+"1680",2009,"chuitna","MJJA_max",89.58409786,"Chuitna",1
+"1681",1980,"crooked","MJJA_max",85.96969697,"Crooked",1
+"1682",1981,"crooked","MJJA_max",123.4356061,"Crooked",1
+"1683",1982,"crooked","MJJA_max",44.68181818,"Crooked",1
+"1684",1983,"crooked","MJJA_max",75.60984849,"Crooked",1
+"1685",1984,"crooked","MJJA_max",125.9318182,"Crooked",1
+"1686",1985,"crooked","MJJA_max",81.52272727,"Crooked",1
+"1687",1986,"crooked","MJJA_max",95.59090909,"Crooked",1
+"1688",1987,"crooked","MJJA_max",41.46969697,"Crooked",1
+"1689",1988,"crooked","MJJA_max",101.0606061,"Crooked",1
+"1690",1989,"crooked","MJJA_max",98.36363636,"Crooked",1
+"1691",1990,"crooked","MJJA_max",56.21969697,"Crooked",1
+"1692",1991,"crooked","MJJA_max",72.51893939,"Crooked",1
+"1693",1992,"crooked","MJJA_max",81.53787879,"Crooked",1
+"1694",1993,"crooked","MJJA_max",102.2424242,"Crooked",1
+"1695",1994,"crooked","MJJA_max",34.85227273,"Crooked",1
+"1696",1995,"crooked","MJJA_max",91.86742424,"Crooked",1
+"1697",1996,"crooked","MJJA_max",63.06060606,"Crooked",1
+"1698",1997,"crooked","MJJA_max",82.99242424,"Crooked",1
+"1699",1998,"crooked","MJJA_max",54.16666667,"Crooked",1
+"1700",1999,"crooked","MJJA_max",93.53030303,"Crooked",1
+"1701",2000,"crooked","MJJA_max",79.875,"Crooked",1
+"1702",2001,"crooked","MJJA_max",58.58712121,"Crooked",1
+"1703",2002,"crooked","MJJA_max",91.87878788,"Crooked",1
+"1704",2003,"crooked","MJJA_max",74.81439394,"Crooked",1
+"1705",2004,"crooked","MJJA_max",24.07575758,"Crooked",1
+"1706",2005,"crooked","MJJA_max",50.29166667,"Crooked",1
+"1707",2006,"crooked","MJJA_max",133.5113636,"Crooked",1
+"1708",2007,"crooked","MJJA_max",46.21590909,"Crooked",1
+"1709",2008,"crooked","MJJA_max",76.64393939,"Crooked",1
+"1710",2009,"crooked","MJJA_max",67.56060606,"Crooked",1
+"1711",1980,"deep","MJJA_max",80.10104167,"Deep",1
+"1712",1981,"deep","MJJA_max",112.025,"Deep",1
+"1713",1982,"deep","MJJA_max",55.59583333,"Deep",1
+"1714",1983,"deep","MJJA_max",67.31041667,"Deep",1
+"1715",1984,"deep","MJJA_max",115.3125,"Deep",1
+"1716",1985,"deep","MJJA_max",95.61875,"Deep",1
+"1717",1986,"deep","MJJA_max",97.23958333,"Deep",1
+"1718",1987,"deep","MJJA_max",53.34791667,"Deep",1
+"1719",1988,"deep","MJJA_max",92.81875,"Deep",1
+"1720",1989,"deep","MJJA_max",94.00729167,"Deep",1
+"1721",1990,"deep","MJJA_max",58.09166667,"Deep",1
+"1722",1991,"deep","MJJA_max",72.55729167,"Deep",1
+"1723",1992,"deep","MJJA_max",75.48541667,"Deep",1
+"1724",1993,"deep","MJJA_max",91.06458333,"Deep",1
+"1725",1994,"deep","MJJA_max",49.16041667,"Deep",1
+"1726",1995,"deep","MJJA_max",102.5989583,"Deep",1
+"1727",1996,"deep","MJJA_max",55.41770833,"Deep",1
+"1728",1997,"deep","MJJA_max",72.50416667,"Deep",1
+"1729",1998,"deep","MJJA_max",73.93020833,"Deep",1
+"1730",1999,"deep","MJJA_max",84.58125,"Deep",1
+"1731",2000,"deep","MJJA_max",110.378125,"Deep",1
+"1732",2001,"deep","MJJA_max",77.47604167,"Deep",1
+"1733",2002,"deep","MJJA_max",82.57291667,"Deep",1
+"1734",2003,"deep","MJJA_max",68.00104167,"Deep",1
+"1735",2004,"deep","MJJA_max",32.84270833,"Deep",1
+"1736",2005,"deep","MJJA_max",49.54583333,"Deep",1
+"1737",2006,"deep","MJJA_max",118.478125,"Deep",1
+"1738",2007,"deep","MJJA_max",61.46979167,"Deep",1
+"1739",2008,"deep","MJJA_max",106.1770833,"Deep",1
+"1740",2009,"deep","MJJA_max",61.090625,"Deep",1
+"1741",1980,"deshka","MJJA_max",93.21945946,"Deshka",1
+"1742",1981,"deshka","MJJA_max",142.350991,"Deshka",1
+"1743",1982,"deshka","MJJA_max",100.729009,"Deshka",1
+"1744",1983,"deshka","MJJA_max",110.4147748,"Deshka",1
+"1745",1984,"deshka","MJJA_max",127.2854054,"Deshka",1
+"1746",1985,"deshka","MJJA_max",97.71243243,"Deshka",1
+"1747",1986,"deshka","MJJA_max",113.9891892,"Deshka",1
+"1748",1987,"deshka","MJJA_max",78.66198198,"Deshka",1
+"1749",1988,"deshka","MJJA_max",99.87783784,"Deshka",1
+"1750",1989,"deshka","MJJA_max",158.5704505,"Deshka",1
+"1751",1990,"deshka","MJJA_max",93.94918919,"Deshka",1
+"1752",1991,"deshka","MJJA_max",73.17333333,"Deshka",1
+"1753",1992,"deshka","MJJA_max",78.85585586,"Deshka",1
+"1754",1993,"deshka","MJJA_max",143.8111712,"Deshka",1
+"1755",1994,"deshka","MJJA_max",73.01765766,"Deshka",1
+"1756",1995,"deshka","MJJA_max",69.31351351,"Deshka",1
+"1757",1996,"deshka","MJJA_max",104.6825225,"Deshka",1
+"1758",1997,"deshka","MJJA_max",129.8630631,"Deshka",1
+"1759",1998,"deshka","MJJA_max",104.1034234,"Deshka",1
+"1760",1999,"deshka","MJJA_max",105.2183784,"Deshka",1
+"1761",2000,"deshka","MJJA_max",71.91675676,"Deshka",1
+"1762",2001,"deshka","MJJA_max",86.27387387,"Deshka",1
+"1763",2002,"deshka","MJJA_max",113.5484685,"Deshka",1
+"1764",2003,"deshka","MJJA_max",85.59135135,"Deshka",1
+"1765",2004,"deshka","MJJA_max",75.14774775,"Deshka",1
+"1766",2005,"deshka","MJJA_max",80.07063063,"Deshka",1
+"1767",2006,"deshka","MJJA_max",187.4468469,"Deshka",1
+"1768",2007,"deshka","MJJA_max",75.6154955,"Deshka",1
+"1769",2008,"deshka","MJJA_max",59.3981982,"Deshka",1
+"1770",2009,"deshka","MJJA_max",75.78522523,"Deshka",1
+"1771",1980,"kenai_early","MJJA_max",119.2556664,"Kenai_early",NA
+"1772",1981,"kenai_early","MJJA_max",192.8259293,"Kenai_early",NA
+"1773",1982,"kenai_early","MJJA_max",65.59564823,"Kenai_early",NA
+"1774",1983,"kenai_early","MJJA_max",104.4351768,"Kenai_early",NA
+"1775",1984,"kenai_early","MJJA_max",149.4125113,"Kenai_early",NA
+"1776",1985,"kenai_early","MJJA_max",114.9709882,"Kenai_early",NA
+"1777",1986,"kenai_early","MJJA_max",132.2674524,"Kenai_early",NA
+"1778",1987,"kenai_early","MJJA_max",67.17225748,"Kenai_early",NA
+"1779",1988,"kenai_early","MJJA_max",139.7923844,"Kenai_early",NA
+"1780",1989,"kenai_early","MJJA_max",129.0090662,"Kenai_early",NA
+"1781",1990,"kenai_early","MJJA_max",77.06618314,"Kenai_early",NA
+"1782",1991,"kenai_early","MJJA_max",123.7026292,"Kenai_early",NA
+"1783",1992,"kenai_early","MJJA_max",116.819583,"Kenai_early",NA
+"1784",1993,"kenai_early","MJJA_max",145.5947416,"Kenai_early",NA
+"1785",1994,"kenai_early","MJJA_max",61.28105168,"Kenai_early",NA
+"1786",1995,"kenai_early","MJJA_max",110.6310064,"Kenai_early",NA
+"1787",1996,"kenai_early","MJJA_max",85.17407072,"Kenai_early",NA
+"1788",1997,"kenai_early","MJJA_max",118.7941976,"Kenai_early",NA
+"1789",1998,"kenai_early","MJJA_max",86.47416138,"Kenai_early",NA
+"1790",1999,"kenai_early","MJJA_max",126.4025385,"Kenai_early",NA
+"1791",2000,"kenai_early","MJJA_max",100.1396192,"Kenai_early",NA
+"1792",2001,"kenai_early","MJJA_max",78.35267452,"Kenai_early",NA
+"1793",2002,"kenai_early","MJJA_max",124.130553,"Kenai_early",NA
+"1794",2003,"kenai_early","MJJA_max",96.11151405,"Kenai_early",NA
+"1795",2004,"kenai_early","MJJA_max",73.10970082,"Kenai_early",NA
+"1796",2005,"kenai_early","MJJA_max",106.0797824,"Kenai_early",NA
+"1797",2006,"kenai_early","MJJA_max",183.0081596,"Kenai_early",NA
+"1798",2007,"kenai_early","MJJA_max",71.64641886,"Kenai_early",NA
+"1799",2008,"kenai_early","MJJA_max",115.5856754,"Kenai_early",NA
+"1800",2009,"kenai_early","MJJA_max",104.3009973,"Kenai_early",NA
+"1801",1980,"kenai_late","MJJA_max",120.7,"Kenai_late",1
+"1802",1981,"kenai_late","MJJA_max",213.2363954,"Kenai_late",1
+"1803",1982,"kenai_late","MJJA_max",68.56639535,"Kenai_late",1
+"1804",1983,"kenai_late","MJJA_max",109.4969767,"Kenai_late",1
+"1805",1984,"kenai_late","MJJA_max",142.4903488,"Kenai_late",1
+"1806",1985,"kenai_late","MJJA_max",116.5355814,"Kenai_late",1
+"1807",1986,"kenai_late","MJJA_max",136.0648837,"Kenai_late",1
+"1808",1987,"kenai_late","MJJA_max",72.85976744,"Kenai_late",1
+"1809",1988,"kenai_late","MJJA_max",141.5404651,"Kenai_late",1
+"1810",1989,"kenai_late","MJJA_max",132.1118605,"Kenai_late",1
+"1811",1990,"kenai_late","MJJA_max",80.44651163,"Kenai_late",1
+"1812",1991,"kenai_late","MJJA_max",137.9456977,"Kenai_late",1
+"1813",1992,"kenai_late","MJJA_max",125.7068605,"Kenai_late",1
+"1814",1993,"kenai_late","MJJA_max",154.5345349,"Kenai_late",1
+"1815",1994,"kenai_late","MJJA_max",65.34174419,"Kenai_late",1
+"1816",1995,"kenai_late","MJJA_max",105.1589535,"Kenai_late",1
+"1817",1996,"kenai_late","MJJA_max",88.65197674,"Kenai_late",1
+"1818",1997,"kenai_late","MJJA_max",127.1480233,"Kenai_late",1
+"1819",1998,"kenai_late","MJJA_max",93.85674419,"Kenai_late",1
+"1820",1999,"kenai_late","MJJA_max",123.0982558,"Kenai_late",1
+"1821",2000,"kenai_late","MJJA_max",89.96372093,"Kenai_late",1
+"1822",2001,"kenai_late","MJJA_max",74.95651163,"Kenai_late",1
+"1823",2002,"kenai_late","MJJA_max",127.5466279,"Kenai_late",1
+"1824",2003,"kenai_late","MJJA_max",98.98418605,"Kenai_late",1
+"1825",2004,"kenai_late","MJJA_max",78.30465116,"Kenai_late",1
+"1826",2005,"kenai_late","MJJA_max",124.180814,"Kenai_late",1
+"1827",2006,"kenai_late","MJJA_max",190.7633721,"Kenai_late",1
+"1828",2007,"kenai_late","MJJA_max",80.56511628,"Kenai_late",1
+"1829",2008,"kenai_late","MJJA_max",110.3245349,"Kenai_late",1
+"1830",2009,"kenai_late","MJJA_max",111.4788372,"Kenai_late",1
+"1831",1980,"lewis","MJJA_max",117.5454546,"Lewis",NA
+"1832",1981,"lewis","MJJA_max",170.0707071,"Lewis",NA
+"1833",1982,"lewis","MJJA_max",108.2828283,"Lewis",NA
+"1834",1983,"lewis","MJJA_max",120.2323232,"Lewis",NA
+"1835",1984,"lewis","MJJA_max",161.6026936,"Lewis",NA
+"1836",1985,"lewis","MJJA_max",112.4915825,"Lewis",NA
+"1837",1986,"lewis","MJJA_max",132.5858586,"Lewis",NA
+"1838",1987,"lewis","MJJA_max",90.54545455,"Lewis",NA
+"1839",1988,"lewis","MJJA_max",124.8787879,"Lewis",NA
+"1840",1989,"lewis","MJJA_max",168.6734007,"Lewis",NA
+"1841",1990,"lewis","MJJA_max",94.44107744,"Lewis",NA
+"1842",1991,"lewis","MJJA_max",90.1043771,"Lewis",NA
+"1843",1992,"lewis","MJJA_max",100.2895623,"Lewis",NA
+"1844",1993,"lewis","MJJA_max",158.023569,"Lewis",NA
+"1845",1994,"lewis","MJJA_max",74.95622896,"Lewis",NA
+"1846",1995,"lewis","MJJA_max",100.3434343,"Lewis",NA
+"1847",1996,"lewis","MJJA_max",110.4680135,"Lewis",NA
+"1848",1997,"lewis","MJJA_max",137.7946128,"Lewis",NA
+"1849",1998,"lewis","MJJA_max",102.4208754,"Lewis",NA
+"1850",1999,"lewis","MJJA_max",123.7003367,"Lewis",NA
+"1851",2000,"lewis","MJJA_max",109.5050505,"Lewis",NA
+"1852",2001,"lewis","MJJA_max",106.5151515,"Lewis",NA
+"1853",2002,"lewis","MJJA_max",129.4781145,"Lewis",NA
+"1854",2003,"lewis","MJJA_max",100.956229,"Lewis",NA
+"1855",2004,"lewis","MJJA_max",65.51178451,"Lewis",NA
+"1856",2005,"lewis","MJJA_max",79.76094276,"Lewis",NA
+"1857",2006,"lewis","MJJA_max",207.4006734,"Lewis",NA
+"1858",2007,"lewis","MJJA_max",85.76430976,"Lewis",NA
+"1859",2008,"lewis","MJJA_max",91.38720539,"Lewis",NA
+"1860",2009,"lewis","MJJA_max",88.10774411,"Lewis",NA
+"1861",1980,"little_susitna","MJJA_max",101.3503044,"Little Susitna",1
+"1862",1981,"little_susitna","MJJA_max",132.9596016,"Little Susitna",1
+"1863",1982,"little_susitna","MJJA_max",99.83674599,"Little Susitna",1
+"1864",1983,"little_susitna","MJJA_max",119.4178196,"Little Susitna",1
+"1865",1984,"little_susitna","MJJA_max",97.86773658,"Little Susitna",1
+"1866",1985,"little_susitna","MJJA_max",97.13115661,"Little Susitna",1
+"1867",1986,"little_susitna","MJJA_max",110.0143885,"Little Susitna",1
+"1868",1987,"little_susitna","MJJA_max",76.76148312,"Little Susitna",1
+"1869",1988,"little_susitna","MJJA_max",91.46541229,"Little Susitna",1
+"1870",1989,"little_susitna","MJJA_max",122.5810736,"Little Susitna",1
+"1871",1990,"little_susitna","MJJA_max",88.47371334,"Little Susitna",1
+"1872",1991,"little_susitna","MJJA_max",95.62700609,"Little Susitna",1
+"1873",1992,"little_susitna","MJJA_max",76.35694521,"Little Susitna",1
+"1874",1993,"little_susitna","MJJA_max",124.3530714,"Little Susitna",1
+"1875",1994,"little_susitna","MJJA_max",71.79856115,"Little Susitna",1
+"1876",1995,"little_susitna","MJJA_max",84.09241837,"Little Susitna",1
+"1877",1996,"little_susitna","MJJA_max",82.77808522,"Little Susitna",1
+"1878",1997,"little_susitna","MJJA_max",113.2191478,"Little Susitna",1
+"1879",1998,"little_susitna","MJJA_max",97.60819037,"Little Susitna",1
+"1880",1999,"little_susitna","MJJA_max",109.1256226,"Little Susitna",1
+"1881",2000,"little_susitna","MJJA_max",82.58716104,"Little Susitna",1
+"1882",2001,"little_susitna","MJJA_max",90.484228,"Little Susitna",1
+"1883",2002,"little_susitna","MJJA_max",102.7249585,"Little Susitna",1
+"1884",2003,"little_susitna","MJJA_max",75.86884339,"Little Susitna",1
+"1885",2004,"little_susitna","MJJA_max",45.04205866,"Little Susitna",1
+"1886",2005,"little_susitna","MJJA_max",89.23907028,"Little Susitna",1
+"1887",2006,"little_susitna","MJJA_max",161.2108467,"Little Susitna",1
+"1888",2007,"little_susitna","MJJA_max",74.08909795,"Little Susitna",1
+"1889",2008,"little_susitna","MJJA_max",112.4244604,"Little Susitna",1
+"1890",2009,"little_susitna","MJJA_max",86.58771444,"Little Susitna",1
+"1891",1980,"little_willow","MJJA_max",120.9814286,"Little Willow",1
+"1892",1981,"little_willow","MJJA_max",162.5528571,"Little Willow",1
+"1893",1982,"little_willow","MJJA_max",125.6085714,"Little Willow",1
+"1894",1983,"little_willow","MJJA_max",139.9685714,"Little Willow",1
+"1895",1984,"little_willow","MJJA_max",112.4214286,"Little Willow",1
+"1896",1985,"little_willow","MJJA_max",106.4042857,"Little Willow",1
+"1897",1986,"little_willow","MJJA_max",138.9485714,"Little Willow",1
+"1898",1987,"little_willow","MJJA_max",96.49571429,"Little Willow",1
+"1899",1988,"little_willow","MJJA_max",98.43857143,"Little Willow",1
+"1900",1989,"little_willow","MJJA_max",145.7428571,"Little Willow",1
+"1901",1990,"little_willow","MJJA_max",111.0128571,"Little Willow",1
+"1902",1991,"little_willow","MJJA_max",109.7157143,"Little Willow",1
+"1903",1992,"little_willow","MJJA_max",84.47714286,"Little Willow",1
+"1904",1993,"little_willow","MJJA_max",143.8128571,"Little Willow",1
+"1905",1994,"little_willow","MJJA_max",88.55142857,"Little Willow",1
+"1906",1995,"little_willow","MJJA_max",83.27714286,"Little Willow",1
+"1907",1996,"little_willow","MJJA_max",98.64571429,"Little Willow",1
+"1908",1997,"little_willow","MJJA_max",133.0028571,"Little Willow",1
+"1909",1998,"little_willow","MJJA_max",111.2657143,"Little Willow",1
+"1910",1999,"little_willow","MJJA_max",119.69,"Little Willow",1
+"1911",2000,"little_willow","MJJA_max",94.50857143,"Little Willow",1
+"1912",2001,"little_willow","MJJA_max",112.4742857,"Little Willow",1
+"1913",2002,"little_willow","MJJA_max",118.7828571,"Little Willow",1
+"1914",2003,"little_willow","MJJA_max",86.40714286,"Little Willow",1
+"1915",2004,"little_willow","MJJA_max",51.42142857,"Little Willow",1
+"1916",2005,"little_willow","MJJA_max",98.13857143,"Little Willow",1
+"1917",2006,"little_willow","MJJA_max",187.8257143,"Little Willow",1
+"1918",2007,"little_willow","MJJA_max",90.89857143,"Little Willow",1
+"1919",2008,"little_willow","MJJA_max",122.4928571,"Little Willow",1
+"1920",2009,"little_willow","MJJA_max",100.0371429,"Little Willow",1
+"1921",1980,"montana","MJJA_max",151.0784044,"Montana",1
+"1922",1981,"montana","MJJA_max",212.9614856,"Montana",1
+"1923",1982,"montana","MJJA_max",164.6740028,"Montana",1
+"1924",1983,"montana","MJJA_max",192.0701513,"Montana",1
+"1925",1984,"montana","MJJA_max",163.0536451,"Montana",1
+"1926",1985,"montana","MJJA_max",137.5694636,"Montana",1
+"1927",1986,"montana","MJJA_max",191.3810179,"Montana",1
+"1928",1987,"montana","MJJA_max",129.0646492,"Montana",1
+"1929",1988,"montana","MJJA_max",128.9270977,"Montana",1
+"1930",1989,"montana","MJJA_max",208.3370014,"Montana",1
+"1931",1990,"montana","MJJA_max",135.1169189,"Montana",1
+"1932",1991,"montana","MJJA_max",126.3686382,"Montana",1
+"1933",1992,"montana","MJJA_max",113.4924347,"Montana",1
+"1934",1993,"montana","MJJA_max",202.2489684,"Montana",1
+"1935",1994,"montana","MJJA_max",105.5543329,"Montana",1
+"1936",1995,"montana","MJJA_max",109.5598349,"Montana",1
+"1937",1996,"montana","MJJA_max",144.2420908,"Montana",1
+"1938",1997,"montana","MJJA_max",191.0701513,"Montana",1
+"1939",1998,"montana","MJJA_max",151.0082531,"Montana",1
+"1940",1999,"montana","MJJA_max",169.2283356,"Montana",1
+"1941",2000,"montana","MJJA_max",111.6836314,"Montana",1
+"1942",2001,"montana","MJJA_max",150.6863824,"Montana",1
+"1943",2002,"montana","MJJA_max",166.8899587,"Montana",1
+"1944",2003,"montana","MJJA_max",120.6850069,"Montana",1
+"1945",2004,"montana","MJJA_max",80.02338377,"Montana",1
+"1946",2005,"montana","MJJA_max",122.3136176,"Montana",1
+"1947",2006,"montana","MJJA_max",266.4910592,"Montana",1
+"1948",2007,"montana","MJJA_max",118.525447,"Montana",1
+"1949",2008,"montana","MJJA_max",126.5983494,"Montana",1
+"1950",2009,"montana","MJJA_max",131.8129299,"Montana",1
+"1951",1980,"ninilchik","MJJA_max",81.56217163,"Ninilchik",1
+"1952",1981,"ninilchik","MJJA_max",114.4518389,"Ninilchik",1
+"1953",1982,"ninilchik","MJJA_max",43.23117338,"Ninilchik",1
+"1954",1983,"ninilchik","MJJA_max",71.07705779,"Ninilchik",1
+"1955",1984,"ninilchik","MJJA_max",120.3992995,"Ninilchik",1
+"1956",1985,"ninilchik","MJJA_max",76.03502627,"Ninilchik",1
+"1957",1986,"ninilchik","MJJA_max",89.43782837,"Ninilchik",1
+"1958",1987,"ninilchik","MJJA_max",41.76007005,"Ninilchik",1
+"1959",1988,"ninilchik","MJJA_max",95.16112084,"Ninilchik",1
+"1960",1989,"ninilchik","MJJA_max",91.73730298,"Ninilchik",1
+"1961",1990,"ninilchik","MJJA_max",52.9352014,"Ninilchik",1
+"1962",1991,"ninilchik","MJJA_max",67.39404553,"Ninilchik",1
+"1963",1992,"ninilchik","MJJA_max",77.39754816,"Ninilchik",1
+"1964",1993,"ninilchik","MJJA_max",95.42732049,"Ninilchik",1
+"1965",1994,"ninilchik","MJJA_max",36.97723293,"Ninilchik",1
+"1966",1995,"ninilchik","MJJA_max",88.64273205,"Ninilchik",1
+"1967",1996,"ninilchik","MJJA_max",59.42031524,"Ninilchik",1
+"1968",1997,"ninilchik","MJJA_max",76.46409807,"Ninilchik",1
+"1969",1998,"ninilchik","MJJA_max",50.87215412,"Ninilchik",1
+"1970",1999,"ninilchik","MJJA_max",87.26970228,"Ninilchik",1
+"1971",2000,"ninilchik","MJJA_max",82.47285464,"Ninilchik",1
+"1972",2001,"ninilchik","MJJA_max",58.85464098,"Ninilchik",1
+"1973",2002,"ninilchik","MJJA_max",86.43957969,"Ninilchik",1
+"1974",2003,"ninilchik","MJJA_max",71.34150613,"Ninilchik",1
+"1975",2004,"ninilchik","MJJA_max",27.37302977,"Ninilchik",1
+"1976",2005,"ninilchik","MJJA_max",44.1558669,"Ninilchik",1
+"1977",2006,"ninilchik","MJJA_max",124.5446585,"Ninilchik",1
+"1978",2007,"ninilchik","MJJA_max",46.77583187,"Ninilchik",1
+"1979",2008,"ninilchik","MJJA_max",76.15236427,"Ninilchik",1
+"1980",2009,"ninilchik","MJJA_max",62.20490368,"Ninilchik",1
+"1981",1980,"theodore","MJJA_max",106.1218182,"Theodore",1
+"1982",1981,"theodore","MJJA_max",168.1545455,"Theodore",1
+"1983",1982,"theodore","MJJA_max",100.9690909,"Theodore",1
+"1984",1983,"theodore","MJJA_max",124.9181818,"Theodore",1
+"1985",1984,"theodore","MJJA_max",163.72,"Theodore",1
+"1986",1985,"theodore","MJJA_max",116.1363636,"Theodore",1
+"1987",1986,"theodore","MJJA_max",135.4963636,"Theodore",1
+"1988",1987,"theodore","MJJA_max",86.71454546,"Theodore",1
+"1989",1988,"theodore","MJJA_max",127.9072727,"Theodore",1
+"1990",1989,"theodore","MJJA_max",173.0763636,"Theodore",1
+"1991",1990,"theodore","MJJA_max",92.96545455,"Theodore",1
+"1992",1991,"theodore","MJJA_max",88.38909091,"Theodore",1
+"1993",1992,"theodore","MJJA_max",102.4236364,"Theodore",1
+"1994",1993,"theodore","MJJA_max",162.6018182,"Theodore",1
+"1995",1994,"theodore","MJJA_max",75.71090909,"Theodore",1
+"1996",1995,"theodore","MJJA_max",101.9327273,"Theodore",1
+"1997",1996,"theodore","MJJA_max",115.8709091,"Theodore",1
+"1998",1997,"theodore","MJJA_max",140.4381818,"Theodore",1
+"1999",1998,"theodore","MJJA_max",108.8690909,"Theodore",1
+"2000",1999,"theodore","MJJA_max",127.2363636,"Theodore",1
+"2001",2000,"theodore","MJJA_max",102.9581818,"Theodore",1
+"2002",2001,"theodore","MJJA_max",98.47454546,"Theodore",1
+"2003",2002,"theodore","MJJA_max",131.6236364,"Theodore",1
+"2004",2003,"theodore","MJJA_max",103.6672727,"Theodore",1
+"2005",2004,"theodore","MJJA_max",66.74909091,"Theodore",1
+"2006",2005,"theodore","MJJA_max",82.07272727,"Theodore",1
+"2007",2006,"theodore","MJJA_max",211.9363636,"Theodore",1
+"2008",2007,"theodore","MJJA_max",81.39454546,"Theodore",1
+"2009",2008,"theodore","MJJA_max",83.68363636,"Theodore",1
+"2010",2009,"theodore","MJJA_max",88.74727273,"Theodore",1
+"2011",1980,"willow","MJJA_max",134.9767025,"Willow",1
+"2012",1981,"willow","MJJA_max",173.9722222,"Willow",1
+"2013",1982,"willow","MJJA_max",135.125448,"Willow",1
+"2014",1983,"willow","MJJA_max",163.4130824,"Willow",1
+"2015",1984,"willow","MJJA_max",118.8870968,"Willow",1
+"2016",1985,"willow","MJJA_max",120.2598566,"Willow",1
+"2017",1986,"willow","MJJA_max",151.8198925,"Willow",1
+"2018",1987,"willow","MJJA_max",103.2311828,"Willow",1
+"2019",1988,"willow","MJJA_max",107.516129,"Willow",1
+"2020",1989,"willow","MJJA_max",156.9749104,"Willow",1
+"2021",1990,"willow","MJJA_max",116.7732975,"Willow",1
+"2022",1991,"willow","MJJA_max",123.9184588,"Willow",1
+"2023",1992,"willow","MJJA_max",94.92204301,"Willow",1
+"2024",1993,"willow","MJJA_max",157.8485663,"Willow",1
+"2025",1994,"willow","MJJA_max",93.57706093,"Willow",1
+"2026",1995,"willow","MJJA_max",101.3709677,"Willow",1
+"2027",1996,"willow","MJJA_max",106.7007169,"Willow",1
+"2028",1997,"willow","MJJA_max",146.1594982,"Willow",1
+"2029",1998,"willow","MJJA_max",125.2992832,"Willow",1
+"2030",1999,"willow","MJJA_max",134.7464158,"Willow",1
+"2031",2000,"willow","MJJA_max",104.8960574,"Willow",1
+"2032",2001,"willow","MJJA_max",121.3709677,"Willow",1
+"2033",2002,"willow","MJJA_max",131.0887097,"Willow",1
+"2034",2003,"willow","MJJA_max",95.53315412,"Willow",1
+"2035",2004,"willow","MJJA_max",59.14784946,"Willow",1
+"2036",2005,"willow","MJJA_max",112.6057348,"Willow",1
+"2037",2006,"willow","MJJA_max",205.9238351,"Willow",1
+"2038",2007,"willow","MJJA_max",99.05645161,"Willow",1
+"2039",2008,"willow","MJJA_max",145.6460574,"Willow",1
+"2040",2009,"willow","MJJA_max",113.5286738,"Willow",1
