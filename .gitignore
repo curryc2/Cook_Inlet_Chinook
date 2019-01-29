@@ -37,3 +37,6 @@ vignettes/*.pdf
 /testing
 /testing/
 testing/*
+
+#Ignore JAGS Output Files
+out.rds
