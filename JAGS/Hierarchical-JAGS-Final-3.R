@@ -46,16 +46,16 @@ dir.data <- file.path(wd,"Data","10.25.18_update")
 #############################
 phase <- 3 #3 4 5
 
-fit <- FALSE
+fit <- TRUE
 
 #Update Fig and Output directories
-dir.output <- file.path(dir.output,"Final_New",paste0("Phase_",phase))
+dir.output <- file.path(dir.output,"Final_New_Publication",paste0("Phase_",phase))
 dir.create(dir.output, recursive=TRUE)
-dir.figs <- file.path(dir.figs,"Final_New",paste0("Phase_",phase))
+dir.figs <- file.path(dir.figs,"Final_New_Publication",paste0("Phase_",phase))
 dir.create(dir.figs, recursive=TRUE)
 
-n.sim <- 5e4#5e4
-n.thin <- 10
+n.sim <- 1e5#5e4
+n.thin <- 50#10
 n.chain <- 3
 
 #Covariate Offset
@@ -498,7 +498,7 @@ JAGS_heir <- function() {
     exp.alpha[p] ~ dunif(0,25)
     alpha[p] <- log(exp.alpha[p])#log(exp.alpha[p])
     beta[p] ~ dunif(1,1e+6)
-    sigma.oe[p] ~ dnorm(0, pow(1,-2));T(1e-3,2)#dgamma(1,1)
+    sigma.oe[p] ~ dnorm(0, pow(5,-2))#dnorm(0, pow(1,-2));T(1e-3,2)#dgamma(1,1)
     
     #Covariate Effects
     for(c in 1:n.covars) {
@@ -591,6 +591,10 @@ if(fit==TRUE) {
                        export_obj_names=c('n.chain','n.thin','Nsim','Nburnin'))   
   #Save
   saveRDS(out, file=file.path(dir.output,"out.rds"))
+  
+  #Write Output File for Diagnoistics
+  write.csv(out$BUGSoutput$summary, file=file.path(dir.figs,"out_summary.csv"))
+  
 }else {
   out <- readRDS(file=file.path(dir.output,"out.rds"))
 }
