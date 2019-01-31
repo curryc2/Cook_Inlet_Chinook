@@ -46,7 +46,7 @@ dir.data <- file.path(wd,"Data","10.25.18_update")
 #############################
 phase <- 3 #3 4 5
 
-fit <- TRUE
+fit <- FALSE
 
 #Update Fig and Output directories
 dir.output <- file.path(dir.output,"Final_New_correct",paste0("Phase_",phase))
