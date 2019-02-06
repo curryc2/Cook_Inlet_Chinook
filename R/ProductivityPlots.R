@@ -65,15 +65,45 @@ envProd <- envProd %>%
 
 # Plot the data----------
 # First, make a plain plot of productivity over time (faceted by population)
-prodCore.time <- ggplot(data = envProd, aes(x = BroodYear, y = prodCore)) +
+prodCore.time <- ggplot(data = prod, aes(x = BroodYear, y = prodCore)) +
   geom_point() +
   geom_line() +
   geom_hline(yintercept = 0, lty = "dotted") +
   facet_wrap(.~Population, scales = "free_y") +
   scale_x_continuous(name = "Brood Year", breaks = seq(1980, 2010, by = 10)) +
-  scale_y_continuous(name = "Productivity (ln(Recruits/Spawner))")
+  expand_limits(x = 2011) +
+  scale_y_continuous(name = "Productivity (ln[Recruits/Spawner])")
 prodCore.time
 ggsave("./figs/Productivity timeseries.png", width = 8, height = 6)
+
+# Same plot with 2003-2007 highlighted
+prodCore.time.2003.2007 <- prodCore.time +
+  geom_rect(xmin = 2003, xmax = 2007, ymin = -3, ymax = 3, fill = "grey75", alpha = 0.2)+
+  geom_point() +
+  geom_line() +
+  geom_hline(yintercept = 0, lty = "dotted") 
+prodCore.time.2003.2007
+ggsave("./figs/Productivity timeseries_2003-2007.png", width = 8, height = 6)
+  
+# Productivity timeseries plot for 1 population only (Deshka)
+prodCore.time.Deshka <- ggplot(data = filter(prod, Population == "Deshka"),
+                               aes(x = BroodYear, y = prodCore)) +
+  geom_point() +
+  geom_line() +
+  geom_hline(yintercept = 0, lty = "dotted") +
+  scale_x_continuous(name = "Brood Year", breaks = seq(1980, 2010, by = 10)) +
+  expand_limits(x = 2011) +
+  scale_y_continuous(name = "Productivity\n(ln[Recruits/Spawner])")
+prodCore.time.Deshka
+ggsave("./figs/Productivity timeseries Deshka.png", width = 4, height = 3)
+
+prodCore.time.Deshka.2003.2007 <- prodCore.time.Deshka +
+  geom_rect(xmin = 2003, xmax = 2007, ymin = -2.5, ymax = 2.5, fill = "grey75", alpha = 0.2)+
+  geom_point() +
+  geom_line() +
+  geom_hline(yintercept = 0, lty = "dotted") 
+prodCore.time.Deshka.2003.2007
+ggsave("./figs/Productivity timeseries Deshka_2003-2007.png", width = 4, height = 3)
 
 # Next show max weekly temp during spawning as dot fill color
 prodCore.time.temp <- prodCore.time +
