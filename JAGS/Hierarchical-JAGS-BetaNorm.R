@@ -44,7 +44,7 @@ dir.data <- file.path(wd,"Data","10.25.18_update")
 
 #CONTROL SECTION ==========================================================
 #############################
-phase <- 4 #3 4 5
+phase <- 3 #3 4 5
 
 fit <- TRUE
 
@@ -54,8 +54,8 @@ dir.create(dir.output, recursive=TRUE)
 dir.figs <- file.path(dir.figs,"Final_New_BetaNorm",paste0("Phase_",phase))
 dir.create(dir.figs, recursive=TRUE)
 
-n.sim <- 1e4#1e6#5e4
-n.thin <- 10#100#10
+n.sim <- 1e5#1e6#1e6#5e4
+n.thin <- 100#500#100#10
 n.chain <- 3
 
 #Covariate Offset
@@ -495,9 +495,10 @@ JAGS_heir <- function() {
   
   for(p in 1:n.pops) {
     # alpha[p] ~ dunif(-1,5)
-    exp.alpha[p] ~ dunif(0,25)
+    # exp.alpha[p] ~ dunif(0,25)
+    exp.alpha[p] ~ dunif(0,25) #(0,10)
     alpha[p] <- log(exp.alpha[p])#log(exp.alpha[p])
-    beta[p] ~ dnorm(0,pow(1e5,-2));T(0,1e6)#dunif(1,1e+6)
+    beta[p] ~ dnorm(0,pow(1e4,-2));T(1e-3,1e5)#dunif(1,1e+6)  - 1e4 and max 1e5
     sigma.oe[p] ~ dnorm(0, pow(5,-2));T(1e-3,100)#dnorm(0, pow(1,-2));T(1e-3,2)#dgamma(1,1)
     
     #Covariate Effects
@@ -517,6 +518,7 @@ JAGS_heir <- function() {
       
       #Standard Hilborn Ricker
       pred.rec[p,y] <- spawn[p,y]*exp(alpha[p]*(1-(spawn[p,y]/beta[p])) + sum(cov.eff[p,y,1:n.covars]))
+      ln.post.pred.rec[p,y] ~ dnorm(log(pred.rec[p,y]), pow(sigma.oe[p],-2))
       #Linear Ricker
       # pred.rec[p,y] <- spawn[p,y]*exp(alpha[p]-(spawn[p,y]/beta[p]) + sum(cov.eff[p,y,])) #Gives same result
       
@@ -528,7 +530,7 @@ JAGS_heir <- function() {
       # corr.pred.rec[p,y] <- pred.rec[p,y]*exp(-(sigma.oe[p]*sigma.oe[p])/2)
       
       #Baseline Recruitment without Covariates
-      base.rec[p,y] <- spawn[p,y]*exp(alpha[p]*(1-(spawn[p,y]/beta[p])))
+      # base.rec[p,y] <- spawn[p,y]*exp(alpha[p]*(1-(spawn[p,y]/beta[p])))
       # corr.base.rec[p,y] <- base.rec[p,y]*exp(-(sigma.oe[p]*sigma.oe[p])/2)
       
       
@@ -537,6 +539,7 @@ JAGS_heir <- function() {
     #Fill in Ragged Components
     for(y in (n.years[p]+1):max(n.years)) {
       pred.rec[p,y] <- 0
+      ln.post.pred.rec[p,y] <- 0
     }
   }#next p
   
@@ -558,8 +561,9 @@ parameters.to.save <- c('alpha','exp.alpha',
                         'sigma.oe',
                         'cov.eff',
                         'pred.rec',#'corr.pred.rec',
-                        'base.rec',#'corr.base.rec',
-                        'dist.coef')
+                        # 'base.rec',#'corr.base.rec',
+                        'dist.coef',
+                        'ln.post.pred.rec')
 
 Data=list("n.pops","n.years","n.covars",
           "spawn","ln.rec","covars")
@@ -769,6 +773,16 @@ for(p in 1:n.pops) {
   # lines(apply(base.rec[,p,1:n.years[p]], 2, median), col='darkgreen')
 }#next p
 
+#Plot alpha and beta corr ========================
+par(mfrow=c(4,4), mar=c(2,2,1,1), oma=c(1,1,1,1))
+p <- 1
+for(p in 1:n.pops) {
+  plot(x=out$BUGSoutput$sims.list$alpha[,p], y=out$BUGSoutput$sims.list$beta[,p],
+       xlab='', ylab='', main=pops[p], type='p', pch=19, col=rgb(0,0,0.5, alpha=0.1))
+}
+mtext('alpha', side=1, outer=TRUE)
+mtext('beta', side=2, outer=TRUE)
+
 dev.off()
 
 png(file=file.path(dir.figs,paste0("Log Fits_",phase,".png")), height=8, width=6, units='in', res=500)
@@ -802,6 +816,7 @@ for(p in 1:n.pops) {
   # lines(apply(corr.pred.rec[,p,1:n.years[p]], 2, median), col='gray')
   # lines(apply(base.rec[,p,1:n.years[p]], 2, median), col='darkgreen')
 }#next p
+
 dev.off()
 
 #Pairs plot

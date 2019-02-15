@@ -54,8 +54,8 @@ dir.create(dir.output, recursive=TRUE)
 dir.figs <- file.path(dir.figs,"Final_New_Publication",paste0("Phase_",phase))
 dir.create(dir.figs, recursive=TRUE)
 
-n.sim <- 1e5#5e4
-n.thin <- 50#10
+n.sim <- 1e6#5e4
+n.thin <- 100#10
 n.chain <- 3
 
 #Covariate Offset
@@ -243,7 +243,7 @@ if(phase!=3 & phase!=4 & phase!=5) {
 }
 
 #Plot Parameter Correlation ================
-out.file <- file.path(wd(),"Final_New.png")
+out.file <- file.path(wd,"Final_New.png")
 cor.input <- input.dat %>% select(c('std.wksGT13','std.wksGT15',
                                     'std.maxWkJA','std.meanWkJJA',
                                     'std.ASON_max','std.RB_ASON','std.RB_MJ',
@@ -498,7 +498,7 @@ JAGS_heir <- function() {
     exp.alpha[p] ~ dunif(0,25)
     alpha[p] <- log(exp.alpha[p])#log(exp.alpha[p])
     beta[p] ~ dunif(1,1e+6)
-    sigma.oe[p] ~ dnorm(0, pow(5,-2))#dnorm(0, pow(1,-2));T(1e-3,2)#dgamma(1,1)
+    sigma.oe[p] ~ dnorm(0, pow(5,-2));T(1e-3,100)#dnorm(0, pow(1,-2));T(1e-3,2)#dgamma(1,1)
     
     #Covariate Effects
     for(c in 1:n.covars) {
