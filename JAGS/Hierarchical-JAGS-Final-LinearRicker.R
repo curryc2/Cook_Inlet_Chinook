@@ -44,9 +44,9 @@ dir.data <- file.path(wd,"Data","10.25.18_update")
 
 #CONTROL SECTION ==========================================================
 #############################
-phase <- 4 #3 4 5
+phase <- 3 #3 4 5
 
-fit <- TRUE
+fit <- FALSE
 
 #Update Fig and Output directories
 dir.output <- file.path(dir.output,"Final_New_LinearRicker",paste0("Phase_",phase))
@@ -164,6 +164,12 @@ temp.dat.3 <- temp.dat.2 %>% mutate('std.wksGT13'=(wksGT13 - mean(wksGT13 , na.r
                                     'std.maxWkJA'=(maxWkJA - mean(maxWkJA , na.rm=TRUE))/sd(maxWkJA, na.rm=TRUE),
                                     'std.wksGT15'=(wksGT15 - mean(wksGT15 , na.rm=TRUE))/sd(wksGT15, na.rm=TRUE),
                                     'std.meanWkJJA'=(meanWkJJA - mean(meanWkJJA , na.rm=TRUE))/sd(meanWkJJA, na.rm=TRUE))
+
+# temp.dat.alt <- temp.dat.2 %>% group_by(Population) %>%  mutate('std.wksGT13'=(wksGT13 - mean(wksGT13 , na.rm=TRUE))/sd(wksGT13, na.rm=TRUE),
+#                                     'std.maxWkJA'=(maxWkJA - mean(maxWkJA , na.rm=TRUE))/sd(maxWkJA, na.rm=TRUE),
+#                                     'std.wksGT15'=(wksGT15 - mean(wksGT15 , na.rm=TRUE))/sd(wksGT15, na.rm=TRUE),
+#                                     'std.meanWkJJA'=(meanWkJJA - mean(meanWkJJA , na.rm=TRUE))/sd(meanWkJJA, na.rm=TRUE))
+
 # 
 # temp.dat.4 <- temp.dat.2 %>% ungroup() %>%  mutate('std.wksGT13'=(wksGT13 - mean(wksGT13 , na.rm=TRUE))/sd(wksGT13, na.rm=TRUE),
 #                                     'std.maxWkJA'=(maxWkJA - mean(maxWkJA , na.rm=TRUE))/sd(maxWkJA, na.rm=TRUE),
@@ -388,7 +394,7 @@ if(phase==4) {
   
 }
 
-#Phase 4 ==========================================
+#Phase 5 ==========================================
 if(phase==5) {
   
   #After update to remove correlated parameters
@@ -489,7 +495,7 @@ JAGS_heir <- function() {
   #Hyperpriors
   for(c in 1:n.covars) {
     mu.coef[c] ~ dnorm(0, pow(25,-2))
-    sigma.coef[c] ~ dnorm(0, pow(5,-2));T(1e-3,25)
+    sigma.coef[c] ~ dnorm(0, pow(5,-2));T(1e-3,100)
     dist.coef[c] ~ dnorm(mu.coef[c], pow(sigma.coef[c],-2))
   }#next c
   
@@ -498,7 +504,7 @@ JAGS_heir <- function() {
     exp.alpha[p] ~ dunif(0,25)
     alpha[p] <- log(exp.alpha[p])#log(exp.alpha[p])
     beta[p] ~ dnorm(0,pow(0.01,-2));T(0,100)
-    sigma.oe[p] ~ dnorm(0, pow(5,-2));T(1e-3,100)#dnorm(0, pow(1,-2));T(1e-3,2)#dgamma(1,1)
+    sigma.oe[p] ~ dnorm(0, pow(1,-2));T(1e-3,100)#dnorm(0, pow(1,-2));T(1e-3,2)#dgamma(1,1)
     
     #Covariate Effects
     for(c in 1:n.covars) {
