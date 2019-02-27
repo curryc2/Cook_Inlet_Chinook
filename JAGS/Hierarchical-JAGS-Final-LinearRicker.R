@@ -44,7 +44,7 @@ dir.data <- file.path(wd,"Data","10.25.18_update")
 
 #CONTROL SECTION ==========================================================
 #############################
-phase <- 3 #3 4 5
+phase <- 4 #3 4 5
 
 fit <- FALSE
 
@@ -204,6 +204,9 @@ input.dat <- cov.dat[!is.na(cov.dat$Population),]
 # pops <- sort(unique(sr.dat$Population))
 pops <- na.omit(intersect(sr.dat$Population, cov.dat$Population))
 n.pops <- length(pops)
+
+#Save names of populations ====================================
+saveRDS(pops, file.path(dir.output,"pops.rds"))
 
 #Look at correlations
 # correlation <- input.dat %>%  filter(Population %in% pops) %>% select(std.ASON_avg, std.ASON_max,
