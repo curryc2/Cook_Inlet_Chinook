@@ -15,6 +15,7 @@ library(GGally)
 library(MuMIn)
 
 setwd("~/Desktop/Cook Inlet Chinook/Analysis")
+theme_set(theme_bw(12))
 
 # Read in data
 breakupRaw <- read_csv("./data/Breakup_Raw.csv")
@@ -163,6 +164,19 @@ breakup <- breakup.wide %>%
   filter(Year > 1979 & Year < 2017)
 write_csv(breakup, "./data/Breakup.csv")
 
-breakup.plot <- ggplot(data = breakup, aes(x = Year, y = BreakupDOY, color = Location)) +
-  geom_point() 
+# Lag the breakup dates by 2 years to align with brood year
+breakup.lag2 <- breakup %>%
+  mutate(BreakupDOY.lag2 = lead(BreakupDOY, 2)) %>%
+  filter(Year < 2010) %>%
+  # Standardize breakup date across the 30-year timeseries
+  mutate(zBreakupDOY.lag2 = scale(BreakupDOY.lag2))
+
+# Plot the index of breakup timing (lagged by 2 years to correspond to brood years) over time for summary in 
+# the results
+breakup.plot <- ggplot(data = breakup.lag2, aes(x = Year, y = zBreakupDOY.lag2)) +
+  geom_col() +
+  scale_x_continuous(name = "Brood year") +
+  scale_y_continuous(name = "Breakup timing in year\nof smolt outmigration (std)")
 breakup.plot
+ggsave("./figs/Breakup timeseries.png", width = 4, height = 3)
+ggsave("./figs/Productivity timeseries.png", width = 6, height = 6)

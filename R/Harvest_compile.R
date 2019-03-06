@@ -14,7 +14,7 @@ library(ggplot2)
 library(stringr)
 library(GGally)
 
-theme_set(theme_bw(14))
+theme_set(theme_bw(12))
 setwd("~/Desktop/Cook Inlet Chinook/Analysis")
 
 # Read in data
@@ -573,11 +573,11 @@ marineSportCIStocks <- marineSport %>%
          
 harvestByYear <- harvestByYearWide %>%
   gather(key = "Fishery", value = "Harvest", 2:6) %>%
-  mutate(Fishery = factor(as.factor(Fishery), labels = c("Commercial",
-                                                         "Sport (Freshwater)", 
-                                                         "Sport (Marine)", 
-                                                         "Sub/PU/Ed (Freshwater)",
-                                                         "Subsistence (Marine)")),
+  mutate(Fishery = factor(as.factor(Fishery), labels = c("Commercial (SW)",
+                                                         "Sport (FW)", 
+                                                         "Sport (SW)", 
+                                                         "Sub/PU/Ed (FW)",
+                                                         "Subsistence (SW)")),
          FWorMarine = ifelse(Fishery == "Sport (Freshwater)" , "Freshwater", 
                              ifelse(Fishery == "Sub/PU/Ed (Freshwater)", "Freshwater", "Marine")))
 
@@ -585,10 +585,12 @@ harvestByYear <- harvestByYearWide %>%
 # Plot the harvest trends
 harvest.plot <- ggplot(data = harvestByYear, aes(x = Year, y = Harvest/1000, color = Fishery)) +
   geom_line() +
+  geom_hline(yintercept = 0) +
   scale_x_continuous(name = "Return Year", breaks = seq(1980, 2015, by = 10), limits = c(1980, 2015)) +
-  scale_y_continuous(name = "Harvest (1,000s)") 
+  scale_y_continuous(name = "Harvest (1,000s)") +
+  theme(legend.justification=c(1,1), legend.position=c(.98,.98), legend.background = element_rect()) 
 harvest.plot
-ggsave("./figs/Harvest by fishery.png", width = 8, height = 6)
+ggsave("./figs/Harvest by fishery.png", width = 7, height = 5)
 
 # Pairwise correlations btw harvest in each fishing sector
 harvest.pairs.plot <- ggpairs(data = harvestByYearWide, columns = 2:6)
