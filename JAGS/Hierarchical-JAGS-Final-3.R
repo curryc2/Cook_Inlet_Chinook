@@ -44,9 +44,9 @@ dir.data <- file.path(wd,"Data","10.25.18_update")
 
 #CONTROL SECTION ==========================================================
 #############################
-phase <- 3 #3 4 5
+phase <- 4 #3 4 5
 
-fit <- TRUE
+fit <- FALSE
 
 #Update Fig and Output directories
 dir.output <- file.path(dir.output,"Final_New_Publication",paste0("Phase_",phase))
@@ -768,6 +768,16 @@ for(p in 1:n.pops) {
   # lines(apply(corr.pred.rec[,p,1:n.years[p]], 2, median), col='gray')
   # lines(apply(base.rec[,p,1:n.years[p]], 2, median), col='darkgreen')
 }#next p
+
+#Plot alpha and beta corr ========================
+par(mfrow=c(4,4), mar=c(2,2,1,1), oma=c(1,1,1,1))
+p <- 1
+for(p in 1:n.pops) {
+  plot(x=out$BUGSoutput$sims.list$alpha[,p], y=out$BUGSoutput$sims.list$beta[,p],
+       xlab='', ylab='', main=pops[p], type='p', pch=19, col=rgb(0,0,0.5, alpha=0.1))
+}
+mtext('alpha', side=1, outer=TRUE)
+mtext('beta', side=2, outer=TRUE)
 
 dev.off()
 

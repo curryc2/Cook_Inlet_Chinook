@@ -46,7 +46,7 @@ dir.data <- file.path(wd,"Data","10.25.18_update")
 #############################
 phase <- 3 #3 4 5
 
-fit <- TRUE
+fit <- FALSE
 
 #Update Fig and Output directories
 dir.output <- file.path(dir.output,"Final_BetaNorm",paste0("Phase_",phase))
@@ -484,7 +484,7 @@ if(phase==5) {
 
 #JAGS Model ========================================================
 JAGS_heir <- NULL
-JAGS_heir <- function() {
+NJAGS_heir <- function() {
   #PRIORS
   #Hyperpriors
   for(c in 1:n.covars) {
