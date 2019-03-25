@@ -70,13 +70,13 @@ spawnersByRY <- escapeFull %>%
   # For aerial survey data, expand Spawners2 using the min, nominal, and max
   # estimates of what fraction of spawners are counted
   mutate(Spawners1 = EscapeIndex,
-         Spawners2.min = ifelse(EscapementMethod == "Single aerial survey",
+         Spawners2.min = ifelse(EscapementMethod == "Aerial survey",
                                 round(EscapeIndex / aerialExp.max),
                                 EscapeIndex),
-         Spawners2.nom = ifelse(EscapementMethod == "Single aerial survey",
+         Spawners2.nom = ifelse(EscapementMethod == "Aerial survey",
                                 round(EscapeIndex / aerialExp.nom),
                                 EscapeIndex),
-         Spawners2.max = ifelse(EscapementMethod == "Single aerial survey",
+         Spawners2.max = ifelse(EscapementMethod == "Aerial survey",
                                 round(EscapeIndex / aerialExp.min),
                                 EscapeIndex))
 
