@@ -5,8 +5,8 @@
 
 # Cook Inlet Chinook project
 
-# Exploratory plots
-# Plot brood-year productivity over time and against a few key predictors to determine
+# Post-hoc Exploratory Data Analysis
+# Plot brood-year productivity over time and against environmental drivers to determine
 # the shapes of the associations and illustrate how changes in productivity over time were
 # associated with drivers
 
@@ -39,11 +39,12 @@ prod <- spawnersRecruits %>%
   mutate(Population = factor(Population, labels = siteNames)) %>%
   group_by(Population) %>%
   mutate(Spawners = Spawners2.nom,
+         zSpawners = scale(Spawners),
          ln.rpsTotal = log(RecruitsPerSpawner),
          ln.rpsCore = log(CoreRecruitsPerSpawner),
          prodTotal = scale(ln.rpsTotal),
          prodCore = scale(ln.rpsCore)) %>%
-  select(Population, BroodYear, Spawners, ln.rpsTotal, ln.rpsCore, prodTotal, prodCore)
+  select(Population, BroodYear, Spawners, zSpawners, ln.rpsTotal, ln.rpsCore, prodTotal, prodCore)
 
 # Double-check that productivity indices standardized properly (mean of each population should 
 # be 0)
@@ -189,6 +190,18 @@ prodCore.time.temp.SD
 ggsave("./figs/Productivity timeseries_maxT_spawn_SD.png", width = 8, height = 6)
 # This is easier to interpret than the one in degrees C units
 
+# Then show max weekly temp during spawning as dot fill color (SD units) 
+# AND spawning abundance as dot size (SD units)
+prodCore.time.temp.esc.SD <- prodCore.time.2003.2007 +
+  geom_point(aes(fill = zmaxWkJA, size = zSpawners), shape = 21, color = "black") +
+  scale_fill_gradient2(name = "Maximum\nweekly\ntemperature\nduring\nspawning\n(maxT_spawn;\nSD)", 
+                       low="navy", mid="white", high="red", 
+                       midpoint=0, limits=range(envProd$zmaxWkJA)) +
+  scale_size_continuous(name = "Escapement\n(SD)")
+prodCore.time.temp.esc.SD
+ggsave("./figs/Productivity timeseries_maxT_spawn_escape_SD.png", 
+       width = 8, height = 6)
+
 # Next show NPGO as dot fill color
 prodCore.time.npgo <- prodCore.time.2003.2007 +
   geom_point(aes(fill = zNPGO.lag2), shape = 21, color = "black", size = 2) +
@@ -230,7 +243,7 @@ prodCore.time.Kenai <- ggplot(data = filter(envProd, Population == "Kenai late r
   geom_hline(yintercept = 0, lty = "dotted") +
   scale_x_continuous(name = "Brood Year", breaks = seq(1980, 2010, by = 10)) +
   expand_limits(x = 2011) +
-  scale_y_continuous(name = "Productivity index (SD)")
+  scale_y_continuous(name = "Productivity index (SD)") 
 prodCore.time.Kenai
 ggsave("./figs/Productivity timeseries Kenai.png", width = 4, height = 3)
 
@@ -256,6 +269,14 @@ prodCore.time.Kenai.maxT_spawn <- prodCore.time.Kenai.2003.2007 +
                        midpoint=0) 
 prodCore.time.Kenai.maxT_spawn
 ggsave("./figs/Productivity timeseries Kenai_maxT_spawn.png", width = 6, height = 3)
+
+prodCore.time.Kenai.maxT_spawn_esc <- prodCore.time.Kenai.2003.2007 +
+  geom_point(aes(fill = zmaxWkJA, size = zSpawners), shape = 21, color = "black") +
+  scale_fill_gradient2(name = "Maximum\nweekly\ntemperature\nduring\nspawning\n(SD)", low="navy", mid="white", high="red", 
+                       midpoint=0) +
+  scale_size_continuous(name = "Escapement\n(SD)")
+prodCore.time.Kenai.maxT_spawn_esc
+ggsave("./figs/Productivity timeseries Kenai_maxT_spawn_esc.png", width = 8, height = 5)
 
 prodCore.time.Kenai.maxPT_spawn <- prodCore.time.Kenai.2003.2007 +
   geom_point(aes(fill = maxPT_spawn), shape = 21, color = "black", size = 2) +
@@ -298,17 +319,17 @@ resid.time <- ggplot(data = envProd, aes(x = BroodYear, y = resid)) +
 resid.time
 ggsave("./figs/Productivity residual timeseries.png", width = 6, height = 6)
 
-# Same plot with 2003-2008 low-productivity period highlighted
-resid.time.2003.2008 <- resid.time +
-  geom_rect(xmin = 2003, xmax = 2008, ymin = -3, ymax = 3, fill = "grey75", alpha = 0.2)+
+# Same plot with 2003-2009 low-productivity period highlighted
+resid.time.2003.2009 <- resid.time +
+  geom_rect(xmin = 2003, xmax = 2009, ymin = -3, ymax = 3, fill = "grey75", alpha = 0.2)+
   geom_point() +
   geom_line() +
   geom_hline(yintercept = 0, lty = "dotted") 
-resid.time.2003.2008
-ggsave("./figs/Productivity residual timeseries_2003-2008.png", width = 6, height = 6)
+resid.time.2003.2009
+ggsave("./figs/Productivity residual timeseries_2003-2009.png", width = 6, height = 6)
 
 # Next show max precip during spawning as dot fill color
-resid.time.precip <- resid.time.2003.2008 +
+resid.time.precip <- resid.time.2003.2009 +
   geom_point(aes(fill = zASON_max), shape = 21, color = "black", size = 2) +
   # scale_fill_distiller(palette = "Blues", trans = "reverse")
   scale_fill_gradient2(name = "Maximum\nprecipitation\nduring\nspawning &\nincubation\n(SD)", 
@@ -318,7 +339,7 @@ resid.time.precip
 ggsave("./figs/Productivity residual timeseries_maxP_spawn.png", width = 8, height = 6)
 
 # # Then show max weekly temp during spawning as dot fill color (degrees C units)
-# resid.time.temp <- resid.time.2003.2008 +
+# resid.time.temp <- resid.time.2003.2009 +
 #   geom_point(aes(fill = maxWkJA), shape = 21, color = "black", size = 2) +
 #   # scale_fill_gradient(low = "blue", high = "red")
 #   # scale_fill_gradientn(colors = rainbow(5), trans = "reverse")
@@ -331,7 +352,20 @@ ggsave("./figs/Productivity residual timeseries_maxP_spawn.png", width = 8, heig
 # # This is hard to interpret because most dots are close to white
 
 # Then show max weekly temp during spawning as dot fill color (SD units)
-resid.time.temp.SD <- resid.time.2003.2008 +
+resid.time.temp.SD <- resid.time.2003.2009 +
+  geom_point(aes(fill = zmaxWkJA), shape = 21, color = "black", size = 2) +
+  # scale_fill_gradient(low = "blue", high = "red")
+  # scale_fill_gradientn(colors = rainbow(5), trans = "reverse")
+  scale_fill_gradient2(name = "Maximum\nweekly\ntemperature\nduring\nspawning\n(SD)", 
+                       low="navy", mid="white", high="red", 
+                       midpoint=0, limits=range(envProd$zmaxWkJA)) 
+resid.time.temp.SD
+ggsave("./figs/Productivity residual timeseries_maxT_spawn_SD.png", width = 8, height = 6)
+# This is easier to interpret than the one in degrees C units
+
+# Then show max weekly temp during spawning as dot fill color (SD units)
+# AND spawning abundance as dot size (SD units)
+resid.time.temp.esc.SD <- resid.time.2003.2009 +
   geom_point(aes(fill = zmaxWkJA), shape = 21, color = "black", size = 2) +
   # scale_fill_gradient(low = "blue", high = "red")
   # scale_fill_gradientn(colors = rainbow(5), trans = "reverse")
@@ -343,7 +377,7 @@ ggsave("./figs/Productivity residual timeseries_maxT_spawn_SD.png", width = 8, h
 # This is easier to interpret than the one in degrees C units
 
 # Next show NPGO as dot fill color
-resid.time.npgo <- resid.time.2003.2008 +
+resid.time.npgo <- resid.time.2003.2009 +
   geom_point(aes(fill = zNPGO.lag2), shape = 21, color = "black", size = 2) +
   # scale_fill_distiller(palette = "Blues", trans = "reverse")
   scale_fill_gradient2(name = "North Pacific\nGyre Oscillation\n(NPGO; SD)", 
@@ -353,7 +387,7 @@ resid.time.npgo
 ggsave("./figs/Productivity residual timeseries_npgo.png", width = 8, height = 6)
 
 # # Finally, show max weekly temp during spawning as dot fill color and maxP_spawn as dot size
-# resid.time.maxT_spawn_maxP_spawn <- resid.time.2003.2008 +
+# resid.time.maxT_spawn_maxP_spawn <- resid.time.2003.2009 +
 #   geom_point(aes(fill = zmaxWkJA, size = zASON_max), shape = 21, color = "black") +
 #   scale_fill_gradient2(name = "Maximum\nweekly\ntemperature\nduring\nspawning\n(maxT_spawn;\nSD)", 
 #                        low="navy", mid="white", high="red", 
@@ -364,18 +398,18 @@ ggsave("./figs/Productivity residual timeseries_npgo.png", width = 8, height = 6
 # ggsave("./figs/Productivity residual timeseries_maxT_spawn_maxP_spawn.png", width = 8, height = 6)
 # This is way too complicated to interpret
 
-# Plot maxP_spawn + maxT_spawn on color axis (SD units)
-resid.time.maxPT_spawn <- resid.time.2003.2008 +
-  geom_point(aes(fill = maxPT_spawn), shape = 21, color = "black", size = 2) +
-  # scale_fill_gradient(low = "blue", high = "red")
-  # scale_fill_gradientn(colors = rainbow(5), trans = "reverse")
-  scale_fill_gradient2(name = "maxP_spawn\n+\nmaxT_spawn\n(SD)", 
-                       low="navy", mid="white", high="red", 
-                       midpoint=0, limits=range(envProd$maxPT_spawn)) 
-resid.time.maxPT_spawn
-ggsave("./figs/Productivity residual timeseries_maxPT_spawn.png", width = 8, height = 6)
-# This isn't statistically meaningful, but it's interesting to see how the combination of high precip and/or
-# high temp together explain more of the low-productivity years
+# # Plot maxP_spawn + maxT_spawn on color axis (SD units)
+# resid.time.maxPT_spawn <- resid.time.2003.2009 +
+#   geom_point(aes(fill = maxPT_spawn), shape = 21, color = "black", size = 2) +
+#   # scale_fill_gradient(low = "blue", high = "red")
+#   # scale_fill_gradientn(colors = rainbow(5), trans = "reverse")
+#   scale_fill_gradient2(name = "maxP_spawn\n+\nmaxT_spawn\n(SD)", 
+#                        low="navy", mid="white", high="red", 
+#                        midpoint=0, limits=range(envProd$maxPT_spawn)) 
+# resid.time.maxPT_spawn
+# ggsave("./figs/Productivity residual timeseries_maxPT_spawn.png", width = 8, height = 6)
+# # This isn't statistically meaningful, but it's interesting to see how the combination of high precip and/or
+# # high temp together explain more of the low-productivity years
 
 # 2) Plot Ricker residuals vs environmental covariates-----------
 
@@ -550,8 +584,14 @@ resid.3panel <- plot_grid(resid.maxP_spawn, resid.maxT_spawn.g, resid.avgP_grow.
 resid.3panel
 ggsave("./figs/Productivity_residuals_3panel.png", width = 12, height = 6)
 
-# A single faceted plot showing residuals for all covariates
-
+# TODO: A single faceted plot showing residuals for all covariates
+# rename covariates and reshape envProd into long form
+# (Can I save some work here by calling Curry's script that does all this?)
+envProd.long <- envProd %>%
+  select(Population, BroodYear, Spawners, ln.rpsCore, prodCore, 
+         maxP_spawn = zASON_max,
+         avgP_grow = zMJJA_avg.lag1)
+  gather(maxWkJA:zNPGO.lag2, key = "Covariate", value = "Value")
 resid.all <- ggplot(data = envProd, aes(x = zASON_max, y = resid)) +
   geom_point(shape = 1) + 
   geom_smooth() +
@@ -715,3 +755,43 @@ resid.avgT_grow_noAlex <- ggplot(data = envProd_noAlex, aes(x = meanWkJJA.lag1, 
 resid.avgT_grow_noAlex
 ggsave("./figs/Productivity_residuals_avgT_grow_noAlex.png", width = 10, height = 6)
 
+# Plot correlations between spawning abundance and key predictors--------
+# maxPspawn
+maxPspawn.esc <- ggplot(data = envProd, aes (x = zSpawners, y = zASON_max)) +
+  geom_point(shape = 1) +
+  # geom_text(aes(label = BroodYear)) + 
+  geom_smooth(method = "lm") +
+  scale_x_continuous(name = "Escapement (SD)") +
+  scale_y_continuous(name = "maxP_spawn (SD)")
+maxPspawn.esc
+ggsave("./figs/maxPspawn vs escape.png", width = 10, height = 6)
+
+maxPspawn.esc.pop <- ggplot(data = envProd, aes (x = zSpawners, y = zASON_max)) +
+  geom_point(shape = 1) +
+  # geom_text(aes(label = BroodYear)) + 
+  geom_smooth(method = "lm") +
+  facet_wrap(.~Population, ncol = 3) +
+  scale_x_continuous(name = "Escapement (SD)") +
+  scale_y_continuous(name = "maxP_spawn (SD)")
+maxPspawn.esc.pop
+ggsave("./figs/maxPspawn vs escape_by popn.png", width = 10, height = 6)
+
+# maxTspawn
+maxTspawn.esc <- ggplot(data = envProd, aes (x = zSpawners, y = zmaxWkJA)) +
+  geom_point(shape = 1) +
+  # geom_text(aes(label = BroodYear)) + 
+  geom_smooth(method = "lm") +
+  scale_x_continuous(name = "Escapement (SD)") +
+  scale_y_continuous(name = "maxT_spawn (SD)")
+maxTspawn.esc
+ggsave("./figs/maxTspawn vs escape.png", width = 10, height = 6)
+
+maxTspawn.esc.pop <- ggplot(data = envProd, aes (x = zSpawners, y = zmaxWkJA)) +
+  geom_point(shape = 1) +
+  # geom_text(aes(label = BroodYear)) + 
+  geom_smooth(method = "lm") +
+  facet_wrap(.~Population, ncol = 3) +
+  scale_x_continuous(name = "Escapement (SD)") +
+  scale_y_continuous(name = "maxT_spawn (SD)")
+maxTspawn.esc.pop
+ggsave("./figs/maxTspawn vs escape_by popn.png", width = 10, height = 6)
