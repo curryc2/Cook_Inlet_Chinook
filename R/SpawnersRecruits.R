@@ -38,6 +38,11 @@ escapeFull <- read_csv("./data/Escapement.csv")
 ageSimple <- read_csv("./data/AgeSimple.csv")
 agePredicted <- read_csv("./data/AgePredicted.csv")
 
+# Define site names for pretty labels
+siteNames <- c("Alexander", "Anchor", "Campbell", "Chuitna", "Chulitna", "Crooked", "Deep",
+               "Deshka", "Kenai late run", "Little Susitna", "Little Willow", "Montana", "Ninilchik",
+               "Theodore", "Willow")
+
 # Aerial expansion factors: what fraction of spawners are counted in aerial surveys?
 # Source: Oslund et al. 2017 (p. 10) and Adam St. Saviour pers. comm.
 aerialExp.min <- 0.3
@@ -112,7 +117,8 @@ ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Escapement_all pops.png",
 # Make same plot for study populations only
 spawnersByRY_studyPops <- spawnersByRY_trimmed %>%
   left_join(sites, by = c("Population" = "Group")) %>%
-  filter(StockRecruit == T)
+  filter(StockRecruit == T) %>%
+  mutate(Population = factor(Population, labels = siteNames))
 
 EscapementStudyPops.plot <- ggplot(data = spawnersByRY_studyPops,
                           aes(x = ReturnYear, y = Spawners2.nom / 1000)) +
@@ -122,12 +128,12 @@ EscapementStudyPops.plot <- ggplot(data = spawnersByRY_studyPops,
   # scale_y_continuous(name = "Escapement (1,000s)", labels = scales::comma) +
   scale_x_continuous(name = "Return Year", breaks = seq(1980, 2015, 10)) +
   # facet_wrap(.~Population, scales = "fixed")
-  facet_wrap(.~Population, scales = "free_y") +
+  facet_wrap(.~Population, scales = "free_y", ncol = 3) +
   expand_limits(y = 0) +
   theme_bw(12)
 EscapementStudyPops.plot
 ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Escapement_study pops.png",
-       width = 8, height = 6)
+       width = 6, height = 6)
 
 # How much did escapement vary (%) between best and worst years, by population?
 escapeVariability <- spawnersByRY_trimmed %>%

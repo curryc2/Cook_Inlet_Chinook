@@ -21,6 +21,7 @@ library(ggplot2)
 library(cowplot)
 
 setwd("~/Desktop/Cook Inlet Chinook/Analysis")
+# source("./JAGS/Hierarchical-JAGS-Final-LinearRicker.R")
 covarsFW <- read_csv("./data/covars.csv")
 covarsSW <- read_csv("./JAGS/Data/10.25.18_update/covars.list.csv")
 spawnersRecruits <- read_csv("./data/SpawnersRecruits.csv")
