@@ -49,9 +49,9 @@ phase <- 4 #3 4 5
 fit <- TRUE
 
 #Update Fig and Output directories
-dir.output <- file.path(dir.output,"Final_New_LinearRicker_ES",paste0("Phase_",phase))
+dir.output <- file.path(dir.output,"Final_New_LinearRicker_corrected",paste0("Phase_",phase))
 dir.create(dir.output, recursive=TRUE)
-dir.figs <- file.path(dir.figs,"Final_New_LinearRicker_ES",paste0("Phase_",phase))
+dir.figs <- file.path(dir.figs,"Final_New_LinearRicker_corrected",paste0("Phase_",phase))
 dir.create(dir.figs, recursive=TRUE)
 
 n.sim <- 1e6#5e4

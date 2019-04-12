@@ -47,13 +47,13 @@ n.phases <- length(phases)
 #Update Fig and Output directories
 # dir.output <- file.path(dir.output,"Final_New_LinearRicker",paste0("Phase_",phase))
 # dir.create(dir.output, recursive=TRUE)
-dir.figs <- file.path(dir.figs,"Final_New_LinearRicker_ES")
+dir.figs <- file.path(dir.figs,"Final_New_LinearRicker_corrected")
 # dir.create(dir.figs, recursive=TRUE)
 
 # Load Data ================================================================
 
-out.3 <- readRDS(file=file.path(dir.output,"Final_New_LinearRicker_ES",paste0("Phase_",3),"out.rds"))
-out.4 <- readRDS(file=file.path(dir.output,"Final_New_LinearRicker_ES",paste0("Phase_",4),"out.rds"))
+out.3 <- readRDS(file=file.path(dir.output,"Final_New_LinearRicker_corrected",paste0("Phase_",3),"out.rds"))
+out.4 <- readRDS(file=file.path(dir.output,"Final_New_LinearRicker_corrected",paste0("Phase_",4),"out.rds"))
 
 # Get Covariate Names ================================================================
 
@@ -111,7 +111,7 @@ dev.off()
 
 
 #Get Population Names
-# pops <- readRDS(file.path(dir.output,"Final_New_LinearRicker_ES",paste0("Phase_",3),"pops.rds"))
+# pops <- readRDS(file.path(dir.output,"Final_New_LinearRicker_corrected",paste0("Phase_",3),"pops.rds"))
 # Set population names for pretty labels
 pops <- c("Alexander", "Anchor", "Campbell", "Chuitna", "Chulitna", "Crooked", "Deep",
                "Deshka", "Kenai late run", "Little Susitna", "Little Willow", "Montana", "Ninilchik",
