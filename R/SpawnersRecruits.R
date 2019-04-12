@@ -38,7 +38,7 @@ escapeFull <- read_csv("./data/Escapement.csv")
 ageSimple <- read_csv("./data/AgeSimple.csv")
 agePredicted <- read_csv("./data/AgePredicted.csv")
 
-# Define site names for pretty labels
+# Define population names for plotting
 siteNames <- c("Alexander", "Anchor", "Campbell", "Chuitna", "Chulitna", "Crooked", "Deep",
                "Deshka", "Kenai late run", "Little Susitna", "Little Willow", "Montana", "Ninilchik",
                "Theodore", "Willow")
@@ -315,28 +315,28 @@ nCoreRecruits <- spawnersRecruits %>%
 # Plot an index of brood year productivity (recruits [escapement + terminal harvest] /
 # spawner) for each population over time, using the nominal estimate for visibility of
 # spawners to aerial surveys [45%]). Plot years with complete broods only
-productivity <- ggplot(data = spawnersRecruits, 
-                              aes(x = BroodYear, y = RecruitsPerSpawner)) +
-  geom_line() +
-  geom_point(size = 1) + # Plotting points as well as lines to show isolated points with NA on either side
-  geom_hline(yintercept = 1) +
-  scale_x_continuous(name = "Brood Year", breaks = seq(1980, 2010, by = 10), 
-                     limits = c(1980, 2010)) +
-  scale_y_continuous(name = "Recruits / Spawner") +
-  facet_wrap(.~Population, scales = "free_y") +
-  expand_limits(y = 0)
-productivity
-ggsave("./figs/Recruits per spawner.png", width = 8, height = 6)
-
-coreProductivity <- ggplot(data = spawnersRecruits, 
-                          aes(x = BroodYear, y = CoreRecruitsPerSpawner)) +
-  geom_line() +
-  geom_point(size = 1) + # Plotting points as well as lines to show isolated points with NA on either side
-  geom_hline(yintercept = 1) +
-  scale_x_continuous(name = "Brood Year", breaks = seq(1980, 2010, by = 10), 
-                     limits = c(1980, 2010)) +
-  scale_y_continuous(name = "Core-Age Recruits / Spawner") +
-  facet_wrap(.~Population, scales = "free_y") +
-  expand_limits(y = 0)
-coreProductivity
-ggsave("./figs/Core-age recruits per spawner.png", width = 8, height = 6)
+# productivity <- ggplot(data = spawnersRecruits, 
+#                               aes(x = BroodYear, y = RecruitsPerSpawner)) +
+#   geom_line() +
+#   geom_point(size = 1) + # Plotting points as well as lines to show isolated points with NA on either side
+#   geom_hline(yintercept = 1) +
+#   scale_x_continuous(name = "Brood Year", breaks = seq(1980, 2010, by = 10), 
+#                      limits = c(1980, 2010)) +
+#   scale_y_continuous(name = "Recruits / Spawner") +
+#   facet_wrap(.~Population, scales = "free_y") +
+#   expand_limits(y = 0)
+# productivity
+# ggsave("./figs/Recruits per spawner.png", width = 8, height = 6)
+# 
+# coreProductivity <- ggplot(data = spawnersRecruits, 
+#                           aes(x = BroodYear, y = CoreRecruitsPerSpawner)) +
+#   geom_line() +
+#   geom_point(size = 1) + # Plotting points as well as lines to show isolated points with NA on either side
+#   geom_hline(yintercept = 1) +
+#   scale_x_continuous(name = "Brood Year", breaks = seq(1980, 2010, by = 10), 
+#                      limits = c(1980, 2010)) +
+#   scale_y_continuous(name = "Core-Age Recruits / Spawner") +
+#   facet_wrap(.~Population, scales = "free_y") +
+#   expand_limits(y = 0)
+# coreProductivity
+# ggsave("./figs/Core-age recruits per spawner.png", width = 8, height = 6)
