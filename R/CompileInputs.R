@@ -222,3 +222,45 @@ ggsave("./figs/CorrelationMatrix_tempWithinPops.png", height = 12, width = 13)
 # differences in mean temperature among sites): 
 # maxT_spawn is tightly correlated with wksGT13_spawn
 # avgT_grow is tightly correlated with wksGT15_grow
+
+# Plot temperature metrics raw and standardized both ways
+
+# complete the table, filling NAs for missing brood years to avoid interpolating in plot
+covarsSR.plot <- covarsSR %>%
+  complete(Population, BroodYear)
+maxT_spawn.raw.timeseries <- ggplot(data = covarsSR.plot, aes(x = BroodYear, y = maxT_spawn,
+                                                         color = Population)) +
+  geom_point() +
+  geom_line()  +
+  scale_y_continuous(name = "maxT_spawn (˚C)", breaks = seq(8, 22, by = 2))
+maxT_spawn.raw.timeseries
+ggsave("./figs/maxT_spawn_raw_timeseries.png", height = 8, width = 8)
+
+maxT_spawn.raw.timeseries.mean.sd <- maxT_spawn.raw.timeseries +
+  geom_hline(aes(yintercept = mean(covarsSR$maxT_spawn))) +
+  geom_hline(aes(yintercept = mean(covarsSR$maxT_spawn)+sd(covarsSR$maxT_spawn)),
+             linetype = "dotted") +
+  geom_hline(aes(yintercept = mean(covarsSR$maxT_spawn)-sd(covarsSR$maxT_spawn)),
+             linetype = "dotted")  
+maxT_spawn.raw.timeseries.mean.sd
+ggsave("./figs/maxT_spawn_raw_timeseries_mean_SD.png", height = 8, width = 8)
+
+
+maxT_spawn.std.timeseries <- ggplot(data = covarsSR.plot, aes(x = BroodYear, y = maxT_spawn.std,
+                                                              color = Population)) +
+  geom_point() +
+  geom_line() +
+  scale_y_continuous(name = "maxT_spawn (SD; standardized within pops)")
+maxT_spawn.std.timeseries
+ggsave("./figs/maxT_spawn_std_timeseries.png", height = 8, width = 8)
+
+
+maxT_spawn.std.all.timeseries <- ggplot(data = covarsSR.plot, aes(x = BroodYear, 
+                                                                  y = maxT_spawn.std.all,
+                                                                  color = Population)) +
+  geom_point() +
+  geom_line() +
+  scale_y_continuous(name = "maxT_spawn (SD; standardized across pops)")
+maxT_spawn.std.all.timeseries
+ggsave("./figs/maxT_spawn_std_across_timeseries.png", height = 8, width = 8)
+

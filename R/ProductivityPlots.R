@@ -30,8 +30,7 @@ theme_set(theme_bw(12))
 # only. Then standardize the productivity indices
 envProd <- covarsSR %>%
   group_by(Population) %>%
-  mutate(zSpawners = scale(Spawners),
-         ln.rpsCore = log(CoreRecruitsPerSpawner),
+  mutate(ln.rpsCore = log(CoreRecruitsPerSpawner),
          prodCore = scale(ln.rpsCore)) 
   
 # Double-check that productivity indices standardized properly (mean of each population should 
@@ -49,44 +48,8 @@ lowestProd <- envProd %>%
 yearOfLowestProd <- lowestProd %>%
   left_join(envProd, by = c("Population", "minProdCore" = "prodCore"))
 
-# # Convert Population to a factor and set label names to match the prod dataframe
-# covarsFW <- covarsFW %>%
-#   mutate(Population = factor(Population, labels = siteNames))
-# 
-# # Join the FW environmental covariates
-# envProd <- prod %>%
-#   left_join(covarsFW, by = c("Population", "BroodYear" = "Year")) %>%
-#   select(-X1, -Site)
-# 
-# # Standardize and lag FW environmental covariates of interest
-# envProd <- envProd %>%
-#   group_by(Population) %>%
-#   mutate(zmaxP_spawn = scale(ASON_max),
-#          zMJJA_avg = scale(MJJA_avg),
-#          # lag this predictor by 1 year (since it applies to brood-year + 1)
-#          zavgP_grow = lead(zMJJA_avg),
-#          zmaxT_spawn = scale(maxT_spawn),
-#          avgT_grow = lead(meanWkJJA),
-#          zmeanWkJJA = scale(meanWkJJA),
-#          # lag this predictor by 1 year (since it applies to brood-year + 1)
-#          zavgT_grow = lead(zmeanWkJJA),
-#          # calculate a compound indicator of hot years with high precip (maxP_spawn + maxT_spawn)
-#          maxPT_spawn = zmaxP_spawn + zmaxT_spawn
-#          )
-# 
-# # Filter down, standardize, and lag NPGO
-# npgo <- covarsSW %>%
-#   filter(Covar == "NPGO",
-#          Year > 1979,
-#          Year < 2012) %>%
-#   mutate(NPGO = value,
-#          zNPGO = scale(value),
-#          NPGO.lag2 = lead(NPGO, 2),
-#          zNPGO.lag2 = lead(zNPGO, 2)) %>%
-#   select(Year, NPGO, zNPGO, NPGO.lag2, zNPGO.lag2)
-
 # Plot NPGO trend over time for brief description in the results
-npgo.trend <- ggplot(data = envProd, aes(x = BroodYear, y = zNPGO)) + 
+npgo.trend <- ggplot(data = envProd, aes(x = BroodYear, y = NPGO.std)) + 
   geom_col() +
   geom_hline(yintercept = 0) +
   scale_x_continuous(name = "Brood year") +
@@ -143,11 +106,11 @@ ggsave("./figs/Productivity timeseries_2003-2007.png", width = 6, height = 6)
 
 # Next show max precip during spawning as dot fill color
 prodCore.time.precip <- prodCore.time.2003.2007 +
-  geom_point(aes(fill = zmaxP_spawn), shape = 21, color = "black", size = 2) +
+  geom_point(aes(fill = maxP_spawn.std), shape = 21, color = "black", size = 2) +
   # scale_fill_distiller(palette = "Blues", trans = "reverse")
   scale_fill_gradient2(name = "Maximum\nprecipitation\nduring\nspawning &\nincubation\n(SD)", 
                        low="yellow", mid="white", high="navy", 
-                       midpoint=0, limits=range(envProd$zmaxP_spawn))
+                       midpoint=0, limits=range(envProd$maxP_spawn.std))
 prodCore.time.precip
 ggsave("./figs/Productivity timeseries_maxP_spawn.png", width = 8, height = 6)
 
@@ -165,36 +128,36 @@ ggsave("./figs/Productivity timeseries_maxT_spawn.png", width = 8, height = 6)
 # This is hard to interpret because most dots are close to white
 
 # # Then show max weekly temp during spawning as dot fill color (SD units)
-# prodCore.time.temp.SD <- prodCore.time.2003.2007 +
-#   geom_point(aes(fill = zmaxT_spawn), shape = 21, color = "black", size = 2) +
-#   # scale_fill_gradient(low = "blue", high = "red")
-#   # scale_fill_gradientn(colors = rainbow(5), trans = "reverse")
-#   scale_fill_gradient2(name = "Maximum\nweekly\ntemperature\nduring\nspawning\n(maxT_spawn;\nSD)", 
-#                        low="navy", mid="white", high="red", 
-#                        midpoint=0, limits=range(envProd$zmaxT_spawn)) 
-# prodCore.time.temp.SD
-# ggsave("./figs/Productivity timeseries_maxT_spawn_SD.png", width = 8, height = 6)
+prodCore.time.temp.SD <- prodCore.time.2003.2007 +
+  geom_point(aes(fill = maxT_spawn.std), shape = 21, color = "black", size = 2) +
+  # scale_fill_gradient(low = "blue", high = "red")
+  # scale_fill_gradientn(colors = rainbow(5), trans = "reverse")
+  scale_fill_gradient2(name = "Maximum\nweekly\ntemperature\nduring\nspawning\n(maxT_spawn;\nSD)",
+                       low="navy", mid="white", high="red",
+                       midpoint=0, limits=range(envProd$maxT_spawn.std))
+prodCore.time.temp.SD
+ggsave("./figs/Productivity timeseries_maxT_spawn_SD.png", width = 8, height = 6)
 # # This is easier to interpret than the one in degrees C units
 
 # # Then show max weekly temp during spawning as dot fill color (SD units)
 # # AND spawning abundance as dot size (SD units)
-# prodCore.time.temp.esc.SD <- prodCore.time.2003.2007 +
-#   geom_point(aes(fill = zmaxT_spawn, size = zSpawners), shape = 21, color = "black") +
-#   scale_fill_gradient2(name = "Maximum\nweekly\ntemperature\nduring\nspawning\n(maxT_spawn;\nSD)",
-#                        low="navy", mid="white", high="red",
-#                        midpoint=0, limits=range(envProd$zmaxT_spawn)) +
-#   scale_size_continuous(name = "Escapement\n(SD)")
-# prodCore.time.temp.esc.SD
-# ggsave("./figs/Productivity timeseries_maxT_spawn_escape_SD.png",
-#        width = 8, height = 6)
+prodCore.time.temp.esc.SD <- prodCore.time.2003.2007 +
+  geom_point(aes(fill = maxT_spawn.std, size = Spawners.std), shape = 21, color = "black") +
+  scale_fill_gradient2(name = "Maximum\nweekly\ntemperature\nduring\nspawning\n(maxT_spawn;\nSD)",
+                       low="navy", mid="white", high="red",
+                       midpoint=0, limits=range(envProd$maxT_spawn.std)) +
+  scale_size_continuous(name = "Escapement\n(SD)")
+prodCore.time.temp.esc.SD
+ggsave("./figs/Productivity timeseries_maxT_spawn_escape_SD.png",
+       width = 8, height = 6)
 
 # Next show NPGO as dot fill color
 prodCore.time.npgo <- prodCore.time.2003.2007 +
-  geom_point(aes(fill = zNPGO), shape = 21, color = "black", size = 2) +
+  geom_point(aes(fill = NPGO.std), shape = 21, color = "black", size = 2) +
   # scale_fill_distiller(palette = "Blues", trans = "reverse")
   scale_fill_gradient2(name = "North Pacific\nGyre Oscillation\n(NPGO; SD)", 
                        low="navy", mid="white", high="red", 
-                       midpoint=0, limits=range(envProd$zmaxP_spawn))
+                       midpoint=0, limits=range(envProd$maxP_spawn.std))
 prodCore.time.npgo
 ggsave("./figs/Productivity timeseries_npgo.png", width = 8, height = 6)
 
@@ -219,25 +182,25 @@ prodCore.time.Kenai.2003.2007
 ggsave("./figs/Productivity timeseries Kenai_2003-2007.png", width = 4, height = 3)
 
 prodCore.time.Kenai.maxP_spawn <- prodCore.time.Kenai.2003.2007 +
-geom_point(aes(fill = zmaxP_spawn), shape = 21, color = "black", size = 2) +
+geom_point(aes(fill = maxP_spawn.std), shape = 21, color = "black", size = 2) +
   scale_fill_gradient2(name = "Maximum\nprecipitation\nduring\nspawning &\nincubation\n(maxP_spawn; SD)", 
                        low="yellow", mid="white", high="navy", 
-                       midpoint=0, limits=range(envProd$zmaxP_spawn))
+                       midpoint=0, limits=range(envProd$maxP_spawn.std))
 prodCore.time.Kenai.maxP_spawn
 ggsave("./figs/Productivity timeseries Kenai_maxP_spawn.png", width = 6, height = 3)
 
 prodCore.time.Kenai.maxT_spawn <- prodCore.time.Kenai.2003.2007 +
-  geom_point(aes(fill = zmaxT_spawn), shape = 21, color = "black", size = 2) +
+  geom_point(aes(fill = maxT_spawn.std.all), shape = 21, color = "black", size = 2) +
   scale_fill_gradient2(name = "Maximum\nweekly\ntemperature\nduring\nspawning\n(SD)", low="navy", mid="white", high="red", 
                        midpoint=0) 
 prodCore.time.Kenai.maxT_spawn
 ggsave("./figs/Productivity timeseries Kenai_maxT_spawn.png", width = 6, height = 3)
 
 prodCore.time.Kenai.maxP_spawn_esc <- prodCore.time.Kenai.2003.2007 +
-  geom_point(aes(fill = zmaxP_spawn, size = zSpawners), shape = 21, color = "black") +
+  geom_point(aes(fill = maxP_spawn.std, size = Spawners.std), shape = 21, color = "black") +
   scale_fill_gradient2(name = "Maximum\nprecipitation\nduring\nspawning &\nincubation\n(maxP_spawn; SD)", 
                        low="yellow", mid="white", high="navy", 
-                       midpoint=0, limits=range(envProd$zmaxP_spawn))
+                       midpoint=0, limits=range(envProd$maxP_spawn.std))
 scale_size_continuous(name = "Escapement\n(SD)")
 prodCore.time.Kenai.maxP_spawn_esc
 ggsave("./figs/Productivity timeseries Kenai_maxP_spawn_esc.png", width = 8, height = 5)
@@ -287,11 +250,11 @@ ggsave("./figs/Productivity residual timeseries_2003-2009.png", width = 6, heigh
 
 # Next show max precip during spawning as dot fill color
 resid.time.precip <- resid.time.2003.2009 +
-  geom_point(aes(fill = zmaxP_spawn), shape = 21, color = "black", size = 2) +
+  geom_point(aes(fill = maxP_spawn.std), shape = 21, color = "black", size = 2) +
   # scale_fill_distiller(palette = "Blues", trans = "reverse")
   scale_fill_gradient2(name = "Maximum\nprecipitation\nduring\nspawning &\nincubation\n(SD)", 
                        low="yellow", mid="white", high="navy", 
-                       midpoint=0, limits=range(envProd$zmaxP_spawn))
+                       midpoint=0, limits=range(envProd$maxP_spawn.std))
 resid.time.precip
 ggsave("./figs/Productivity residual timeseries_maxP_spawn.png", width = 8, height = 6)
 
@@ -309,30 +272,30 @@ ggsave("./figs/Productivity residual timeseries_maxT_spawn.png", width = 8, heig
 # This is hard to interpret because most dots are close to white
 # 
 # # Then show max weekly temp during spawning as dot fill color (SD units)
-# resid.time.temp.SD <- resid.time.2003.2009 +
-#   geom_point(aes(fill = zmaxT_spawn), shape = 21, color = "black", size = 2) +
-#   # scale_fill_gradient(low = "blue", high = "red")
-#   # scale_fill_gradientn(colors = rainbow(5), trans = "reverse")
-#   scale_fill_gradient2(name = "Maximum\nweekly\ntemperature\nduring\nspawning\n(SD)", 
-#                        low="navy", mid="white", high="red", 
-#                        midpoint=0, limits=range(envProd$zmaxT_spawn)) 
-# resid.time.temp.SD
-# ggsave("./figs/Productivity residual timeseries_maxT_spawn_SD.png", width = 8, height = 6)
+resid.time.temp.SD <- resid.time.2003.2009 +
+  geom_point(aes(fill = maxT_spawn.std), shape = 21, color = "black", size = 2) +
+  # scale_fill_gradient(low = "blue", high = "red")
+  # scale_fill_gradientn(colors = rainbow(5), trans = "reverse")
+  scale_fill_gradient2(name = "Maximum\nweekly\ntemperature\nduring\nspawning\n(SD)",
+                       low="navy", mid="white", high="red",
+                       midpoint=0, limits=range(envProd$maxT_spawn.std))
+resid.time.temp.SD
+ggsave("./figs/Productivity residual timeseries_maxT_spawn_SD.png", width = 8, height = 6)
 # # This is easier to interpret than the one in degrees C units
 
 # Next show NPGO as dot fill color
 resid.time.npgo <- resid.time.2003.2009 +
-  geom_point(aes(fill = zNPGO), shape = 21, color = "black", size = 2) +
+  geom_point(aes(fill = NPGO.std), shape = 21, color = "black", size = 2) +
   # scale_fill_distiller(palette = "Blues", trans = "reverse")
   scale_fill_gradient2(name = "North Pacific\nGyre Oscillation\n(NPGO; SD)", 
                        low="navy", mid="white", high="red", 
-                       midpoint=0, limits=range(envProd$zmaxP_spawn))
+                       midpoint=0, limits=range(envProd$maxP_spawn.std))
 resid.time.npgo
 ggsave("./figs/Productivity residual timeseries_npgo.png", width = 8, height = 6)
 
 # 2) Plot Ricker residuals vs environmental covariates-----------
 
-resid.maxP_spawn <- ggplot(data = envProd, aes(x = zmaxP_spawn, y = resid)) +
+resid.maxP_spawn <- ggplot(data = envProd, aes(x = maxP_spawn.std, y = resid)) +
   geom_point(shape = 1) + 
   geom_smooth() +
   geom_hline(yintercept = 0, linetype = "dotted") +
@@ -343,34 +306,34 @@ ggsave("./figs/Productivity_residuals_maxP_spawn.png", width = 4, height = 4)
 
 # Also made residuals plots faceted by population, but these were generally less informative due to small sample
 # sizes within each population
-# resid.maxP_spawn.popn <- ggplot(data = envProd, aes(x = zmaxP_spawn, y = resid)) +
-#   geom_point(shape = 1) + 
-#   geom_smooth(method = "lm") +
-#   geom_hline(yintercept = 0, linetype = "dotted") +
-#   facet_wrap(.~Population, ncol = 3, scales = "free_y") +
-#   scale_x_continuous(name = "Maximum monthly precipitation during spawning & incubation (maxP_spawn; SD)") +
-#   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
-# resid.maxP_spawn.popn
-# ggsave("./figs/Productivity_residuals_maxP_spawn_by_popn.png", width = 8, height = 8)
+resid.maxP_spawn.popn <- ggplot(data = envProd, aes(x = maxP_spawn.std, y = resid)) +
+  geom_point(shape = 1) +
+  geom_smooth(method = "lm") +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  facet_wrap(.~Population, ncol = 3, scales = "free_y") +
+  scale_x_continuous(name = "Maximum monthly precipitation during spawning & incubation (maxP_spawn; SD)") +
+  scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
+resid.maxP_spawn.popn
+ggsave("./figs/Productivity_residuals_maxP_spawn_by_popn.png", width = 8, height = 8)
 
 # # Plot maxP_spawn on x and maxT_spawn on color axis
 # resid.maxP_spawn.maxT_spawn <- resid.maxP_spawn +
-#   geom_point(aes(fill = zmaxT_spawn), shape = 21, color = "black", size = 2) +
+#   geom_point(aes(fill = maxT_spawn.std.all), shape = 21, color = "black", size = 2) +
 #   scale_fill_gradient2(name = "Maximum\nweekly\ntemperature\nduring\nspawning\n(maxT_spawn;\nSD)", 
 #                        low="navy", mid="white", high="red", 
-#                        midpoint=0, limits=range(envProd$zmaxT_spawn)) 
+#                        midpoint=0, limits=range(envProd$maxT_spawn.std.all)) 
 # resid.maxP_spawn.maxT_spawn
 # ggsave("./figs/Productivity_residuals_maxP_spawn_maxT_spawn.png", width = 10, height = 8)
 
 # resid.maxP_spawn.maxT_spawn.popn <- resid.maxP_spawn.popn +
-#   geom_point(aes(fill = zmaxT_spawn), shape = 21, color = "black", size = 2) +
+#   geom_point(aes(fill = maxT_spawn.std.all), shape = 21, color = "black", size = 2) +
 #   scale_fill_gradient2(name = "Maximum\nweekly\ntemperature\nduring\nspawning\n(maxT_spawn;\nSD)", 
 #                        low="navy", mid="white", high="red", 
-#                        midpoint=0, limits=range(envProd$zmaxT_spawn)) 
+#                        midpoint=0, limits=range(envProd$maxT_spawn.std.all)) 
 # resid.maxP_spawn.maxT_spawn.popn
 # ggsave("./figs/Productivity_residuals_maxP_spawn_maxT_spawn_by_popn.png", width = 10, height = 8)
 
-resid.avgP_grow <- ggplot(data = envProd, aes(x = zavgP_grow, y = resid)) +
+resid.avgP_grow <- ggplot(data = envProd, aes(x = avgP_grow.std, y = resid)) +
   geom_point(shape = 1) + 
   geom_smooth() +
   geom_hline(yintercept = 0, linetype = "dotted") +
@@ -379,15 +342,15 @@ resid.avgP_grow <- ggplot(data = envProd, aes(x = zavgP_grow, y = resid)) +
 resid.avgP_grow
 ggsave("./figs/Productivity_residuals_avgP_grow.png", width = 4, height = 4)
 
-# resid.avgP_grow.popn <- ggplot(data = envProd, aes(x = zavgP_grow, y = resid)) +
-#   geom_point(shape = 1) + 
-#   geom_smooth(method = "lm") +
-#   geom_hline(yintercept = 0, linetype = "dotted") +
-#   facet_wrap(.~Population, ncol = 3) +
-#   scale_x_continuous(name = "Mean precipitation during juvenile rearing (avgP_grow; SD)") +
-#   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
-# resid.avgP_grow.popn
-# ggsave("./figs/Productivity_residuals_avgP_grow_by_popn.png", width = 8, height = 10)
+resid.avgP_grow.popn <- ggplot(data = envProd, aes(x = avgP_grow.std, y = resid)) +
+  geom_point(shape = 1) +
+  geom_smooth(method = "lm") +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  facet_wrap(.~Population, ncol = 3) +
+  scale_x_continuous(name = "Mean precipitation during juvenile rearing (avgP_grow; SD)") +
+  scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
+resid.avgP_grow.popn
+ggsave("./figs/Productivity_residuals_avgP_grow_by_popn.png", width = 8, height = 10)
 
 resid.maxT_spawn <- ggplot(data = envProd, aes(x = maxT_spawn, y = resid)) +
   geom_point(shape = 1) + 
@@ -401,38 +364,38 @@ ggsave("./figs/Productivity_residuals_maxT_spawn.png", width = 4, height = 4)
 
 # # A similar plot, with temperature expressed in standard deviations rather than degrees.  Went with degrees for
 # # the paper for ease of interpretability
-# resid.maxT_spawn_SD <- ggplot(data = envProd, aes(x = zmaxT_spawn, y = resid)) +
-#   geom_point(shape = 1) +
-#   geom_smooth() +
-#   geom_hline(yintercept = 0, linetype = "dotted") +
-#   scale_x_continuous(name = "Maximum weekly temperature during spawning\n(maxT_spawn; SD)") +
-#   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
-# resid.maxT_spawn_SD
-# ggsave("./figs/Productivity_residuals_maxT_spawn_SD.png", width = 6, height = 6)
+resid.maxT_spawn_SD <- ggplot(data = envProd, aes(x = maxT_spawn.std, y = resid)) +
+  geom_point(shape = 1) +
+  geom_smooth() +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  scale_x_continuous(name = "Maximum weekly temperature during spawning\n(maxT_spawn; SD)") +
+  scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
+resid.maxT_spawn_SD
+ggsave("./figs/Productivity_residuals_maxT_spawn_SD.png", width = 6, height = 6)
 
-# resid.maxT_spawn.popn <- ggplot(data = envProd, aes(x = maxT_spawn, y = resid)) +
-#   geom_point(shape = 1) + 
-#   geom_smooth(method = "lm") +
-#   geom_hline(yintercept = 0, linetype = "dotted") +
-#   facet_wrap(.~Population, ncol = 3, scales = "free_y") +
-#   scale_x_continuous(name = "Maximum weekly temperature during spawning (maxT_spawn; ˚C)",
-#                      breaks = seq(8, 22, by = 2), limits = c(8, 22)) +
-#   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
-# resid.maxT_spawn.popn
-# ggsave("./figs/Productivity_residuals_maxT_spawn_by_popn.png", width = 8, height = 10)
-# 
+resid.maxT_spawn.popn <- ggplot(data = envProd, aes(x = maxT_spawn, y = resid)) +
+  geom_point(shape = 1) +
+  geom_smooth(method = "lm") +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  facet_wrap(.~Population, ncol = 3, scales = "free_y") +
+  scale_x_continuous(name = "Maximum weekly temperature during spawning (maxT_spawn; ˚C)",
+                     breaks = seq(8, 22, by = 2), limits = c(8, 22)) +
+  scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
+resid.maxT_spawn.popn
+ggsave("./figs/Productivity_residuals_maxT_spawn_by_popn.png", width = 8, height = 10)
+
 # Another version based on suggestions from Becky
-# resid.maxT_spawn.popn.poly <- ggplot(data = envProd, aes(x = maxT_spawn, y = resid)) +
-#   geom_point(shape = 1) + 
-#   geom_smooth(method = "lm", formula = y ~ poly(x,2)) +
-#   geom_hline(yintercept = 0, linetype = "dotted") +
-#   facet_wrap(.~Population, ncol = 3, scales = "free_y") +
-#   scale_x_continuous(name = "Maximum weekly temperature during spawning (maxT_spawn; ˚C)") +
-#   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
-# resid.maxT_spawn.popn.poly
-# ggsave("./figs/Productivity_residuals_maxT_spawn_by_popn_poly.png", width = 8, height = 10)
-# 
-resid.NPGO <- ggplot(data = envProd, aes(x = zNPGO, y = resid)) +
+resid.maxT_spawn.popn.poly <- ggplot(data = envProd, aes(x = maxT_spawn, y = resid)) +
+  geom_point(shape = 1) +
+  geom_smooth(method = "lm", formula = y ~ poly(x,2)) +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  facet_wrap(.~Population, ncol = 3, scales = "free_y") +
+  scale_x_continuous(name = "Maximum weekly temperature during spawning (maxT_spawn; ˚C)") +
+  scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
+resid.maxT_spawn.popn.poly
+ggsave("./figs/Productivity_residuals_maxT_spawn_by_popn_poly.png", width = 8, height = 10)
+
+resid.NPGO <- ggplot(data = envProd, aes(x = NPGO.std, y = resid)) +
   geom_point(shape = 1) +
   geom_smooth() +
   geom_hline(yintercept = 0, linetype = "dotted") +
@@ -442,7 +405,7 @@ resid.NPGO
 ggsave("./figs/Productivity_residuals_NPGO.png", width = 6, height = 6)
 # 
 # Other residuals plots generated for exploratory purposes but not included in paper:
-# resid.NPGO.popn <- ggplot(data = envProd, aes(x = zNPGO, y = resid)) +
+# resid.NPGO.popn <- ggplot(data = envProd, aes(x = NPGO.std, y = resid)) +
 #   geom_point(shape = 1) + 
 #   geom_smooth(method = "lm") +
 #   geom_hline(yintercept = 0, linetype = "dotted") +
@@ -461,17 +424,17 @@ resid.avgT_grow <- ggplot(data = envProd, aes(x = avgT_grow, y = resid)) +
   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
 resid.avgT_grow
 ggsave("./figs/Productivity_residuals_avgT_grow.png", width = 6, height = 6)
-# 
-# resid.avgT_grow.popn <- ggplot(data = envProd, aes(x = avgT_grow, y = resid)) +
-#   geom_point(shape = 1) + 
-#   geom_smooth(method = "lm") +
-#   geom_hline(yintercept = 0, linetype = "dotted") +
-#   facet_wrap(.~Population, ncol = 3) +
-#   scale_x_continuous(name = "Mean weekly temp. during juvenile rearing (˚C)",
-#                      breaks = seq(8, 18, by = 2)) +
-#   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
-# resid.avgT_grow.popn
-# ggsave("./figs/Productivity_residuals_avgT_grow_by_popn.png", width = 8, height = 10)
+
+resid.avgT_grow.popn <- ggplot(data = envProd, aes(x = avgT_grow, y = resid)) +
+  geom_point(shape = 1) +
+  geom_smooth(method = "lm") +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  facet_wrap(.~Population, ncol = 3) +
+  scale_x_continuous(name = "Mean weekly temp. during juvenile rearing (˚C)",
+                     breaks = seq(8, 18, by = 2)) +
+  scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
+resid.avgT_grow.popn
+ggsave("./figs/Productivity_residuals_avgT_grow_by_popn.png", width = 8, height = 10)
 
 
 # Combine the residuals plots for the 3 stronest effects (maxP_spawn, maxT_spawn, avgP_grow) into a 3-panel fig
@@ -487,9 +450,9 @@ ggsave("./figs/Productivity_residuals_3panel.png", width = 12, height = 6)
 # TODO: A single faceted plot showing residuals for all covariates
 # rename covariates and reshape envProd into long form
 envProd.long <- envProd %>%
-  select(Population, BroodYear, Spawners, zSpawners, ln.rpsCore, prodCore, resid,
+  select(Population, BroodYear, Spawners, Spawners.std, ln.rpsCore, prodCore, resid,
          maxT_spawn, avgT_grow, wksGT13_spawn, wksGT15_grow,
-         zmaxP_spawn, zavgP_grow, RB_spawn, RB_grow, medianQ_grow, 
+         maxP_spawn.std, avgP_grow.std, RB_spawn, RB_grow, medianQ_grow, 
          breakup, NPGO) %>%
   gather(maxT_spawn:NPGO, key = "Covariate", value = "Value") %>%
   # drop nas
@@ -522,7 +485,7 @@ resid.all <- ggplot(data = envProd.long, aes(x = Value, y = prodCore)) +
 resid.all
 ggsave("./figs/Productivity_all_covariates.png", width = 8, height = 8)
 
-prodCore.maxP_spawn <- ggplot(data = envProd, aes(x = zmaxP_spawn, y = prodCore)) +
+prodCore.maxP_spawn <- ggplot(data = envProd, aes(x = maxP_spawn.std, y = prodCore)) +
   geom_point(shape = 1) +
   geom_smooth() +
   geom_hline(yintercept = 0, linetype = "dotted") +
@@ -531,7 +494,7 @@ prodCore.maxP_spawn <- ggplot(data = envProd, aes(x = zmaxP_spawn, y = prodCore)
 prodCore.maxP_spawn
 ggsave("./figs/Productivity_maxP_spawn.png", width = 10, height = 6)
 
-prodCore.maxP_spawn.popn <- ggplot(data = envProd, aes(x = zmaxP_spawn, y = prodCore)) +
+prodCore.maxP_spawn.popn <- ggplot(data = envProd, aes(x = maxP_spawn.std, y = prodCore)) +
   geom_point(shape = 1) +
   geom_smooth(method = "lm") +
   geom_hline(yintercept = 0, linetype = "dotted") +
@@ -543,22 +506,22 @@ ggsave("./figs/Productivity_maxP_spawn_by_popn.png", width = 8, height = 10)
 
 # Plot maxP_spawn on x and maxT_spawn on color axis
 prodCore.maxP_spawn.maxT_spawn <- prodCore.maxP_spawn +
-  geom_point(aes(fill = zmaxT_spawn), shape = 21, color = "black", size = 2) +
+  geom_point(aes(fill = maxT_spawn.std.all), shape = 21, color = "black", size = 2) +
   scale_fill_gradient2(name = "Max. weekly\ntemperature\nduring\nspawning (SD)", 
                        low="navy", mid="white", high="red", 
-                       midpoint=0, limits=range(envProd$zmaxT_spawn)) 
+                       midpoint=0, limits=range(envProd$maxT_spawn.std.all)) 
 prodCore.maxP_spawn.maxT_spawn
 ggsave("./figs/Productivity_maxP_spawn_maxT_spawn.png", width = 10, height = 6)
 
 prodCore.maxP_spawn.maxT_spawn.popn <- prodCore.maxP_spawn.popn +
-  geom_point(aes(fill = zmaxT_spawn), shape = 21, color = "black", size = 2) +
+  geom_point(aes(fill = maxT_spawn.std.all), shape = 21, color = "black", size = 2) +
   scale_fill_gradient2(name = "Max. weekly\ntemperature\nduring\nspawning (SD)", 
                        low="navy", mid="white", high="red", 
-                       midpoint=0, limits=range(envProd$zmaxT_spawn)) 
+                       midpoint=0, limits=range(envProd$maxT_spawn.std.all)) 
 prodCore.maxP_spawn.maxT_spawn.popn
 ggsave("./figs/Productivity_maxP_spawn_maxT_spawn_by_popn.png", width = 8, height = 10)
 
-prodCore.avgP_grow <- ggplot(data = envProd, aes(x = zavgP_grow, y = prodCore)) +
+prodCore.avgP_grow <- ggplot(data = envProd, aes(x = avgP_grow.std, y = prodCore)) +
   geom_point(shape = 1) +
   geom_smooth() +
   geom_hline(yintercept = 0, linetype = "dotted") +
@@ -567,7 +530,7 @@ prodCore.avgP_grow <- ggplot(data = envProd, aes(x = zavgP_grow, y = prodCore)) 
 prodCore.avgP_grow
 ggsave("./figs/Productivity_avgP_grow.png", width = 10, height = 6)
 
-prodCore.avgP_grow.popn <- ggplot(data = envProd, aes(x = zavgP_grow, y = prodCore)) +
+prodCore.avgP_grow.popn <- ggplot(data = envProd, aes(x = avgP_grow.std, y = prodCore)) +
   geom_point(shape = 1) +
   geom_smooth() +
   geom_hline(yintercept = 0, linetype = "dotted") +
@@ -625,7 +588,7 @@ ggsave("./figs/Productivity_avgT_grow_by_popn.png", width = 8, height = 10)
 
 envProd_noAlex <- filter(envProd, Population != "Alexander")
 
-resid.maxP_spawn_noAlex <- ggplot(data = envProd_noAlex, aes(x = zmaxP_spawn, y = resid)) +
+resid.maxP_spawn_noAlex <- ggplot(data = envProd_noAlex, aes(x = maxP_spawn.std, y = resid)) +
   geom_point(shape = 1) + 
   geom_smooth() +
   geom_hline(yintercept = 0, linetype = "dotted") +
@@ -636,14 +599,14 @@ ggsave("./figs/Productivity_residuals_maxP_spawn_noAlex.png", width = 10, height
 
 # Plot maxP_spawn on x and maxT_spawn on color axis
 resid.maxP_spawn.maxT_spawn_noAlex <- resid.maxP_spawn_noAlex +
-  geom_point(aes(fill = zmaxT_spawn), shape = 21, color = "black", size = 2) +
+  geom_point(aes(fill = maxT_spawn.std.all), shape = 21, color = "black", size = 2) +
   scale_fill_gradient2(name = "Max. weekly\ntemperature\nduring\nspawning (SD)", 
                        low="navy", mid="white", high="red", 
-                       midpoint=0, limits=range(envProd$zmaxT_spawn)) 
+                       midpoint=0, limits=range(envProd$maxT_spawn.std.all)) 
 resid.maxP_spawn.maxT_spawn_noAlex
 ggsave("./figs/Productivity_residuals_maxP_spawn_maxT_spawn_noAlex.png", width = 10, height = 6)
 
-resid.avgP_grow_noAlex <- ggplot(data = envProd_noAlex, aes(x = zavgP_grow, y = resid)) +
+resid.avgP_grow_noAlex <- ggplot(data = envProd_noAlex, aes(x = avgP_grow.std, y = resid)) +
   geom_point(shape = 1) + 
   geom_smooth() +
   geom_hline(yintercept = 0, linetype = "dotted") +
@@ -674,7 +637,7 @@ ggsave("./figs/Productivity_residuals_avgT_grow_noAlex.png", width = 10, height 
 
 # Plot correlations between spawning abundance and key predictors--------
 # maxPspawn
-maxPspawn.esc <- ggplot(data = envProd, aes (x = zSpawners, y = zmaxP_spawn)) +
+maxPspawn.esc <- ggplot(data = envProd, aes (x = Spawners.std, y = maxP_spawn.std)) +
   geom_point(shape = 1) +
   # geom_text(aes(label = BroodYear)) + 
   geom_smooth(method = "lm") +
@@ -683,7 +646,7 @@ maxPspawn.esc <- ggplot(data = envProd, aes (x = zSpawners, y = zmaxP_spawn)) +
 maxPspawn.esc
 ggsave("./figs/maxPspawn vs escape.png", width = 10, height = 6)
 
-maxPspawn.esc.pop <- ggplot(data = envProd, aes (x = zSpawners, y = zmaxP_spawn)) +
+maxPspawn.esc.pop <- ggplot(data = envProd, aes (x = Spawners.std, y = maxP_spawn.std)) +
   geom_point(shape = 1) +
   # geom_text(aes(label = BroodYear)) + 
   geom_smooth(method = "lm") +
@@ -694,7 +657,7 @@ maxPspawn.esc.pop
 ggsave("./figs/maxPspawn vs escape_by popn.png", width = 10, height = 6)
 
 # maxTspawn
-maxTspawn.esc <- ggplot(data = envProd, aes (x = zSpawners, y = zmaxT_spawn)) +
+maxTspawn.esc <- ggplot(data = envProd, aes (x = Spawners.std, y = maxT_spawn.std.all)) +
   geom_point(shape = 1) +
   # geom_text(aes(label = BroodYear)) + 
   geom_smooth(method = "lm") +
@@ -703,7 +666,7 @@ maxTspawn.esc <- ggplot(data = envProd, aes (x = zSpawners, y = zmaxT_spawn)) +
 maxTspawn.esc
 ggsave("./figs/maxTspawn vs escape.png", width = 10, height = 6)
 
-maxTspawn.esc.pop <- ggplot(data = envProd, aes (x = zSpawners, y = zmaxT_spawn)) +
+maxTspawn.esc.pop <- ggplot(data = envProd, aes (x = Spawners.std, y = maxT_spawn.std.all)) +
   geom_point(shape = 1) +
   # geom_text(aes(label = BroodYear)) + 
   geom_smooth(method = "lm") +

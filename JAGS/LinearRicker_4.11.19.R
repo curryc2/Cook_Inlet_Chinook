@@ -13,24 +13,26 @@
 # covariates are commented out. The script was also modified to run all 3
 # model versions in sequence, rather than one at a time, for convenience.
 
-# This script runs 3 versions of the model, called phases "A", "B1", and "B2",
+# This script runs 3 versions of the model, called phases 3, 4, and A,
 # that deal with temperature covariates differently. The central challenge is
 # that conventional standardization (z-scoring) of temperature covariates
 # discards information about which streams are warmer than others, on average.
+
+# Phases 3 and 4 use temperature covariates standardized within each 
+# population. When standardized this way, the two spawning temperature metrics
+# are correlated with each other and the two rearing temperature metrics are
+# correlated with each other. Thus, we can only use 1 spawning metric and 1
+# rearing metric in each model run. Model phase 3 includes the duration metrics 
+# "wksGT13_spawn" and # "wksGT15_grow". Phase 4 includes the magnitude metrics
+# "maxT_spawn" and "avgT_grow".
 
 # Phase "A" uses temperature covariates standardized across all populations.
 # This approach retains information about differences in mean temperature
 # among streams (some streams are warmer than others). However, when standardized
 # this way, all 4 examined temperature metrics are highly correlated, so we
-# can only include 1 in the model. We included "maxT_spawn".
+# can only include 1 in the model. We included "maxT_spawn". We decided not to use this
+# model in the paper because of concerns about coefficient interpretation.
 
-# Phases "B1" and "B2" use temperature covariates standardized within each 
-# population. When standardized this way, the two spawning temperature metrics
-# are correlated with each other and the two rearing temperature metrics are
-# correlated with each other. Thus, we can only use 1 spawning metric and 1
-# rearing metric in each model run. Model phase B1 includes the magnitude metrics
-# "maxT_spawn" and "avgT_grow". Phase B2 includes the duration metrics "wksGT13_spawn" and 
-# "wksGT15_grow".
 #
 #==================================================================================================
 require(ggplot2)
@@ -284,8 +286,8 @@ for(p in 1:n.pops) {
 #Calculate correlations
 # corrplot.mixed(cor(cor.input.2, use="na.or.complete"), upper='ellipse')
 
-#Phase A: Temp metric standardized across pops ==========================================
-phase <- "A"
+#Phase 3: Duration temp metrics standardized within pops ===================================
+phase <- 3
 #Update Fig and Output directories
 dir.output <- file.path(dir.output.root,paste0("Phase_",phase))
 dir.create(dir.output, recursive=TRUE)
@@ -293,9 +295,9 @@ dir.figs <- file.path(dir.figs.root,paste0("Phase_",phase))
 dir.create(dir.figs, recursive=TRUE)
 
 # Define covariate names
-names.covars <- c('maxT_spawn',
+names.covars <- c('wksGT13_spawn', 'wksGT15_grow',
                   'maxP_spawn','avgP_grow',
-                  'medianQ','RB_spawn','RB_emerge',
+                  'medianQ_grow','RB_spawn','RB_emerge',
                   'breakup','NPGO')
 
 # if(do.temp==TRUE) { names.covars <- c(names.covars,'Max.temp') }
@@ -328,19 +330,16 @@ for(p in 1:n.pops) {
     
     c <- 1
     #TEMPERATURE ========
-    # maxT_spawn
-    temp.cov <- dat$maxT_spawn.std.all[dat$Population==pops[p] & dat$BroodYear==year]
+    # wksGT13_spawn
+    temp.cov <- dat$wksGT13_spawn.std[dat$Population==pops[p] & dat$BroodYear==year]
     covars[p,y,c] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
     c <- c+1
     
-    # #wksGT13-0
-    # temp.cov <- dat$std.wksGT13[dat$Population==pops[p] & dat$BroodYear==(year+0)]
-    # covars[p,y,1] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
-    # 
-    # #wksGT15-1
-    # temp.cov <- dat$std.wksGT15[dat$Population==pops[p] & dat$BroodYear==(year+1)]
-    # covars[p,y,2] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
-    # 
+    # wksGT15_grow
+    temp.cov <- dat$wksGT15_grow.std[dat$Population==pops[p] & dat$BroodYear==year]
+    covars[p,y,c] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+    c <- c+1
+    
     #DISCHARGE =========
     #maxP_spawn
     temp.cov <- dat$maxP_spawn.std[dat$Population==pops[p] & dat$BroodYear==year]
@@ -351,7 +350,7 @@ for(p in 1:n.pops) {
     temp.cov <- dat$avgP_grow.std[dat$Population==pops[p] & dat$BroodYear==year]
     covars[p,y,c] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
     c <- c+1
-
+    
     #medianQ_grow
     temp.cov <- dat$medianQ_grow.std[dat$Population==pops[p] & dat$BroodYear==year]
     covars[p,y,c] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
@@ -729,40 +728,8 @@ locs <- grep("mu", dimnames(temp.summary)[[1]])
 
 write.csv(cbind(names.covars, temp.summary[locs,]), file=file.path(dir.output,'Mu Coefs.csv'))
 
-
-# exp(0.1)
-
-# plotPost(out$BUGSoutput$sims.list)
-# 
-# p <- 3
-# pred.rec <- out$BUGSoutput$sims.list$pred.rec
-# plot(x=spawn[p,], y=rec[p,], pch=21, bg=rgb(0,0,1,alpha=0.5), ylim=c(0, max(rec[p,],apply(pred.rec[,p,1:n.years[p]], 2, median), na.rm=TRUE)))
-# 
-# points(x=spawn[p,1:n.years[p]], y=apply(pred.rec[,p,1:n.years[p]], 2, median), col='red')
-# # points(x=spawn[p,1:n.years[p]], y=apply(base.rec[,p,1:n.years[p]], 2, median), col='red')
-# 
-# plot(x=rec[p,], y=apply(pred.rec[,p,], 2, median))
-# 
-# alpha <- out$BUGSoutput$sims.list$alpha[,p]
-# beta <- out$BUGSoutput$sims.list$beta[,p]
-# pred.rec <- spawn[p,]*exp(alpha*(1-spawn[p,]/beta))
-# 
-# pred.rec <- out$BUGSoutput$sims.list$pred.rec
-# corr.pred.rec <- out$BUGSoutput$sims.list$corr.pred.rec
-# base.rec <- out$BUGSoutput$sims.list$base.rec
-# 
-# ylim <- c(0,max(rec[p,], apply(pred.rec[,p,1:n.years[p]],2,median), na.rm=TRUE))
-# 
-# plot(rec[p,], pch=21, bg=rgb(0,0,1,alpha=0.5), ylim=ylim)
-# lines(apply(pred.rec[,p,1:n.years[p]], 2, median), col='red')
-# # lines(apply(corr.pred.rec[,p,1:n.years[p]], 2, median), col='gray')
-# lines(apply(base.rec[,p,1:n.years[p]], 2, median), col='darkgreen')
-# 
-# 
-# 
-
-#Phase B1: Magnitude temp metrics standardized within pops ===================================
-phase <- "B1"
+#Phase 4: Magnitude temp metrics standardized within pops ===================================
+phase <- 4
 #Update Fig and Output directories
 dir.output <- file.path(dir.output.root,paste0("Phase_",phase))
 dir.create(dir.output, recursive=TRUE)
@@ -1211,8 +1178,9 @@ locs <- grep("mu", dimnames(temp.summary)[[1]])
 
 write.csv(cbind(names.covars, temp.summary[locs,]), file=file.path(dir.output,'Mu Coefs.csv'))
 
-#Phase B2: Duration temp metrics standardized within pops ===================================
-phase <- "B2"
+
+#Phase A: Temp metric standardized across pops ==========================================
+phase <- "A"
 #Update Fig and Output directories
 dir.output <- file.path(dir.output.root,paste0("Phase_",phase))
 dir.create(dir.output, recursive=TRUE)
@@ -1220,9 +1188,9 @@ dir.figs <- file.path(dir.figs.root,paste0("Phase_",phase))
 dir.create(dir.figs, recursive=TRUE)
 
 # Define covariate names
-names.covars <- c('wksGT13_spawn', 'wksGT15_grow',
+names.covars <- c('maxT_spawn',
                   'maxP_spawn','avgP_grow',
-                  'medianQ_grow','RB_spawn','RB_emerge',
+                  'medianQ','RB_spawn','RB_emerge',
                   'breakup','NPGO')
 
 # if(do.temp==TRUE) { names.covars <- c(names.covars,'Max.temp') }
@@ -1255,16 +1223,19 @@ for(p in 1:n.pops) {
     
     c <- 1
     #TEMPERATURE ========
-    # wksGT13_spawn
-    temp.cov <- dat$wksGT13_spawn.std[dat$Population==pops[p] & dat$BroodYear==year]
+    # maxT_spawn
+    temp.cov <- dat$maxT_spawn.std.all[dat$Population==pops[p] & dat$BroodYear==year]
     covars[p,y,c] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
     c <- c+1
     
-    # wksGT15_grow
-    temp.cov <- dat$wksGT15_grow.std[dat$Population==pops[p] & dat$BroodYear==year]
-    covars[p,y,c] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
-    c <- c+1
-    
+    # #wksGT13-0
+    # temp.cov <- dat$std.wksGT13[dat$Population==pops[p] & dat$BroodYear==(year+0)]
+    # covars[p,y,1] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+    # 
+    # #wksGT15-1
+    # temp.cov <- dat$std.wksGT15[dat$Population==pops[p] & dat$BroodYear==(year+1)]
+    # covars[p,y,2] <- ifelse(is.na(temp.cov),0,temp.cov) # Fill in with zero if unavailable
+    # 
     #DISCHARGE =========
     #maxP_spawn
     temp.cov <- dat$maxP_spawn.std[dat$Population==pops[p] & dat$BroodYear==year]
@@ -1653,3 +1624,34 @@ locs <- grep("mu", dimnames(temp.summary)[[1]])
 
 write.csv(cbind(names.covars, temp.summary[locs,]), file=file.path(dir.output,'Mu Coefs.csv'))
 
+
+# exp(0.1)
+
+# plotPost(out$BUGSoutput$sims.list)
+# 
+# p <- 3
+# pred.rec <- out$BUGSoutput$sims.list$pred.rec
+# plot(x=spawn[p,], y=rec[p,], pch=21, bg=rgb(0,0,1,alpha=0.5), ylim=c(0, max(rec[p,],apply(pred.rec[,p,1:n.years[p]], 2, median), na.rm=TRUE)))
+# 
+# points(x=spawn[p,1:n.years[p]], y=apply(pred.rec[,p,1:n.years[p]], 2, median), col='red')
+# # points(x=spawn[p,1:n.years[p]], y=apply(base.rec[,p,1:n.years[p]], 2, median), col='red')
+# 
+# plot(x=rec[p,], y=apply(pred.rec[,p,], 2, median))
+# 
+# alpha <- out$BUGSoutput$sims.list$alpha[,p]
+# beta <- out$BUGSoutput$sims.list$beta[,p]
+# pred.rec <- spawn[p,]*exp(alpha*(1-spawn[p,]/beta))
+# 
+# pred.rec <- out$BUGSoutput$sims.list$pred.rec
+# corr.pred.rec <- out$BUGSoutput$sims.list$corr.pred.rec
+# base.rec <- out$BUGSoutput$sims.list$base.rec
+# 
+# ylim <- c(0,max(rec[p,], apply(pred.rec[,p,1:n.years[p]],2,median), na.rm=TRUE))
+# 
+# plot(rec[p,], pch=21, bg=rgb(0,0,1,alpha=0.5), ylim=ylim)
+# lines(apply(pred.rec[,p,1:n.years[p]], 2, median), col='red')
+# # lines(apply(corr.pred.rec[,p,1:n.years[p]], 2, median), col='gray')
+# lines(apply(base.rec[,p,1:n.years[p]], 2, median), col='darkgreen')
+# 
+# 
+# 
