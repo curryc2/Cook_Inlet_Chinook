@@ -403,17 +403,26 @@ resid.NPGO <- ggplot(data = envProd, aes(x = NPGO.std, y = resid)) +
   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
 resid.NPGO
 ggsave("./figs/Productivity_residuals_NPGO.png", width = 6, height = 6)
+
+resid.medianQ_grow <- ggplot(data = envProd, aes(x = medianQ_grow.std, y = resid)) +
+  geom_point(shape = 1) +
+  geom_smooth() +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  scale_x_continuous(name = "Median river discharge (SD)") +
+  scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
+resid.medianQ_grow
+ggsave("./figs/Productivity_residuals_medianQ_grow.png", width = 6, height = 6)
 # 
 # Other residuals plots generated for exploratory purposes but not included in paper:
-# resid.NPGO.popn <- ggplot(data = envProd, aes(x = NPGO.std, y = resid)) +
-#   geom_point(shape = 1) + 
-#   geom_smooth(method = "lm") +
-#   geom_hline(yintercept = 0, linetype = "dotted") +
-#   facet_wrap(.~Population, ncol = 3, scales = "free_y") +
-#   scale_x_continuous(name = "North Pacific Gyre Oscillation (NPGO; SD)") +
-#   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
-# resid.NPGO.popn
-# ggsave("./figs/Productivity_residuals_NPGO_by_popn.png", width = 8, height = 8)
+resid.NPGO.popn <- ggplot(data = envProd, aes(x = NPGO.std, y = resid)) +
+  geom_point(shape = 1) +
+  geom_smooth(method = "lm") +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  facet_wrap(.~Population, ncol = 3, scales = "free_y") +
+  scale_x_continuous(name = "North Pacific Gyre Oscillation (NPGO; SD)") +
+  scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
+resid.NPGO.popn
+ggsave("./figs/Productivity_residuals_NPGO_by_popn.png", width = 8, height = 8)
 # 
 resid.avgT_grow <- ggplot(data = envProd, aes(x = avgT_grow, y = resid)) +
   geom_point(shape = 1) +
@@ -436,23 +445,14 @@ resid.avgT_grow.popn <- ggplot(data = envProd, aes(x = avgT_grow, y = resid)) +
 resid.avgT_grow.popn
 ggsave("./figs/Productivity_residuals_avgT_grow_by_popn.png", width = 8, height = 10)
 
-
-# Combine the residuals plots for the 3 stronest effects (maxP_spawn, maxT_spawn, avgP_grow) into a 3-panel fig
-resid.maxT_spawn.g <- resid.maxT_spawn +
-  scale_y_continuous(name = NULL, labels = NULL)
-resid.avgP_grow.g <- resid.avgP_grow +
-  scale_y_continuous(name = NULL, labels = NULL)
-resid.3panel <- plot_grid(resid.maxP_spawn, resid.maxT_spawn.g, resid.avgP_grow.g, 
-                          labels = c("     A", "B", "C"), ncol = 3, align = "h", label_x = 0.08)
-resid.3panel
-ggsave("./figs/Productivity_residuals_3panel.png", width = 12, height = 6)
-
-# TODO: A single faceted plot showing residuals for all covariates
+# A single faceted plot showing residuals for all covariates
 # rename covariates and reshape envProd into long form
 envProd.long <- envProd %>%
   select(Population, BroodYear, Spawners, Spawners.std, ln.rpsCore, prodCore, resid,
          maxT_spawn, avgT_grow, wksGT13_spawn, wksGT15_grow,
-         maxP_spawn.std, avgP_grow.std, RB_spawn, RB_grow, medianQ_grow, 
+         # use standardized values for precip indicators, but don't show ".std" on plot
+         maxP_spawn = maxP_spawn.std, avgP_grow = avgP_grow.std,
+         RB_spawn, RB_emerge, medianQ_grow, 
          breakup, NPGO) %>%
   gather(maxT_spawn:NPGO, key = "Covariate", value = "Value") %>%
   # drop nas
@@ -467,7 +467,24 @@ resid.all <- ggplot(data = envProd.long, aes(x = Value, y = resid)) +
   scale_x_continuous(name = "Covariate value") +
   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
 resid.all
-ggsave("./figs/Productivity_residuals_all_covariates.png", width = 8, height = 8)
+ggsave("./figs/Productivity_residuals_all_covariates.png", width = 6, height = 8)
+
+# Combine the residuals plots for the 3 strongest effects (maxP_spawn, NPGO, medianQ_grow) into a 3-panel fig
+resid.NPGO.g <- resid.NPGO +
+  scale_y_continuous(name = NULL, labels = NULL)
+resid.medianQ_grow.g <- resid.medianQ_grow +
+  scale_y_continuous(name = NULL, labels = NULL)
+resid.3panel <- plot_grid(resid.maxP_spawn, resid.NPGO.g, resid.medianQ_grow.g, 
+                          labels = c("    A", "B", "C"), ncol = 3, align = "h", label_x = 0.08)
+resid.3panel
+ggsave("./figs/Productivity_residuals_3panel.png", width = 12, height = 6)
+
+# TODO:
+# Make a new fig showing top 6?
+#   Top 3: maxP_spawn, NPGO, medianQ_grow
+# Next 3: avgP_grow, wksGT15_grow, maxT_spawn
+# 
+# Or top 4, and then show maxT_spawn in a separate figure, with particular warm, cold, and medium streams highlighted?
 
 
 # 3) Plot productivity ln(R/S) vs the environmental covariates---------
