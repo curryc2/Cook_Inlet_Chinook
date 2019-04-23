@@ -362,6 +362,19 @@ resid.maxT_spawn <- ggplot(data = envProd, aes(x = maxT_spawn, y = resid)) +
 resid.maxT_spawn
 ggsave("./figs/Productivity_residuals_maxT_spawn.png", width = 4, height = 4)
 
+# Same plot with the coldest (Chulitna) and warmest (Deshka) streams highlighted in color,
+# with their own linear regression fits
+resid.maxT_spawn_ChuliVDeshka <- resid.maxT_spawn +
+  geom_smooth(color = "black") +
+  geom_point(data = filter(envProd, Population == "Deshka"), shape = 1, color = "red") +
+  geom_smooth(data = filter(envProd, Population == "Deshka"), method = "lm", se = F,
+              color = "red", lty = "dashed") +
+  geom_point(data = filter(envProd, Population == "Chulitna"), shape = 1, color = "blue") +
+  geom_smooth(data = filter(envProd, Population == "Chulitna"), method = "lm", se = F,
+              color = "blue", lty = "dashed")
+resid.maxT_spawn_ChuliVDeshka
+ggsave("./figs/Productivity_residuals_maxT_spawn_Chuli vs Deshka.png", width = 4, height = 4)
+
 # # A similar plot, with temperature expressed in standard deviations rather than degrees.  Went with degrees for
 # # the paper for ease of interpretability
 resid.maxT_spawn_SD <- ggplot(data = envProd, aes(x = maxT_spawn.std, y = resid)) +
@@ -382,7 +395,7 @@ resid.maxT_spawn.popn <- ggplot(data = envProd, aes(x = maxT_spawn, y = resid)) 
                      breaks = seq(8, 22, by = 2), limits = c(8, 22)) +
   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
 resid.maxT_spawn.popn
-ggsave("./figs/Productivity_residuals_maxT_spawn_by_popn.png", width = 8, height = 10)
+ggsave("./figs/Productivity_residuals_maxT_spawn_by_popn.png", width = 6, height = 8)
 
 # Another version based on suggestions from Becky
 resid.maxT_spawn.popn.poly <- ggplot(data = envProd, aes(x = maxT_spawn, y = resid)) +
@@ -424,15 +437,38 @@ resid.NPGO.popn <- ggplot(data = envProd, aes(x = NPGO.std, y = resid)) +
 resid.NPGO.popn
 ggsave("./figs/Productivity_residuals_NPGO_by_popn.png", width = 8, height = 8)
 # 
+
+resid.wksGT15_grow <- ggplot(data = envProd, aes(x = wksGT15_grow, y = resid)) +
+  geom_point(shape = 1) +
+  geom_smooth() +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  scale_x_continuous(name = "Weeks exceeding 15˚C during juvenile rearing\n(wksGT15_grow)") +
+  scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
+resid.wksGT15_grow
+ggsave("./figs/Productivity_residuals_wksGT15_grow.png", width = 6, height = 6)
+
 resid.avgT_grow <- ggplot(data = envProd, aes(x = avgT_grow, y = resid)) +
   geom_point(shape = 1) +
   geom_smooth() +
   geom_hline(yintercept = 0, linetype = "dotted") +
-  scale_x_continuous(name = "Mean weekly temperature during juvenile rearing\n(avgT_grow, ˚C)",
+  scale_x_continuous(name = "Mean weekly temp. during juvenile rearing\n(avgT_grow, ˚C)",
                      breaks = seq(8, 18, by = 2)) +
   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
 resid.avgT_grow
 ggsave("./figs/Productivity_residuals_avgT_grow.png", width = 6, height = 6)
+
+# Same plot with the coldest (Chulitna) and warmest (Deshka) streams highlighted in color,
+# with their own linear regression fits
+resid.avgT_grow_ChuliVDeshka <- resid.avgT_grow +
+  geom_smooth(color = "black") +
+  geom_point(data = filter(envProd, Population == "Deshka"), shape = 1, color = "red") +
+  geom_smooth(data = filter(envProd, Population == "Deshka"), method = "lm", se = F,
+              color = "red", lty = "dashed") +
+  geom_point(data = filter(envProd, Population == "Chulitna"), shape = 1, color = "blue") +
+  geom_smooth(data = filter(envProd, Population == "Chulitna"), method = "lm", se = F,
+              color = "blue", lty = "dashed")
+resid.avgT_grow_ChuliVDeshka
+ggsave("./figs/Productivity_residuals_avgT_grow_Chuli vs Deshka.png", width = 4, height = 4)
 
 resid.avgT_grow.popn <- ggplot(data = envProd, aes(x = avgT_grow, y = resid)) +
   geom_point(shape = 1) +
@@ -449,14 +485,23 @@ ggsave("./figs/Productivity_residuals_avgT_grow_by_popn.png", width = 8, height 
 # rename covariates and reshape envProd into long form
 envProd.long <- envProd %>%
   select(Population, BroodYear, Spawners, Spawners.std, ln.rpsCore, prodCore, resid,
-         maxT_spawn, avgT_grow, wksGT13_spawn, wksGT15_grow,
-         # use standardized values for precip indicators, but don't show ".std" on plot
-         maxP_spawn = maxP_spawn.std, avgP_grow = avgP_grow.std,
-         RB_spawn, RB_emerge, medianQ_grow, 
-         breakup, NPGO) %>%
-  gather(maxT_spawn:NPGO, key = "Covariate", value = "Value") %>%
+         maxT_spawn.std, avgT_grow.std, wksGT13_spawn.std, wksGT15_grow.std,
+         maxP_spawn.std, avgP_grow.std,
+         RB_spawn.std, RB_emerge.std, medianQ_grow.std, 
+         breakup.std, NPGO.std) %>%
+  gather(maxT_spawn.std:NPGO.std, key = "Covariate", value = "Value") %>%
   # drop nas
-  drop_na(resid)
+  drop_na(resid) %>%
+  # Order and label the covariates for plotting
+  mutate(Covariate = factor(Covariate, 
+                            levels = c("maxP_spawn.std", "avgP_grow.std", "NPGO.std",
+                                       "medianQ_grow.std", "maxT_spawn.std", "wksGT15_grow.std",
+                                       "wksGT13_spawn.std", "RB_emerge.std", "RB_spawn.std", 
+                                       "breakup.std", "avgT_grow.std"),
+                            labels = c("maxP_spawn", "avgP_grow", "NPGO",
+                                       "medianQ_grow", "maxT_spawn", "wksGT15_grow",
+                                       "wksGT13_spawn.std", "RB_emerge.std", "RB_spawn.std", 
+                                       "breakup.std", "avgT_grow.std")))
 
 # Plot residuals against all covariates
 resid.all <- ggplot(data = envProd.long, aes(x = Value, y = resid)) +
@@ -464,27 +509,82 @@ resid.all <- ggplot(data = envProd.long, aes(x = Value, y = resid)) +
   geom_smooth() +
   geom_hline(yintercept = 0, linetype = "dotted") +
   facet_wrap(.~Covariate, ncol = 3, scales = "free") +
-  scale_x_continuous(name = "Covariate value") +
+  scale_x_continuous(name = "Covariate value (SD)") +
   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
 resid.all
 ggsave("./figs/Productivity_residuals_all_covariates.png", width = 6, height = 8)
 
-# Combine the residuals plots for the 3 strongest effects (maxP_spawn, NPGO, medianQ_grow) into a 3-panel fig
-resid.NPGO.g <- resid.NPGO +
-  scale_y_continuous(name = NULL, labels = NULL)
-resid.medianQ_grow.g <- resid.medianQ_grow +
-  scale_y_continuous(name = NULL, labels = NULL)
-resid.3panel <- plot_grid(resid.maxP_spawn, resid.NPGO.g, resid.medianQ_grow.g, 
-                          labels = c("    A", "B", "C"), ncol = 3, align = "h", label_x = 0.08)
-resid.3panel
-ggsave("./figs/Productivity_residuals_3panel.png", width = 12, height = 6)
+# Plot top 6 covariates
+envProd.long.top6 <- envProd.long %>%
+  filter(Covariate != "wksGT13_spawn.std") %>%
+  filter(Covariate != "avgT_grow.std") %>%
+  filter(Covariate != "RB_emerge.std") %>%
+  filter(Covariate != "RB_spawn.std") %>%
+  filter(Covariate != "breakup.std")
 
-# TODO:
-# Make a new fig showing top 6?
-#   Top 3: maxP_spawn, NPGO, medianQ_grow
-# Next 3: avgP_grow, wksGT15_grow, maxT_spawn
+resid.top6 <- ggplot(data = envProd.long.top6, aes(x = Value, y = resid)) +
+  geom_point(shape = 1) + 
+  geom_smooth() +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  facet_wrap(.~Covariate, ncol = 3, scales = "free_x") +
+  scale_x_continuous(name = "Standardized covariate value (SD)") +
+  scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
+resid.top6
+ggsave("./figs/Productivity_residuals_top6_covariates.png", width = 6, height = 8)
+
+# Plot top 4 covariates
+envProd.long.top4 <- envProd.long.top6 %>%
+  filter(Covariate != "wksGT15_grow") %>%
+  filter(Covariate != "maxT_spawn") 
+
+resid.top4 <- ggplot(data = envProd.long.top4, aes(x = Value, y = resid)) +
+  geom_point(shape = 1) + 
+  geom_smooth() +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  facet_wrap(.~Covariate, ncol = 2, scales = "free_x") +
+  scale_x_continuous(name = "Standardized covariate value (SD)") +
+  scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
+resid.top4
+ggsave("./figs/Productivity_residuals_top4_covariates.png", width = 6, height = 8)
+
+# A 2-panel plot showing the residuals of maxT_spawn and avgT_grow with Chuli and Deshka
+# highlighted
+
+# # First, make new subplot without y-axis labels
+resid.avgT_grow_ChuliVDeshka.g <- resid.avgT_grow_ChuliVDeshka +
+  scale_y_continuous(name = NULL, labels = NULL)
+
+resid.temp.2panel <- plot_grid(resid.maxT_spawn_ChuliVDeshka, resid.avgT_grow_ChuliVDeshka.g,
+                          # labels = c("    A", "B", "C"), 
+                          ncol = 2, align = "h", label_x = 0.08)
+resid.temp.2panel
+ggsave("./figs/Productivity_residuals_temp_2panel.png", width = 8, height = 6)
+
+
+# # Combine the residuals plots for key effects into multi-panel figs
+# # First, make new subplots without y-axis labels
+# resid.NPGO.g <- resid.NPGO +
+#   scale_y_continuous(name = NULL, labels = NULL)
+# resid.medianQ_grow.g <- resid.medianQ_grow +
+#   scale_y_continuous(name = NULL, labels = NULL)
+# resid.maxT_spawn.g <- resid.maxT_spawn +
+#   scale_y_continuous(name = NULL, labels = NULL)
+# resid.wksGT15_grow.g <- resid.wksGT15_grow +
+#   scale_y_continuous(name = NULL, labels = NULL)
+# resid.3panel <- plot_grid(resid.maxP_spawn, resid.NPGO.g, resid.medianQ_grow.g, 
+#                           labels = c("    A", "B", "C"), ncol = 3, align = "h", label_x = 0.08)
+# resid.3panel
+# ggsave("./figs/Productivity_residuals_3panel.png", width = 12, height = 6)
 # 
-# Or top 4, and then show maxT_spawn in a separate figure, with particular warm, cold, and medium streams highlighted?
+# resid.6panel <- plot_grid(resid.maxP_spawn, resid.NPGO.g, resid.medianQ_grow.g, 
+#                           resid.avgP_grow, resid.maxT_spawn.g, resid.wksGT15_grow.g,
+#                           # labels = c("    A", "B", "C"), 
+#                           ncol = 3, align = "hv", 
+#                           label_x = 0.08, nrow = 2)
+# resid.6panel
+# ggsave("./figs/Productivity_residuals_3panel.png", width = 12, height = 6)
+
+# TODO: show maxT_spawn residuals in a separate figure, with particular warm, cold, and medium streams highlighted?
 
 
 # 3) Plot productivity ln(R/S) vs the environmental covariates---------
