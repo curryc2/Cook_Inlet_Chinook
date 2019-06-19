@@ -375,6 +375,25 @@ resid.maxT_spawn_ChuliVDeshka <- resid.maxT_spawn +
 resid.maxT_spawn_ChuliVDeshka
 ggsave("./figs/Productivity_residuals_maxT_spawn_Chuli vs Deshka.png", width = 4, height = 4)
 
+# Same plot with the 2 coldest and 2 warmest streams highlighted in color,
+# with their own linear regression fits
+resid.maxT_spawn_ColdVWarm <- resid.maxT_spawn +
+  geom_smooth(color = "black") +
+  geom_point(data = filter(envProd, Population == "Deshka"), shape = 1, color = "red") +
+  geom_smooth(data = filter(envProd, Population == "Deshka"), method = "lm", se = F,
+              color = "red", lty = "dashed") +
+  geom_point(data = filter(envProd, Population == "Alexander"), shape = 1, color = "orange") +
+  geom_smooth(data = filter(envProd, Population == "Alexander"), method = "lm", se = F,
+              color = "orange", lty = "dashed") +
+  geom_point(data = filter(envProd, Population == "Chulitna"), shape = 1, color = "blue") +
+  geom_smooth(data = filter(envProd, Population == "Chulitna"), method = "lm", se = F,
+              color = "blue", lty = "dashed") +
+  geom_point(data = filter(envProd, Population == "Little Susitna"), shape = 1, color = "cyan") +
+  geom_smooth(data = filter(envProd, Population == "Little Susitna"), method = "lm", se = F,
+              color = "cyan", lty = "dashed")
+resid.maxT_spawn_ColdVWarm
+ggsave("./figs/Productivity_residuals_maxT_spawn_ColdVWarm.png", width = 4, height = 4)
+
 # # A similar plot, with temperature expressed in standard deviations rather than degrees.  Went with degrees for
 # # the paper for ease of interpretability
 resid.maxT_spawn_SD <- ggplot(data = envProd, aes(x = maxT_spawn.std, y = resid)) +
@@ -470,6 +489,26 @@ resid.avgT_grow_ChuliVDeshka <- resid.avgT_grow +
 resid.avgT_grow_ChuliVDeshka
 ggsave("./figs/Productivity_residuals_avgT_grow_Chuli vs Deshka.png", width = 4, height = 4)
 
+# Same plot with the 2 coldest and 2 warmest streams highlighted in color,
+# with their own linear regression fits
+resid.avgT_grow_ColdVWarm <- resid.avgT_grow +
+  geom_smooth(color = "black") +
+  geom_point(data = filter(envProd, Population == "Deshka"), shape = 1, color = "red") +
+  geom_smooth(data = filter(envProd, Population == "Deshka"), method = "lm", se = F,
+              color = "red", lty = "dashed") +
+  geom_point(data = filter(envProd, Population == "Alexander"), shape = 1, color = "orange") +
+  geom_smooth(data = filter(envProd, Population == "Alexander"), method = "lm", se = F,
+              color = "orange", lty = "dashed") +
+  geom_point(data = filter(envProd, Population == "Chulitna"), shape = 1, color = "blue") +
+  geom_smooth(data = filter(envProd, Population == "Chulitna"), method = "lm", se = F,
+              color = "blue", lty = "dashed") +
+  geom_point(data = filter(envProd, Population == "Little Susitna"), shape = 1, color = "cyan") +
+  geom_smooth(data = filter(envProd, Population == "Little Susitna"), method = "lm", se = F,
+              color = "cyan", lty = "dashed")
+resid.avgT_grow_ColdVWarm
+ggsave("./figs/Productivity_residuals_avgT_grow_ColdVWarm.png", width = 4, height = 4)
+
+
 resid.avgT_grow.popn <- ggplot(data = envProd, aes(x = avgT_grow, y = resid)) +
   geom_point(shape = 1) +
   geom_smooth(method = "lm") +
@@ -558,8 +597,20 @@ resid.temp.2panel <- plot_grid(resid.maxT_spawn_ChuliVDeshka, resid.avgT_grow_Ch
                           # labels = c("    A", "B", "C"), 
                           ncol = 2, align = "h", label_x = 0.08)
 resid.temp.2panel
-ggsave("./figs/Productivity_residuals_temp_2panel.png", width = 8, height = 6)
+ggsave("./figs/Productivity_residuals_temp_2panel_ChuliVDeshka.png", width = 8, height = 6)
 
+# A 2-panel plot showing the residuals of maxT_spawn and avgT_grow with 2 coldest and 2 warmest
+# streams highlighted
+
+# # First, make new subplot without y-axis labels
+resid.avgT_grow_ColdVWarm.g <- resid.avgT_grow_ColdVWarm +
+  scale_y_continuous(name = NULL, labels = NULL)
+
+resid.temp.2panel <- plot_grid(resid.maxT_spawn_ColdVWarm, resid.avgT_grow_ColdVWarm.g,
+                               # labels = c("    A", "B", "C"), 
+                               ncol = 2, align = "h", label_x = 0.08)
+resid.temp.2panel
+ggsave("./figs/Productivity_residuals_temp_2panel_ColdVWarm.png", width = 8, height = 6)
 
 # # Combine the residuals plots for key effects into multi-panel figs
 # # First, make new subplots without y-axis labels
