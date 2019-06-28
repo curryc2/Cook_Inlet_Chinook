@@ -591,6 +591,7 @@ harvest.plot <- ggplot(data = harvestByYear, aes(x = Year, y = Harvest/1000, col
   theme(legend.justification=c(1,1), legend.position=c(.98,.98), legend.background = element_rect()) 
 harvest.plot
 ggsave("./figs/Harvest by fishery.png", width = 7, height = 5)
+ggsave("./figs/Harvest by fishery.pdf", width = 7, height = 5)
 
 # Pairwise correlations btw harvest in each fishing sector
 harvest.pairs.plot <- ggpairs(data = harvestByYearWide, columns = 2:6)

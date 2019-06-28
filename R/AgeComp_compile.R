@@ -64,6 +64,10 @@ PropPrimaryAges
 # Result: Ages 1.1 through 1.5 made up 99.4% of the overall age comp, so we excluded the other age
 # classes for simplicity
 
+PropCoreAges <- sum(ageCompOverall[7:9, 3])
+PropCoreAges
+# Results: Ages 1.2 through 1.4 made up 94% of the overall age comp
+
 #### Remove the rare age classes from the dataset and recalculate age composition #######
 # Remove rare age classes
 ageRawSimple <- ageRaw %>%
