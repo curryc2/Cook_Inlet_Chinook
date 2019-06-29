@@ -312,6 +312,41 @@ nCoreRecruits <- spawnersRecruits %>%
 
 # Plot the results -----------------
 
+# Remove site-years with NA values for recruits or spawners (messes up axis scaling)
+spawnersRecruits.no.nas <- spawnersRecruits %>%
+  filter(!is.na(CoreRecruits2.nom) & !is.na(Spawners2.nom))
+
+# Plot core-age recruitment as a function of spawning abundance
+rps.plot <- ggplot(data = spawnersRecruits.no.nas, aes(x = Spawners2.nom/1000, 
+                                                y = CoreRecruits2.nom/1000,
+                                                color = BroodYear)) +
+  geom_point() +
+  facet_wrap(.~Population, scales = "free", ncol = 3) +
+  expand_limits(y = 0) +
+  theme_bw(12) +
+  scale_x_continuous(name = "Spawning abundance (thousands)") +
+  scale_y_continuous(name = "Recruitment (thousands)") +
+  scale_color_continuous()
+rps.plot
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Recruits_vs_Spawners.png",
+       width = 8, height = 8)
+
+# Plot natural log of core-age recruits per spawner regressed against spawner abundance
+logRPSvSpawners.plot <- ggplot(data = spawnersRecruits.no.nas, aes(x = Spawners2.nom/1000, 
+                                                y = log(CoreRecruitsPerSpawner),
+                                                color = BroodYear)) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  facet_wrap(.~Population, scales = "free", ncol = 3) +
+  expand_limits(y = 0) +
+  theme_bw(12) +
+  scale_x_continuous(name = "Spawning abundance (thousands)") +
+  scale_y_continuous(name = "ln(Recruits/Spawner)") +
+  scale_color_continuous()
+logRPSvSpawners.plot
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/LogRPS_vs_Spawners.png",
+       width = 8, height = 8)
+
 # Plot an index of brood year productivity (recruits [escapement + terminal harvest] /
 # spawner) for each population over time, using the nominal estimate for visibility of
 # spawners to aerial surveys [45%]). Plot years with complete broods only

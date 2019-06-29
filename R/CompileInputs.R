@@ -50,12 +50,12 @@ covarsSpawn <- covarsFW %>%
   select(-Year, -Site)
 
 # Index juvenile rearing indicators to brood year + 1----------
-covarsGrow <- covarsFW %>%
+covarsRear <- covarsFW %>%
   select(Year, Site, Population,
-         avgT_grow = meanWkJJA,
-         wksGT15_grow = wksGT15,
-         avgP_grow = MJJA_avg,
-         medianQ_grow = MDIS_MJJA,
+         avgT_rear = meanWkJJA,
+         wksGT15_rear = wksGT15,
+         avgP_rear = MJJA_avg,
+         medianQ_rear = MDIS_MJJA,
          RB_emerge = RB_MJ) %>%
   mutate(BroodYear = Year - 1,
          Population = factor(Population, labels = siteNames)) %>% 
@@ -100,6 +100,33 @@ npgo <- npgoRaw %>%
 npgo <- npgo %>%
   select(-Year)
 
+
+# Plot standardized values for regional and oceanic-scale indicators----------
+# First generate data frame of regional and oceanic-scale indicators, in long format
+large.scale.indicators <- covarsSpawn %>%
+  left_join(covarsRear, by = "BroodYear") %>%
+  left_join(breakup, by = "BroodYear") %>%
+  left_join(npgo, by = "BroodYear") %>%
+  select(BroodYear, medianQ_rear, RB_spawn, RB_emerge, breakup, NPGO) %>%
+  distinct() %>%
+  filter(BroodYear < 2010) %>%
+  # Standardize each indicator
+  mutate(medianQ_rear.std = scale(medianQ_rear),
+          RB_spawn.std = scale(RB_spawn),
+          RB_emerge.std = scale(RB_emerge),
+          breakup.std = scale(breakup),
+          NPGO.std = scale(NPGO)) %>%
+  # Reshape into long format for plotting
+  select(BroodYear, medianQ_rear.std:NPGO.std) %>%
+  gather(medianQ_rear.std:NPGO.std, key = "Covariate", value = "Value")
+
+large.scale.indicators.plot <- ggplot(data = covarsSR, aes(x = BroodYear, y = Value)) +
+  geom_line() +
+  facet_wrap(Covariate~., ncol = 1)
+large.scale.indicators.plot
+
+npgo.std <- large.scale.indicators %>%
+  filter(Covariate == "NPGO.std")
 # Join all covariates to stock-recruit data by brood year and standardize----------
 
 covarsSR <- spawnersRecruits %>%
@@ -108,25 +135,25 @@ covarsSR <- spawnersRecruits %>%
   select(Population, BroodYear, EscapementMethod, Spawners = Spawners2.nom, 
          CoreRecruits = CoreRecruits2.nom, CoreRecruitsPerSpawner) %>%
   left_join(covarsSpawn, by = c("Population", "BroodYear")) %>%
-  left_join(covarsGrow, by = c("Population", "BroodYear")) %>%
+  left_join(covarsRear, by = c("Population", "BroodYear")) %>%
   left_join(breakup, by = "BroodYear") %>%
   left_join(npgo, by = "BroodYear") %>%
 
   # Standardize temperature covariates across all populations and brood years
   mutate(maxT_spawn.std.all = scale(maxT_spawn),
-         avgT_grow.std.all = scale(avgT_grow),
+         avgT_rear.std.all = scale(avgT_rear),
          wksGT13_spawn.std.all = scale(wksGT13_spawn),
-         wksGT15_grow.std.all = scale(wksGT15_grow)) %>%
+         wksGT15_rear.std.all = scale(wksGT15_rear)) %>%
   # Standardize all covariates within each population (across years)
   # Also standardize spawning abundance within each popn to show in corr plot
   group_by(Population) %>%
   mutate(maxT_spawn.std = scale(maxT_spawn),
-         avgT_grow.std = scale(avgT_grow),
+         avgT_rear.std = scale(avgT_rear),
          wksGT13_spawn.std = scale(wksGT13_spawn),
-         wksGT15_grow.std = scale(wksGT15_grow),
+         wksGT15_rear.std = scale(wksGT15_rear),
          maxP_spawn.std = scale(maxP_spawn),
-         avgP_grow.std = scale(avgP_grow),
-         medianQ_grow.std = scale(medianQ_grow),
+         avgP_rear.std = scale(avgP_rear),
+         medianQ_rear.std = scale(medianQ_rear),
          RB_spawn.std = scale(RB_spawn),
          RB_emerge.std = scale(RB_emerge),
          breakup.std = scale(breakup),
@@ -137,7 +164,7 @@ covarsSR <- spawnersRecruits %>%
   # populations that never exceeded the threshold value, resulting in zeros in
   # the denominator. By replacing with 0, we effectively z-score the time series
   # with every year equalling the mean value (0 weeks above the threshold).
-  replace_na(list(wksGT13_spawn.std = 0, wksGT15_grow.std = 0))
+  replace_na(list(wksGT13_spawn.std = 0, wksGT15_rear.std = 0))
 
 # Double-check that covariates standardized properly
 # Calculate means by population
@@ -145,16 +172,16 @@ covarMeansByPop <- covarsSR %>%
   group_by(Population) %>%
   summarize(mean.Spawners.std = mean(Spawners.std),
             mean.maxT_spawn.std.all = mean(maxT_spawn.std.all),
-            mean.avgT_grow.std.all = mean(avgT_grow.std.all),
+            mean.avgT_rear.std.all = mean(avgT_rear.std.all),
             mean.wksGT13_spawn.std.all = mean(wksGT13_spawn.std.all),
-            mean.wksGT15_grow.std.all = mean(wksGT15_grow.std.all),
+            mean.wksGT15_rear.std.all = mean(wksGT15_rear.std.all),
             mean.maxT_spawn.std = mean(maxT_spawn.std),
-            mean.avgT_grow.std = mean(avgT_grow.std),
+            mean.avgT_rear.std = mean(avgT_rear.std),
             mean.wksGT13_spawn.std = mean(wksGT13_spawn.std),
-            mean.wksGT15_grow.std = mean(wksGT15_grow.std),
+            mean.wksGT15_rear.std = mean(wksGT15_rear.std),
             mean.maxP_spawn.std = mean(maxP_spawn.std),
-            mean.avgP_grow.std = mean(avgP_grow.std),
-            mean.medianQ_grow.std = mean(medianQ_grow.std),
+            mean.avgP_rear.std = mean(avgP_rear.std),
+            mean.medianQ_rear.std = mean(medianQ_rear.std),
             mean.RB_spawn.std = mean(RB_spawn.std),
             mean.RB_emerge.std = mean(RB_emerge.std),
             mean.breakup.std = mean(breakup.std),
@@ -167,16 +194,16 @@ covarMeans <- covarsSR %>%
   ungroup() %>%
   summarize(mean.Spawners.std = mean(Spawners.std),
             mean.maxT_spawn.std.all = mean(maxT_spawn.std.all),
-            mean.avgT_grow.std.all = mean(avgT_grow.std.all),
+            mean.avgT_rear.std.all = mean(avgT_rear.std.all),
             mean.wksGT13_spawn.std.all = mean(wksGT13_spawn.std.all),
-            mean.wksGT15_grow.std.all = mean(wksGT15_grow.std.all),
+            mean.wksGT15_rear.std.all = mean(wksGT15_rear.std.all),
             mean.maxT_spawn.std = mean(maxT_spawn.std),
-            mean.avgT_grow.std = mean(avgT_grow.std),
+            mean.avgT_rear.std = mean(avgT_rear.std),
             mean.wksGT13_spawn.std = mean(wksGT13_spawn.std),
-            mean.wksGT15_grow.std = mean(wksGT15_grow.std),
+            mean.wksGT15_rear.std = mean(wksGT15_rear.std),
             mean.maxP_spawn.std = mean(maxP_spawn.std),
-            mean.avgP_grow.std = mean(avgP_grow.std),
-            mean.medianQ_grow.std = mean(medianQ_grow.std),
+            mean.avgP_rear.std = mean(avgP_rear.std),
+            mean.medianQ_rear.std = mean(medianQ_rear.std),
             mean.RB_spawn.std = mean(RB_spawn.std),
             mean.RB_emerge.std = mean(RB_emerge.std),
             mean.breakup.std = mean(breakup.std),
@@ -190,7 +217,7 @@ write_csv(covarsSR, "./data/covarsSR.csv")
 # First, with temperature covariates standardized across all pops
 corrData.tempAcrossPops <- covarsSR %>%
   ungroup() %>%
-  select(Spawners.std, maxT_spawn.std.all:wksGT15_grow.std.all,
+  select(Spawners.std, maxT_spawn.std.all:wksGT15_rear.std.all,
          maxP_spawn.std:NPGO.std) 
 ggcorr(corrData.tempAcrossPops, palette = "RdBu", label = T, 
        # adjust covariate name text to make it more readable
@@ -201,7 +228,7 @@ ggsave("./figs/CorrelationMatrix_tempAcrossPops.png", height = 12, width = 13)
 # candidate temperature metrics are tightly correlated. So we can only use one 
 # of them at a time. Used maxT_spawn because it does not depend on a literature-
 # based threshold value, all site-years have non-zero values, and it is more
-# ecologically meaningful than avgT_grow.
+# ecologically meaningful than avgT_rear.
 
 # Alternative version using corrplot and base R plotting (ggsave doesn't work)
 # Variable names are still unreadable
@@ -221,7 +248,7 @@ ggsave("./figs/CorrelationMatrix_tempWithinPops.png", height = 12, width = 13)
 # If using temperatures standardized within each population (i.e., ignoring
 # differences in mean temperature among sites): 
 # maxT_spawn is tightly correlated with wksGT13_spawn
-# avgT_grow is tightly correlated with wksGT15_grow
+# avgT_rear is tightly correlated with wksGT15_rear
 
 # Plot temperature metrics raw and standardized both ways
 
