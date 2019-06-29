@@ -118,15 +118,31 @@ large.scale.indicators <- covarsSpawn %>%
           NPGO.std = scale(NPGO)) %>%
   # Reshape into long format for plotting
   select(BroodYear, medianQ_rear.std:NPGO.std) %>%
-  gather(medianQ_rear.std:NPGO.std, key = "Covariate", value = "Value")
+  gather(medianQ_rear.std:NPGO.std, key = "Covariate", value = "Value") %>%
+  # Turn covariate names into a factor with proper labels and order for plotting
+  mutate(Covariate = factor(Covariate, levels = c("medianQ_rear.std", "RB_spawn.std", 
+                                                  "RB_emerge.std",
+                                                  "breakup.std", "NPGO.std"),
+                            labels = c("medianQ_rear", "RB_spawn", 
+                                       "RB_emerge",
+                                       "breakup", "NPGO")))
 
-large.scale.indicators.plot <- ggplot(data = covarsSR, aes(x = BroodYear, y = Value)) +
+large.scale.indicators.plot <- ggplot(data = large.scale.indicators, 
+                                      aes(x = BroodYear, y = Value)) +
   geom_line() +
-  facet_wrap(Covariate~., ncol = 1)
+  geom_hline(yintercept = 0, color = "red", lty = "dashed") +
+  facet_wrap(Covariate~., ncol = 1, scales = "free_y") +
+  scale_x_continuous(name = "Brood Year") +
+  scale_y_continuous(name = "Standardized covariate value (SD)", 
+                     breaks = seq(from = -4, to = 4, by = 1))
 large.scale.indicators.plot
+ggsave("./figs/large.scale.indicators.plot.png", height = 6, width = 5)
 
 npgo.std <- large.scale.indicators %>%
   filter(Covariate == "NPGO.std")
+large.scale.indicators.plot <- ggplot(data = covarsSR, aes(x = BroodYear, y = Value)) +
+  geom_line()
+large.scale.indicators.plot
 # Join all covariates to stock-recruit data by brood year and standardize----------
 
 covarsSR <- spawnersRecruits %>%
