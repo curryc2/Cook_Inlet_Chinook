@@ -242,11 +242,6 @@ left_join(str.wk, str.dat4) %>%
 week(as.Date("05-01-2015", format = "%m-%d-%Y")) #18, starts on 4/30 on non-leap years
 week(as.Date("09-30-2015", format = "%m-%d-%Y")) #39, ends on 9/30 exactly on non-leap years
 
-#added in observed v predicted lm fits, but r2 are exactly the 
-# same as for the original model. Not totally sure why, except that 
-# when plotting predictions, they are simple offsets from observations 
-# based on linear adjustments so r2 will always be the same.
-
 predictions <- data.frame()
 model.list <- list()
 
@@ -258,11 +253,11 @@ for(i in stream.sites){
   dat <- str.wk[str.wk$Site == i & str.wk$Week %in% 18:40,]   # captures May-Sept
   weeks <- paste(dat$Year, dat$Week)
   air.st <- site.cw[site.cw$Site == i, "Air_Site"]
-  air <- air.wk[air.wk$STATION_NAME==air.st & paste(air.wk$Year,air.wk$Week) %in% weeks,]
-  dat<-merge(dat,air)
+  air <- air.wk[air.wk$STATION_NAME == air.st & paste(air.wk$Year,air.wk$Week) %in% weeks,]
+  dat<-merge(dat, air)
   
-  lm1<-lm(meanStrTemp ~ meanAirTemp, data = dat)
-  model.list[[i]]<-lm1
+  lm1 <- lm(meanStrTemp ~ meanAirTemp, data = dat)
+  model.list[[i]] <- lm1
   
   # plot(meanStrTemp ~ meanAirTemp, data = dat, main = i, xlab = paste(unique(STATION_NAME),"Air Temperature"),
   #      ylab = "Stream Temperature")
@@ -522,7 +517,7 @@ precip %>%
   left_join(rb) %>% 
   pairs(~ASON_avg + ASON_max + MJJA_avg + MJJA_max + RB_ASON + RB_MJ + MDIS_MJJA, ., lower.panel=panel.smooth, upper.panel=panel.cor)
 
-# 11. Combined all covariates and save output for modeling--------
+# 11. Combined all covariates and save output for modeling --------
 
 #convert precip to wide form and and merge with little su flow metrics.
 prpWd <- precip %>%
@@ -589,7 +584,7 @@ ggplot(summer.temps %>% filter(fish.model == 1), aes(x = Year, y = meanTemp)) +
   ylim(4, 18) +
   labs(y = expression("Modeled Mean Summer Temperature (˚C)"), x = "Year")
 
-ggsave("figs/Fig S4. Modeled summer temps.pdf", width = 7, height = 7, units = "in")
+ggsave("figs/Fig S4. Modeled summer temps.png", width = 7, height = 7, units = "in")
 
 # Figure S5. Maximum temperature during spawning 
 
@@ -631,7 +626,7 @@ ggplot() +
   geom_hline(yintercept = 13, linetype="dashed",color="red") +
   theme(legend.position = "bottom") 
 
-ggsave("figs/Fig S5.maxT_spawn.pdf", width = 7, height = 7, units = "in")
+ggsave("figs/Fig S5.maxT_spawn.png", width = 7, height = 7, units = "in")
 
 # Figure S6. Mean summer temperatures during rearing 
 
@@ -674,7 +669,7 @@ ggplot() +
   theme_bw() + 
   theme(legend.position = "bottom") 
 
-ggsave("figs/Fig S6.avgT_grow.pdf", width = 7, height = 7, units = "in")
+ggsave("figs/Fig S6.avgT_grow.png", width = 7, height = 7, units = "in")
 
 # Figure S7. Maximum monthly precipitation during spawning 
 
@@ -722,5 +717,5 @@ ggplot() +
                      limits = c(1980, 2010)) +
   theme_bw() 
 
-ggsave("figs/Fig S7.maxP_spawn.pdf", width = 7, height = 7, units = "in")
+ggsave("figs/Fig S7.maxP_spawn.png", width = 7, height = 7, units = "in")
 
