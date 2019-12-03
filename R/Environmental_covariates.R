@@ -4,12 +4,13 @@
 # rsshaftel@alaska.edu
 # October 2018
 
-#Note: this script includes data for 38 stream temperature sites.
-# All 38 sites were used in models to predict stream temperature
-# for May-September 1980 - 2016 and create temperature covariates.
-# The stream temperature covariates were combined with precipitation
-# covariates generated in ArcGIS for 15 sites with Chinook salmon data
-# used in the model and manuscript (Section 11 below).
+#Note: this script includes data for 36 stream temperature sites.
+# All 36 sites were used in models to predict stream temperature
+# for May-September 1980 - 2016 and the predictions were used to 
+# create stream temperature covariates.
+# Precipitation covariates were generated in ArcGIS for 15 sites 
+# with Chinook salmon data. These are the same 15 sites
+# used in the Chinook Salmon productivity model in the manuscript. 
 
 library(XLConnect)
 library(tidyverse)
@@ -528,16 +529,19 @@ prpWd <- precip %>%
   select(-siteID) %>% 
   spread(key = Covariate, value = Value) %>%
   left_join(rb) %>% 
-  rename("Year" = "year") 
+  rename("Year" = "year") %>% 
+  mutate(Site = case_when(Site == "Kenai R" ~ "Kenai R at Soldotna",
+                          TRUE ~ Site))
 
 #Filtering stream temperature covariates in allCovars to just 15 sites
 # that are in the productivity model.
 covars <- allCovars %>%
+  ungroup() %>% 
   filter(fish.model == 1) %>% 
   select(-fish.model) %>% 
-  inner_join(prpWd) %>% 
+  left_join(prpWd) %>% 
   mutate(Population = case_when(Site == "EF Chulitna" ~ "Chulitna",
-                                Site == "Kenai R" ~ "Kenai late run",
+                                Site == "Kenai R at Soldotna" ~ "Kenai late run",
                                 Site == "NF Campbell" ~ "Campbell",
                                 TRUE ~ Site)) 
 
@@ -547,4 +551,176 @@ unique(covars$Population)[unique(covars$Population) %in% unique(sr$Population)]
 
 write.csv(covars, "data/covars.csv")
 
+
+# 12. Manuscript figures --------------------------------------------------
+
+# Figure S4. Mean summer temperature trends 
+
+summer.temps <- predictions %>% 
+  filter(Week %in% 22:35, !Site %in% c("Kenai R at Skilak", "Kenai R at Cooper Landing")) %>% 
+  group_by(Site, Year) %>% 
+  summarize(meanTemp = mean(predStrTemp)) %>%
+  left_join(site.cw[,c("Site", "region", "fish.model")]) %>%
+  transform(Site = as.factor(plyr::revalue(Site, c("Kenai R at Soldotna" = "Kenai R")))) %>%
+  mutate(reg.site = paste(region, Site, sep = ": "))
+
+#add population field so names match ms.
+summer.temps <- summer.temps %>% 
+  mutate(Population = case_when(Site == "EF Chulitna" ~ "Chulitna",
+                                Site == "Kenai R" ~ "Kenai late run",
+                                Site == "NF Campbell" ~ "Campbell",
+                                TRUE ~ as.character(Site))) 
+
+formula <- y ~ x
+
+ggplot(summer.temps %>% filter(fish.model == 1), aes(x = Year, y = meanTemp)) +
+  geom_line() +
+  geom_smooth(method = "lm") +
+  stat_fit_tidy(method = "lm",
+                method.args = list(formula = formula),
+                mapping = aes(label = paste0("slope = ", signif(..x_estimate.., digits = 2))),
+                label.x = 'left',
+                label.y = 0.1,
+                size = 3) +
+  facet_wrap(~Population) +
+  scale_x_continuous(breaks = c(1980, 1990, 2000, 2010), labels = c("'80", "'90", "'00", "'10")) +
+  theme_bw() +
+  theme(strip.text = element_text(size = 7)) +
+  ylim(4, 18) +
+  labs(y = expression("Modeled Mean Summer Temperature (˚C)"), x = "Year")
+
+ggsave("figs/Fig S4. Modeled summer temps.pdf", width = 7, height = 7, units = "in")
+
+# Figure S5. Maximum temperature during spawning 
+
+#Identify years where majority of streams had higher than normal temperatures
+# during spawning (> 1 sd from long-term mean).
+covars %>% 
+  group_by(Site) %>% 
+  mutate(stdMaxWkJA = scale(maxWkJA),
+         mean2 = mean(maxWkJA),
+         sd2 = sd(maxWkJA)) %>% 
+  group_by(Year) %>% 
+  summarize(ct1sd = sum(stdMaxWkJA > 1)) %>% 
+  print(n=37)
+
+#which sites are below 1 sd from mean for 1997, 2003, 2004, and 2013?
+covars %>% 
+  group_by(Site) %>% 
+  mutate(stdMaxWkJA = scale(maxWkJA)) %>% 
+  filter(Year %in% c(1997, 2003, 2004, 2013), stdMaxWkJA <= 1) %>% 
+  select(Site, Year, stdMaxWkJA) %>% arrange(Year)
+
+
+ggplot() +
+  geom_line(aes(x = Year, y = maxWkJA), data = covars) +
+  geom_point(aes(x = 1997, y = maxWkJA), 
+             data = covars %>% filter(Year == 1997,
+                                      !Site %in% c("Anchor", "Chuitna", "Deep", "NF Campbell", "Ninilchik", "Theodore")), 
+             shape = 21) +
+  geom_point(aes(x = 2003, y = maxWkJA), 
+             data = covars %>% filter(Year == 2003), shape = 21) +
+  geom_point(aes(x = 2004, y = maxWkJA), 
+             data = covars %>% filter(Year == 2004), shape = 21) +
+  geom_point(aes(x = 2013, y = maxWkJA), 
+             data = covars %>% filter(Year == 2013, !Site %in% c("Kenai R at Soldotna", "Crooked")), shape = 21) +
+  facet_wrap(~ Population) +
+  labs(y = "Stream Temperature (˚C)") +
+  scale_x_continuous(breaks = c(1980, 1990, 2000, 2010), labels = c("'80", "'90", "'00", "'10")) +
+  theme_bw() + 
+  geom_hline(yintercept = 13, linetype="dashed",color="red") +
+  theme(legend.position = "bottom") 
+
+ggsave("figs/Fig S5.maxT_spawn.pdf", width = 7, height = 7, units = "in")
+
+# Figure S6. Mean summer temperatures during rearing 
+
+#Identify years where majority of streams had higher than normal temperatures
+# during rearing (> 1 sd from long-term mean).
+covars %>% 
+  group_by(Site) %>% 
+  mutate(stdMeanWkJJA = scale(meanWkJJA)) %>% 
+  group_by(Year) %>% 
+  summarize(ct1sd = sum(stdMeanWkJJA > 1)) %>% 
+  print(n=37)
+
+#which sites are below 1 sd from mean for 1997, 2004, 2005, 2013, and 2016?
+covars %>% 
+  group_by(Site) %>% 
+  mutate(stdMeanWkJJA = scale(meanWkJJA)) %>% 
+  filter(Year %in% c(1997, 2004, 2005, 2013, 2016), stdMeanWkJJA <= 1) %>% 
+  select(Site, Year, stdMeanWkJJA) %>% arrange(Year)
+
+ggplot() +
+  geom_line(aes(x = Year, y = meanWkJJA), data = covars) +
+  geom_point(aes(x = 1997, y = meanWkJJA), 
+             data = covars %>% filter(Year == 1997,
+                                         !Site %in% c("Chuitna", "NF Campbell", "Theodore")), shape = 21) +
+  geom_point(aes(x = 2004, y = meanWkJJA), 
+             data = covars %>% filter(Year == 2004), shape = 21) +
+  geom_point(aes(x = 2005, y = meanWkJJA), 
+             data = covars %>% filter(Year == 2005,
+                                         !Site %in% c("Kenai R at Soldotna", "Crooked", "Chuitna", "NF Campbell", "Theodore")), shape = 21) +
+  geom_point(aes(x = 2013, y = meanWkJJA), 
+             data = covars %>% filter(Year == 2013, 
+                                         !Site %in% c("Kenai R at Soldotna", "Crooked")), shape = 21) +
+  geom_point(aes(x = 2016, y = meanWkJJA), 
+             data = covars %>% filter(Year == 2016), shape = 21) +
+  geom_hline(yintercept=15, linetype="dashed",color="red") +
+  facet_wrap(~Population) +
+  labs(y = "Stream Temperature (˚C)") +
+  scale_x_continuous(breaks = c(1980, 1990, 2000, 2010), labels = c("'80", "'90", "'00", "'10")) +
+  scale_y_continuous(breaks = c(5,10,15, 20), labels = c("5", "10", "15", "20")) +
+  theme_bw() + 
+  theme(legend.position = "bottom") 
+
+ggsave("figs/Fig S6.avgT_grow.pdf", width = 7, height = 7, units = "in")
+
+# Figure S7. Maximum monthly precipitation during spawning 
+
+#Identify years where majority of streams had higher than normal monthly precipitation
+# during spawning and early incubation (> 1 sd from long-term mean).
+covars %>% 
+  group_by(Site) %>% 
+  filter(!is.na(ASON_max)) %>% 
+  mutate(stdASON_max = scale(ASON_max)) %>% 
+  group_by(Year) %>% 
+  summarize(ct1sd = sum(stdASON_max > 1)) %>% 
+  print(n=37)
+
+#which sites are below 1 sd from mean for 1982, 1990, 1993, 2004, and 2006?
+covars %>% 
+  group_by(Site) %>% 
+  filter(!is.na(ASON_max)) %>% 
+  mutate(stdASON_max = scale(ASON_max)) %>% 
+  filter(Year %in% c(1982, 1990, 1993, 2004, 2005, 2006), stdASON_max <= 1) %>% 
+  select(Site, Year, stdASON_max) %>% arrange(Year)
+
+ason_max_means <- covars %>% 
+  group_by(Site, Population) %>% 
+  summarize(meanP = mean(ASON_max, na.rm = TRUE))
+
+ggplot() +
+  geom_line(aes(x = Year, y = ASON_max), data = covars) +
+  geom_point(aes(x = 1982, y = ASON_max), 
+             data = covars %>% filter(Year == 1982, !Site %in% c("EF Chulitna", "Little Susitna", "Little Willow", "NF Campbell", "Willow")), shape = 21) +
+  geom_point(aes(x = 1990, y = ASON_max), 
+             data = covars %>% filter(Year == 1990), shape = 21) +
+  geom_point(aes(x = 1993, y = ASON_max), 
+             data = covars %>% filter(Year == 1993, !Site %in% c("Anchor", "Deep", "Kenai R at Soldotna")), shape = 21) +
+  geom_point(aes(x = 2004, y = ASON_max), 
+             data = covars %>% filter(Year == 2004, !Site == "EF Chulitna"), shape = 21) +
+  geom_point(aes(x = 2005, y = ASON_max), 
+             data = covars %>% filter(Year == 2005, !Site == "Little Susitna"), shape = 21) +
+  geom_point(aes(x = 2006, y = ASON_max), 
+             data = covars %>% filter(Year == 2006,
+                                      !Site %in% c("Anchor", "Deep", "Kenai R at Soldotna", "Ninilchik")), shape = 21) +
+  geom_hline(aes(yintercept = meanP), data = ason_max_means, linetype = "dashed", color = "red") +
+  facet_wrap(~ Population) +
+  labs(y = "Total Monthly Precipitation (mm)") +
+  scale_x_continuous(breaks = c(1980, 1990, 2000, 2010), labels = c("'80", "'90", "'00", "'10"),
+                     limits = c(1980, 2010)) +
+  theme_bw() 
+
+ggsave("figs/Fig S7.maxP_spawn.pdf", width = 7, height = 7, units = "in")
 
