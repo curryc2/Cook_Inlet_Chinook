@@ -182,8 +182,8 @@ names.covars.simple <- c('Max. precip. (spawning/incubation)',
 n.plot.simple <- length(names.covars.simple)
 
 #PLOT IT
-png(file.path(dir.figs, "Graphical abstract.png"), height=8, width=10, res=500, units='in')
-par(mfrow=c(2,3), mar=c(2,7,3,1), oma=c(3,3,1,1))
+pdf(file.path(dir.figs, "Graphical abstract.pdf"), height=8, width=10)
+par(mfrow=c(2,3), mar=c(2,2,3,2), oma=c(3,10,2,2))
 c <- 1
 for(c in 1:n.plot.simple) {
   caterplot(covar.list.simple[,,c],
@@ -194,7 +194,7 @@ for(c in 1:n.plot.simple) {
   abline(v=0, lty=1, lwd=2, col=rgb(1,0,0, alpha=0.5))
 }
 mtext('Covariate effect', side=1, outer=TRUE, font=2, line=1, cex = 1.3)
-mtext('Chinook salmon population', side=2, outer=TRUE, font=2, line=1, cex = 1.3)
+mtext('Chinook salmon population', side=2, outer=TRUE, font=2, line=6, cex = 1.3)
 
 dev.off()
 
