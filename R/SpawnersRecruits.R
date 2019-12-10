@@ -146,6 +146,17 @@ escapeVariability <- spawnersByRY_trimmed %>%
   mutate(cvEsc = sdEsc / meanEsc,
          variabilityEsc = maxEsc / minEsc)
 
+# What proportion of monitored Chinook escapement is accounted for by the 15 study pops?
+escapeAccountedFor <- escape %>%
+  left_join(sites, by = c("Population" = "Group")) %>%
+  group_by(ReturnYear, StockRecruit) %>%
+  filter(ReturnYear > 1980 & ReturnYear < 2011) %>%
+  summarize(totalEscape = sum(Escapement, na.rm = T)) %>%
+  group_by(StockRecruit) %>%
+  summarize(avgEscape = mean(totalEscape, na.rm = T))
+propEscapeAccountedFor = escapeAccountedFor[[2,2]] / (escapeAccountedFor[[1,2]] +
+  escapeAccountedFor[[2,2]])
+
 # Recruits-----------
 # Join the escapement, terminal harvest, and age comp data and the mean age comps 
 # (for filling in missing age comps)
