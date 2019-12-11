@@ -150,7 +150,7 @@ escapeVariability <- spawnersByRY_trimmed %>%
 escapeAccountedFor <- escape %>%
   left_join(sites, by = c("Population" = "Group")) %>%
   group_by(ReturnYear, StockRecruit) %>%
-  filter(ReturnYear > 1980 & ReturnYear < 2011) %>%
+  filter(ReturnYear > 1979 & ReturnYear < 2016) %>%
   summarize(totalEscape = sum(Escapement, na.rm = T)) %>%
   group_by(StockRecruit) %>%
   summarize(avgEscape = mean(totalEscape, na.rm = T))
