@@ -531,9 +531,63 @@ resid.avgT_rear_ColdVWarm
 # resid.avgT_rear.popn
 # ggsave("./figs/Productivity_residuals_avgT_rear_by_popn.png", width = 8, height = 10)
 # 
-# # A single faceted plot showing residuals for all covariates
+
+# Make faceted plots showing productivity residuals vs multiple covariates of interest----------
+
 # # rename covariates and reshape envProd into long form
 envProd.long <- envProd %>%
+  select(Population, BroodYear, Spawners, Spawners.std, ln.rpsCore, prodCore, resid,
+         # Include all unstandardized covariates (except precip covariates, which must be standardized
+         # to be meaningful because of differences in watershed area and topography)
+         maxT_spawn, avgT_rear, RB_spawn, RB_emerge, medianQ_rear, breakup, NPGO,
+         # Also include all standardized covariates
+         maxT_spawn.std, avgT_rear.std, 
+         maxP_spawn.std, avgP_rear.std,
+         RB_spawn.std, RB_emerge.std, medianQ_rear.std,
+         breakup.std, NPGO.std) %>%
+  gather(maxT_spawn:NPGO.std, key = "Covariate", value = "Value") %>%
+  # drop nas
+  drop_na(resid) 
+
+# 
+# # Plot residuals against all covariates
+# resid.all <- ggplot(data = envProd.long, aes(x = Value, y = resid)) +
+#   geom_point(shape = 1) + 
+#   geom_smooth() +
+#   geom_hline(yintercept = 0, linetype = "dotted") +
+#   facet_wrap(.~Covariate, ncol = 3, scales = "free") +
+#   scale_x_continuous(name = "Covariate value (SD)") +
+#   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
+# resid.all
+# ggsave("./figs/Productivity_residuals_all_covariates.png", width = 6, height = 8)
+# 
+
+# Plot top 4 covariates
+envProd.long.top4 <- envProd.long %>%
+  filter(Covariate == "maxP_spawn.std" | Covariate == "avgP_rear.std" | Covariate == "NPGO" | 
+           Covariate == "medianQ_rear") %>%
+  # Order and label the covariates for plotting
+  mutate(Covariate = factor(Covariate,
+                            levels = c("maxP_spawn.std", "avgP_rear.std", "medianQ_rear", "NPGO"),
+                            labels = c("maxP_spawn", "avgP_rear", "medianQ_rear","NPGO")))
+  
+
+resid.top4 <- ggplot(data = envProd.long.top4, aes(x = Value, y = resid)) +
+  geom_point(shape = 1) + 
+  geom_smooth() +
+  geom_hline(yintercept = 0, linetype = "dotted") +
+  facet_wrap(.~Covariate, ncol = 2, scales = "free") +
+  # facet_wrap(.~Covariate, ncol = 2, scales = "free_x") +
+  scale_x_continuous(name = "Covariate value") +
+  scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
+resid.top4
+ggsave("./figs/Productivity_residuals_top4_covariates.png", width = 6, height = 8)
+ggsave("./figs/Productivity_residuals_top4_covariates.pdf", width = 6, height = 8)
+
+# # A single faceted plot showing residuals for all STANDARDIZED covariates (original plot from
+# submitted manuscript)
+# # rename covariates and reshape envProd into long form
+envProd.std.long <- envProd %>%
   select(Population, BroodYear, Spawners, Spawners.std, ln.rpsCore, prodCore, resid,
          maxT_spawn.std, avgT_rear.std, wksGT13_spawn.std, wksGT15_rear.std,
          maxP_spawn.std, avgP_rear.std,
@@ -554,49 +608,49 @@ envProd.long <- envProd %>%
                                        "breakup.std", "avgT_rear.std")))
 # 
 # # Plot residuals against all covariates
-# resid.all <- ggplot(data = envProd.long, aes(x = Value, y = resid)) +
+# resid.all.std <- ggplot(data = envProd.std.long, aes(x = Value, y = resid)) +
 #   geom_point(shape = 1) + 
 #   geom_smooth() +
 #   geom_hline(yintercept = 0, linetype = "dotted") +
 #   facet_wrap(.~Covariate, ncol = 3, scales = "free") +
 #   scale_x_continuous(name = "Covariate value (SD)") +
 #   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
-# resid.all
-# ggsave("./figs/Productivity_residuals_all_covariates.png", width = 6, height = 8)
+# resid.all.std
+# ggsave("./figs/Productivity_residuals_all_covariates_std.png", width = 6, height = 8)
 # 
 # # Plot top 6 covariates
-envProd.long.top6 <- envProd.long %>%
+envProd.std.long.top6 <- envProd.std.long %>%
   filter(Covariate != "wksGT13_spawn.std") %>%
   filter(Covariate != "avgT_rear.std") %>%
   filter(Covariate != "RB_emerge.std") %>%
   filter(Covariate != "RB_spawn.std") %>%
   filter(Covariate != "breakup.std")
 # 
-# resid.top6 <- ggplot(data = envProd.long.top6, aes(x = Value, y = resid)) +
+# resid.top6.std <- ggplot(data = envProd.std.long.top6, aes(x = Value, y = resid)) +
 #   geom_point(shape = 1) + 
 #   geom_smooth() +
 #   geom_hline(yintercept = 0, linetype = "dotted") +
 #   facet_wrap(.~Covariate, ncol = 3, scales = "free_x") +
 #   scale_x_continuous(name = "Standardized covariate value (SD)") +
 #   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
-# resid.top6
-# ggsave("./figs/Productivity_residuals_top6_covariates.png", width = 6, height = 8)
+# resid.top6.std
+# ggsave("./figs/Productivity_residuals_top6_covariates_std.png", width = 6, height = 8)
 
 # Plot top 4 covariates
-envProd.long.top4 <- envProd.long.top6 %>%
+envProd.std.long.top4 <- envProd.std.long.top6 %>%
   filter(Covariate != "wksGT15_rear") %>%
   filter(Covariate != "maxT_spawn") 
 
-resid.top4 <- ggplot(data = envProd.long.top4, aes(x = Value, y = resid)) +
+resid.top4.std <- ggplot(data = envProd.std.long.top4, aes(x = Value, y = resid)) +
   geom_point(shape = 1) + 
   geom_smooth() +
   geom_hline(yintercept = 0, linetype = "dotted") +
   facet_wrap(.~Covariate, ncol = 2, scales = "free_x") +
   scale_x_continuous(name = "Standardized covariate value (SD)") +
   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
-resid.top4
-ggsave("./figs/Productivity_residuals_top4_covariates.png", width = 6, height = 8)
-ggsave("./figs/Productivity_residuals_top4_covariates.pdf", width = 6, height = 8)
+resid.top4.std
+ggsave("./figs/Productivity_residuals_top4_covariates_std.png", width = 6, height = 8)
+ggsave("./figs/Productivity_residuals_top4_covariates_std.pdf", width = 6, height = 8)
 
 # # A 2-panel plot showing the residuals of maxT_spawn and avgT_rear with Chuli and Deshka
 # # highlighted
