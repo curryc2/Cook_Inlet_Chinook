@@ -570,6 +570,10 @@ envProd.long.top4 <- envProd.long %>%
   mutate(Covariate = factor(Covariate,
                             levels = c("maxP_spawn.std", "avgP_rear.std", "medianQ_rear", "NPGO"),
                             labels = c("maxP_spawn", "avgP_rear", "medianQ_rear","NPGO")))
+<<<<<<< HEAD
+=======
+  
+>>>>>>> f10112c2ca178dafb851120a86b19169d5361291
 
 resid.top4 <- ggplot(data = envProd.long.top4, aes(x = Value, y = resid)) +
   geom_point(shape = 1) + 
