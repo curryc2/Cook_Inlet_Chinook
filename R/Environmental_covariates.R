@@ -303,6 +303,8 @@ tempModSum <- left_join(tempModSum, site.cw %>% select(Site, fish.model), by = c
 
 tempModSum %>% filter(fish.model == 1) %>% arrange(desc(r.squared))
 
+# tempModSum %>% write.csv(., file = "D:\\AKNHP\\Manuscripts\\CI Chinook GCB\\temp_model_summary.csv")
+
 #Some max weekly temps seem to be from years without much summer data.  Only use
 # weeks from June July August. Weeks 22:35.
 week(as.Date("06-01-2015", format = "%m-%d-%Y")) #22, starts on 5/28 on non-leap years
@@ -576,17 +578,23 @@ ggplot(summer.temps %>% filter(fish.model == 1), aes(x = Year, y = meanTemp)) +
                 mapping = aes(label = paste0("slope = ", signif(..x_estimate.., digits = 2))),
                 label.x = 'left',
                 label.y = 0.1,
-                size = 3) +
-  facet_wrap(~Population) +
+                size = 3.5) +
+  facet_wrap(~Population, ncol = 3) +
   scale_x_continuous(breaks = c(1980, 1990, 2000, 2010), labels = c("'80", "'90", "'00", "'10")) +
   theme_bw() +
-  theme(strip.text = element_text(size = 7)) +
+  theme(strip.text = element_text(size = 10)) +
   ylim(4, 18) +
-  labs(y = expression("Modeled Mean Summer Temperature (˚C)"), x = "Year")
+  labs(y = expression("Modeled mean summer temperature (˚C)"), x = "Year")
 
-ggsave("figs/Fig S4. Modeled summer temps.png", width = 7, height = 7, units = "in")
+ggsave("figs/Fig S4. Modeled summer temps.png", width = 7, height = 8, units = "in")
 
 # Figure S5. Maximum temperature during spawning 
+
+# NOTE: Figures  S5, S6, and S7 have been modified to remove the black dots 
+# that indicated which years in which the majority of sites had metrics
+# > 1SD from their mean. This was confusing to the reader because we only
+# placed the points for those sites (within each year) for which the metric
+# was greater than 1SD from their mean.
 
 #Identify years where majority of streams had higher than normal temperatures
 # during spawning (> 1 sd from long-term mean).
@@ -609,24 +617,24 @@ covars %>%
 
 ggplot() +
   geom_line(aes(x = Year, y = maxWkJA), data = covars) +
-  geom_point(aes(x = 1997, y = maxWkJA), 
-             data = covars %>% filter(Year == 1997,
-                                      !Site %in% c("Anchor", "Chuitna", "Deep", "NF Campbell", "Ninilchik", "Theodore")), 
-             shape = 21) +
-  geom_point(aes(x = 2003, y = maxWkJA), 
-             data = covars %>% filter(Year == 2003), shape = 21) +
-  geom_point(aes(x = 2004, y = maxWkJA), 
-             data = covars %>% filter(Year == 2004), shape = 21) +
-  geom_point(aes(x = 2013, y = maxWkJA), 
-             data = covars %>% filter(Year == 2013, !Site %in% c("Kenai R at Soldotna", "Crooked")), shape = 21) +
-  facet_wrap(~ Population) +
-  labs(y = "Stream Temperature (˚C)") +
+  # geom_point(aes(x = 1997, y = maxWkJA), 
+  #            data = covars %>% filter(Year == 1997,
+  #                                     !Site %in% c("Anchor", "Chuitna", "Deep", "NF Campbell", "Ninilchik", "Theodore")), 
+  #            shape = 21) +
+  # geom_point(aes(x = 2003, y = maxWkJA), 
+  #            data = covars %>% filter(Year == 2003), shape = 21) +
+  # geom_point(aes(x = 2004, y = maxWkJA), 
+  #            data = covars %>% filter(Year == 2004), shape = 21) +
+  # geom_point(aes(x = 2013, y = maxWkJA), 
+  #            data = covars %>% filter(Year == 2013, !Site %in% c("Kenai R at Soldotna", "Crooked")), shape = 21) +
+  facet_wrap(~ Population, ncol = 3) +
+  labs(y = "Stream temperature (˚C)") +
   scale_x_continuous(breaks = c(1980, 1990, 2000, 2010), labels = c("'80", "'90", "'00", "'10")) +
   theme_bw() + 
   geom_hline(yintercept = 13, linetype="dashed",color="red") +
-  theme(legend.position = "bottom") 
+  theme(strip.text = element_text(size = 10)) 
 
-ggsave("figs/Fig S5.maxT_spawn.png", width = 7, height = 7, units = "in")
+ggsave("figs/Fig S5.maxT_spawn.png", width = 7, height = 8, units = "in")
 
 # Figure S6. Mean summer temperatures during rearing 
 
@@ -648,30 +656,32 @@ covars %>%
 
 ggplot() +
   geom_line(aes(x = Year, y = meanWkJJA), data = covars) +
-  geom_point(aes(x = 1997, y = meanWkJJA), 
-             data = covars %>% filter(Year == 1997,
-                                         !Site %in% c("Chuitna", "NF Campbell", "Theodore")), shape = 21) +
-  geom_point(aes(x = 2004, y = meanWkJJA), 
-             data = covars %>% filter(Year == 2004), shape = 21) +
-  geom_point(aes(x = 2005, y = meanWkJJA), 
-             data = covars %>% filter(Year == 2005,
-                                         !Site %in% c("Kenai R at Soldotna", "Crooked", "Chuitna", "NF Campbell", "Theodore")), shape = 21) +
-  geom_point(aes(x = 2013, y = meanWkJJA), 
-             data = covars %>% filter(Year == 2013, 
-                                         !Site %in% c("Kenai R at Soldotna", "Crooked")), shape = 21) +
-  geom_point(aes(x = 2016, y = meanWkJJA), 
-             data = covars %>% filter(Year == 2016), shape = 21) +
+  # geom_point(aes(x = 1997, y = meanWkJJA), 
+  #            data = covars %>% filter(Year == 1997,
+  #                                        !Site %in% c("Chuitna", "NF Campbell", "Theodore")), shape = 21) +
+  # geom_point(aes(x = 2004, y = meanWkJJA), 
+  #            data = covars %>% filter(Year == 2004), shape = 21) +
+  # geom_point(aes(x = 2005, y = meanWkJJA), 
+  #            data = covars %>% filter(Year == 2005,
+  #                                        !Site %in% c("Kenai R at Soldotna", "Crooked", "Chuitna", "NF Campbell", "Theodore")), shape = 21) +
+  # geom_point(aes(x = 2013, y = meanWkJJA), 
+  #            data = covars %>% filter(Year == 2013, 
+  #                                        !Site %in% c("Kenai R at Soldotna", "Crooked")), shape = 21) +
+  # geom_point(aes(x = 2016, y = meanWkJJA), 
+  #            data = covars %>% filter(Year == 2016), shape = 21) +
   geom_hline(yintercept=15, linetype="dashed",color="red") +
-  facet_wrap(~Population) +
-  labs(y = "Stream Temperature (˚C)") +
+  facet_wrap(~Population, ncol = 3) +
+  labs(y = "Stream temperature (˚C)") +
   scale_x_continuous(breaks = c(1980, 1990, 2000, 2010), labels = c("'80", "'90", "'00", "'10")) +
   scale_y_continuous(breaks = c(5,10,15, 20), labels = c("5", "10", "15", "20")) +
   theme_bw() + 
-  theme(legend.position = "bottom") 
+  theme(strip.text = element_text(size = 10)) 
 
-ggsave("figs/Fig S6.avgT_grow.png", width = 7, height = 7, units = "in")
+ggsave("figs/Fig S6.avgT_grow.png", width = 7, height = 8, units = "in")
 
 # Figure S7. Maximum monthly precipitation during spawning 
+
+#Added rectangle from 2004-2006.
 
 #Identify years where majority of streams had higher than normal monthly precipitation
 # during spawning and early incubation (> 1 sd from long-term mean).
@@ -696,26 +706,28 @@ ason_max_means <- covars %>%
   summarize(meanP = mean(ASON_max, na.rm = TRUE))
 
 ggplot() +
+  annotate("rect", ymin = -Inf, ymax = Inf, xmin = 2003.8, xmax = 2006.2, fill = "grey50", alpha = 0.5) +
   geom_line(aes(x = Year, y = ASON_max), data = covars) +
-  geom_point(aes(x = 1982, y = ASON_max), 
-             data = covars %>% filter(Year == 1982, !Site %in% c("EF Chulitna", "Little Susitna", "Little Willow", "NF Campbell", "Willow")), shape = 21) +
-  geom_point(aes(x = 1990, y = ASON_max), 
-             data = covars %>% filter(Year == 1990), shape = 21) +
-  geom_point(aes(x = 1993, y = ASON_max), 
-             data = covars %>% filter(Year == 1993, !Site %in% c("Anchor", "Deep", "Kenai R at Soldotna")), shape = 21) +
-  geom_point(aes(x = 2004, y = ASON_max), 
-             data = covars %>% filter(Year == 2004, !Site == "EF Chulitna"), shape = 21) +
-  geom_point(aes(x = 2005, y = ASON_max), 
-             data = covars %>% filter(Year == 2005, !Site == "Little Susitna"), shape = 21) +
-  geom_point(aes(x = 2006, y = ASON_max), 
-             data = covars %>% filter(Year == 2006,
-                                      !Site %in% c("Anchor", "Deep", "Kenai R at Soldotna", "Ninilchik")), shape = 21) +
+  # geom_point(aes(x = 1982, y = ASON_max), 
+  #            data = covars %>% filter(Year == 1982, !Site %in% c("EF Chulitna", "Little Susitna", "Little Willow", "NF Campbell", "Willow")), shape = 21) +
+  # geom_point(aes(x = 1990, y = ASON_max), 
+  #            data = covars %>% filter(Year == 1990), shape = 21) +
+  # geom_point(aes(x = 1993, y = ASON_max), 
+  #            data = covars %>% filter(Year == 1993, !Site %in% c("Anchor", "Deep", "Kenai R at Soldotna")), shape = 21) +
+  # geom_point(aes(x = 2004, y = ASON_max), 
+  #            data = covars %>% filter(Year == 2004, !Site == "EF Chulitna"), shape = 21) +
+  # geom_point(aes(x = 2005, y = ASON_max), 
+  #            data = covars %>% filter(Year == 2005, !Site == "Little Susitna"), shape = 21) +
+  # geom_point(aes(x = 2006, y = ASON_max), 
+  #            data = covars %>% filter(Year == 2006,
+  #                                     !Site %in% c("Anchor", "Deep", "Kenai R at Soldotna", "Ninilchik")), shape = 21) +
   geom_hline(aes(yintercept = meanP), data = ason_max_means, linetype = "dashed", color = "red") +
-  facet_wrap(~ Population) +
-  labs(y = "Total Monthly Precipitation (mm)") +
+  facet_wrap(~ Population, ncol = 3) +
+  labs(y = "Total monthly precipitation (mm)") +
   scale_x_continuous(breaks = c(1980, 1990, 2000, 2010), labels = c("'80", "'90", "'00", "'10"),
                      limits = c(1980, 2010)) +
-  theme_bw() 
+  theme_bw() +
+  theme(strip.text = element_text(size = 10))
 
-ggsave("figs/Fig S7.maxP_spawn.png", width = 7, height = 7, units = "in")
+ggsave("figs/Fig S7.maxP_spawn.png", width = 7, height = 8, units = "in")
 
