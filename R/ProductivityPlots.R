@@ -90,9 +90,9 @@ prodCore.time <- ggplot(data = envProd, aes(x = BroodYear, y = prodCore)) +
   geom_hline(yintercept = 0, lty = "dotted") +
   facet_wrap(.~Population, ncol = 3) +
   # facet_wrap(.~Population, ncol = 3, scales = "free_y") + # facets with free y-axis scales
-  scale_x_continuous(name = "Brood Year", breaks = seq(1980, 2010, by = 10)) +
+  scale_x_continuous(name = "Brood year", breaks = seq(1980, 2010, by = 10)) +
   expand_limits(x = c(1979,2011)) +
-  scale_y_continuous(name = "Productivity index (SD)")
+  scale_y_continuous(name = "Productivity index (ln[R/S])")
 prodCore.time
 # ggsave("./figs/Productivity timeseries.png", width = 6, height = 6)
 

@@ -586,7 +586,7 @@ harvestByYear <- harvestByYearWide %>%
 harvest.plot <- ggplot(data = harvestByYear, aes(x = Year, y = Harvest/1000, color = Fishery)) +
   geom_line() +
   geom_hline(yintercept = 0) +
-  scale_x_continuous(name = "Return Year", breaks = seq(1980, 2015, by = 10), limits = c(1980, 2015)) +
+  scale_x_continuous(name = "Return year", breaks = seq(1980, 2015, by = 10), limits = c(1980, 2015)) +
   scale_y_continuous(name = "Harvest (1,000s)") +
   theme(legend.justification=c(1,1), legend.position=c(.98,.98), legend.background = element_rect()) 
 harvest.plot

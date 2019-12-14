@@ -124,9 +124,9 @@ EscapementStudyPops.plot <- ggplot(data = spawnersByRY_studyPops,
                           aes(x = ReturnYear, y = Spawners2.nom / 1000)) +
   geom_line() +
   geom_point(size = 1) + # Plotting points as well as lines to show isolated points with NA on either side
-  scale_y_continuous(name = "Escapement (1,000s)") +
+  scale_y_continuous(name = "Spawning abundance (1,000s)") +
   # scale_y_continuous(name = "Escapement (1,000s)", labels = scales::comma) +
-  scale_x_continuous(name = "Return Year", breaks = seq(1980, 2015, 10)) +
+  scale_x_continuous(name = "Return year", breaks = seq(1980, 2015, 10)) +
   # facet_wrap(.~Population, scales = "fixed")
   facet_wrap(.~Population, scales = "free_y", ncol = 3) +
   expand_limits(y = 0) +

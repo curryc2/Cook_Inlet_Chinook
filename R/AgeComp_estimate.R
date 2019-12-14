@@ -430,7 +430,7 @@ AgeByRegion.Data.Predicted.plot
 AgeByRegionComp.Data.plot <- ggplot(data = agePlot, aes(x = ReturnYear, y = Prop, color = Region)) +
   facet_grid(Age ~ Component) +
   geom_point(shape = 1, fill = NA) +
-  labs(x = "Return year", y = "Age Proportion") +
+  labs(x = "Return year", y = "Age proportion") +
   scale_x_continuous(breaks = seq(1980, 2015, 10)) +
   scale_color_discrete(name = "Region")
 AgeByRegionComp.Data.plot
