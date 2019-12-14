@@ -155,7 +155,7 @@ ageByComponent.plot <- ggplot(data = agePlot, aes(x = ReturnYear, y = Prop, grou
   labs(x = "Return year", y = "Age Proportion") +
   scale_x_continuous(breaks = seq(1980, 2015, 5))
 ageByComponent.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by Component.png")
+# ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by Component.png")
 
 ageByGroup.plot <- ggplot(data = agePlot, aes(x = ReturnYear, y = Prop, group = GroupComponent, 
                                               color = Group)) +
@@ -165,7 +165,7 @@ ageByGroup.plot <- ggplot(data = agePlot, aes(x = ReturnYear, y = Prop, group = 
   scale_color_discrete(name = "River or fishery") +
   scale_x_continuous(breaks = seq(1980, 2015, 5))
 ageByGroup.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by river or fishery.png")
+# ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by river or fishery.png")
 
 # Plot the age comp for Kenai and ESSN only to compare run components and gear types
 agePlotKenai <- agePlot %>%
@@ -180,7 +180,7 @@ ageByComponentKenai.plot <- ggplot(data = agePlotKenai,
   scale_color_discrete(name = "Run component") +
   scale_x_continuous(breaks = seq(1980, 2015, 5))
 ageByComponentKenai.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Kenai late run age comp by component.png")
+# ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Kenai late run age comp by component.png")
 
 # Plot the age comp for Deshka and NSN only to compare gear types
 
@@ -195,7 +195,7 @@ ageByGearDeshka.plot <- ggplot(data = agePlotDeshka,
   scale_color_discrete(name = "Run component") +
   scale_x_continuous(breaks = seq(1980, 2015, 5))
 ageByGearDeshka.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Deshka age comp by component.png")
+# ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Deshka age comp by component.png")
 
 ageByRegion.plot <- ggplot(data = agePlot, aes(x = ReturnYear, y = Prop, color = Region)) +
   facet_grid(Age ~ .) +
@@ -203,7 +203,7 @@ ageByRegion.plot <- ggplot(data = agePlot, aes(x = ReturnYear, y = Prop, color =
   labs(x = "Return year", y = "Age Proportion") +
   scale_x_continuous(breaks = seq(1980, 2015, 5)) 
 ageByRegion.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region.png")
+# ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region.png")
 
 ageByRegionComp.plot <- ggplot(data = agePlot, aes(x = ReturnYear, y = Prop, color = RegionComponent)) +
   facet_grid(Age ~ .) +
@@ -214,7 +214,7 @@ ageByRegionComp.plot <- ggplot(data = agePlot, aes(x = ReturnYear, y = Prop, col
                                                                    "dark blue", "blue", "cyan",
                                                                    "green")) 
 ageByRegionComp.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region & run component.png")
+# ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region & run component.png")
 
 # # Fit a predictive model to estimate age composition-----------
 # Method 1: Fit hierarchical multinomial logistic regression (MLR) models ----------
@@ -285,93 +285,93 @@ age.mlr10.loglik <- nnet:::logLik.multinom(age.mlr10)
 # The best regional model explained 10% of the variability in age composition (nearly as much as the
 # population-specific model)
 
-# Method 2: Fit an identical set of ordinal logistic regression (OLR) models----------------
-# This approach is simpler because it assumes each fixed effect has the same overall effect on
-# the entire age distribution (i.e., it is associated with Chinook younger or older across the board),
-# rather than modeling separate effects on each age class.  As a result, is likely not to fit the data 
-# as well, but it also requires way fewer parameters.  
-
-# null model
-age.olr0 <- polr(data = age, Age ~ 1, weights = Count, Hess = T)
-# full model
-age.olr1 <- polr(data = age, Age ~ Component + Group * zReturnYear, weights = Count, Hess = T)
-age.olr2 <- polr(data = age, Age ~ Component + Group + zReturnYear, weights = Count, Hess = T)
-age.olr3 <- polr(data = age, Age ~ Component + Group, weights = Count, Hess = T)
-age.olr4 <- polr(data = age, Age ~ Component + zReturnYear, weights = Count, Hess = T)
-age.olr5 <- polr(data = age, Age ~ Component, weights = Count, Hess = T)
-age.olr6 <- polr(data = age, Age ~ Group * zReturnYear, weights = Count, Hess = T)
-age.olr7 <- polr(data = age, Age ~ Group + zReturnYear, weights = Count, Hess = T)
-age.olr8 <- polr(data = age, Age ~ Group, weights = Count, Hess = T)
-age.olr9 <- polr(data = age, Age ~ zReturnYear, weights = Count, Hess = T) 
-age.olr10 <- polr(data = age, Age ~ Component + Region * zReturnYear, weights = Count, Hess = T)
-age.olr11 <- polr(data = age, Age ~ Component + Region + zReturnYear, weights = Count, Hess = T)
-age.olr12 <- polr(data = age, Age ~ Component + Region, weights = Count, Hess = T)
-age.olr13 <- polr(data = age, Age ~ Region * zReturnYear, weights = Count, Hess = T)
-age.olr14 <- polr(data = age, Age ~ Region + zReturnYear, weights = Count, Hess = T)
-age.olr15 <- polr(data = age, Age ~ Region, weights = Count, Hess = T)
-# Model selection using AICc
-modsel.olr <- model.sel(age.olr0, age.olr1, age.olr2, age.olr3, age.olr4, age.olr5, age.olr6, age.olr7, 
-                    age.olr8, age.olr9, age.olr10, age.olr11, age.olr12, age.olr13, age.olr14,
-                    age.olr15)
-modsel.olr
-
-# Model selection table 
-#           (Int) Cmp Grp     zRY Grp:zRY Rgn Rgn:zRY df    logLik    AICc   delta weight
-# age.olr1      +   +   + -0.2046       +             20 -21607.21 43254.5    0.00      1
-# age.olr6      +       + -0.3421       +             19 -21634.41 43306.9   52.41      0
-# age.olr2      +   +   + -0.5453                     13 -21719.54 43465.1  210.65      0
-# age.olr7      +       + -0.5581                     12 -21722.43 43468.9  214.41      0
-# age.olr10     +   +     -0.4556           +       + 11 -21853.53 43729.1  474.61      0
-# age.olr11     +   +     -0.5364           +          9 -21861.40 43740.8  486.36      0
-# age.olr13     +         -0.4306           +       +  9 -22214.38 44446.8 1192.32      0
-# age.olr14     +         -0.4960           +          7 -22221.99 44458.0 1203.53      0
-# age.olr3      +   +   +                             12 -22223.55 44471.1 1216.65      0
-# age.olr8      +       +                             11 -22307.37 44636.8 1382.29      0
-# age.olr12     +   +                       +          8 -22359.47 44734.9 1480.48      0
-# age.olr4      +   +     -0.5192                      7 -22679.01 45372.0 2117.57      0
-# age.olr15     +                           +          6 -22708.21 45428.4 2173.96      0
-# age.olr9      +         -0.5706                      5 -22956.18 45922.4 2667.90      0
-# age.olr5      +   +                                  6 -23198.03 46408.1 3153.61      0
-# age.olr0      +                                      4 -23736.62 47481.2 4226.78      0
-# Models ranked by AICc(x) 
-# Same result as for the multinomial models
-
-summary(age.olr10)
-# Call:
-#   polr(formula = Age ~ Component + Region * zReturnYear, data = age, 
-#        weights = Count, Hess = T)
+# # Method 2: Fit an identical set of ordinal logistic regression (OLR) models----------------
+# # This approach is simpler because it assumes each fixed effect has the same overall effect on
+# # the entire age distribution (i.e., it is associated with Chinook younger or older across the board),
+# # rather than modeling separate effects on each age class.  As a result, is likely not to fit the data 
+# # as well, but it also requires way fewer parameters.  
 # 
-# Coefficients:
-#   Value Std. Error t value
-# ComponentCommercial Harvest -0.8571    0.04074 -21.035
-# ComponentSport Harvest       0.1689    0.04458   3.787
-# RegionKenai                  1.1137    0.03556  31.322
-# RegionSouth                 -0.2281    0.05423  -4.206
-# zReturnYear                 -0.4556    0.02665 -17.099
-# RegionKenai:zReturnYear     -0.1325    0.03518  -3.765
-# RegionSouth:zReturnYear     -0.1459    0.06085  -2.397
+# # null model
+# age.olr0 <- polr(data = age, Age ~ 1, weights = Count, Hess = T)
+# # full model
+# age.olr1 <- polr(data = age, Age ~ Component + Group * zReturnYear, weights = Count, Hess = T)
+# age.olr2 <- polr(data = age, Age ~ Component + Group + zReturnYear, weights = Count, Hess = T)
+# age.olr3 <- polr(data = age, Age ~ Component + Group, weights = Count, Hess = T)
+# age.olr4 <- polr(data = age, Age ~ Component + zReturnYear, weights = Count, Hess = T)
+# age.olr5 <- polr(data = age, Age ~ Component, weights = Count, Hess = T)
+# age.olr6 <- polr(data = age, Age ~ Group * zReturnYear, weights = Count, Hess = T)
+# age.olr7 <- polr(data = age, Age ~ Group + zReturnYear, weights = Count, Hess = T)
+# age.olr8 <- polr(data = age, Age ~ Group, weights = Count, Hess = T)
+# age.olr9 <- polr(data = age, Age ~ zReturnYear, weights = Count, Hess = T) 
+# age.olr10 <- polr(data = age, Age ~ Component + Region * zReturnYear, weights = Count, Hess = T)
+# age.olr11 <- polr(data = age, Age ~ Component + Region + zReturnYear, weights = Count, Hess = T)
+# age.olr12 <- polr(data = age, Age ~ Component + Region, weights = Count, Hess = T)
+# age.olr13 <- polr(data = age, Age ~ Region * zReturnYear, weights = Count, Hess = T)
+# age.olr14 <- polr(data = age, Age ~ Region + zReturnYear, weights = Count, Hess = T)
+# age.olr15 <- polr(data = age, Age ~ Region, weights = Count, Hess = T)
+# # Model selection using AICc
+# modsel.olr <- model.sel(age.olr0, age.olr1, age.olr2, age.olr3, age.olr4, age.olr5, age.olr6, age.olr7, 
+#                     age.olr8, age.olr9, age.olr10, age.olr11, age.olr12, age.olr13, age.olr14,
+#                     age.olr15)
+# modsel.olr
 # 
-# Intercepts:
-#   Value    Std. Error t value 
-# Age1.1|Age1.2  -3.3512   0.0480   -69.7658
-# Age1.2|Age1.3  -0.9515   0.0308   -30.8446
-# Age1.3|Age1.4   0.8008   0.0307    26.0634
-# Age1.4|Age1.5   4.5790   0.0610    75.0130
+# # Model selection table 
+# #           (Int) Cmp Grp     zRY Grp:zRY Rgn Rgn:zRY df    logLik    AICc   delta weight
+# # age.olr1      +   +   + -0.2046       +             20 -21607.21 43254.5    0.00      1
+# # age.olr6      +       + -0.3421       +             19 -21634.41 43306.9   52.41      0
+# # age.olr2      +   +   + -0.5453                     13 -21719.54 43465.1  210.65      0
+# # age.olr7      +       + -0.5581                     12 -21722.43 43468.9  214.41      0
+# # age.olr10     +   +     -0.4556           +       + 11 -21853.53 43729.1  474.61      0
+# # age.olr11     +   +     -0.5364           +          9 -21861.40 43740.8  486.36      0
+# # age.olr13     +         -0.4306           +       +  9 -22214.38 44446.8 1192.32      0
+# # age.olr14     +         -0.4960           +          7 -22221.99 44458.0 1203.53      0
+# # age.olr3      +   +   +                             12 -22223.55 44471.1 1216.65      0
+# # age.olr8      +       +                             11 -22307.37 44636.8 1382.29      0
+# # age.olr12     +   +                       +          8 -22359.47 44734.9 1480.48      0
+# # age.olr4      +   +     -0.5192                      7 -22679.01 45372.0 2117.57      0
+# # age.olr15     +                           +          6 -22708.21 45428.4 2173.96      0
+# # age.olr9      +         -0.5706                      5 -22956.18 45922.4 2667.90      0
+# # age.olr5      +   +                                  6 -23198.03 46408.1 3153.61      0
+# # age.olr0      +                                      4 -23736.62 47481.2 4226.78      0
+# # Models ranked by AICc(x) 
+# # Same result as for the multinomial models
 # 
-# Residual Deviance: 43707.06 
-# AIC: 43729.06 
-
-# Just out of curiosity, compare multinomial models against ordinal models
-modsel.mlrolr <- model.sel(age.mlr0, age.mlr1, age.mlr2, age.mlr3, age.mlr4, age.mlr5, age.mlr6, age.mlr7, 
-                           age.mlr8, age.mlr9, age.mlr10, age.mlr11, age.mlr12, age.mlr13, age.mlr14,
-                           age.mlr15,
-                           age.olr0, age.olr1, age.olr2, age.olr3, age.olr4, age.olr5, age.olr6, age.olr7, 
-                           age.olr8, age.olr9, age.olr10, age.olr11, age.olr12, age.olr13, age.olr14,
-                           age.olr15)
-modsel.mlrolr
-# As expected, the more complex MLR models fit the data better (but required many more parameters).
-# Based on AICc, the MLR models were more parsimonious, so we used the MLR approach for the run 
-# reconstruction.
+# summary(age.olr10)
+# # Call:
+# #   polr(formula = Age ~ Component + Region * zReturnYear, data = age, 
+# #        weights = Count, Hess = T)
+# # 
+# # Coefficients:
+# #   Value Std. Error t value
+# # ComponentCommercial Harvest -0.8571    0.04074 -21.035
+# # ComponentSport Harvest       0.1689    0.04458   3.787
+# # RegionKenai                  1.1137    0.03556  31.322
+# # RegionSouth                 -0.2281    0.05423  -4.206
+# # zReturnYear                 -0.4556    0.02665 -17.099
+# # RegionKenai:zReturnYear     -0.1325    0.03518  -3.765
+# # RegionSouth:zReturnYear     -0.1459    0.06085  -2.397
+# # 
+# # Intercepts:
+# #   Value    Std. Error t value 
+# # Age1.1|Age1.2  -3.3512   0.0480   -69.7658
+# # Age1.2|Age1.3  -0.9515   0.0308   -30.8446
+# # Age1.3|Age1.4   0.8008   0.0307    26.0634
+# # Age1.4|Age1.5   4.5790   0.0610    75.0130
+# # 
+# # Residual Deviance: 43707.06 
+# # AIC: 43729.06 
+# 
+# # Just out of curiosity, compare multinomial models against ordinal models
+# modsel.mlrolr <- model.sel(age.mlr0, age.mlr1, age.mlr2, age.mlr3, age.mlr4, age.mlr5, age.mlr6, age.mlr7, 
+#                            age.mlr8, age.mlr9, age.mlr10, age.mlr11, age.mlr12, age.mlr13, age.mlr14,
+#                            age.mlr15,
+#                            age.olr0, age.olr1, age.olr2, age.olr3, age.olr4, age.olr5, age.olr6, age.olr7, 
+#                            age.olr8, age.olr9, age.olr10, age.olr11, age.olr12, age.olr13, age.olr14,
+#                            age.olr15)
+# modsel.mlrolr
+# # As expected, the more complex MLR models fit the data better (but required many more parameters).
+# # Based on AICc, the MLR models were more parsimonious, so we used the MLR approach for the run 
+# # reconstruction.
 
 # Predict the age composition for Population-ReturnYears lacking data --------------
 # using the best regional MLR model
@@ -407,7 +407,7 @@ AgePredictedByRegion.plot <- ggplot(data = agePredicted, aes(x = ReturnYear, y =
   scale_x_continuous(breaks = seq(1980, 2015, 5)) +
   geom_smooth(se = F)
 AgePredictedByRegion.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region_model fit.png")
+# ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region_model fit.png")
 
 # 4) Plot the model fit (curves) on top of the raw data (points)
 AgeByRegion.Data.plot <- ggplot(data = agePlot, aes(x = ReturnYear, y = Prop, color = Region,
@@ -423,8 +423,8 @@ AgeByRegion.Data.plot
 AgeByRegion.Data.Predicted.plot <- AgeByRegion.Data.plot +
   geom_smooth(data = filter(agePredicted, Component == "Escapement"))
 AgeByRegion.Data.Predicted.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region and run component_data and fit.png",
-       width = 8, height = 6)
+# ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region and run component_data and fit.png",
+#        width = 8, height = 6)
 
 # 5) Plot the model fit on top of the data, with run component faceted in columns
 AgeByRegionComp.Data.plot <- ggplot(data = agePlot, aes(x = ReturnYear, y = Prop, color = Region)) +
@@ -438,7 +438,7 @@ AgeByRegionComp.Data.plot
 AgeByRegionComp.Data.Predicted.plot <- AgeByRegionComp.Data.plot +
   geom_smooth(data = agePredicted)
 AgeByRegionComp.Data.Predicted.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp by region_run component faceted_data and fit.pdf",
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Fig S5_Age comp by region_run component faceted_data and fit.pdf",
        width = 8, height = 6)
 
 agePredVsObs <- left_join(ageSimple, agePredicted, by = c("Region", "ReturnYear", "Component",
@@ -455,295 +455,5 @@ AgePredictedVsObs.plot <- ggplot(data = agePredVsObs, aes(x = Observed, y = Pred
   geom_abline(slope = 1, intercept = 0, linetype = "dashed") +
   facet_grid(Region~Component)
 AgePredictedVsObs.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Age comp obs vs pred.png",
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Fig S13_Age comp obs vs pred.png",
        width = 8, height = 6)
-# Old code, no longer used:----------------
-
-# # Make subsets of the main age dataset for more specific analyses:
-# # Look at terminal age data only (remove data from mixed-stock fisheries)
-# ageTerm <- age %>%
-#   filter(Component != "Commercial Harvest" & Component != "Subsistence Harvest") %>%
-#   # Relevel factors to set baseline reference levels
-#   mutate(Component = factor(Component),
-#          Group = factor(Group),
-#          Gear = factor(Gear),
-#          GearMesh = factor(GearMesh),
-#          Component = relevel(Component, ref = "Escapement"),
-#          Group = relevel(Group, ref = "Deshka"),
-#          Gear = relevel(Gear, ref = "Weir"),
-#          GearMesh = relevel(GearMesh, ref = "Weir"))
-# 
-# # Filter down to only the "core" age classes ocean ages 2, 3, and 4 (excluding 1-ocean and 5-ocean)
-# ageCore <- age %>%
-#   filter (Age == "Age1.2" | Age == "Age1.3" | Age == "Age1.4") %>%
-#   mutate(Age = factor(Age, levels = c("Age1.2", "Age1.3", "Age1.4")), ordered = T)
-# 
-# # Core age classes from terminal sampling only
-# ageCoreTerm <- ageTerm %>%
-#   filter (Age == "Age1.2" | Age == "Age1.3" | Age == "Age1.4") %>%
-#   mutate(Age = factor(Age, levels = c("Age1.2", "Age1.3", "Age1.4")), ordered = T)
-
-
-# Estimate and correct for age-selectivity of different sampling gears in the Deshka--------
-# Use a statistical model to test for an effect of sampling gear (angling / comm gill net / weir)
-# on age composition of the Deshka River and Northern Set Net fishery.
-
-# deshka <- age %>%
-#   filter(Group == "Deshka" | Group == "NSN") %>%
-#   # Relevel factor
-#   mutate(Gear = factor(Gear, levels = c("Weir", "Angling", "Gill Net")))
-# 
-# deshkaCore <- ageCore %>%
-#   filter(Group == "Deshka" | Group == "NSN") %>%
-#   # Relevel factor
-#   mutate(Gear = factor(Gear, levels = c("Weir", "Angling", "Gill Net")))
-# 
-# deshka.olr1 <- polr(Age ~ Gear * zReturnYear, data = deshka, weights = Count, Hess = T)
-# deshka.olr2 <- polr(Age ~ Gear + zReturnYear, data = deshka, weights = Count, Hess = T)
-# deshka.olr3 <- polr(Age ~ Gear, data = deshka, weights = Count, Hess = T)
-# deshka.olr4 <- polr(Age ~ zReturnYear, data = deshka, weights = Count, Hess = T)
-# deshka.olr5 <- polr(Age ~ Gear + factor(ReturnYear), data = deshka, weights = Count, Hess = T)
-# deshka.olr6 <- polr(Age ~ factor(ReturnYear), data = deshka, weights = Count, Hess = T)
-# 
-# deshka.olr.models <- model.sel(deshka.olr1, deshka.olr2, deshka.olr3, deshka.olr4, deshka.olr5, deshka.olr6)
-# deshka.olr.models
-# 
-# summary(deshka.olr5)
-# 
-# deshka.mlr1 <- multinom(Age ~ Gear * zReturnYear, data = deshka, weights = Count, Hess = T)
-# deshka.mlr2 <- multinom(Age ~ Gear + zReturnYear, data = deshka, weights = Count, Hess = T)
-# deshka.mlr3 <- multinom(Age ~ Gear, data = deshka, weights = Count, Hess = T)
-# deshka.mlr4 <- multinom(Age ~ zReturnYear, data = deshka, weights = Count, Hess = T)
-# deshka.mlr5 <- multinom(Age ~ Gear + factor(ReturnYear), data = deshka, weights = Count, Hess = T)
-# deshka.mlr6 <- multinom(Age ~ factor(ReturnYear), data = deshka, weights = Count, Hess = T)
-# 
-# summary(deshka.mlr5)
-# 
-# deshka.mlr.models <- model.sel(deshka.mlr1, deshka.mlr2, deshka.mlr3, deshka.mlr4, deshka.mlr5, deshka.mlr6)
-# deshka.mlr.models
-# 
-# deshka.all.models <- model.sel(deshka.olr1, deshka.olr2, deshka.olr3, deshka.olr4, deshka.olr5, deshka.olr6,
-#                                deshka.mlr1, deshka.mlr2, deshka.mlr3, deshka.mlr4, deshka.mlr5, deshka.mlr6)
-# deshka.all.models
-# 
-# deshkaCore.olr1 <- polr(Age ~ Gear * zReturnYear, data = deshkaCore, weights = Count, Hess = T)
-# deshkaCore.olr2 <- polr(Age ~ Gear + zReturnYear, data = deshkaCore, weights = Count, Hess = T)
-# deshkaCore.olr3 <- polr(Age ~ Gear, data = deshkaCore, weights = Count, Hess = T)
-# deshkaCore.olr4 <- polr(Age ~ zReturnYear, data = deshkaCore, weights = Count, Hess = T)
-# deshkaCore.olr5 <- polr(Age ~ Gear + factor(ReturnYear), data = deshkaCore, weights = Count, Hess = T)
-# deshkaCore.olr6 <- polr(Age ~ factor(ReturnYear), data = deshkaCore, weights = Count, Hess = T)
-# 
-# deshkaCore.olr.models <- model.sel(deshkaCore.olr1, deshkaCore.olr2, deshkaCore.olr3, deshkaCore.olr4,
-#                                    deshkaCore.olr5, deshkaCore.olr6)
-# deshkaCore.olr.models
-# 
-# deshkaCore.olr1
-# 
-# summary(deshkaCore.olr1)
-
-# # Estimate and correct for age-selectivity of different sampling gears in the Kenai-----------
-# # I abandoned this effort after examining the methods of the Kenai run reconstruction more closely.
-# # Fleischman and McKinley used age comps from the ESSN fishery for their "harvest below RM 9"
-# # component of the run and age comps from the in-river gill netting at RM 9 for the "in-river run"
-# # component.  So calculating selectivities using the same data is circular.
-
-# # Join the observed age composition (from the 3 gear types) with the age composition
-# # of the total run (from the run reconstruction) and calculate selectivities for each
-# # gear g, age a, and year t
-# kenaiAgeComp <- ageFull %>%
-#   filter(Group == "Kenai.Late" | Group == "ESSN") %>%
-#   filter(ReturnYear > 2001 & ReturnYear < 2013) %>%
-#   filter(Gear != "Model Estimate") %>%
-#   mutate(GearMesh = ifelse(is.na(Mesh), Gear, paste(Mesh, Gear))) %>%
-#   select(ReturnYear, n, GearMesh, Age, Prop) %>%
-#   left_join(select(kenaiTR, ReturnYear, Age, PropRR = Prop), by = c("ReturnYear", "Age")) %>%
-#   # rename(Prop = Prop.x, PropRR = Prop.y) %>%
-#   mutate(Selectivity_gat = Prop / PropRR)
-# 
-# # Q: Can we use the 5" gill net (in-river test fishery) age comp data to correct for the selectivity of 
-# # the < 6" gill net mixed-stock fisheries (ESSN, NSN, WSN, Tyonek sub)?
-# 
-# selectivity.trend.plot <- ggplot(data = kenaiAgeComp, aes(x = ReturnYear, y = Selectivity_gat)) +
-#   facet_grid(rows = vars(Age), cols = vars(GearMesh)) +
-#   geom_point() +
-#   geom_smooth(method = "lm") +
-#   scale_y_continuous(name = "Selectivity") +
-#   scale_x_continuous(name = "Return Year") +
-#   geom_hline(yintercept = 1)
-# selectivity.trend.plot
-# 
-# # Plot the core age classes only...
-# selectivity.trend.core.plot <- ggplot(data = filter(kenaiAgeComp, Age != "Age1.1" & Age != "Age1.5"),
-#                                  aes(x = ReturnYear, y = Selectivity_gat)) +
-#   facet_grid(rows = vars(Age), cols = vars(GearMesh)) +
-#   geom_point() +
-#   geom_smooth(method = "lm") +
-#   scale_y_continuous(name = "Selectivity") +
-#   scale_x_continuous(name = "Return Year") +
-#   geom_hline(yintercept = 1)
-# selectivity.trend.core.plot
-# 
-#A: No, the selectivities of the 5" and <6" gill net samples are totally different. Don't use 5"
-# selectivities to correct the <6" data.  The 5" and 7.5" gill net samples are not very selective, so
-# use those instead of the 5" gill net samples.
-
-# Fit linear models to describe changes in selectivity over time (using broom package)
-# selectivity.trends <- kenaiAgeComp %>%
-#   filter(GearMesh != "5 in Gill Net") %>%
-#   group_by(GearMesh, Age) %>%
-#   do(fit.lm = lm(Selectivity_gat ~ ReturnYear, data = .))
-# 
-# Summarize the coeficients and summary stats of these linear models
-# selectivity.trends.coef <- tidy(selectivity.trends, fit.lm)
-# selectivity.trends.coef
-# selectivity.trends.stats <- glance(selectivity.trends, fit.lm)
-# selectivity.trends.stats
-# 
-# Fit intercept-only models to describe fixed selectivities (null models for comparison against lms)
-# selectivity.static <- kenaiAgeComp %>%
-#   group_by(GearMesh, Age) %>%
-#   do(fit.lm = lm(Selectivity_gat ~ 1, data = .))
-# selectivity.static.stats <- glance(selectivity.static, fit.lm)
-# selectivity.static.stats
-# 
-# selectivity.static.aicc <- selectivity.static
-# Compare the linear and intercept-only models using AICc (for each GearMesh and Age)
-# First combine the dataframes of summary stats
-# selectivity.models.stats <- selectivity.trends.stats %>%
-#   bind_rows(selectivity.static.stats) %>%
-#   # Then calculate AICc for each model
-#   mutate(Model = ifelse(df == 1, "Static", "Linear"),
-#          k = df,
-#          n = df.residual + df,
-#          AICc = AIC + (2*k^2 + 2*k)/(n-k-1)) %>%
-#   arrange(GearMesh, Age)
-# 
-# Next, calculate the lowest AICc for each GearMesh and Age
-# selectivity.models.lowAICc <- selectivity.models.stats %>%
-#   group_by(GearMesh, Age) %>%
-#   summarize(lowAICc = min(AICc))
-# 
-# Join low AICc dataframe with the summary stats
-# selectivity.models.stats <- selectivity.models.stats %>%
-#   left_join(selectivity.models.lowAICc, by = c("GearMesh", "Age")) %>%
-#   # calculate delta AICc for each model
-#   mutate(deltaAICc = AICc - lowAICc) %>%
-#   select(GearMesh, Age, Model, deltaAICc, r.squared) %>%
-#   arrange(GearMesh, Age, desc(Model))
-# 
-# Which linear (time-varying) selectivity functions are supported by the data (e.g. delta AICc > 0
-# for the static intercept-only model)
-# selectivity.trends.parsim <- selectivity.models.stats %>%
-#   filter(Model == "Static" & deltaAICc > 0)
-# 
-# # Should I use time-varying selectivities when I correct the age comp data?
-# # Pros: Many selectivities do appear to be changing over time based on AICc.
-# # It does make sense that age-selectivity would be changing, given that size-at-age
-# # is changing (Lewis et al. 2015).  It will be fairly straightforward to predict the selectivity_gat
-# # from 1986-2012 for the 7" gill net and angling gears.
-# # Cons: I want to predict the selectivity_gat for years outside the range of the data.  This is
-# # probably not a huge deal because we have long time series 1986-2012, and we only want to go a few
-# # years forward and back
-# # Conclusion: use time-varying sensitivities for all gear types
-# 
-# # Summarize the time-varying selectivity model coefficients
-# selectivity <- selectivity.trends.coef %>%
-#   select(GearMesh, Age, term, estimate) %>%
-#   spread(key = term, value = estimate) %>%
-#   rename(Intercept = `(Intercept)`, Slope = ReturnYear)
-# 
-# # Correct all age composition data for age selectivity of the gear (assuming weirs are non-selective)
-# ageCorrRaw <- age %>%
-#   left_join(selectivity, by = c("GearMesh", "Age")) %>%
-#   mutate(Intercept = ifelse(Gear == "Weir", 1, Intercept),
-#          Slope = ifelse(Gear == "Weir", 0, Slope),
-#          Selectivity_gat = Intercept + ReturnYear*Slope,
-#          PropCorr = Prop / Selectivity_gat)
-# 
-# # Recalculate proportions so that the sum of all corrected proportions equals 1
-# # Reshape data with one row for each Group, ReturnYear, and GearMesh (age classes in columns)
-# 
-# ageCorrWide <- ageCorrRaw %>%
-#   select(-Prop, -Selectivity_gat, -Intercept, -Slope) %>%
-#   spread(key = Age, value = PropCorr) %>%
-#   # Calculate the sum of the corrected proportions
-#   mutate(SumPropCorr = rowSums(cbind(Age1.1, Age1.2, Age1.3, Age1.4, Age1.5), na.rm = T),
-#          
-#          #Divide each proportion by the SumProportions for that row.  New values should add to 1
-#          Age1.1 = Age1.1/SumPropCorr,
-#          Age1.2 = Age1.2/SumPropCorr,
-#          Age1.3 = Age1.3/SumPropCorr,
-#          Age1.4 = Age1.4/SumPropCorr,
-#          Age1.5 = Age1.5/SumPropCorr,
-#          # Verify that the corrected values add to 1
-#          SumPropCorr2 = rowSums(cbind(Age1.1, Age1.2, Age1.3, Age1.4, Age1.5), na.rm = T))
-# 
-# # Now reshape back to long form with age classes in rows
-# ageCorr <- ageCorrWide %>%
-#   gather(key = Age, value = Prop, Age1.1:Age1.5) %>%
-#   # Now that the data is corrected for age-selectivity of the gear, remove the data that will not be
-#   # used for fitting the age composition models (e.g., all 5" gill net, and 7.5" gill net starting in 2002)
-#   filter(GearMesh != "5 in gill net")
-# 
-# # Plot the age comp for Kenai and ESSN only to compare gear types
-# agePlotKenai <- ageCorr %>%
-#   filter(Group == "ESSN" | Group == "Kenai.Late") %>%
-#   filter(GearMesh != "5 in Gill Net") %>%
-#   mutate(GroupGear = ifelse(is.na(Mesh), str_c(Group, Gear, sep = " "), 
-#                             str_c(Group, Mesh, Gear, sep = " ")))
-# 
-# ageByGearKenai.plot <- ggplot(data = agePlotKenai, 
-#                               aes(x = ReturnYear, y = Prop, color = GroupGear)) +
-#   facet_grid(Age ~ .) +
-#   geom_line() +
-#   # geom_point(shape = 1, fill = NA) +
-#   labs(x = "Return year", y = "Age Proportion") +
-#   scale_color_discrete(name = "Gear type") +
-#   scale_x_continuous(breaks = seq(1980, 2015, 5))
-# ageByGearKenai.plot
-# ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Kenai late run age comp by gear type_corrected.png")
-# 
-# # Plot the age comp for Deshka and NSN only to compare gear types
-# agePlotDeshka <- ageCorr %>%
-#   filter(Group == "NSN" | Group == "Deshka") %>%
-#   mutate(GroupGear = ifelse(is.na(Mesh), str_c(Group, Gear, sep = " "), 
-#                             str_c(Group, Mesh, Gear, sep = " ")))
-# 
-# ageByGearDeshka.plot <- ggplot(data = agePlotDeshka, 
-#                                aes(x = ReturnYear, y = Prop, color = GroupGear)) +
-#   facet_grid(Age ~ .) +
-#   geom_line() +
-#   geom_point(shape = 1, fill = NA) +
-#   labs(x = "Return year", y = "Age Proportion") +
-#   scale_color_discrete(name = "Gear type") +
-#   scale_x_continuous(breaks = seq(1980, 2015, 5))
-# ageByGearDeshka.plot
-# ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Deshka age comp by gear type_corrected.png")
-# # Uh oh.  The gear selectivity corrections from the Kenai data DO NOT appear to improve the Deshka data.
-# 
-# # Plot pairwise correlations of age comp by gear for Deshka / NSN
-# # Uncorrected
-# ageWideDeshka <- age %>%
-#   filter(Group == "NSN" | Group == "Deshka") %>%
-#   mutate(GroupGear = ifelse(is.na(Mesh), str_c(Group, Gear, sep = " "), 
-#                             str_c(Group, Mesh, Gear, sep = " "))) %>%
-#   select(GroupGear, ReturnYear, Age, Prop) %>%
-#   spread(key = GroupGear, value = Prop, fill = NA)
-# 
-# ggpairs(data = filter(ageWideDeshka, Age == "Age1.2"), columns = 3:5)
-# ggpairs(data = filter(ageWideDeshka, Age == "Age1.3"), columns = 3:5)
-# ggpairs(data = filter(ageWideDeshka, Age == "Age1.4"), columns = 3:5)
-# 
-# # Corrected
-# ageWideDeshkaCorr <- ageCorr %>%
-#   filter(Group == "NSN" | Group == "Deshka") %>%
-#   mutate(GroupGear = ifelse(is.na(Mesh), str_c(Group, Gear, sep = " "), 
-#                             str_c(Group, Mesh, Gear, sep = " "))) %>%
-#   select(GroupGear, ReturnYear, Age, Prop) %>%
-#   spread(key = GroupGear, value = Prop, fill = NA)
-# 
-# ggpairs(data = filter(ageWideDeshkaCorr, Age == "Age1.2"), columns = 3:5)
-# ggpairs(data = filter(ageWideDeshkaCorr, Age == "Age1.3"), columns = 3:5)
-# ggpairs(data = filter(ageWideDeshkaCorr, Age == "Age1.4"), columns = 3:5)
-# 
-# 

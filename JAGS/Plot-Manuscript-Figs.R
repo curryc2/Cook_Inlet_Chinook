@@ -67,7 +67,7 @@ dev.off()
 
 # Caterpillar Plot
 
-pdf(file.path(dir.figs, "Regional mean effects_caterpillar.pdf"), height=5, width=7)
+pdf(file.path(dir.figs, "Fig 3_Regional mean effects_caterpillar.pdf"), height=5, width=7)
 
 par(mfrow=c(1,1), mar=c(2,7,1,1), oma=c(3,3,0,0))
 caterplot(mu.list,
@@ -80,7 +80,7 @@ mtext('Covariate', side=2, outer=TRUE, font=2, line=1, cex = 1.3)
 
 dev.off()
 
-png(file.path(dir.figs, "Regional mean effects_caterpillar.png"), height=5, width=7, res=500, units='in')
+png(file.path(dir.figs, "Fig 3_Regional mean effects_caterpillar.png"), height=5, width=7, res=500, units='in')
 par(mfrow=c(1,1), mar=c(2,7,1,1), oma=c(3,3,0,0))
 caterplot(mu.list,
           labels=names.covars, reorder=FALSE, quantiles=list(0.025,0.25,0.75,0.975),
@@ -112,7 +112,7 @@ covar.list <- array(dim=c(dims.out[1], dims.out[2], dims.out[3]),
 covar.list <- out$BUGSoutput$sims.list$coef
 
 #PLOT IT
-png(file.path(dir.figs, "Population-specific Effects.png"), height=8, width=10, res=500, units='in')
+png(file.path(dir.figs, "Fig 4_Population-specific Effects.png"), height=8, width=10, res=500, units='in')
 par(mfrow=c(3,3), mar=c(2,7,3,1), oma=c(3,3,1,1))
 c <- 1
 for(c in 1:n.plot) {
@@ -129,7 +129,7 @@ mtext('Population', side=2, outer=TRUE, font=2, line=1, cex = 1.3)
 dev.off()
 
 
-pdf(file.path(dir.figs, "Population-specific Effects.pdf"), height=8, width=10)
+pdf(file.path(dir.figs, "Fig 4_Population-specific Effects.pdf"), height=8, width=10)
 
 par(mfrow=c(3,3), mar=c(2,7,3,1), oma=c(3,3,1,1))
 c <- 1

@@ -1135,7 +1135,7 @@ mtext('beta', side=2, outer=TRUE)
 
 dev.off()
 
-png(file=file.path(dir.figs,paste0("Log Fits_",phase,".png")), height=8, width=6, units='in', res=500)
+png(file=file.path(dir.figs,paste0("Fig 6_Log Fits_",phase,".png")), height=8, width=6, units='in', res=500)
 #Log Space
 par(mfrow=c(5,3), mar=c(2,2,2,1), oma=c(2,2,1,1))
 p <- 2
@@ -1581,7 +1581,7 @@ mtext('beta', side=2, outer=TRUE)
 
 dev.off()
 
-png(file=file.path(dir.figs,paste0("Log Fits_",phase,".png")), height=8, width=6, units='in', res=500)
+png(file=file.path(dir.figs,paste0("Fig 6_Log Fits_",phase,".png")), height=8, width=6, units='in', res=500)
 #Log Space
 par(mfrow=c(5,3), mar=c(2,2,2,1), oma=c(2,2,1,1))
 p <- 2

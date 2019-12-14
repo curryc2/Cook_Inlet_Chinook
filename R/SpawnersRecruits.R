@@ -111,8 +111,8 @@ EscapementAllPops.plot <- ggplot(data = spawnersByRY_trimmed,
   expand_limits(y = 0) +
   theme_bw(12)
 EscapementAllPops.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Escapement_all pops.png",
-       width = 8, height = 6)
+# ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Escapement_all pops.png",
+#        width = 8, height = 6)
 
 # Make same plot for study populations only
 spawnersByRY_studyPops <- spawnersByRY_trimmed %>%
@@ -132,11 +132,27 @@ EscapementStudyPops.plot <- ggplot(data = spawnersByRY_studyPops,
   expand_limits(y = 0) +
   theme_bw(12)
 EscapementStudyPops.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Escapement_study pops.png",
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Fig S1_Escapement_study pops.png",
        width = 6, height = 6)
 
+# # Same plot, but with fixed y axis on a log scale
+# EscapementStudyPops.fixedY.plot <- ggplot(data = spawnersByRY_studyPops,
+#                                    aes(x = ReturnYear, y = log(Spawners2.nom))) +
+#   geom_line() +
+#   geom_point(size = 1) + # Plotting points as well as lines to show isolated points with NA on either side
+#   scale_y_continuous(name = "Log escapement") +
+#   # scale_y_continuous(name = "Escapement (1,000s)", labels = scales::comma) +
+#   scale_x_continuous(name = "Return Year", breaks = seq(1980, 2015, 10)) +
+#   # facet_wrap(.~Population, scales = "fixed")
+#   facet_wrap(.~Population, ncol = 3) +
+#   theme_bw(12)
+# EscapementStudyPops.fixedY.plot
+# ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Escapement_study pops_fixedY.png",
+#        width = 6, height = 6)
+# # This doesn't show the decline in harvest very well, so we used the previous version
+
 # How much did escapement vary (%) between best and worst years, by population?
-escapeVariability <- spawnersByRY_trimmed %>%
+escapeSummaryAll <- spawnersByRY_trimmed %>%
   group_by(Population) %>%
   summarize(nYears = n(),
             maxEsc = max(Spawners2.nom, na.rm = T),
@@ -145,6 +161,13 @@ escapeVariability <- spawnersByRY_trimmed %>%
             meanEsc = mean(Spawners2.nom, na.rm = T)) %>%
   mutate(cvEsc = sdEsc / meanEsc,
          variabilityEsc = maxEsc / minEsc)
+
+# Condense this down to the study pops and write it to csv
+escapeSummary <- escapeSummaryAll %>%
+  left_join(sites, by = c("Population" = "Group")) %>%
+  filter(StockRecruit == T) %>%
+  select(Population:variabilityEsc)
+write_csv(escapeSummary, "./data/EscapementSummary.csv")
 
 # What proportion of monitored Chinook escapement is accounted for by the 15 study pops?
 escapeAccountedFor <- escape %>%
@@ -339,7 +362,7 @@ rps.plot <- ggplot(data = spawnersRecruits.no.nas, aes(x = Spawners2.nom/1000,
   scale_y_continuous(name = "Recruitment (thousands)") +
   scale_color_continuous()
 rps.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Recruits_vs_Spawners.png",
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Fig S3_Recruits_vs_Spawners.png",
        width = 8, height = 8)
 
 # Plot natural log of core-age recruits per spawner regressed against spawner abundance
@@ -355,7 +378,7 @@ logRPSvSpawners.plot <- ggplot(data = spawnersRecruits.no.nas, aes(x = Spawners2
   scale_y_continuous(name = "ln(Recruits/Spawner)") +
   scale_color_continuous()
 logRPSvSpawners.plot
-ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/LogRPS_vs_Spawners.png",
+ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Fig S4_LogRPS_vs_Spawners.png",
        width = 8, height = 8)
 
 # Plot an index of brood year productivity (recruits [escapement + terminal harvest] /
