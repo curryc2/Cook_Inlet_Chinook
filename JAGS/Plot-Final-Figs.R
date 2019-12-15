@@ -22,6 +22,7 @@ require(tidybayes)
 require(brms)
 require(corrplot)
 require(cowplot)
+require(RColorBrewer)
 
 #Define Workflow Paths ====================================================
 # *Assumes you are working from the Cook Inlet Chinook R project
@@ -48,6 +49,12 @@ names.covars <- c('maxT_spawn','avgT_rear',
                   'medianQ_rear','RB_spawn','RB_emerge',
                   'breakup','NPGO')
 
+covar.scale.lookup <- data.frame(names.covars,
+                                 c(rep("Local",5),
+                                   rep("Regional",3),
+                                   "Broad"))
+names(covar.scale.lookup) <- c("variable","Covariate Scale")
+
 # Plot Group Means ================================================================
 mu.list <- cbind(out$BUGSoutput$sims.list$mu.coef)
 names(mu.list) <- names.covars
@@ -55,27 +62,76 @@ n.plot <- length(names.covars)
 
 # PLOT: Group Mean Caterpillar Plots ==============================================
 
+# Plotting Terms
+fig.height <- 4.25; fit.width <- 5.25
+
+# Data
 temp.list <- data.frame(out$BUGSoutput$sims.list$mu.coef)
 names(temp.list) <- names.covars
 temp.list.2 <- melt(temp.list)
+temp.list.3 <- temp.list.2 %>% left_join(covar.scale.lookup)
 
 
 
-g <- temp.list.2 %>% 
+g <- temp.list.3 %>% 
        ggplot(aes(x=variable, y=value)) +
-       theme_bw() +
+       theme_linedraw() +
        geom_hline(yintercept = 0, colour='red')+
        stat_summary(fun.y="q.95", colour="darkblue", geom="line", lwd=0.5) +
        stat_summary(fun.y="q.50", colour="blue", geom="line", lwd=1.25) +
        stat_summary(fun.y="median", colour="yellow", size=1.75, geom="point", pch=19) +
        stat_summary(fun.y="median", colour="red", size=1.75, geom="point", pch=21) +
        scale_x_discrete(limits=rev(levels(temp.list.2$variable))) +
-       coord_flip() + theme(axis.title=element_blank()) +
-       ggtitle("Group Mean Effects")
+       coord_flip() +# theme(axis.title=element_blank())
+       # ggtitle("Group Mean Effects")
+       xlab("Covariate") + ylab("Group Mean Effect")
        
 g
-ggsave(file=file.path(dir.figs,"New_Group Mean Effects.pdf"), plot=g,
-         height=5, width=5, units='in')
+ggsave(file=file.path(dir.figs,"New Fig 3.1.pdf"), plot=g,
+         height=fig.height, width=fit.width, units='in')
+
+# Add Covariate definitions
+temp.cols <- c("#66c2a5", "#fc8d62", "#8da0cb")
+
+
+g.2 <- g + annotate("rect", xmin=4.5, xmax=Inf, ymin=-Inf, ymax=Inf, alpha=0.2, fill=temp.cols[1]) +
+           annotate("text", x = 7, y = -0.2, label = "Local Scale", angle=90) +
+           annotate("rect", xmin=1.5, xmax=4.5, ymin=-Inf, ymax=Inf, alpha=0.2, fill=temp.cols[2]) +
+           annotate("text", x = 3, y = -0.2, label = "Regional Scale", angle=90) +
+           annotate("rect", xmin=-Inf, xmax=1.5, ymin=-Inf, ymax=Inf, alpha=0.2, fill=temp.cols[3]) +
+           annotate("text", x = 1, y = -0.2, label = "Broad", angle=90)
+           
+g.2 
+
+ggsave(file=file.path(dir.figs,"New Fig 3.2 Shaded Scales.pdf"), plot=g.2,
+       height=fig.height, width=fit.width, units='in')
+
+# Covariate definition horizontal
+g.3 <- g + annotate("rect", xmin=4.5, xmax=Inf, ymin=-Inf, ymax=Inf, alpha=0.2, fill=temp.cols[1]) +
+  annotate("label", x = 9.3, y = -0.15, label = "Local Scale") +
+  annotate("rect", xmin=1.5, xmax=4.5, ymin=-Inf, ymax=Inf, alpha=0.2, fill=temp.cols[2]) +
+  annotate("label", x = 4.3, y = -0.15, label = "Regional Scale") +
+  annotate("rect", xmin=-Inf, xmax=1.5, ymin=-Inf, ymax=Inf, alpha=0.2, fill=temp.cols[3]) +
+  annotate("label", x = 1.3, y = -0.15, label = "Broad")
+
+g.3 
+
+ggsave(file=file.path(dir.figs,"New Fig 3.3 Shaded Scales Horizontal Text.pdf"), plot=g.3,
+       height=fig.height, width=fit.width, units='in')
+
+# Covariate definition horizontal - 
+g.3 <- g + annotate("rect", xmin=4.5, xmax=Inf, ymin=-Inf, ymax=Inf, alpha=0.2, fill=temp.cols[1]) +
+  annotate("label", x = 9.3, y = -0.15, label = "Local Scale") +
+  annotate("rect", xmin=1.5, xmax=4.5, ymin=-Inf, ymax=Inf, alpha=0.2, fill=temp.cols[2]) +
+  annotate("label", x = 4.3, y = -0.15, label = "Regional Scale") +
+  annotate("rect", xmin=-Inf, xmax=1.5, ymin=-Inf, ymax=Inf, alpha=0.2, fill=temp.cols[3]) +
+  annotate("label", x = 1.3, y = -0.15, label = "Broad")
+
+g.3 
+
+ggsave(file=file.path(dir.figs,"New Fig 3.4 Shaded Scales Horizontal Text - Right Justified.pdf"), plot=g.3,
+       height=fig.height, width=fit.width, units='in')
+
 
 
 # PLOT: Stock-specific Caterpillar Plots ==========================================
