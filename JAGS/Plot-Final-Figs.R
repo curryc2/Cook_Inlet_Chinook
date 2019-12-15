@@ -241,9 +241,13 @@ for(i in 1:nrow(covar.scale.lookup)) {
 # fig4.4 <- fig4.2 + annotate("rect", xmin=-Inf, xmax=Inf, ymin=-Inf, ymax=Inf, alpha=0.2, fill=covar.list.3$color)
                      # scale_fill_colorblind()
                      
+
+
+# fig4.4 <- fig4.2 + theme(strip.background =element_rect(fill=covar.scale.lookup$color))
+
 # fig4.4
 
 # ggsave(file.path(dir.figs,"New Fig 4.4 - Colored Backgrounds.pdf"), plot=fig4.4,
-#        height=fig.height, width=fig.width, units="in")
+       # height=fig.height, width=fig.width, units="in")
 
 
