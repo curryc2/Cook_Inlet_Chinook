@@ -251,3 +251,208 @@ for(i in 1:nrow(covar.scale.lookup)) {
        # height=fig.height, width=fig.width, units="in")
 
 
+# Figure 3 and 4 alternatives: R Shaftel ----------------------------------------------------------------------
+
+#Figures 3 and 4 took a long time to run on my machine with the stat_summary inside
+# ggplot so I summarized the data and removed the large data frames.
+
+temp.list.3.summ <- temp.list.3 %>% 
+  group_by(variable) %>% 
+  summarize(q.025 = quantile(value, probs = 0.025),
+            q.975 = quantile(value, probs = 0.975),
+            q.25 = quantile(value, probs = 0.25),
+            q.75 = quantile(value, probs = 0.75),
+            median = quantile(value, probs = 0.5))
+
+temp.list.3.summ$variable <- fct_relevel(temp.list.3.summ$variable, names.covars)
+
+
+g1 <- ggplot(data = temp.list.3.summ) + 
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(variable, desc(variable)), xend = variable, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_segment(aes(x = variable, xend = variable, y = q.25, yend = q.75), 
+               color = "blue", lwd = 1.25) +
+  geom_point(data = temp.list.3.summ,
+             aes(x = variable, y = median), color = "red", shape = 16, size = 2) +
+  coord_flip() +
+  theme_bw() +
+  annotate("rect", xmin=-Inf, xmax=5.5, ymin=-Inf, ymax=Inf, alpha=0.3, fill='lightgreen') +
+  labs(y = "Group mean effect", x = "Covariate") +
+  theme(text = element_text(size = 15))
+
+g1
+
+# save as 3.5.
+ggsave("JAGS/Plots/New Figure 3.5.png", plot = g1, width = 6, height = 5, units = "in")
+
+
+# For figure 4, create each plot and then arrange using grid. I can't find another
+# way to do different background colors.
+
+library(gridExtra)
+library(grid)
+
+covar.list.3.summ <- covar.list.3 %>% 
+  group_by(Covariate_Scale, stock, variable) %>% 
+  summarize(q.025 = quantile(value, probs = 0.025),
+            q.975 = quantile(value, probs = 0.975),
+            q.25 = quantile(value, probs = 0.25),
+            q.75 = quantile(value, probs = 0.75),
+            median = quantile(value, probs = 0.5))
+
+xlimits <- c(min(covar.list.3.summ$q.025), max(covar.list.3.summ$q.975) + 0.05)
+
+
+p1 <- ggplot(data = covar.list.3.summ %>% filter(variable == "maxT_spawn")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits, breaks = c(-0.4, -0.2, 0, 0.2, 0.4)) +
+  coord_flip() +
+  labs(x = "", y = "Effect", title = "maxT_spawn") + 
+  theme_bw() +
+  theme(axis.text.x = element_blank(), axis.title.x = element_blank(), axis.ticks.x = element_blank(),
+        plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0)),
+        plot.margin = margin(1,1,0,1))
+
+p2 <- ggplot(data = covar.list.3.summ %>% filter(variable == "avgT_rear")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits) +
+  coord_flip() +
+  labs(x = "Population", y = "Effect", title = "avgT_rear") + 
+  theme_bw() +
+  theme(axis.text.x = element_blank(), axis.title.x = element_blank(), axis.ticks.x = element_blank(),
+        axis.text.y = element_blank(), axis.title.y = element_blank(), axis.ticks.y = element_blank(),
+        plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0)),
+        plot.margin = margin(1,1,0,1))
+
+p3 <- ggplot(data = covar.list.3.summ %>% filter(variable == "maxP_spawn")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits) +
+  coord_flip() +
+  labs(x = "Population", y = "Effect", title = "maxP_spawn") + 
+  theme_bw() +
+  theme(axis.text.x = element_blank(), axis.title.x = element_blank(), axis.ticks.x = element_blank(),
+        axis.text.y = element_blank(), axis.title.y = element_blank(), axis.ticks.y = element_blank(),
+        plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0)),
+        plot.margin = margin(1,1,0,1))
+
+p4 <- ggplot(data = covar.list.3.summ %>% filter(variable == "avgP_rear")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits) +
+  coord_flip() +
+  labs(x = "Population", y = "Effect", title = "avgP_rear") + 
+  theme_bw() +
+  theme(axis.text.x = element_blank(), axis.title.x = element_blank(), axis.ticks.x = element_blank(),
+        plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0)),
+        plot.margin = margin(1,1,0,1))
+
+p5 <- ggplot(data = covar.list.3.summ %>% filter(variable == "medianQ_rear")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits) +
+  coord_flip() +
+  labs(x = "Population", y = "Effect", title = "medianQ_rear") + 
+  annotate("rect", xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf, alpha=0.2, fill="lightgreen") +
+  theme_bw() +
+  theme(axis.text.x = element_blank(), axis.title.x = element_blank(), axis.ticks.x = element_blank(),
+        axis.text.y = element_blank(), axis.title.y = element_blank(), axis.ticks.y = element_blank(),
+        plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0)),
+        plot.margin = margin(1,1,0,1))
+
+p6 <- ggplot(data = covar.list.3.summ %>% filter(variable == "RB_spawn")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits) +
+  coord_flip() +
+  labs(x = "Population", y = "Effect", title = "RB_spawn") + 
+  annotate("rect", xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf, alpha=0.2, fill="lightgreen") +
+  theme_bw() +
+  theme(axis.text.x = element_blank(), axis.title.x = element_blank(), axis.ticks.x = element_blank(),
+        axis.text.y = element_blank(), axis.title.y = element_blank(), axis.ticks.y = element_blank(),
+        plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0)),
+        plot.margin = margin(1,1,0,1))
+
+p7 <- ggplot(data = covar.list.3.summ %>% filter(variable == "RB_emerge")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits, breaks = c(-0.4, -0.2, 0, 0.2, 0.4)) +
+  coord_flip() +
+  labs(x = "", y = "", title = "RB_emerge") + 
+  annotate("rect", xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf, alpha=0.2, fill="lightgreen") +
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0)),
+        plot.margin = margin(1,1,0,1))
+
+p8 <- ggplot(data = covar.list.3.summ %>% filter(variable == "breakup")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits, breaks = c(-0.4, -0.2, 0, 0.2, 0.4)) +
+  coord_flip() +
+  labs(x = "Population", y = "Effect", title = "breakup") + 
+  annotate("rect", xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf, alpha=0.2, fill="lightgreen") +
+  theme_bw() +
+  theme(axis.text.y = element_blank(), axis.title.y = element_blank(), axis.ticks.y = element_blank(),
+        plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0)),
+        plot.margin = margin(1,1,0,1))
+
+p9 <- ggplot(data = covar.list.3.summ %>% filter(variable == "NPGO")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits, breaks = c(-0.4, -0.2, 0, 0.2, 0.4)) +
+  coord_flip() +
+  labs(x = "Population", y = "", title = "NPGO") + 
+  annotate("rect", xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf, alpha=0.2, fill="lightgreen") +
+  theme_bw() +
+  theme(axis.text.y = element_blank(), axis.title.y = element_blank(), axis.ticks.y = element_blank(),
+        plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0)),
+        plot.margin = margin(1,1,0,1))
+
+p3by3 <- grid.arrange(grobs = list(p1, p2, p3, p4, p5, p6, p7, p8, p9), 
+             layout_matrix = rbind(c(1,2,3),
+                                   c(4,5,6),
+                                   c(7,8,9)),
+             widths = list(1.5,1,1),
+             heights = list(1,1,1.2))
+
+ggsave("JAGS/Plots/New Figure 4.4.png", plot = p3by3, width = 7.5, height = 6.5, units = "in")
+

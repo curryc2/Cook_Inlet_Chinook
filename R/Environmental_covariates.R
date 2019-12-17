@@ -551,7 +551,7 @@ write.csv(covars, "data/covars.csv")
 
 # 12. Manuscript figures --------------------------------------------------
 
-# Figure S4. Mean summer temperature trends 
+# Figure S10. Mean summer temperature trends 
 
 summer.temps <- predictions %>% 
   filter(Week %in% 22:35, !Site %in% c("Kenai R at Skilak", "Kenai R at Cooper Landing")) %>% 
@@ -580,17 +580,17 @@ ggplot(summer.temps %>% filter(fish.model == 1), aes(x = Year, y = meanTemp)) +
                 label.y = 0.1,
                 size = 3.5) +
   facet_wrap(~Population, ncol = 3) +
-  scale_x_continuous(breaks = c(1980, 1990, 2000, 2010), labels = c("'80", "'90", "'00", "'10")) +
+  scale_x_continuous(breaks = c(1980, 1990, 2000, 2010)) +
   theme_bw() +
   theme(strip.text = element_text(size = 10)) +
   ylim(4, 18) +
   labs(y = expression("Modeled mean summer temperature (˚C)"), x = "Year")
 
-ggsave("figs/Fig S4. Modeled summer temps.png", width = 7, height = 8, units = "in")
+ggsave("figs/Fig S10. Modeled summer temps.png", width = 7, height = 8, units = "in")
 
-# Figure S5. Maximum temperature during spawning 
+# Figure S8. Maximum temperature during spawning 
 
-# NOTE: Figures  S5, S6, and S7 have been modified to remove the black dots 
+# NOTE: Figures  have been modified to remove the black dots 
 # that indicated which years in which the majority of sites had metrics
 # > 1SD from their mean. This was confusing to the reader because we only
 # placed the points for those sites (within each year) for which the metric
@@ -616,6 +616,7 @@ covars %>%
 
 
 ggplot() +
+  annotate("rect", ymin = -Inf, ymax = Inf, xmin = 2003, xmax = 2007, fill = "grey50", alpha = 0.5) +
   geom_line(aes(x = Year, y = maxWkJA), data = covars) +
   # geom_point(aes(x = 1997, y = maxWkJA), 
   #            data = covars %>% filter(Year == 1997,
@@ -629,14 +630,14 @@ ggplot() +
   #            data = covars %>% filter(Year == 2013, !Site %in% c("Kenai R at Soldotna", "Crooked")), shape = 21) +
   facet_wrap(~ Population, ncol = 3) +
   labs(y = "Stream temperature (˚C)") +
-  scale_x_continuous(breaks = c(1980, 1990, 2000, 2010), labels = c("'80", "'90", "'00", "'10")) +
+  scale_x_continuous(breaks = c(1980, 1990, 2000, 2010)) +
   theme_bw() + 
   geom_hline(yintercept = 13, linetype="dashed",color="red") +
   theme(strip.text = element_text(size = 10)) 
 
-ggsave("figs/Fig S5.maxT_spawn.png", width = 7, height = 8, units = "in")
+ggsave("figs/Fig S8.maxT_spawn.png", width = 7, height = 8, units = "in")
 
-# Figure S6. Mean summer temperatures during rearing 
+# Figure S9. Mean summer temperatures during rearing 
 
 #Identify years where majority of streams had higher than normal temperatures
 # during rearing (> 1 sd from long-term mean).
@@ -655,6 +656,7 @@ covars %>%
   select(Site, Year, stdMeanWkJJA) %>% arrange(Year)
 
 ggplot() +
+  annotate("rect", ymin = -Inf, ymax = Inf, xmin = 2004, xmax = 2008, fill = "grey50", alpha = 0.5) +
   geom_line(aes(x = Year, y = meanWkJJA), data = covars) +
   # geom_point(aes(x = 1997, y = meanWkJJA), 
   #            data = covars %>% filter(Year == 1997,
@@ -672,14 +674,14 @@ ggplot() +
   geom_hline(yintercept=15, linetype="dashed",color="red") +
   facet_wrap(~Population, ncol = 3) +
   labs(y = "Stream temperature (˚C)") +
-  scale_x_continuous(breaks = c(1980, 1990, 2000, 2010), labels = c("'80", "'90", "'00", "'10")) +
+  scale_x_continuous(breaks = c(1980, 1990, 2000, 2010)) +
   scale_y_continuous(breaks = c(5,10,15, 20), labels = c("5", "10", "15", "20")) +
   theme_bw() + 
   theme(strip.text = element_text(size = 10)) 
 
-ggsave("figs/Fig S6.avgT_grow.png", width = 7, height = 8, units = "in")
+ggsave("figs/Fig S9.avgT_grow.png", width = 7, height = 8, units = "in")
 
-# Figure S7. Maximum monthly precipitation during spawning 
+# Figure S11. Maximum monthly precipitation during spawning 
 
 #Added rectangle from 2004-2006.
 
@@ -706,7 +708,7 @@ ason_max_means <- covars %>%
   summarize(meanP = mean(ASON_max, na.rm = TRUE))
 
 ggplot() +
-  annotate("rect", ymin = -Inf, ymax = Inf, xmin = 2003.8, xmax = 2006.2, fill = "grey50", alpha = 0.5) +
+  annotate("rect", ymin = -Inf, ymax = Inf, xmin = 2003, xmax = 2007, fill = "grey50", alpha = 0.5) +
   geom_line(aes(x = Year, y = ASON_max), data = covars) +
   # geom_point(aes(x = 1982, y = ASON_max), 
   #            data = covars %>% filter(Year == 1982, !Site %in% c("EF Chulitna", "Little Susitna", "Little Willow", "NF Campbell", "Willow")), shape = 21) +
@@ -724,10 +726,10 @@ ggplot() +
   geom_hline(aes(yintercept = meanP), data = ason_max_means, linetype = "dashed", color = "red") +
   facet_wrap(~ Population, ncol = 3) +
   labs(y = "Total monthly precipitation (mm)") +
-  scale_x_continuous(breaks = c(1980, 1990, 2000, 2010), labels = c("'80", "'90", "'00", "'10"),
-                     limits = c(1980, 2010)) +
+  scale_x_continuous(breaks = c(1980, 1990, 2000, 2010),
+                     limits = c(1980, 2012)) +
   theme_bw() +
   theme(strip.text = element_text(size = 10))
 
-ggsave("figs/Fig S7.maxP_spawn.png", width = 7, height = 8, units = "in")
+ggsave("figs/Fig S11.maxP_spawn.png", width = 7, height = 8, units = "in")
 

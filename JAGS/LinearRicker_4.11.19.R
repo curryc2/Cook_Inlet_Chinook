@@ -1170,6 +1170,59 @@ for(p in 1:n.pops) {
 dev.off()
 
 
+# Alternative Figure 6 with fixed scales - R Shaftel ----------------------
+
+#Log Space
+png(file = "Jags/Plots/New Figure 6_fixed x.png", height=8, width=6, units='in', res = 500)
+
+par(mfrow=c(5,3), mar=c(1,2,1,1), oma=c(4,2,1,1))
+p <- 2
+for(p in 1:n.pops) {
+  log.pred <- log(apply(out$BUGSoutput$sims.list$pred.rec[,p,1:n.years[p]],2, 
+                        quantile, probs=c(0.025,0.25,0.5,0.75,0.975)))
+  log.rec <- log(rec)
+  
+  ylim <- c(min(log.pred, log.rec[p,], na.rm=TRUE),max(log.pred,log.rec[p,], na.rm=TRUE))
+  # ylim <- range(log.rec, na.rm = TRUE)
+  
+  temp.yrs <- years[p,1:n.years[p]]
+  
+  if(p %in% 1:12) {
+    plot(x=temp.yrs, y=log.rec[p,1:n.years[p]], pch=21, bg=rgb(0,0,1,alpha=0.5), ylim=ylim,
+         xaxt = "n", xlim = c(1980,2010))
+    
+    polygon(x=c(temp.yrs,rev(temp.yrs)), y=c(log.pred[1,],rev(log.pred[5,])), col=rgb(1,0,0, alpha=0.2),
+            border=FALSE)
+    polygon(x=c(temp.yrs,rev(temp.yrs)), y=c(log.pred[2,],rev(log.pred[4,])), col=rgb(1,0,0, alpha=0.2),
+            border=FALSE)
+    
+    lines(x=temp.yrs, y=log.pred[3,], col='red')
+    mtext(pops[p], side=3, line=0.25)
+  } else {
+    plot(x=temp.yrs, y=log.rec[p,1:n.years[p]], pch=21, bg=rgb(0,0,1,alpha=0.5), ylim=ylim,
+         xlim = c(1980, 2010))
+    
+    polygon(x=c(temp.yrs,rev(temp.yrs)), y=c(log.pred[1,],rev(log.pred[5,])), col=rgb(1,0,0, alpha=0.2),
+            border=FALSE)
+    polygon(x=c(temp.yrs,rev(temp.yrs)), y=c(log.pred[2,],rev(log.pred[4,])), col=rgb(1,0,0, alpha=0.2),
+            border=FALSE)
+    
+    lines(x=temp.yrs, y=log.pred[3,], col='red')
+    mtext(pops[p], side=3, line=0.25)
+    
+  }
+  
+  mtext('Log Recruitment', side=2, outer=TRUE, line=0.5)
+  mtext('Year', side=1, outer=TRUE, line=1.5)
+}
+dev.off()  
+  
+
+
+
+
+
+
 #Create Group Level .csv ==================================
 
 
