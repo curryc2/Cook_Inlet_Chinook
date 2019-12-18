@@ -1,5 +1,5 @@
 #==================================================================================================
-#Project Name: COOK INLET CHINOOK ENVIRONMENTAL EFFECTS - Bayesian Hierarchical Model - With AR-1 Error
+#Project Name: COOK INLET CHINOOK ENVIRONMENTAL EFFECTS - Bayesian Hierarchical Model - With AR-1 Error (lag-1 autocorrelated process errors)
 #Creator: Curry James Cunningham, NOAA/NMFS, ABL
 #Date: 6.10.18
 #
@@ -33,7 +33,9 @@
 # can only include 1 in the model. We included "maxT_spawn". We decided not to use this
 # model in the paper because of concerns about coefficient interpretation.
 
-#
+#####################################################################################
+# NEW December 2019: Model updated to include lag-1 autocorrelated process errors.
+#####################################################################################
 #==================================================================================================
 require(ggplot2)
 require(R2jags)
