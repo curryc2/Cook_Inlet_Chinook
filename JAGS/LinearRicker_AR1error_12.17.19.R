@@ -78,7 +78,7 @@ n.chain <- 3
 # ofst <- 1
 
 #Whether to plot SR relationships
-plot.SR <- TRUE
+plot.SR <- FALSE
 
 #############################
 
