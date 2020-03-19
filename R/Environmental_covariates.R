@@ -733,3 +733,43 @@ ggplot() +
 
 ggsave("figs/Fig S11.maxP_spawn.png", width = 7, height = 8, units = "in")
 
+# Trends in precipitation 1980-2010
+
+#example of broom and lm
+# Orange %>%
+#   nest(-Tree) %>% 
+#   mutate(
+#     fit = map(data, ~ lm(age ~ circumference, data = .x)),
+#     tidied = map(fit, tidy)
+#   ) %>% 
+#   unnest(tidied)
+
+covars %>% 
+  filter(!is.na(ASON_max)) %>% 
+  select(Year, ASON_max, Site) %>% 
+  nest(-Site) %>% 
+  mutate(fit = purrr::map(data, ~ lm(ASON_max ~ Year, data = .x)),
+         tidied = map(fit, tidy)) %>%
+  unnest(tidied) %>% 
+  filter(term == "Year") %>% 
+  print(n = 15)
+
+covars %>% 
+  filter(!is.na(ASON_max)) %>% 
+  select(Year, ASON_avg, Site) %>% 
+  nest(-Site) %>% 
+  mutate(fit = purrr::map(data, ~ lm(ASON_avg ~ Year, data = .x)),
+         tidied = map(fit, tidy)) %>%
+  unnest(tidied) %>% 
+  filter(term == "Year") %>% 
+  print(n=30)
+
+covars %>% 
+  filter(!is.na(ASON_max)) %>% 
+  select(Year, MJJA_avg, Site) %>% 
+  nest(-Site) %>% 
+  mutate(fit = purrr::map(data, ~ lm(MJJA_avg ~ Year, data = .x)),
+         tidied = map(fit, tidy)) %>%
+  unnest(tidied) %>% 
+  filter(term == "Year") %>% 
+  print(n=30)
