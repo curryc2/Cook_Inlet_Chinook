@@ -285,6 +285,7 @@ g1
 
 # save as 3.5.
 ggsave("JAGS/Plots/New Figure 3.5.png", plot = g1, width = 6, height = 5, units = "in")
+ggsave("JAGS/Plots/New Figure 3.5.pdf", plot = g1, width = 6, height = 5, units = "in")
 
 
 # For figure 4, create each plot and then arrange using grid. I can't find another
@@ -455,4 +456,5 @@ p3by3 <- grid.arrange(grobs = list(p1, p2, p3, p4, p5, p6, p7, p8, p9),
              heights = list(1,1,1.2))
 
 ggsave("JAGS/Plots/New Figure 4.4.png", plot = p3by3, width = 7.5, height = 6.5, units = "in")
+ggsave("JAGS/Plots/New Figure 4.4.pdf", plot = p3by3, width = 7.5, height = 6.5, units = "in")
 
