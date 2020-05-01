@@ -352,8 +352,8 @@ resid.avgT_rear_ColdVWarm.g <- resid.avgT_rear_ColdVWarm +
   scale_y_continuous(name = NULL, labels = NULL)
 
 resid.temp.2panel <- plot_grid(resid.maxT_spawn_ColdVWarm, resid.avgT_rear_ColdVWarm.g,
-                               # labels = c("    A", "B", "C"), 
-                               ncol = 2, align = "h", label_x = 0.08)
+                               labels = c("    (a)", "(b)"),
+                               ncol = 2, align = "h", label_x = 0.05, label_y = 0.97)
 resid.temp.2panel
 ggsave("./figs/Fig 5_Productivity_residuals_temp_2panel_ColdVWarm.png", width = 8, height = 6)
 ggsave("./figs/Fig 5_Productivity_residuals_temp_2panel_ColdVWarm.pdf", width = 8, height = 6)
