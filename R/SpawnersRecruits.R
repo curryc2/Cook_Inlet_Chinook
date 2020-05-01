@@ -37,6 +37,7 @@ sites <- read_csv("./data/Sites.csv")
 escapeFull <- read_csv("./data/Escapement.csv")
 ageSimple <- read_csv("./data/AgeSimple.csv")
 agePredicted <- read_csv("./data/AgePredicted.csv")
+spawnersRecruits_ADFG <- read_csv("./data/SpawnersRecruits_ADFG.csv")
 
 # Define population names for plotting
 siteNames <- c("Alexander", "Anchor", "Campbell", "Chuitna", "Chulitna", "Crooked", "Deep",
@@ -344,6 +345,47 @@ nCoreRecruits <- spawnersRecruits %>%
   summarize(nCoreRecruits = n())
 # 332 population-years of core-age recruits (ages 2-4) / spawner
 
+# Compare the results against ln(R/S) estimates based on ADFG run reconstructions------
+# For Deshka and Kenai late run
+
+# Calculate ln (R / S) for Deshka and Kenai late run, based on ADFG run reconstructions
+spawnersRecruits_ADFG <- spawnersRecruits_ADFG %>%
+  mutate(Population = ifelse(Population == "Kenai.Late", "Kenai late run", Population),
+         ReturnPerSpawner_ADFG = ifelse(is.na(ReturnPerSpawner), TotalReturn / Escapement,
+                                        ReturnPerSpawner),
+         logRPS_ADFG = log(ReturnPerSpawner_ADFG))
+
+# Join ADFG estimates with our estimates and filter down to pops of interest
+spawnersRecruits_compare <- spawnersRecruits %>%
+  left_join(spawnersRecruits_ADFG, by = c("Population", "BroodYear")) %>%
+  filter(Population == "Deshka" | Population == "Kenai late run")
+
+# Plot ADFG estimates of ln(R/S) against our estimates
+lnRPS.compare.plot <- ggplot(data = spawnersRecruits_compare, 
+                             aes(x = log(CoreRecruitsPerSpawner),
+                                 y = logRPS_ADFG, color = Population)) +
+  geom_text(aes(label = BroodYear)) +
+  geom_smooth(method = "lm")
+lnRPS.compare.plot
+# Looks pretty good for both pops
+
+# How strongly correlated are our estimates with ADFG estimates?
+# Deshka
+spawnersRecruits_compare_D <- spawnersRecruits_compare %>%
+  filter(Population == "Deshka") %>%
+  filter(!is.na(CoreRecruitsPerSpawner) & !is.na(logRPS_ADFG))
+cor(log(spawnersRecruits_compare_D$CoreRecruitsPerSpawner), spawnersRecruits_compare_D$logRPS_ADFG)
+
+#Pearson correlation = 0.994. Gorgeous
+
+# Kenai late run
+spawnersRecruits_compare_K <- spawnersRecruits_compare %>%
+  filter(Population == "Kenai late run") %>%
+  filter(!is.na(CoreRecruitsPerSpawner) & !is.na(logRPS_ADFG))
+cor(log(spawnersRecruits_compare_K$CoreRecruitsPerSpawner), spawnersRecruits_compare_K$logRPS_ADFG)
+
+#Pearson correlation = 0.928. Not too shabby
+
 # Plot the results -----------------
 
 # Remove site-years with NA values for recruits or spawners (messes up axis scaling)
@@ -381,6 +423,8 @@ logRPSvSpawners.plot
 ggsave("~/Desktop/Cook Inlet Chinook/Analysis/figs/Fig S4_LogRPS_vs_Spawners.png",
        width = 8, height = 8)
 
+# Compare our index of brood year productivity (ln[core-age R/S]) with traditional estimates
+# of ln(R/S) based on ADFG run reconstructions for the Deshka and Kenai late run.
 # Plot an index of brood year productivity (recruits [escapement + terminal harvest] /
 # spawner) for each population over time, using the nominal estimate for visibility of
 # spawners to aerial surveys [45%]). Plot years with complete broods only
