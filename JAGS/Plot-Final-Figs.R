@@ -27,7 +27,7 @@ require(forcats)
 
 #Define Workflow Paths ====================================================
 # *Assumes you are working from the Cook Inlet Chinook R project
-wd <- file.path(getwd(),"JAGS")
+wd <- file.path(getwd())
 # setwd(wd)
 dir.output <- file.path(wd,"Output")
 dir.figs <- file.path(wd,"Plots")
@@ -458,3 +458,144 @@ p3by3 <- grid.arrange(grobs = list(p1, p2, p3, p4, p5, p6, p7, p8, p9),
 ggsave("JAGS/Plots/New Figure 4.4.png", plot = p3by3, width = 7.5, height = 6.5, units = "in")
 ggsave("JAGS/Plots/New Figure 4.4.pdf", plot = p3by3, width = 7.5, height = 6.5, units = "in")
 
+# Graphical abstract base figure #################
+# Simplified version of population-specific effects 
+# Just show the top 3 regional effects, plus both temp indicators and NPGO
+# Replace covariate name abbrevs with meaningful labels
+
+
+ga1 <- ggplot(data = covar.list.3.summ %>% filter(variable == "maxP_spawn")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits, breaks = c(-0.4, -0.2, 0, 0.2, 0.4)) +
+  coord_flip() +
+  labs(x = "", y = "Effect", title = "Max. precip.\n(spawning)") + 
+  theme_bw() +
+  theme(axis.text.x = element_blank(), axis.title.x = element_blank(), axis.ticks.x = element_blank(),
+        plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0), size = rel(1.1)),
+        plot.margin = margin(1,1,0,1))
+
+ga2 <- ggplot(data = covar.list.3.summ %>% filter(variable == "avgP_rear")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits, breaks = c(-0.4, -0.2, 0, 0.2, 0.4)) +
+  coord_flip() +
+  labs(x = "Population", y = "Effect", title = "Mean precip.\n(rearing)") + 
+  theme_bw() +
+  theme(axis.text.x = element_blank(), axis.title.x = element_blank(), axis.ticks.x = element_blank(),
+        axis.text.y = element_blank(), axis.title.y = element_blank(), axis.ticks.y = element_blank(),
+        plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0), size = rel(1.1)),
+        plot.margin = margin(1,1,0,1))
+
+ga3 <- ggplot(data = covar.list.3.summ %>% filter(variable == "medianQ_rear")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits, breaks = c(-0.4, -0.2, 0, 0.2, 0.4)) +
+  coord_flip() +
+  labs(x = "Population", y = "Effect", title = "Median discharge\n(rearing)") + 
+  annotate("rect", xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf, alpha=0.2, fill="lightgreen") +
+  theme_bw() +
+  theme(axis.text.x = element_blank(), axis.title.x = element_blank(), axis.ticks.x = element_blank(),
+        axis.text.y = element_blank(), axis.title.y = element_blank(), axis.ticks.y = element_blank(),
+        plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0), size = rel(1.1)),
+        plot.margin = margin(1,1,1,1))
+
+ga4 <- ggplot(data = covar.list.3.summ %>% filter(variable == "maxT_spawn")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits, breaks = c(-0.4, -0.2, 0, 0.2, 0.4)) +
+  coord_flip() +
+  labs(x = "", y = "Effect", title = "Max. temp.\n(spawning)") + 
+  theme_bw() +
+  theme(plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0), size = rel(1.1)),
+        axis.title.x = element_blank(),
+        plot.margin = margin(1,1,1,1))
+
+ga5 <- ggplot(data = covar.list.3.summ %>% filter(variable == "avgT_rear")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits, breaks = c(-0.4, -0.2, 0, 0.2, 0.4)) +
+  coord_flip() +
+  labs(x = "Population", y = "Effect", title = "Mean temp.\n(rearing)") + 
+  theme_bw() +
+  theme(axis.text.y = element_blank(), axis.title.y = element_blank(), axis.ticks.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0), size = rel(1.1)),
+        plot.margin = margin(1,1,1,1))
+
+ga6 <- ggplot(data = covar.list.3.summ %>% filter(variable == "NPGO")) +
+  geom_hline(yintercept = 0, colour='red') +
+  geom_segment(aes(x = reorder(stock, desc(stock)), xend = stock, y = q.25, yend = q.75),
+               color = "blue", lwd = 1) +
+  geom_segment(aes(x = stock, xend = stock, y = q.025, yend = q.975), 
+               color = "darkblue", lwd = 0.5) +
+  geom_point(aes(x = stock, y = median), color = "red", shape = 16, size = 1.5) +
+  scale_y_continuous(limits = xlimits, breaks = c(-0.4, -0.2, 0, 0.2, 0.4)) +
+  coord_flip() +
+  labs(x = "Population", y = "Effect", title = "NPGO\n(early marine)") + 
+  annotate("rect", xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf, alpha=0.2, fill="lightgreen") +
+  theme_bw() +
+  theme(axis.text.y = element_blank(), axis.title.y = element_blank(), axis.ticks.y = element_blank(),
+        axis.title.x = element_blank(),
+        plot.title = element_text(hjust = 0.5, margin = margin(0,0,1.2,0), size = rel(1.1)),
+        plot.margin = margin(1,1,1,1))
+
+ga3by2 <- grid.arrange(grobs = list(ga1, ga2, ga3, ga4, ga5, ga6), 
+                      layout_matrix = rbind(c(1,2,3),
+                                            c(4,5,6)),
+                      widths = list(1.45,1,1),
+                      heights = list(1,1.1),
+                      left = "Chinook salmon population",
+                      bottom = "Covariate effect",
+                      padding = unit(0.5, "line"))
+ggsave("Graphical Abstract base.pdf", plot = ga3by2)
+
+# Original code generating graphical abstract base figure
+# # Filter down to the 6 covariates of most interest
+# covar.list.simple <- covar.list[,,c(3, 4, 5, 1, 2, 9)]
+# 
+# names.covars.simple <- c('Max. precip. (spawning/incubation)',
+#                          'Mean precip. (rearing)',
+#                          'Median discharge (rearing)',
+#                          'Max. temp. (spawning/incubation)',
+#                          'Mean temp. (rearing)', 
+#                          'NPGO (smolt/early marine)')
+# 
+# n.plot.simple <- length(names.covars.simple)
+# 
+# #PLOT IT
+# pdf(file.path(dir.figs, "Graphical abstract.pdf"), height=8, width=10)
+# par(mfrow=c(2,3), mar=c(2,2,3,2), oma=c(3,10,2,2))
+# c <- 1
+# for(c in 1:n.plot.simple) {
+#   caterplot(covar.list.simple[,,c],
+#             labels=pops, reorder=FALSE, quantiles=list(0.025,0.25,0.75,0.975), 
+#             style='gray', col='blue', cex = 1.1, val.lim = c(-0.45, 0.4))
+#   mtext(names.covars.simple[c], side=3, outer=FALSE, line=1)
+#   caterpoints(apply(covar.list.simple[,,c],2,median), reorder=FALSE, pch=21, col='red', bg='orange')
+#   abline(v=0, lty=1, lwd=2, col=rgb(1,0,0, alpha=0.5))
+# }
+# mtext('Covariate effect', side=1, outer=TRUE, font=2, line=1, cex = 1.3)
+# mtext('Chinook salmon population', side=2, outer=TRUE, font=2, line=6, cex = 1.3)
+# 
+# dev.off()

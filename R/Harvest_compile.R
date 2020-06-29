@@ -13,6 +13,7 @@ library(readr)
 library(ggplot2)
 library(stringr)
 library(GGally)
+library(scales)
 
 theme_set(theme_bw(12))
 setwd("~/Desktop/Cook Inlet Chinook/Analysis")
@@ -579,7 +580,15 @@ harvestByYear <- harvestByYearWide %>%
                                                          "Sub/PU/Ed (FW)",
                                                          "Subsistence (SW)")),
          FWorMarine = ifelse(Fishery == "Sport (Freshwater)" , "Freshwater", 
-                             ifelse(Fishery == "Sub/PU/Ed (Freshwater)", "Freshwater", "Marine")))
+                             ifelse(Fishery == "Sub/PU/Ed (Freshwater)", "Freshwater", "Marine")),
+         FisherySimple = ifelse(Fishery == "Commercial (SW)", "Commercial",
+                                ifelse(Fishery == "Sport (FW)", "Sport",
+                                       ifelse(Fishery == "Sport (SW)", "Sport", "Other"))))
+
+harvestSimpleByYear <- harvestByYear %>%
+  group_by(Year, FisherySimple) %>%
+  summarize(Harvest = sum(Harvest, na.rm = T)*1000) %>%
+  mutate(FisherySimple = factor(FisherySimple, levels = c("Sport", "Commercial", "Other")))
 
 # Plots--------------
 # Plot the harvest trends
@@ -592,6 +601,20 @@ harvest.plot <- ggplot(data = harvestByYear, aes(x = Year, y = Harvest/1000, col
 harvest.plot
 ggsave("./figs/Fig S2_Harvest by fishery.png", width = 7, height = 5)
 ggsave("./figs/Fig S2_Harvest by fishery.pdf", width = 7, height = 5)
+
+# Plot simplified harvest trends for video abstract
+theme_set(theme_classic(16))
+harvest.simple.plot <- ggplot(data = harvestSimpleByYear, 
+                              aes(x = Year, y = Harvest/1000, color = FisherySimple)) +
+  geom_line() +
+  geom_hline(yintercept = 0) +
+  scale_x_continuous(name = NULL, breaks = seq(1980, 2015, by = 10), limits = c(1980, 2015)) +
+  scale_y_continuous(name = "Chinook salmon harvest", label = comma) +
+  scale_color_discrete(name = "Fishery") +
+  theme(legend.justification=c(1,1), legend.position=c(1,1), legend.background = element_rect()) 
+harvest.simple.plot
+ggsave("./figs/Harvest by fishery_simple.png", width = 5, height = 4)
+ggsave("./figs/Harvest by fishery_simple.pdf", width = 5, height = 4)
 
 # Pairwise correlations btw harvest in each fishing sector
 harvest.pairs.plot <- ggpairs(data = harvestByYearWide, columns = 2:6)
