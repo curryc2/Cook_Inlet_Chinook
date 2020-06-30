@@ -166,7 +166,6 @@ ggsave("./figs/Fig 2_Productivity timeseries_2003-2007.pdf", width = 6, height =
 # resid.avgP_rear.popn
 # ggsave("./figs/Productivity_residuals_avgP_rear_by_popn.png", width = 8, height = 10)
 # 
-# TODO: convert x-axis label to expression() format so degree symbol will print in pdf
 resid.maxT_spawn <- ggplot(data = envProd, aes(x = maxT_spawn, y = resid)) +
   geom_point(shape = 1) +
   geom_smooth() +
@@ -179,7 +178,7 @@ resid.maxT_spawn <- ggplot(data = envProd, aes(x = maxT_spawn, y = resid)) +
                      breaks = seq(8, 22, by = 2), limits = c(8, 22)) +
   scale_y_continuous(name = "Productivity (Ricker residuals)", limits=range(envProd$resid))
 resid.maxT_spawn
-# ggsave("./figs/Productivity_residuals_maxT_spawn.png", width = 4, height = 4)
+ggsave("./figs/Productivity_residuals_maxT_spawn.png", width = 4, height = 4)
 # 
 # # Same plot with the coldest (Chulitna) and warmest (Deshka) streams highlighted in color,
 # # with their own linear regression fits
@@ -190,7 +189,9 @@ resid.maxT_spawn
 #               color = "red", lty = "dashed") +
 #   geom_point(data = filter(envProd, Population == "Chulitna"), shape = 1, color = "blue") +
 #   geom_smooth(data = filter(envProd, Population == "Chulitna"), method = "lm", se = F,
-#               color = "blue", lty = "dashed")
+#               color = "blue", lty = "dashed") +
+#   xlab("Chinook salmon productivity") +
+#   ylab(expression("Maximum weekly stream temperature during spawning ("*degree*C*")"))
 # resid.maxT_spawn_ChuliVDeshka
 # ggsave("./figs/Productivity_residuals_maxT_spawn_Chuli vs Deshka.png", width = 4, height = 4)
 
@@ -299,8 +300,8 @@ resid.avgT_rear <- ggplot(data = envProd, aes(x = avgT_rear, y = resid)) +
 resid.avgT_rear
 # ggsave("./figs/Productivity_residuals_avgT_rear.png", width = 6, height = 6)
 # 
-# # Same plot with the coldest (Chulitna) and warmest (Deshka) streams highlighted in color,
-# # with their own linear regression fits
+# Same plot with the coldest (Chulitna) and warmest (Deshka) streams highlighted in color,
+# with their own linear regression fits
 # resid.avgT_rear_ChuliVDeshka <- resid.avgT_rear +
 #   geom_smooth(color = "black") +
 #   geom_point(data = filter(envProd, Population == "Deshka"), shape = 1, color = "red") +
@@ -457,3 +458,45 @@ resid.top4.std
 # ggsave("./figs/Productivity_residuals_top4_covariates_std.png", width = 6, height = 8)
 # ggsave("./figs/Productivity_residuals_top4_covariates_std.pdf", width = 6, height = 8)
 
+# Simplified plot for video abstract----------
+theme_set(theme_classic(12))
+resid.maxT_spawn.video1 <- ggplot(data = envProd, aes(x = maxT_spawn, y = resid)) +
+  geom_point(data = filter(envProd, Population == "Deshka"), shape = 1, color = "red") +
+  geom_smooth(data = filter(envProd, Population == "Deshka"), method = "lm", se = F,
+              color = "red", lty = "dashed") +
+  # geom_hline(yintercept = 0, linetype = "dotted") +
+  # scale_x_continuous(name = "Max. weekly temp. during spawning\n(maxT_spawn; ˚C)",
+  #                    breaks = seq(8, 22, by = 2), limits = c(8, 22)) +
+  # scale_x_continuous(name = expression("Max. weekly temp. during spawning (maxT_spawn " ( degree*C)),
+  #                    breaks = seq(8, 22, by = 2), limits = c(8, 22)) +
+  scale_x_continuous(name = expression("Maximum weekly stream temperature during spawning ("*degree*C*")"),
+                     breaks = seq(8, 22, by = 2), limits = c(8, 22)) +
+  scale_y_continuous(name = "Chinook salmon productivity", limits=c(-2.5, 1.5))
+resid.maxT_spawn.video1
+ggsave("./figs/Temperature figure for video1.pdf", width = 5, height = 5)
+# 
+# # Same plot with the coldest (Chulitna) and warmest (Deshka) streams highlighted in color,
+# # with their own linear regression fits
+resid.maxT_spawn.video2 <- resid.maxT_spawn.video1 +
+  geom_point(data = filter(envProd, Population == "Chulitna"), shape = 1, color = "blue") +
+  geom_smooth(data = filter(envProd, Population == "Chulitna"), method = "lm", se = F,
+              color = "blue", lty = "dashed")
+resid.maxT_spawn.video2
+ggsave("./figs/Temperature figure for video2.pdf", width = 5, height = 5)
+
+resid.maxT_spawn.video3 <- resid.maxT_spawn.video2 +
+  geom_point(shape = 1) +
+  geom_smooth(color = "black") +
+  geom_point(data = filter(envProd, Population == "Deshka"), shape = 1, color = "red") +
+  geom_smooth(data = filter(envProd, Population == "Deshka"), method = "lm", se = F,
+              color = "red", lty = "dashed") +
+  geom_point(data = filter(envProd, Population == "Chulitna"), shape = 1, color = "blue") +
+  geom_smooth(data = filter(envProd, Population == "Chulitna"), method = "lm", se = F,
+              color = "blue", lty = "dashed")
+resid.maxT_spawn.video3
+ggsave("./figs/Temperature figure for video3.pdf", width = 5, height = 5)
+
+resid.maxT_spawn.video4 <- resid.maxT_spawn.video3 +
+  geom_vline(xintercept = 18)
+resid.maxT_spawn.video4
+ggsave("./figs/Temperature figure for video4.pdf", width = 5, height = 5)
