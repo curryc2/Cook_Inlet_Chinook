@@ -106,6 +106,7 @@ prodCore.time.2003.2007
 ggsave("./figs/Fig 2_Productivity timeseries_2003-2007.png", width = 6, height = 6)
 ggsave("./figs/Fig 2_Productivity timeseries_2003-2007.pdf", width = 6, height = 6)
 
+# Simplified versions for video abstract
 
 # # 2) Plot Ricker residuals vs environmental covariates-----------
 # 
