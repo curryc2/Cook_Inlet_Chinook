@@ -287,6 +287,37 @@ g1
 ggsave("JAGS/Plots/New Figure 3.5.png", plot = g1, width = 6, height = 5, units = "in")
 ggsave("JAGS/Plots/New Figure 3.5.pdf", plot = g1, width = 6, height = 5, units = "in")
 
+#Black and white version of figure 3 for Oncorhynchus article. 9/21/20.
+#Also rename covariates on y axis.
+
+g1 <- temp.list.3.summ %>% 
+  mutate(variable2 = case_when(variable == "maxT_spawn" ~ "Max. Temp. Spawning",
+                               variable == "avgT_rear" ~ "Avg. Temp. Rearing",
+                               variable == "maxP_spawn" ~ "Max. Precip. Spawning",
+                               variable == "avgP_rear" ~ "Avg. Precip. Rearing",
+                               variable == "medianQ_rear" ~ "Median Streamflow Rearing",
+                               variable == "RB_spawn" ~ "Flashy Streamflow Spawning",
+                               variable == "RB_emerge" ~ "Flashy Streamflow Emergence",
+                               variable == "breakup" ~ "River Breakup Timing",
+                               variable == "NPGO" ~ "North Pacific Gyre Oscillation")) %>% 
+  ggplot() + 
+  geom_hline(yintercept = 0, colour='black') +
+  geom_segment(aes(x = reorder(variable2, desc(variable2)), xend = variable2, y = q.025, yend = q.975), 
+               color = "black", lwd = 0.5) +
+  geom_segment(aes(x = variable2, xend = variable2, y = q.25, yend = q.75), 
+               color = "black", lwd = 1.25) +
+  geom_point(aes(x = variable2, y = median), color = "black", shape = 16, size = 2) +
+  coord_flip() +
+  theme_bw() +
+  annotate("rect", xmin=-Inf, xmax=5.5, ymin=-Inf, ymax=Inf, alpha=0.3, fill='lightgray') +
+  labs(y = "Group mean effect") +
+  theme(text = element_text(size = 15), axis.title.y = element_blank())
+
+g1
+
+# save as 3.6.
+ggsave("JAGS/Plots/New Figure 3.6.png", plot = g1, width = 6, height = 5, units = "in")
+ggsave("JAGS/Plots/New Figure 3.6.pdf", plot = g1, width = 6, height = 5, units = "in")
 
 # For figure 4, create each plot and then arrange using grid. I can't find another
 # way to do different background colors.
